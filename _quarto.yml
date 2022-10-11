@@ -1,19 +1,30 @@
 project:
   type: website
+  title: "Malmstrom"
 
 website:
-  title: "blog"
+  title: "Malmstrom"
   navbar:
     right:
-      - about.qmd
-      - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+      - text: "blog"
+        file: index.qmd
+      - text: "research"
+        file: research.qmd
+      - text: "about"
+        file: about.qmd
+      #- icon: github
+        #href: https://github.com/mastoffel
+      #- icon: twitter
+        #href: https://twitter.com
+  favicon: favicon_round.png
 format:
   html:
-    theme: cosmo
+    theme: custom.scss
     css: styles.css
+    mainfont: "Avenir Next"
+    #monofont: "Avenir"
+    footnotes-hover: true
+highlight-style: arrow
 
 editor: visual
 

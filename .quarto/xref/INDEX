@@ -10,5 +10,17 @@
   },
   "about.qmd": {
     "about.html": "2e805e7e"
+  },
+  "posts/ggplot_theme/making_a_ggplot_theme.qmd": {
+    "making_a_ggplot_theme.html": "80c38856"
+  },
+  "research.qmd": {
+    "research.html": "2d409f38"
+  },
+  "posts/magic_map/magic_map.qmd": {
+    "magic_map.html": "865af8f6"
+  },
+  "posts/magic_map/index.qmd": {
+    "index.html": "74031e08"
   }
 }

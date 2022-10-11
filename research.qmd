@@ -1,0 +1,12 @@
+---
+title: "Research"
+editor: visual
+---
+
+2\|
+
+1\| [Demographic histories and genetic diversity across pinnipeds are shaped by human exploitation, ecology and life-history](https://www.nature.com/articles/s41467-018-06695-z). [Code](https://github.com/mastoffel/pinniped_bottlenecks) Nat Comms (2018)
+
+Summary:
+
+## ![Northern Elephant Seal Bull](https://github.com/mastoffel/pinniped_bottlenecks/blob/master/pics/elephant_seal2.jpg?raw=true)
