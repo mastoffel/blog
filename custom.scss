@@ -5,11 +5,13 @@ $theme: "litera" !default;
 
 // import google fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato');
-@import url('https://fonts.googleapis.com/css2?family=Chivo');
+//@import url('https://fonts.googleapis.com/css2?family=Nunito');
+//@import url('https://fonts.googleapis.com/css2?family=Titillium+Web');
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
 
 // use Lato font if available
-$font-family-sans-serif:  "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 /*-- scss:rules --*/
 
@@ -21,16 +23,16 @@ p {
 // Navs
 
 .navbar-brand {
-  font-family: "Avenir Next", mono;
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-family: "Lato", mono;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: black;
 }
 
 // Navbar
 
 .navbar {
-  font-family: "Avenir Next", mono;
+  font-family: "Lato", mono;
   font-size: 1rem;
 }
 
