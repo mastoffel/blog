@@ -7,7 +7,7 @@ editor: visual
 *Nat Comms* (2021), [Code](https://github.com/mastoffel/sheep_ID).
 
 ::: columns
-::: {.callout-tip .column collapse="true" width="20%"}
+::: {.callout-tip .column collapse="true"}
 # short and sweet
 
 We know that inbreeding is bad for offspring fitness since [Darwin](https://charles-darwin.classic-literature.co.uk/the-effects-of-cross-and-self-fertilisation/) or maybe even since [biblical times](https://en.wikipedia.org/wiki/Incest_in_the_Bible#:~:text=Incest%20in%20the%20Bible%20refers,21%2C%20but%20also%20in%20Deuteronomy.). The phenomenon is called **inbreeding depression** and is relevant not just for animals but also for [humans](https://www.nature.com/articles/s41467-019-12283-6). Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.
@@ -17,7 +17,6 @@ We know that inbreeding is bad for offspring fitness since [Darwin](https://char
 # doubts
 
 The genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I'm currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.
-:::
 :::
 :::
 
