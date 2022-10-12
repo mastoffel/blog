@@ -4,7 +4,14 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "short and sweet\n\n\n\n\n\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the carribean monk seal and the japanese sea lion), others have lost most of their diversity.\n\n\n\n\n\n\n\n\nretrospective doubts\n\n\n\n\n\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better."
+    "text": "1) Genetic architecture and lifetime dynamics of inbreeding depression in a wild mammal.\nNat Comms (2021), Code.\n:::\n2) Demographic histories and genetic diversity across pinnipeds are shaped by human exploitation, ecology and life-history.\nNat Comms (2018) | Code"
+  },
+  {
+    "objectID": "research.html#software",
+    "href": "research.html#software",
+    "title": "Research",
+    "section": "Software",
+    "text": "Software\npartR2: partitioning R2 in generalized linear mixed models.\npaper, package\nrptR: Repeatability estimation and variance decomposition by generalized linear mixed‐effects models.\npaper, package\ninbreedR: an R package for the analysis of inbreeding based on genetic markers.\npaper, package\nGCalignR: An R package for aligning gas-chromatography data for ecological and evolutionary studies.\narticle, package"
   },
   {
     "objectID": "posts/ggplot_theme/making_a_ggplot_theme.html",

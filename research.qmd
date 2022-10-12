@@ -3,18 +3,51 @@ title: "Research"
 editor: visual
 ---
 
-1\) [Demographic histories and genetic diversity across pinnipeds are shaped by human exploitation, ecology and life-history](https://www.nature.com/articles/s41467-018-06695-z). *Nat Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)
+1\) [Genetic architecture and lifetime dynamics of inbreeding depression in a wild mammal](https://www.nature.com/articles/s41467-021-23222-9).\
+*Nat Comms* (2021), [Code](https://github.com/mastoffel/sheep_ID).
 
 ::: columns
-::: {.callout-tip .callout-note .column collapse="true" icon="false" appearance="simple" width="50%"}
+::: {.callout-tip .column collapse="true" width="20%"}
 # short and sweet
 
-The scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the carribean monk seal and the japanese sea lion), others have lost most of their diversity. 
+We know that inbreeding is bad for offspring fitness since [Darwin](https://charles-darwin.classic-literature.co.uk/the-effects-of-cross-and-self-fertilisation/) or maybe even since [biblical times](https://en.wikipedia.org/wiki/Incest_in_the_Bible#:~:text=Incest%20in%20the%20Bible%20refers,21%2C%20but%20also%20in%20Deuteronomy.). The phenomenon is called **inbreeding depression** and is relevant not just for animals but also for [humans](https://www.nature.com/articles/s41467-019-12283-6). Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.
 :::
 
-::: {.callout-warning .callout-note .column collapse="true" icon="false" appearance="simple" width="50%"}
-# retrospective doubts
+::: {.callout-warning .column collapse="true" width="20%"}
+# doubts
+
+The genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I'm currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.
+:::
+:::
+:::
+
+2\) [Demographic histories and genetic diversity across pinnipeds are shaped by human exploitation, ecology and life-history](https://www.nature.com/articles/s41467-018-06695-z).\
+*Nat Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)
+
+::: columns
+::: {.callout-tip .column collapse="true" width="50%"}
+# short and sweet
+
+The scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the carribean monk seal and the japanese sea lion), others have lost most of their diversity.
+:::
+
+::: {.callout-warning .column collapse="true" width="50%"}
+# doubts
 
 To reconstruct the population histories of each species, we used **Approximate Bayesian Computation (ABC)**. The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be *good*. Alternative, untested population histories could have explained the patterns equally well or better.
 :::
 :::
+
+## Software
+
+`partR2`: partitioning R2 in generalized linear mixed models.\
+[paper](https://peerj.com/articles/11414/), [package](https://github.com/mastoffel/partR2)
+
+`rptR`: Repeatability estimation and variance decomposition by generalized linear mixed‐effects models.\
+[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12797), [package](https://github.com/mastoffel/rptR)
+
+`inbreedR`: an R package for the analysis of inbreeding based on genetic markers.\
+[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12588), [package](https://github.com/mastoffel/inbreedR)
+
+`GCalignR`: An R package for aligning gas-chromatography data for ecological and evolutionary studies.\
+[article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR)

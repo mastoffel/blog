@@ -26,7 +26,10 @@ format:
     footnotes-hover: true
     fontsize: 1em
     linkcolor: "black"
+    
 highlight-style: kate
+callout-appearance: simple
+callout-icon: false
 
 editor: visual
 
