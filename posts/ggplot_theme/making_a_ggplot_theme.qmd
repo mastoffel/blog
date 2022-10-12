@@ -4,6 +4,7 @@ description: "Creating a custom theme."
 #author: "Martin Stoffel"
 #date: "11/10/2022"
 categories: [visualisation, code]
+image: theme.png
 #  - visualisation
 ---
 

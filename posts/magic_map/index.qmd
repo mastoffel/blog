@@ -4,6 +4,7 @@ description: "A functional programming workflow in R."
 #author: "Martin Stoffel"
 #date: "11/10/2022"
 categories: [R, code]
+image: map.png
 ---
 
 ```{r, include = FALSE}

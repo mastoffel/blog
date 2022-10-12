@@ -3,20 +3,18 @@ title: "Research"
 editor: visual
 ---
 
-1\) [Demographic histories and genetic diversity across pinnipeds are shaped by human exploitation, ecology and life-history](https://www.nature.com/articles/s41467-018-06695-z). Nat Comms (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)
+1\) [Demographic histories and genetic diversity across pinnipeds are shaped by human exploitation, ecology and life-history](https://www.nature.com/articles/s41467-018-06695-z). *Nat Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)
 
-:::{.columns}
+::: columns
+::: {.callout-tip .callout-note .column collapse="true" icon="false" appearance="simple" width="50%"}
+# short and sweet
 
-:::{.callout-tip collapse="true" .callout-note icon=false appearance="simple" .column width="50%"}
-# summary
-
-This is a summary
+The scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the carribean monk seal and the japanese sea lion), others have lost most of their diversity. 
 :::
 
-:::{.callout-warning collapse="true" .callout-note icon=false appearance="simple" .column width="50%"}
-# doubts
+::: {.callout-warning .callout-note .column collapse="true" icon="false" appearance="simple" width="50%"}
+# retrospective doubts
 
-These are some *doubts*
+To reconstruct the population histories of each species, we used **Approximate Bayesian Computation (ABC)**. The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be *good*. Alternative, untested population histories could have explained the patterns equally well or better.
 :::
-
 :::
