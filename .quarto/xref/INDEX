@@ -22,5 +22,8 @@
   },
   "posts/magic_map/index.qmd": {
     "index.html": "74031e08"
+  },
+  "posts/test/index.qmd": {
+    "index.html": "181325ab"
   }
 }

@@ -1,8 +1,10 @@
 /* css styles */
 
-.content-block {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+.blackbox {
+  padding: 0em;
+  background: black;
+  color: white;
+  border: 2px solid orange;
+  border-radius: 1px;
+  height: 50px;
 }

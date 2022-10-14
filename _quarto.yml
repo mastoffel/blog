@@ -1,9 +1,9 @@
 project:
   type: website
-  title: "Malmstrom"
+  title: "fantom filters"
 
 website:
-  title: "Malmstrom"
+  title: "fantom filters"
   navbar:
     right:
       - text: "blog"
@@ -16,7 +16,7 @@ website:
         #href: https://github.com/mastoffel
       #- icon: twitter
         #href: https://twitter.com
-  favicon: favicon_round.png
+  favicon: favicon.png
 format:
   html:
     theme: custom.scss
@@ -28,7 +28,7 @@ format:
     linkcolor: "black"
     
 highlight-style: kate
-callout-appearance: simple
+callout-appearance: default
 callout-icon: false
 
 editor: visual

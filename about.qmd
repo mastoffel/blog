@@ -6,11 +6,15 @@ about:
   template: jolla
   links:
     - icon: github
-      #text: Github
+      text: Github
       href: https://github.com/mastoffel
+    - text: "{{< ai google-scholar >}} Google scholar"
+      href: https://scholar.google.com/citations?user=58uLFHoAAAAJ&hl=en&oi=ao
     - icon: linkedin
-      #text: LinkedIn
+      text: LinkedIn
       href: https://www.linkedin.com/in/mastoffel/
 ---
 
 Hi, I'm Martin.
+
+
