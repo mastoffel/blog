@@ -8,3 +8,10 @@
   border-radius: 1px;
   height: 50px;
 }
+
+.callout {
+  padding: 0em;
+  margin-top: 0rem; /* 1.25rem by default */
+  margin-bottom: 0rem; /* 1.25rem by default */
+  margin-right: 0rem;
+  }

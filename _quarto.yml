@@ -28,7 +28,7 @@ format:
     linkcolor: "black"
     
 highlight-style: kate
-callout-appearance: default
+callout-appearance: minimal
 callout-icon: false
 
 editor: visual
