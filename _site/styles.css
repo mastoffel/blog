@@ -11,7 +11,7 @@
 
 .callout {
   padding: 0em;
-  margin-top: 0rem; /* 1.25rem by default */
-  margin-bottom: 0rem; /* 1.25rem by default */
+  margin-top: -0.5rem; /* 1.25rem by default */
+  margin-bottom: 1rem; /* 1.25rem by default */
   margin-right: 0rem;
   }

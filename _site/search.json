@@ -2,16 +2,16 @@
   {
     "objectID": "research.html",
     "href": "research.html",
-    "title": "Research",
+    "title": "fantom filters",
     "section": "",
-    "text": "1) Genetic basis and effect size of inbreeding depression in the wild.\nNat Comms (2021), Code\n2) Industrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code"
+    "text": "Under construction."
   },
   {
     "objectID": "research.html#software",
     "href": "research.html#software",
-    "title": "Research",
+    "title": "fantom filters",
     "section": "Software",
-    "text": "Software\npartR2: partitioning R2 in generalized linear mixed models.\npaper, package\nrptR: Repeatability estimation and variance decomposition by generalized linear mixed‐effects models.\npaper, package\ninbreedR: an R package for the analysis of inbreeding based on genetic markers.\npaper, package\nGCalignR: An R package for aligning gas-chromatography data for ecological and evolutionary studies.\narticle, package"
+    "text": "Software\npartR2: partitioning R2 in mixed models.\npaper, package\nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package\ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package\nGCalignR:aligning gas-chromatography data from the field.\narticle, package"
   },
   {
     "objectID": "posts/ggplot_theme/making_a_ggplot_theme.html",
@@ -96,5 +96,12 @@
     "title": "About",
     "section": "",
     "text": "Hi, I’m Martin."
+  },
+  {
+    "objectID": "research.html#empirical-research",
+    "href": "research.html#empirical-research",
+    "title": "fantom filters",
+    "section": "Empirical research",
+    "text": "Empirical research\n1) Genetic basis and effect size of inbreeding depression in the wild.\nNat Comms (2021), Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.\n\n\n\n\n \n\n\n\n2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n3) Longer runs of homozygosity are more deleterious, because their haplotypes are younger.\nEvol. Letters (2021)\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n2) The early life gut microbium predicts extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n2) Industrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the carribean monk seal and the japanese sea lion), others have lost most of their diversity.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better.\n\n\n\n\n \n\n\n\n3) Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nSkin chemicals covary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals."
   }
 ]
