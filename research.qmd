@@ -1,109 +1,42 @@
 ---
 editor: visual
+filters:
+      - nutshell
 ---
 
 *Under construction.*
 
 ## Empirical research
 
-1\) [**Genetic basis and effect size of inbreeding depression in the wild**](https://www.nature.com/articles/s41467-021-23222-9).\
-*Nat Comms* (2021), [Code](https://github.com/mastoffel/sheep_ID)
+Selected papers with simplified titles. Thinking back, I should
+have probably chosen those titles in the first place. Full publication list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao).
 
-::: {layout="[0.3, 0.3, -0.5]"}
-::: {.callout-tip collapse="true"}
-# short and sweet
+1\) [**Long runs of homozygosity have a higher mutation load because their haplotypes are younger**](https://onlinelibrary.wiley.com/doi/full/10.1002/evl3.229).\
+*Evol Letters* (2021) \| [Code](https://github.com/mastoffel/sheep_roh)\
+[:In a nutshell](#x-roh), [:doubts](#x-roh_doubts)
 
-We know that inbreeding is bad for offspring fitness since [Darwin](https://charles-darwin.classic-literature.co.uk/the-effects-of-cross-and-self-fertilisation/) or maybe even since [biblical times](https://en.wikipedia.org/wiki/Incest_in_the_Bible#:~:text=Incest%20in%20the%20Bible%20refers,21%2C%20but%20also%20in%20Deuteronomy.). The phenomenon is called **inbreeding depression** and is relevant not just for animals but also for [humans](https://www.nature.com/articles/s41467-019-12283-6). Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.
-:::
+2\) [**Effect size and genetic basis of inbreeding depression in a small, wild population**](https://www.nature.com/articles/s41467-021-23222-9).\
+*Nat Comms* (2021) \| [Code](https://github.com/mastoffel/sheep_ID)\
+[:In a nutshell](#x-id), [:doubts](#x-id_doubts)
 
-::: {.callout-warning collapse="true"}
-# doubts
+3\) [**Early life gut microbiota predict extreme sex differences in Elephant Seals.**](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.15385)\
+*Mol Ecol* (2020) \| [Code](https://github.com/mastoffel/nes_microbiome)\
+[:In a nutshell](#x-nes), [:doubts](#x-nes_doubts)
 
-The genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I'm currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.
-:::
-:::
+4\) [**Industrial exploitation brought one-third of pinniped species to the edge of extinction**](https://www.nature.com/articles/s41467-018-06695-z).\
+*Nat Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)\
+[:In a nutshell](#x-bot), [:doubts](#x-bot_doubts)
 
-2\) [**Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.**](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.15385)\
-*Mol Ecol* (2020) \| [Code](https://github.com/mastoffel/nes_microbiome)
+5\) [**Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.**](https://www.pnas.org/doi/abs/10.1073/pnas.1506076112)\
+*PNAS* (2015) \| [Code](https://github.com/mastoffel/seal_chemical_fingerprints/blob/master/analysis_markdown.pdf) \| Article in the [Sueddeutsche Zeitung](https://www.sueddeutsche.de/wissen/biologie-wie-robben-einander-finden-1.2604289).\
+[:In a nutshell](#x-chem), [:doubts](#x-chem_doubts)
 
-::: {layout="[0.3, 0.3, -0.5]"}
-::: {.callout-tip collapse="true"}
-# short and sweet
-
-Elephant seals have the largest sexual size dimorphism of any mammal.
-:::
-
-::: {.callout-warning collapse="true"}
-# doubts
-:::
-:::
-
-3\) [**Longer runs of homozygosity are more deleterious, because their haplotypes are younger.**](https://onlinelibrary.wiley.com/doi/full/10.1002/evl3.229)\
-*Evol. Letters* (2021)
-
-::: {layout="[0.3, 0.3, -0.5]"}
-::: {.callout-tip collapse="true"}
-# short and sweet
-:::
-
-::: {.callout-warning collapse="true"}
-# doubts
-:::
-:::
-
-2\) [**The early life gut microbium predicts extreme sex-differences in Northern Elephant Seals.**](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.15385)\
-*Mol Ecol* (2020) \| [Code](https://github.com/mastoffel/nes_microbiome)
-
-::: {layout="[0.3, 0.3, -0.5]"}
-::: {.callout-tip collapse="true"}
-# short and sweet
-
-Elephant seals have the largest sexual size dimorphism of any mammal.
-:::
-
-::: {.callout-warning collapse="true"}
-# doubts
-:::
-:::
-
-2\) [**Industrial exploitation brought one-third of pinniped species to the edge of extinction**](https://www.nature.com/articles/s41467-018-06695-z).\
-*Nat Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)
-
-::: {layout="[0.3, 0.3, -0.5]"}
-::: {.callout-tip collapse="true"}
-# short and sweet
-
-The scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the carribean monk seal and the japanese sea lion), others have lost most of their diversity.
-:::
-
-::: {.callout-warning collapse="true"}
-# doubts
-
-To reconstruct the population histories of each species, we used **Approximate Bayesian Computation (ABC)**. The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be *good*. Alternative, untested population histories could have explained the patterns equally well or better.
-:::
-:::
-
-3\) [**Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.**](https://www.pnas.org/doi/abs/10.1073/pnas.1506076112)\
-*PNAS* (2015) \| [Code](https://github.com/mastoffel/seal_chemical_fingerprints/blob/master/analysis_markdown.pdf) \| Article in the [Sueddeutsche Zeitung](https://www.sueddeutsche.de/wissen/biologie-wie-robben-einander-finden-1.2604289)
-
-::: {layout="[0.3, 0.3, -0.5]"}
-::: {.callout-tip collapse="true"}
-# short and sweet
-
-Fur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (`GCalignR`, see below) and borrowed analytical methods from psychology.
-:::
-
-::: {.callout-warning collapse="true"}
-# doubts
-
-Skin chemicals covary with relatedness, genetic make-up and colony membership. This doesn't mean these 'signals' are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals.
-:::
-:::
 
 ## Software
 
 `partR2`: partitioning R^2^ in mixed models.\
-[paper](https://peerj.com/articles/11414/), [package](https://github.com/mastoffel/partR2)
+[paper](https://peerj.com/articles/11414/), [package](https://github.com/mastoffel/partR2), 
+[:In a nutshell](#x-partR2)
 
 `rptR`: repeatability estimation and variance decomposition in mixed models.\
 [paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12797), [package](https://github.com/mastoffel/rptR)
@@ -111,5 +44,63 @@ Skin chemicals covary with relatedness, genetic make-up and colony membership. T
 `inbreedR`: analysing inbreeding with sparse genetic markers.\
 [paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12588), [package](https://github.com/mastoffel/inbreedR)
 
-`GCalignR`:aligning gas-chromatography data from the field.\
+`GCalignR`:aligning gas-chromatography data from messy field samples.\
 [article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR)
+
+
+
+## :x roh
+
+*Authors* | **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
+
+## :x roh_doubts
+
+
+## :x id 
+
+We know that inbreeding is bad for offspring fitness since [Darwin](https://charles-darwin.classic-literature.co.uk/the-effects-of-cross-and-self-fertilisation/) or maybe even since [biblical times](https://en.wikipedia.org/wiki/Incest_in_the_Bible#:~:text=Incest%20in%20the%20Bible%20refers,21%2C%20but%20also%20in%20Deuteronomy.). The phenomenon is called **inbreeding depression** and is relevant not just for animals but also for [humans](https://www.nature.com/articles/s41467-019-12283-6). Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.  
+
+*Authors* | **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
+
+## :x id_doubts 
+
+The genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I'm currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.
+
+
+
+## :x nes 
+
+Elephant seals have the largest sexual size dimorphism of any mammal.
+
+*Authors* | **Martin A Stoffel**, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman
+
+## :x nes_doubts 
+
+Some doubts here
+
+
+
+## :x bot 
+The scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.
+
+*Authors* | **MA Stoffel**, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman
+
+
+## :x bot_doubts
+
+To reconstruct the population histories of each species, we used **Approximate Bayesian Computation (ABC)**. The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be *good*. Alternative, untested population histories could have explained the patterns equally well or better.
+
+
+
+## :x chem
+Fur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (`GCalignR`, see below) and borrowed analytical methods from psychology.
+
+*Authors* | **Martin A Stoffel**, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman
+
+## :x chem_doubts
+Skin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn't mean these 'signals' are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals.
+
+## :x partR2
+When using a [:mixed model](https://en.wikipedia.org/wiki/Mixed_model), we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements *one* possible solution to estimate the semi-partial R^2^ in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the [manual](https://cran.r-project.org/web/packages/partR2/vignettes/Using_partR2.html)).
+
+*Authors* | *MA Stoffel*, S Nakagawa, H Schielzeth

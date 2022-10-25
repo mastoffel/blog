@@ -1,6 +1,6 @@
 ---
-title: "ggplot2"
-description: "Creating a custom theme."
+title: "Always changing the default ggplot?"
+description: "Make a custom theme!"
 #author: "Martin Stoffel"
 #date: "11/10/2022"
 categories: [visualisation, code]

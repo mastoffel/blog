@@ -7,79 +7,93 @@
     "text": "Under construction."
   },
   {
+    "objectID": "research.html#empirical-research",
+    "href": "research.html#empirical-research",
+    "title": "fantom filters",
+    "section": "Empirical research",
+    "text": "Empirical research\nSelected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list here.\n1) Long runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell, :doubts\n2) Effect size and genetic basis of inbreeding depression in a small, wild population.\nNat Comms (2021) | Code\n:In a nutshell, :doubts\n3) Early life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n4) Industrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code\n:In a nutshell, :doubts\n5) Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts"
+  },
+  {
     "objectID": "research.html#software",
     "href": "research.html#software",
     "title": "fantom filters",
     "section": "Software",
-    "text": "Software\npartR2: partitioning R2 in mixed models.\npaper, package\nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package\ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package\nGCalignR:aligning gas-chromatography data from the field.\narticle, package"
+    "text": "Software\npartR2: partitioning R2 in mixed models.\npaper, package, :In a nutshell\nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package\ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package\nGCalignR:aligning gas-chromatography data from messy field samples.\narticle, package"
+  },
+  {
+    "objectID": "posts/test/index.html",
+    "href": "posts/test/index.html",
+    "title": "test",
+    "section": "",
+    "text": "This is a senseless paragraph."
   },
   {
     "objectID": "posts/ggplot_theme/making_a_ggplot_theme.html",
     "href": "posts/ggplot_theme/making_a_ggplot_theme.html",
-    "title": "ggplot2",
+    "title": "Always changing the default ggplot?",
     "section": "",
     "text": "The general look of a ggplot is controlled by a theme. Anyone using ggplot knows that the default grey theme is usually not what you want to show the world. Modifying themes is very flexible, but a little bit complicated. Even after using it for years, I have to google some things every single time. Creating your own theme is a way to give your plots a consistent and personal design, and will save you a lot of time and many lines of code.\n\nThe default ggplot\nLet’s use the data from gapminder to see how a default plot looks like. We first load a few packages and do some data pre-processing.\n\nlibrary(ggplot2)\nlibrary(gapminder)\nlibrary(dplyr)\nlibrary(wesanderson)\nlibrary(systemfonts)\n# a bit of data processing\ndat <- gapminder %>% \n        group_by(year, continent) %>% \n        summarise(`Life Expectancy` = mean(lifeExp),\n                  Population = sum(as.numeric(pop))) %>% \n        rename(Year = year, Continent = continent)\n\nHere is a default theme_grey() scatterplot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n      geom_point()\n\n\n\n\nThere are a few things I change all the time:\n\nThe background, which I prefer simple plain, or only with x and y axis lines.\nGrid lines: I usually keep only major grid lines (as they are connected to values) or remove them entirely.\nThe spacing between axis, axis-labels and axis-titles.\nThe font.\nFor themes with axis lines, like theme_classic, the line thickness.\n\n\n\nMaking your own theme\nMaking a new theme is quite simple. We (1) create a function which starts with a standard theme, such as theme_minimal and (2) add all the theme aspects which we prefer for our plots. Finally (3), we add some arguments to make changing things easy which we need often, such as axis and grid lines and the text size. Below is the theme I am using, but of course you can change every other theme aspect too (see theme documentation). I’m often using the ‘Avenir Next’ font, which might not be installed on your system (at the end of this post is a little guide on how to install fancy fonts). Using ‘sans’ should always work.\n\ntheme_simple <- function(axis_lines = TRUE, \n                         grid_lines = FALSE,     \n                         text_size = 12,       \n                         line_size = 0.2,\n                         # replace with 'sans' if not working\n                         base_family= 'Avenir Next'){ \n        \n    # start with theme_minimal because it is really simple.\n    th <- ggplot2::theme_minimal(base_family = base_family, \n                               base_size = text_size)\n         \n    # remove the grid lines \n    th <- th + theme(panel.grid=element_blank())\n    \n    # if we want axis lines\n    if (axis_lines) {\n      # We add axis lines and give them our preferred thickness\n        th <- th + \n            theme(axis.line = element_line(size = line_size),\n                  axis.ticks = element_line(size = line_size))\n    } \n    # do we want grid lines?\n    if (grid_lines) {\n        th <- th + \n            theme(panel.grid.major = element_line(size = line_size))\n    }\n    \n    # more space for axis text/title and plot title \n    th <- th + theme(\n              axis.text.x=element_text(margin=margin(t=5)),\n              axis.text.y=element_text(margin=margin(r=5)),\n              axis.title.x=element_text(margin=margin(t=10)),\n              axis.title.y=element_text(margin=margin(r=10)),\n              plot.title=element_text(margin=margin(b=10)))\n    \n    return (th)\n}\n\n\n\nAdding theme_simple to the plot.\nNow, we can add theme_simple() to the plot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n    geom_point() +\n    scale_color_manual(values = wes_palette(\"Darjeeling2\")) + \n    theme_simple()\n\n\n\n\nSmall tweaks can sometimes make a big aesthetic difference. ggplot comes with a few themes, like theme_classic(), which are sort of close to what I like my plots to be, but are just not quite there. If you feel the same, it’s time to make your own theme.\nLastly, you can put the code for your theme into an R script and save it, for example as theme_simple.R. The next time you make plots, just source the script to load the theme_simple() function. To use it as the default theme, we can use theme_set like so:\n\nsource(\"theme_simple.R\") \n# set theme_simple as default theme\nggplot2::theme_set(theme_simple()) \n\nThat’s it!\nIf you are plotting in base R, you might say: You need a full blog post just to explain how to make ggplot look like base R with a different font! And I can only say: touché, my friend.\n\n\nAppendix: Fancy fonts made easy\nFonts can really make a big difference in the visual design of plots. A lot of freely available fonts are on https://fonts.google.com/. On Mac, I just download them, double click and they are installed. Then, we have to make them available in R. The systemfonts package magically finds all installed fonts from different directories.\n\n# install.packages(\"systemfonts)\nlibrary(systemfonts)\n# which fonts are installed?\n# print only top 5\nsystem_fonts()[1:5, ]\n\n#> # A tibble: 5 x 9\n#>   path             index name      family   style weight width  italic monospace\n#>   <chr>            <int> <chr>     <chr>    <chr> <ord>  <ord>  <lgl>  <lgl>    \n#> 1 /System/Library…     1 ShreeDev… Shree D… Bold  bold   normal FALSE  FALSE    \n#> 2 /Users/mstoffel…     0 FiraCode… Fira Co… Medi… medium normal FALSE  TRUE     \n#> 3 /System/Library…     0 AcademyE… Academy… Plain normal normal FALSE  FALSE    \n#> 4 /System/Library…     0 Impact    Impact   Regu… heavy  semic… FALSE  FALSE    \n#> 5 /Users/mstoffel…     0 IBMPlexS… IBM Ple… Thin  ultra… normal FALSE  FALSE\n\n\nI’ve just downloaded a font which looks like it’s from Pokemon Red and Blue on the old big grey Game boy, called Press Start 2P. We can first check if its there with match_font() and then just use it in the ggplot.\n\n# match_font('Press Start 2P')\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n    geom_point() +\n    scale_color_manual(values = wes_palette(\"Darjeeling2\")) + \n    theme_simple(base_family = \"Press Start 2P\", text_size = 9)\n\n\n\n\nOther options to import fonts are extrafont and showtext.\n\n\npdf-ing fancy fonts\nSometimes, especially for science publications, plots need to be saved as pdfs. With non-standard fonts, this can be problematic, because they have to be embedded, but a little tweak to ggsave() can help here.\n\nggsave(\"plot.pdf\", device = cairo_pdf)"
   },
   {
     "objectID": "posts/magic_map/index.html",
     "href": "posts/magic_map/index.html",
-    "title": "magic map",
+    "title": "map()-magic",
     "section": "",
     "text": "“Form follows function” - Louis Sullivan\nFunctional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions. A function can then be elegantly applied to many inputs. Here, we will do this with purrr::map(), which I’m using day in and day out and which is a great starting point to dive into the world of functional programming.\nLet’s go through some of the map()-magic with a minimal workflow to produce clean, robust and fast code. We will do a small genome-wide association study, an analysis looking at the association between genes and a trait by fitting a model over and over again for every SNP in the genome.\nHere are some my favorite packages.\nLet’s see whether drinking coffee has a genetic basis. We make up a trait (coffees per day) and 100 SNPs for 100 individuals."
   },
   {
     "objectID": "posts/magic_map/index.html#simulate-data",
     "href": "posts/magic_map/index.html#simulate-data",
-    "title": "magic map",
+    "title": "map()-magic",
     "section": "Simulate data",
-    "text": "Simulate data\n\ncoffees   <- sample(1:6, 100, TRUE)\nsnps      <- replicate(100, sample(c(0,1,2), 100, TRUE))\nsnp_names <- paste0(\"snp\", 1:100)\n\ndat <- data.frame(cbind(coffees, snps)) %>% \n            setNames(c(\"coffees\", snp_names))\n            \nhead(dat[1:5, 1:7])\n\n#>   coffees snp1 snp2 snp3 snp4 snp5 snp6\n#> 1       1    2    1    2    0    1    2\n#> 2       5    2    1    0    2    2    1\n#> 3       1    0    1    2    2    2    2\n#> 4       3    0    0    0    2    0    0\n#> 5       6    2    2    2    1    1    0"
+    "text": "Simulate data\n\ncoffees   <- sample(1:6, 100, TRUE)\nsnps      <- replicate(100, sample(c(0,1,2), 100, TRUE))\nsnp_names <- paste0(\"snp\", 1:100)\n\ndat <- data.frame(cbind(coffees, snps)) %>% \n            setNames(c(\"coffees\", snp_names))\n            \nhead(dat[1:5, 1:7])\n\n#>   coffees snp1 snp2 snp3 snp4 snp5 snp6\n#> 1       4    1    2    2    2    0    1\n#> 2       6    2    1    2    2    0    1\n#> 3       1    0    0    0    1    2    0\n#> 4       1    2    2    1    2    1    2\n#> 5       5    0    0    1    1    1    2"
   },
   {
     "objectID": "posts/magic_map/index.html#write-a-function",
     "href": "posts/magic_map/index.html#write-a-function",
-    "title": "magic map",
+    "title": "map()-magic",
     "section": "1) Write a function",
     "text": "1) Write a function\nWe could now do 100 linear models manually by writing 100 lines of code, or we could do a for loop.\nInstead, let’s write a function to fit one model, and then apply this function to each SNP. We generally want the thing that changes (i.e. snp_name) to be the first argument. The function below fits a linear model of coffee consumption with a snp as predictor, and extracts the model estimate and p-value for the SNP. It returns a one-row data.frame. I generally like my functions to return data.frames, because that makes it easy to put together many function outputs into a big data.frame at the end.\n\nfit_model <- function(snp_name, dat) {\n      # write formula using SNP name\n      model_formula <- glue(\"coffees ~ {snp_name}\")\n      # fit linear model\n      fit <- lm(model_formula, data = dat) %>% \n                  broom::tidy() %>%        # tidy results\n                  filter(term == snp_name) # extract snp\n      return(fit)\n      \n}"
   },
   {
     "objectID": "posts/magic_map/index.html#use-map-to-apply-function-to-every-snp",
     "href": "posts/magic_map/index.html#use-map-to-apply-function-to-every-snp",
-    "title": "magic map",
+    "title": "map()-magic",
     "section": "2) Use map() to apply function to every SNP",
-    "text": "2) Use map() to apply function to every SNP\nUsing a vector with snp_names, we can apply the function to every SNP. The structure of map() is always the same: map(list/vector, function, additional_arguments). map() always returns a list. We can convert the list to a data.frame with dplyr::bind_rows().\n\n# run gwas\ngwas <- map(snp_names, fit_model, dat) %>% \n              bind_rows()\n# print first three SNPs\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    -0.464     0.196    -2.36   0.0201\n#> 2 snp2    -0.292     0.210    -1.39   0.169 \n#> 3 snp3     0.105     0.232     0.450  0.654"
+    "text": "2) Use map() to apply function to every SNP\nUsing a vector with snp_names, we can apply the function to every SNP. The structure of map() is always the same: map(list/vector, function, additional_arguments). map() always returns a list. We can convert the list to a data.frame with dplyr::bind_rows().\n\n# run gwas\ngwas <- map(snp_names, fit_model, dat) %>% \n              bind_rows()\n# print first three SNPs\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1   0.0541      0.201    0.269    0.788\n#> 2 snp2   0.00721     0.221    0.0326   0.974\n#> 3 snp3  -0.0468      0.205   -0.228    0.820"
   },
   {
     "objectID": "posts/magic_map/index.html#what-if-something-goes-wrong---map-safely",
     "href": "posts/magic_map/index.html#what-if-something-goes-wrong---map-safely",
-    "title": "magic map",
+    "title": "map()-magic",
     "section": "3) What if something goes wrong? - map() safely",
-    "text": "3) What if something goes wrong? - map() safely\nLoops often fail becomes something goes wrong in one or a few iterations.Let’s introduce a non-existing SNP and try again to see how it fails\n\nsnp_names2 <- c(\"not_a_snp\", snp_names)\n\ngwas <- map(snp_names2, fit_model, dat) %>% \n      bind_rows()\n\n#> Error in eval(predvars, data, env): object 'not_a_snp' not found\n\n\nWe can make our gwas error-safe using purrr::safely(). This does some magic under the hood which isn’t so important now. For every iteration, it will return a list with two elements, one for the result and one for the error (equals NULL if there is no error). This way, we always get the results or errors of all our iterations back.\n\nfit_model_safely <- purrr::safely(fit_model)\n\ngwas <- map(snp_names2, fit_model_safely, dat)\ngwas[1:2]\n\n#> [[1]]\n#> [[1]]$result\n#> NULL\n#> \n#> [[1]]$error\n#> <simpleError in eval(predvars, data, env): object 'not_a_snp' not found>\n#> \n#> \n#> [[2]]\n#> [[2]]$result\n#> # A tibble: 1 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    -0.464     0.196     -2.36  0.0201\n#> \n#> [[2]]$error\n#> NULL\n\n\nmap() lets you extract a list element simply by its name. Here, we iterate over the list of results and extract all SNPs that worked.\n\ngwas <- map(gwas, \"result\") %>% \n            bind_rows()\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    -0.464     0.196    -2.36   0.0201\n#> 2 snp2    -0.292     0.210    -1.39   0.169 \n#> 3 snp3     0.105     0.232     0.450  0.654"
+    "text": "3) What if something goes wrong? - map() safely\nLoops often fail becomes something goes wrong in one or a few iterations.Let’s introduce a non-existing SNP and try again to see how it fails\n\nsnp_names2 <- c(\"not_a_snp\", snp_names)\n\ngwas <- map(snp_names2, fit_model, dat) %>% \n      bind_rows()\n\n#> Error in eval(predvars, data, env): object 'not_a_snp' not found\n\n\nWe can make our gwas error-safe using purrr::safely(). This does some magic under the hood which isn’t so important now. For every iteration, it will return a list with two elements, one for the result and one for the error (equals NULL if there is no error). This way, we always get the results or errors of all our iterations back.\n\nfit_model_safely <- purrr::safely(fit_model)\n\ngwas <- map(snp_names2, fit_model_safely, dat)\ngwas[1:2]\n\n#> [[1]]\n#> [[1]]$result\n#> NULL\n#> \n#> [[1]]$error\n#> <simpleError in eval(predvars, data, env): object 'not_a_snp' not found>\n#> \n#> \n#> [[2]]\n#> [[2]]$result\n#> # A tibble: 1 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    0.0541     0.201     0.269   0.788\n#> \n#> [[2]]$error\n#> NULL\n\n\nmap() lets you extract a list element simply by its name. Here, we iterate over the list of results and extract all SNPs that worked.\n\ngwas <- map(gwas, \"result\") %>% \n            bind_rows()\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1   0.0541      0.201    0.269    0.788\n#> 2 snp2   0.00721     0.221    0.0326   0.974\n#> 3 snp3  -0.0468      0.205   -0.228    0.820"
   },
   {
     "objectID": "posts/magic_map/index.html#what-if-it-takes-too-long---map-in-parallel",
     "href": "posts/magic_map/index.html#what-if-it-takes-too-long---map-in-parallel",
-    "title": "magic map",
+    "title": "map()-magic",
     "section": "4) What if it takes too long? - map() in parallel",
-    "text": "4) What if it takes too long? - map() in parallel\nOnce the idea of map() is clear, we can easily parallelise it to run on multiple cores. There is some overhead in collecting computations from several cores so this doesn’t make much sense when the running time is short. But for longer computations, using 4 cores instead of 1 should make it nearly 4 times as fast.\nWe can use the furrr package here, which mimics purrr functions but can run in parallel. It is based on future, which is why all functions start with future_, for example future_map(). Unlike other ways of parallelising, this approach works on Windows, Mac and Linux. All we have to do now is to first set up a plan() …\n\n# check available cores\navailableCores()\n# parallelises across 4 cores\nplan(multiprocess, workers = 4)\n\n… and then replace map() with future_map().\n\ngwas <- future_map(snp_names, fit_model, dat) %>% \n            bind_rows()\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    -0.464     0.196    -2.36   0.0201\n#> 2 snp2    -0.292     0.210    -1.39   0.169 \n#> 3 snp3     0.105     0.232     0.450  0.654"
+    "text": "4) What if it takes too long? - map() in parallel\nOnce the idea of map() is clear, we can easily parallelise it to run on multiple cores. There is some overhead in collecting computations from several cores so this doesn’t make much sense when the running time is short. But for longer computations, using 4 cores instead of 1 should make it nearly 4 times as fast.\nWe can use the furrr package here, which mimics purrr functions but can run in parallel. It is based on future, which is why all functions start with future_, for example future_map(). Unlike other ways of parallelising, this approach works on Windows, Mac and Linux. All we have to do now is to first set up a plan() …\n\n# check available cores\navailableCores()\n# parallelises across 4 cores\nplan(multiprocess, workers = 4)\n\n… and then replace map() with future_map().\n\ngwas <- future_map(snp_names, fit_model, dat) %>% \n            bind_rows()\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1   0.0541      0.201    0.269    0.788\n#> 2 snp2   0.00721     0.221    0.0326   0.974\n#> 3 snp3  -0.0468      0.205   -0.228    0.820"
   },
   {
     "objectID": "posts/magic_map/index.html#the-full-minimal-workflow-for-a-robust-parallel-gwas",
     "href": "posts/magic_map/index.html#the-full-minimal-workflow-for-a-robust-parallel-gwas",
-    "title": "magic map",
+    "title": "map()-magic",
     "section": "The full, minimal workflow for a robust, parallel gwas",
-    "text": "The full, minimal workflow for a robust, parallel gwas\n\nplan(multiprocess, workers = 4)\n\nfit_model <- function(snp_name, dat) {\n      model_formula <- glue(\"coffees ~ {snp_name}\")\n      fit <- lm(model_formula, data = dat) %>% \n                  broom::tidy() %>% \n                  filter(term == snp_name)\n      return(fit)\n}\n\nfit_model_safely <- purrr::safely(fit_model)\ngwas <- future_map(snp_names, fit_model_safely, dat) %>% \n                  map(\"result\") %>% \n                  bind_rows()\n\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    -0.464     0.196    -2.36   0.0201\n#> 2 snp2    -0.292     0.210    -1.39   0.169 \n#> 3 snp3     0.105     0.232     0.450  0.654"
+    "text": "The full, minimal workflow for a robust, parallel gwas\n\nplan(multiprocess, workers = 4)\n\nfit_model <- function(snp_name, dat) {\n      model_formula <- glue(\"coffees ~ {snp_name}\")\n      fit <- lm(model_formula, data = dat) %>% \n                  broom::tidy() %>% \n                  filter(term == snp_name)\n      return(fit)\n}\n\nfit_model_safely <- purrr::safely(fit_model)\ngwas <- future_map(snp_names, fit_model_safely, dat) %>% \n                  map(\"result\") %>% \n                  bind_rows()\n\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1   0.0541      0.201    0.269    0.788\n#> 2 snp2   0.00721     0.221    0.0326   0.974\n#> 3 snp3  -0.0468      0.205   -0.228    0.820"
   },
   {
     "objectID": "posts/magic_map/index.html#general-thoughts-about-map",
     "href": "posts/magic_map/index.html#general-thoughts-about-map",
-    "title": "magic map",
+    "title": "map()-magic",
     "section": "General thoughts about map",
     "text": "General thoughts about map\nWhen to use map?\n\nWhenever more than two lines of code look similar, whenever a for loop needs two cups of coffee to be understood, map will be on your side\n\nCan every for-loop be replaced by a function and map?\n\nI think yes, but it becomes less practical when an iteration depends on the previous iteration, though I rarely encounter that problem\n\nWhat about the base R functions apply, sapply, lapply?\n\nlapply is very similar to map, though it lacks some very nice features which can be discovered over time. The other apply-functions can give surprising results, except for vapply, which is concise but slightly more complicated.\n\nWhat about map_df, map_lgl, map_dbl and all the other maps?\n\nAll these functions differ in what their output is. However, the list resulting from simple map() can easily be transformed into any of these. After getting to grips with map, all the other maps fall into place.\n\nWhat if I have more than one vector or list as input?\n\nmap2() takes two vectors as input and pmap() takes any number of vectors as input. I’m using pmap() to iterate over rows in a data.frame, but this is stuff for another blogpost I think."
   },
   {
     "objectID": "posts/magic_map/index.html#where-to-go-from-here",
     "href": "posts/magic_map/index.html#where-to-go-from-here",
-    "title": "magic map",
+    "title": "map()-magic",
     "section": "Where to go from here",
     "text": "Where to go from here\n\nJenny Bryan’s purrr tutorials\nHadley Wickham’s “The joy of functional programming”\nR4DS chapter on iterations"
   },
@@ -88,7 +102,7 @@
     "href": "index.html",
     "title": "fantom filters",
     "section": "",
-    "text": "visualisation\n\n\ncode\n\n\n\n\nCreating a custom theme.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\n\n\nA functional programming workflow in R.\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "visualisation\n\n\ncode\n\n\n\n\nMake a custom theme!\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -98,10 +112,157 @@
     "text": "Hi, I’m Martin."
   },
   {
-    "objectID": "research.html#empirical-research",
-    "href": "research.html#empirical-research",
+    "objectID": "posts/test/index.html#test",
+    "href": "posts/test/index.html#test",
+    "title": "test",
+    "section": "Test",
+    "text": "Test\nThis is a senseless paragraph.\n:link to senseless paragraph\n:link to wikipedia article"
+  },
+  {
+    "objectID": "posts/test/index.html#x-invisible",
+    "href": "posts/test/index.html#x-invisible",
+    "title": "test",
+    "section": ":x invisible",
+    "text": ":x invisible\nUse ## :x header to include :invisible2"
+  },
+  {
+    "objectID": "posts/test/index.html#testing-links",
+    "href": "posts/test/index.html#testing-links",
+    "title": "test",
+    "section": "Testing links",
+    "text": "Testing links\n\n:link to senseless paragraph\n\n:link to wikipedia article\nThis is an :invisible section."
+  },
+  {
+    "objectID": "posts/test/index.html#y",
+    "href": "posts/test/index.html#y",
+    "title": "test",
+    "section": ":y",
+    "text": ":y"
+  },
+  {
+    "objectID": "posts/test/index.html#y-invisible",
+    "href": "posts/test/index.html#y-invisible",
+    "title": "test",
+    "section": ":y invisible",
+    "text": ":y invisible\nThis is a y invisible"
+  },
+  {
+    "objectID": "posts/test/index.html#y-invisible2",
+    "href": "posts/test/index.html#y-invisible2",
+    "title": "test",
+    "section": ":y invisible2",
+    "text": ":y invisible2\nThis is a y invisible"
+  },
+  {
+    "objectID": "posts/test/index.html#x-invisible2",
+    "href": "posts/test/index.html#x-invisible2",
+    "title": "test",
+    "section": ":x invisible2",
+    "text": ":x invisible2\nThis is a y invisible"
+  },
+  {
+    "objectID": "research.html#x-inbreeding_depression",
+    "href": "research.html#x-inbreeding_depression",
     "title": "fantom filters",
-    "section": "Empirical research",
-    "text": "Empirical research\n1) Genetic basis and effect size of inbreeding depression in the wild.\nNat Comms (2021), Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.\n\n\n\n\n \n\n\n\n2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n3) Longer runs of homozygosity are more deleterious, because their haplotypes are younger.\nEvol. Letters (2021)\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n2) The early life gut microbium predicts extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n2) Industrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the carribean monk seal and the japanese sea lion), others have lost most of their diversity.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better.\n\n\n\n\n \n\n\n\n3) Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nSkin chemicals covary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals."
+    "section": ":x inbreeding_depression",
+    "text": ":x inbreeding_depression\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.\n\n\n\n\n \n\n\n\n2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n3) Longer runs of homozygosity are more deleterious, because their haplotypes are younger.\nEvol. Letters (2021) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n2) The early life gut microbiome reflects extreme sex-differences in adult Northern Elephant Seals.\nMol Ecol (2020) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n2) Industrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the carribean monk seal and the japanese sea lion), others have lost most of their diversity.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better.\n\n\n\n\n \n\n\n\n3) Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nSkin chemicals covary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals."
+  },
+  {
+    "objectID": "research.html#x-id",
+    "href": "research.html#x-id",
+    "title": "fantom filters",
+    "section": ":x id",
+    "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "research.html#x-id_doubts",
+    "href": "research.html#x-id_doubts",
+    "title": "fantom filters",
+    "section": ":x id_doubts",
+    "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
+  },
+  {
+    "objectID": "research.html#x-nes",
+    "href": "research.html#x-nes",
+    "title": "fantom filters",
+    "section": ":x nes",
+    "text": ":x nes\nElephant seals have the largest sexual size dimorphism of any mammal.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
+  },
+  {
+    "objectID": "research.html#more-empirical-research",
+    "href": "research.html#more-empirical-research",
+    "title": "fantom filters",
+    "section": "More empirical research",
+    "text": "More empirical research\n2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code.\n:In a nutshell, :doubts"
+  },
+  {
+    "objectID": "research.html#d",
+    "href": "research.html#d",
+    "title": "fantom filters",
+    "section": "d",
+    "text": "d\n2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code.\n:In a nutshell, :doubts\n\n:x nes\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n:x nes_doubts\nSome doubts here"
+  },
+  {
+    "objectID": "research.html#section",
+    "href": "research.html#section",
+    "title": "fantom filters",
+    "section": "",
+    "text": "2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code.\n:In a nutshell, :doubts\n\n:x nes\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n:x nes_doubts\nSome doubts here"
+  },
+  {
+    "objectID": "research.html#x-nes_doubts",
+    "href": "research.html#x-nes_doubts",
+    "title": "fantom filters",
+    "section": ":x nes_doubts",
+    "text": ":x nes_doubts\nSome doubts here"
+  },
+  {
+    "objectID": "research.html#x-bot",
+    "href": "research.html#x-bot",
+    "title": "fantom filters",
+    "section": ":x bot",
+    "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
+  },
+  {
+    "objectID": "research.html#x-bot_doubts",
+    "href": "research.html#x-bot_doubts",
+    "title": "fantom filters",
+    "section": ":x bot_doubts",
+    "text": ":x bot_doubts\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better."
+  },
+  {
+    "objectID": "research.html#x-chem",
+    "href": "research.html#x-chem",
+    "title": "fantom filters",
+    "section": ":x chem",
+    "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
+  },
+  {
+    "objectID": "research.html#x-chem_doubts",
+    "href": "research.html#x-chem_doubts",
+    "title": "fantom filters",
+    "section": ":x chem_doubts",
+    "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals."
+  },
+  {
+    "objectID": "research.html#x-roh",
+    "href": "research.html#x-roh",
+    "title": "fantom filters",
+    "section": ":x roh",
+    "text": ":x roh\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "research.html#x-roh_doubts",
+    "href": "research.html#x-roh_doubts",
+    "title": "fantom filters",
+    "section": ":x roh_doubts",
+    "text": ":x roh_doubts"
+  },
+  {
+    "objectID": "research.html#x-partr2",
+    "href": "research.html#x-partr2",
+    "title": "fantom filters",
+    "section": ":x partR2",
+    "text": ":x partR2\nWhen using a :mixed model, we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements one possible solution to estimate the semi-partial R2 in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the manual).\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
   }
 ]

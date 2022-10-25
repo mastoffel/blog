@@ -29,7 +29,6 @@ format:
     
 highlight-style: kate
 callout-appearance: minimal
-callout-icon: false
 
 editor: visual
 
