@@ -25,5 +25,8 @@
   },
   "posts/test/index.qmd": {
     "index.html": "181325ab"
+  },
+  "posts/test/index.rmarkdown": {
+    "index.html": "4245e047"
   }
 }

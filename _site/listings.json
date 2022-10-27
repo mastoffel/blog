@@ -2,7 +2,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/test/index.html",
       "/posts/ggplot_theme/making_a_ggplot_theme.html",
       "/posts/magic_map/index.html"
     ]

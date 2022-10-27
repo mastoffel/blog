@@ -1,9 +1,0 @@
----
-title: "test"
-editor: visual
-draft: true
----
-
-This is a draft
-
-

@@ -98,6 +98,27 @@
     "text": ":x partR2\nWhen using a :mixed model, we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements one possible solution to estimate the semi-partial R2 in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the manual).\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
   },
   {
+    "objectID": "research.html#x-rptR",
+    "href": "research.html#x-rptR",
+    "title": "fantom filters",
+    "section": ":x rptR",
+    "text": ":x rptR\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
+  },
+  {
+    "objectID": "research.html#x-inbreedR",
+    "href": "research.html#x-inbreedR",
+    "title": "fantom filters",
+    "section": ":x inbreedR",
+    "text": ":x inbreedR"
+  },
+  {
+    "objectID": "research.html#x-GCalignR",
+    "href": "research.html#x-GCalignR",
+    "title": "fantom filters",
+    "section": ":x GCalignR",
+    "text": ":x GCalignR"
+  },
+  {
     "objectID": "posts/ggplot_theme/making_a_ggplot_theme.html",
     "href": "posts/ggplot_theme/making_a_ggplot_theme.html",
     "title": "Always changing the default ggplot?",
@@ -180,26 +201,5 @@
     "title": "About",
     "section": "",
     "text": "Hi, I’m Martin."
-  },
-  {
-    "objectID": "research.html#x-rptR",
-    "href": "research.html#x-rptR",
-    "title": "fantom filters",
-    "section": ":x rptR",
-    "text": ":x rptR\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
-  },
-  {
-    "objectID": "research.html#x-inbreedR",
-    "href": "research.html#x-inbreedR",
-    "title": "fantom filters",
-    "section": ":x inbreedR",
-    "text": ":x inbreedR"
-  },
-  {
-    "objectID": "research.html#x-GCalignR",
-    "href": "research.html#x-GCalignR",
-    "title": "fantom filters",
-    "section": ":x GCalignR",
-    "text": ":x GCalignR"
   }
 ]
