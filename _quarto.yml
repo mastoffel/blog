@@ -17,6 +17,7 @@ website:
       #- icon: twitter
         #href: https://twitter.com
   favicon: favicon.png
+  google-analytics: "G-FYLF41PFGT"
 format:
   html:
     theme: custom.scss
@@ -29,6 +30,6 @@ format:
     
 highlight-style: kate
 callout-appearance: minimal
-
+  
 editor: visual
 

@@ -8,8 +8,7 @@ filters:
 
 ## Empirical research
 
-Selected papers with simplified titles. Thinking back, I should
-have probably chosen those titles in the first place. Full publication list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao).
+Selected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao).
 
 1\) [**Long runs of homozygosity have a higher mutation load because their haplotypes are younger**](https://onlinelibrary.wiley.com/doi/full/10.1002/evl3.229).\
 *Evol Letters* (2021) \| [Code](https://github.com/mastoffel/sheep_roh)\
@@ -31,76 +30,76 @@ have probably chosen those titles in the first place. Full publication list [her
 *PNAS* (2015) \| [Code](https://github.com/mastoffel/seal_chemical_fingerprints/blob/master/analysis_markdown.pdf) \| Article in the [Sueddeutsche Zeitung](https://www.sueddeutsche.de/wissen/biologie-wie-robben-einander-finden-1.2604289).\
 [:In a nutshell](#x-chem), [:doubts](#x-chem_doubts)
 
-
 ## Software
 
 `partR2`: partitioning R^2^ in mixed models.\
-[paper](https://peerj.com/articles/11414/), [package](https://github.com/mastoffel/partR2), 
-[:In a nutshell](#x-partR2)
+[package](https://github.com/mastoffel/partR2), [paper](https://peerj.com/articles/11414/), [:In a nutshell](#x-partR2)
 
 `rptR`: repeatability estimation and variance decomposition in mixed models.\
-[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12797), [package](https://github.com/mastoffel/rptR)
+[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12797), [package](https://github.com/mastoffel/rptR), [:In a nutshell](#x-rptR) 
 
 `inbreedR`: analysing inbreeding with sparse genetic markers.\
-[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12588), [package](https://github.com/mastoffel/inbreedR)
+[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12588), [package](https://github.com/mastoffel/inbreedR), [:In a nutshell](#x-inbreedR)
 
 `GCalignR`:aligning gas-chromatography data from messy field samples.\
-[article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR)
+[article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR), [:In a nutshell](#x-GCalignR)
 
+## :x roh {#x-roh}
 
+*Authors* \| **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
 
-## :x roh
+## :x roh_doubts {#x-roh_doubts}
 
-*Authors* | **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
+## :x id {#x-id}
 
-## :x roh_doubts
+We know that inbreeding is bad for offspring fitness since [Darwin](https://charles-darwin.classic-literature.co.uk/the-effects-of-cross-and-self-fertilisation/) or maybe even since [biblical times](https://en.wikipedia.org/wiki/Incest_in_the_Bible#:~:text=Incest%20in%20the%20Bible%20refers,21%2C%20but%20also%20in%20Deuteronomy.). The phenomenon is called **inbreeding depression** and is relevant not just for animals but also for [humans](https://www.nature.com/articles/s41467-019-12283-6). Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.
 
+*Authors* \| **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
 
-## :x id 
-
-We know that inbreeding is bad for offspring fitness since [Darwin](https://charles-darwin.classic-literature.co.uk/the-effects-of-cross-and-self-fertilisation/) or maybe even since [biblical times](https://en.wikipedia.org/wiki/Incest_in_the_Bible#:~:text=Incest%20in%20the%20Bible%20refers,21%2C%20but%20also%20in%20Deuteronomy.). The phenomenon is called **inbreeding depression** and is relevant not just for animals but also for [humans](https://www.nature.com/articles/s41467-019-12283-6). Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.  
-
-*Authors* | **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
-
-## :x id_doubts 
+## :x id_doubts {#x-id_doubts}
 
 The genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I'm currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.
 
-
-
-## :x nes 
+## :x nes {#x-nes}
 
 Elephant seals have the largest sexual size dimorphism of any mammal.
 
-*Authors* | **Martin A Stoffel**, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman
+*Authors* \| **Martin A Stoffel**, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman
 
-## :x nes_doubts 
+## :x nes_doubts {#x-nes_doubts}
 
 Some doubts here
 
+## :x bot {#x-bot}
 
-
-## :x bot 
 The scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.
 
-*Authors* | **MA Stoffel**, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman
+*Authors* \| **MA Stoffel**, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman
 
-
-## :x bot_doubts
+## :x bot_doubts {#x-bot_doubts}
 
 To reconstruct the population histories of each species, we used **Approximate Bayesian Computation (ABC)**. The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be *good*. Alternative, untested population histories could have explained the patterns equally well or better.
 
+## :x chem {#x-chem}
 
-
-## :x chem
 Fur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (`GCalignR`, see below) and borrowed analytical methods from psychology.
 
-*Authors* | **Martin A Stoffel**, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman
+*Authors* \| **Martin A Stoffel**, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman
 
-## :x chem_doubts
+## :x chem_doubts {#x-chem_doubts}
+
 Skin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn't mean these 'signals' are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals.
 
-## :x partR2
+## :x partR2 {#x-partr2}
+
 When using a [:mixed model](https://en.wikipedia.org/wiki/Mixed_model), we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements *one* possible solution to estimate the semi-partial R^2^ in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the [manual](https://cran.r-project.org/web/packages/partR2/vignettes/Using_partR2.html)).
 
-*Authors* | *MA Stoffel*, S Nakagawa, H Schielzeth
+*Authors* \| **MA Stoffel**, S Nakagawa, H Schielzeth
+
+## :x rptR {#x-rptR}
+
+*Authors* \| **MA Stoffel**, S Nakagawa, H Schielzeth
+
+## :x inbreedR {#x-inbreedR}
+
+## :x GCalignR {#x-GCalignR}

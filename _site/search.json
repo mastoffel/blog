@@ -18,14 +18,84 @@
     "href": "research.html#software",
     "title": "fantom filters",
     "section": "Software",
-    "text": "Software\npartR2: partitioning R2 in mixed models.\npaper, package, :In a nutshell\nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package\ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package\nGCalignR:aligning gas-chromatography data from messy field samples.\narticle, package"
+    "text": "Software\npartR2: partitioning R2 in mixed models.\npackage, paper, :In a nutshell\nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package, :In a nutshell\ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package, :In a nutshell\nGCalignR:aligning gas-chromatography data from messy field samples.\narticle, package, :In a nutshell"
   },
   {
-    "objectID": "posts/test/index.html",
-    "href": "posts/test/index.html",
-    "title": "test",
-    "section": "",
-    "text": "This is a senseless paragraph."
+    "objectID": "research.html#x-roh",
+    "href": "research.html#x-roh",
+    "title": "fantom filters",
+    "section": ":x roh",
+    "text": ":x roh\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "research.html#x-roh_doubts",
+    "href": "research.html#x-roh_doubts",
+    "title": "fantom filters",
+    "section": ":x roh_doubts",
+    "text": ":x roh_doubts"
+  },
+  {
+    "objectID": "research.html#x-id",
+    "href": "research.html#x-id",
+    "title": "fantom filters",
+    "section": ":x id",
+    "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "research.html#x-id_doubts",
+    "href": "research.html#x-id_doubts",
+    "title": "fantom filters",
+    "section": ":x id_doubts",
+    "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
+  },
+  {
+    "objectID": "research.html#x-nes",
+    "href": "research.html#x-nes",
+    "title": "fantom filters",
+    "section": ":x nes",
+    "text": ":x nes\nElephant seals have the largest sexual size dimorphism of any mammal.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
+  },
+  {
+    "objectID": "research.html#x-nes_doubts",
+    "href": "research.html#x-nes_doubts",
+    "title": "fantom filters",
+    "section": ":x nes_doubts",
+    "text": ":x nes_doubts\nSome doubts here"
+  },
+  {
+    "objectID": "research.html#x-bot",
+    "href": "research.html#x-bot",
+    "title": "fantom filters",
+    "section": ":x bot",
+    "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
+  },
+  {
+    "objectID": "research.html#x-bot_doubts",
+    "href": "research.html#x-bot_doubts",
+    "title": "fantom filters",
+    "section": ":x bot_doubts",
+    "text": ":x bot_doubts\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better."
+  },
+  {
+    "objectID": "research.html#x-chem",
+    "href": "research.html#x-chem",
+    "title": "fantom filters",
+    "section": ":x chem",
+    "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
+  },
+  {
+    "objectID": "research.html#x-chem_doubts",
+    "href": "research.html#x-chem_doubts",
+    "title": "fantom filters",
+    "section": ":x chem_doubts",
+    "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals."
+  },
+  {
+    "objectID": "research.html#x-partr2",
+    "href": "research.html#x-partr2",
+    "title": "fantom filters",
+    "section": ":x partR2",
+    "text": ":x partR2\nWhen using a :mixed model, we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements one possible solution to estimate the semi-partial R2 in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the manual).\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
   },
   {
     "objectID": "posts/ggplot_theme/making_a_ggplot_theme.html",
@@ -112,157 +182,24 @@
     "text": "Hi, I’m Martin."
   },
   {
-    "objectID": "posts/test/index.html#test",
-    "href": "posts/test/index.html#test",
-    "title": "test",
-    "section": "Test",
-    "text": "Test\nThis is a senseless paragraph.\n:link to senseless paragraph\n:link to wikipedia article"
-  },
-  {
-    "objectID": "posts/test/index.html#x-invisible",
-    "href": "posts/test/index.html#x-invisible",
-    "title": "test",
-    "section": ":x invisible",
-    "text": ":x invisible\nUse ## :x header to include :invisible2"
-  },
-  {
-    "objectID": "posts/test/index.html#testing-links",
-    "href": "posts/test/index.html#testing-links",
-    "title": "test",
-    "section": "Testing links",
-    "text": "Testing links\n\n:link to senseless paragraph\n\n:link to wikipedia article\nThis is an :invisible section."
-  },
-  {
-    "objectID": "posts/test/index.html#y",
-    "href": "posts/test/index.html#y",
-    "title": "test",
-    "section": ":y",
-    "text": ":y"
-  },
-  {
-    "objectID": "posts/test/index.html#y-invisible",
-    "href": "posts/test/index.html#y-invisible",
-    "title": "test",
-    "section": ":y invisible",
-    "text": ":y invisible\nThis is a y invisible"
-  },
-  {
-    "objectID": "posts/test/index.html#y-invisible2",
-    "href": "posts/test/index.html#y-invisible2",
-    "title": "test",
-    "section": ":y invisible2",
-    "text": ":y invisible2\nThis is a y invisible"
-  },
-  {
-    "objectID": "posts/test/index.html#x-invisible2",
-    "href": "posts/test/index.html#x-invisible2",
-    "title": "test",
-    "section": ":x invisible2",
-    "text": ":x invisible2\nThis is a y invisible"
-  },
-  {
-    "objectID": "research.html#x-inbreeding_depression",
-    "href": "research.html#x-inbreeding_depression",
+    "objectID": "research.html#x-rptR",
+    "href": "research.html#x-rptR",
     "title": "fantom filters",
-    "section": ":x inbreeding_depression",
-    "text": ":x inbreeding_depression\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.\n\n\n\n\n \n\n\n\n2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n3) Longer runs of homozygosity are more deleterious, because their haplotypes are younger.\nEvol. Letters (2021) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n2) The early life gut microbiome reflects extreme sex-differences in adult Northern Elephant Seals.\nMol Ecol (2020) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n2) Industrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the carribean monk seal and the japanese sea lion), others have lost most of their diversity.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better.\n\n\n\n\n \n\n\n\n3) Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung\n\n\n\n\n\n\n\n\nshort and sweet\n\n\n\n\n\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\n\n\n\n\n\n\n\n\n\ndoubts\n\n\n\n\n\nSkin chemicals covary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals."
+    "section": ":x rptR",
+    "text": ":x rptR\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
   },
   {
-    "objectID": "research.html#x-id",
-    "href": "research.html#x-id",
+    "objectID": "research.html#x-inbreedR",
+    "href": "research.html#x-inbreedR",
     "title": "fantom filters",
-    "section": ":x id",
-    "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+    "section": ":x inbreedR",
+    "text": ":x inbreedR"
   },
   {
-    "objectID": "research.html#x-id_doubts",
-    "href": "research.html#x-id_doubts",
+    "objectID": "research.html#x-GCalignR",
+    "href": "research.html#x-GCalignR",
     "title": "fantom filters",
-    "section": ":x id_doubts",
-    "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
-  },
-  {
-    "objectID": "research.html#x-nes",
-    "href": "research.html#x-nes",
-    "title": "fantom filters",
-    "section": ":x nes",
-    "text": ":x nes\nElephant seals have the largest sexual size dimorphism of any mammal.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
-  },
-  {
-    "objectID": "research.html#more-empirical-research",
-    "href": "research.html#more-empirical-research",
-    "title": "fantom filters",
-    "section": "More empirical research",
-    "text": "More empirical research\n2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code.\n:In a nutshell, :doubts"
-  },
-  {
-    "objectID": "research.html#d",
-    "href": "research.html#d",
-    "title": "fantom filters",
-    "section": "d",
-    "text": "d\n2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code.\n:In a nutshell, :doubts\n\n:x nes\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n:x nes_doubts\nSome doubts here"
-  },
-  {
-    "objectID": "research.html#section",
-    "href": "research.html#section",
-    "title": "fantom filters",
-    "section": "",
-    "text": "2) Early life gut microbes predict extreme sex-differences in Northern Elephant Seals.\nMol Ecol (2020) | Code.\n:In a nutshell, :doubts\n\n:x nes\nElephant seals have the largest sexual size dimorphism of any mammal.\n\n\n:x nes_doubts\nSome doubts here"
-  },
-  {
-    "objectID": "research.html#x-nes_doubts",
-    "href": "research.html#x-nes_doubts",
-    "title": "fantom filters",
-    "section": ":x nes_doubts",
-    "text": ":x nes_doubts\nSome doubts here"
-  },
-  {
-    "objectID": "research.html#x-bot",
-    "href": "research.html#x-bot",
-    "title": "fantom filters",
-    "section": ":x bot",
-    "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
-  },
-  {
-    "objectID": "research.html#x-bot_doubts",
-    "href": "research.html#x-bot_doubts",
-    "title": "fantom filters",
-    "section": ":x bot_doubts",
-    "text": ":x bot_doubts\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better."
-  },
-  {
-    "objectID": "research.html#x-chem",
-    "href": "research.html#x-chem",
-    "title": "fantom filters",
-    "section": ":x chem",
-    "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
-  },
-  {
-    "objectID": "research.html#x-chem_doubts",
-    "href": "research.html#x-chem_doubts",
-    "title": "fantom filters",
-    "section": ":x chem_doubts",
-    "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals."
-  },
-  {
-    "objectID": "research.html#x-roh",
-    "href": "research.html#x-roh",
-    "title": "fantom filters",
-    "section": ":x roh",
-    "text": ":x roh\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
-  },
-  {
-    "objectID": "research.html#x-roh_doubts",
-    "href": "research.html#x-roh_doubts",
-    "title": "fantom filters",
-    "section": ":x roh_doubts",
-    "text": ":x roh_doubts"
-  },
-  {
-    "objectID": "research.html#x-partr2",
-    "href": "research.html#x-partr2",
-    "title": "fantom filters",
-    "section": ":x partR2",
-    "text": ":x partR2\nWhen using a :mixed model, we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements one possible solution to estimate the semi-partial R2 in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the manual).\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
+    "section": ":x GCalignR",
+    "text": ":x GCalignR"
   }
 ]
