@@ -23,10 +23,11 @@ format:
     theme: custom.scss
     css: styles.css
     #mainfont: "Open Sans"
-    #monofont: "Avenir"
+    #monofont: "JetBrainsMono"
     footnotes-hover: true
-    fontsize: 1em
+    fontsize: 1.1em
     linkcolor: "black"
+    linestretch: 1.7
     
 highlight-style: kate
 callout-appearance: minimal
