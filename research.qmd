@@ -10,45 +10,79 @@ filters:
 
 Selected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao).
 
-1\) [**Long runs of homozygosity have a higher mutation load because their haplotypes are younger**](https://onlinelibrary.wiley.com/doi/full/10.1002/evl3.229).\
+[**Long runs of homozygosity have a higher mutation load because their haplotypes are younger**](https://onlinelibrary.wiley.com/doi/full/10.1002/evl3.229).\
 *Evol Letters* (2021) \| [Code](https://github.com/mastoffel/sheep_roh)\
-[:In a nutshell](#x-roh), [:doubts](#x-roh_doubts)
+[:In a nutshell](#x-roh)
 
-2\) [**Effect size and genetic basis of inbreeding depression in a small, wild population**](https://www.nature.com/articles/s41467-021-23222-9).\
+[**Effect size and genetic basis of inbreeding depression in a small, wild population**](https://www.nature.com/articles/s41467-021-23222-9).\
 *Nat Comms* (2021) \| [Code](https://github.com/mastoffel/sheep_ID)\
 [:In a nutshell](#x-id), [:doubts](#x-id_doubts)
 
-3\) [**Early life gut microbiota predict extreme sex differences in Elephant Seals.**](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.15385)\
+[**Early life gut microbiota predict extreme sex differences in Elephant Seals.**](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.15385)\
 *Mol Ecol* (2020) \| [Code](https://github.com/mastoffel/nes_microbiome)\
 [:In a nutshell](#x-nes), [:doubts](#x-nes_doubts)
 
-4\) [**Industrial exploitation brought one-third of pinniped species to the edge of extinction**](https://www.nature.com/articles/s41467-018-06695-z).\
+[**Industrial exploitation brought one-third of pinniped species to the edge of extinction**](https://www.nature.com/articles/s41467-018-06695-z).\
 *Nat Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)\
 [:In a nutshell](#x-bot), [:doubts](#x-bot_doubts)
 
-5\) [**Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.**](https://www.pnas.org/doi/abs/10.1073/pnas.1506076112)\
+[**Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.**](https://www.pnas.org/doi/abs/10.1073/pnas.1506076112)\
 *PNAS* (2015) \| [Code](https://github.com/mastoffel/seal_chemical_fingerprints/blob/master/analysis_markdown.pdf) \| Article in the [Sueddeutsche Zeitung](https://www.sueddeutsche.de/wissen/biologie-wie-robben-einander-finden-1.2604289).\
 [:In a nutshell](#x-chem), [:doubts](#x-chem_doubts)
 
 ## Software
 
 `partR2`: partitioning R^2^ in mixed models.\
-[package](https://github.com/mastoffel/partR2), [paper](https://peerj.com/articles/11414/), [:In a nutshell](#x-partR2)
+[package](https://github.com/mastoffel/partR2), [paper](https://peerj.com/articles/11414/), [:In a nutshell](#x-partR2)  
+![Build
+Status](https://travis-ci.org/mastoffel/partR2.svg?branch=master)
+[![CRAN total
+downloads](http://cranlogs.r-pkg.org/badges/grand-total/partR2?color=blue)](https://cran.r-project.org/package=partR2)
+[![Monthly downloads
+badge](https://cranlogs.r-pkg.org/badges/last-month/partR2?color=blue)](https://CRAN.R-project.org/package=partR2)
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Codecov test
+coverage](https://codecov.io/gh/mastoffel/partR2/branch/master/graph/badge.svg)](https://codecov.io/gh/mastoffel/partR2?branch=master)
+
 
 `rptR`: repeatability estimation and variance decomposition in mixed models.\
-[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12797), [package](https://github.com/mastoffel/rptR), [:In a nutshell](#x-rptR) 
+[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12797), [package](https://github.com/mastoffel/rptR), [:In a nutshell](#x-rptR)  
+![Build Status](https://travis-ci.org/mastoffel/rptR.svg?branch=master)
+[![CRAN total
+downloads](http://cranlogs.r-pkg.org/badges/grand-total/rptR?color=blue)](https://cran.r-project.org/package=rptR)
+[![Monthly downloads
+badge](https://cranlogs.r-pkg.org/badges/last-month/rptR?color=blue)](https://CRAN.R-project.org/package=rptR)
+[![Codecov test
+coverage](https://codecov.io/gh/mastoffel/rptR/branch/master/graph/badge.svg)](https://codecov.io/gh/mastoffel/rptR?branch=master)
+
 
 `inbreedR`: analysing inbreeding with sparse genetic markers.\
-[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12588), [package](https://github.com/mastoffel/inbreedR), [:In a nutshell](#x-inbreedR)
+[paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12588), [package](https://github.com/mastoffel/inbreedR), [:In a nutshell](#x-inbreedR)  
+![Build
+Status](https://travis-ci.org/mastoffel/inbreedR.svg?branch=master)
+[![CRAN total
+downloads](http://cranlogs.r-pkg.org/badges/grand-total/inbreedR?color=blue)](https://cran.r-project.org/package=inbreedR)
+[![Codecov test
+coverage](https://codecov.io/gh/mastoffel/inbreedR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/mastoffel/inbreedR?branch=master)
+
 
 `GCalignR`:aligning gas-chromatography data from messy field samples.\
-[article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR), [:In a nutshell](#x-GCalignR)
+[article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR), [:In a nutshell](#x-GCalignR)  
+![Build
+Status](https://travis-ci.org/mottensmann/GCalignR.svg?branch=master)
+[![CRAN total
+downloads](http://cranlogs.r-pkg.org/badges/grand-total/GCalignR?color=blue)](https://cran.r-project.org/package=GCalignR)
+[![](https://img.shields.io/badge/Altmetric-13-Darkorange.svg)](https://www.altmetric.com/details/43624695)
+
 
 ## :x roh {#x-roh}
 
-*Authors* \| **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
+The fundamental question in this study was: Is the density of deleterious mutations in the genome higher in long runs of homozygosity (ROH)? If an individual inherits an ROH, this basically means that they inherited two copies the *very same* stretch of DNA (or haplotype) from both mum and dad. The longer such an ROH is, the fewer generations in thee past is it's most recent common ancestor haplotype. Therefore, natural selection had less time to remove potential deleterious mutations from this stretch of DNA.
 
-## :x roh_doubts {#x-roh_doubts}
+Our simulations and empirical data for thousands of wild Soay sheep showed exactly this. Long ROH have a higher density of deleterious mutations, their frequencies are lower, and the harmful effect of each single mutation is on average higher than those of mutations in short ROH.
+
+*Authors* \| **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
 
 ## :x id {#x-id}
 
@@ -58,17 +92,19 @@ We know that inbreeding is bad for offspring fitness since [Darwin](https://char
 
 ## :x id_doubts {#x-id_doubts}
 
-The genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I'm currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.
+The genetics of inbreeding depression is hard to study. Highly deleterious alleles are usually rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I'm currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are.
 
 ## :x nes {#x-nes}
 
-Elephant seals have the largest sexual size dimorphism of any mammal.
+[:Northern elephant seals](https://en.wikipedia.org/wiki/Northern_elephant_seal) have the second-largest sexual size dimorphism of any mammal (right after their Southern sister-species). Adult males can be 3-5 times as heavy as females. Why is that? Sexual selection has favored larger males because they are able to defend large harems of females on the beach against competitors.
+
+In young elephant seals (pups) you can't really spot a difference between males and females yet. However, when measuring their microbiome (the collection of bacteria in their guts) sampled with a very long cotton swab, we find very strong sex-differences from early on. This opens the possibility for microbes to provide an adaptation to these two very different life-histories of female and male elephant seals.
 
 *Authors* \| **Martin A Stoffel**, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman
 
 ## :x nes_doubts {#x-nes_doubts}
 
-Some doubts here
+One of the most important aspects of this study is that we ruled out that sex-differences in the gut microbiome are simply to due differences in diet, as all pups only ever fed on their mother's milk and were fasting at the time of sampling. Therefore, it's likely that male and female pups have a different gut microbiome due to intrinsic causes (genetics, physiology). However, this doesn't mean that these differences are also adaptive and functional for things like development or the immune system.
 
 ## :x bot {#x-bot}
 
@@ -88,18 +124,25 @@ Fur seal mothers have to find their own offspring in dense colonies among thousa
 
 ## :x chem_doubts {#x-chem_doubts}
 
-Skin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn't mean these 'signals' are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals.
+Skin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn't mean these 'signals' are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesising these chemical signals and doing behavioural experiments. However, we know at least that sea lions can recognise their pups by [scent alone](https://royalsocietypublishing.org/doi/full/10.1098/rsbl.2010.0569?casa_token=dXG4dwFcjzAAAAAA%3AEVn-FEa6i8ojfD4e2zvZPc1EcV94Mykn8S_5mZXPKCSyR2BW5AV3iu5Pak5IY8iGwZWcZDm8SPPp4Q).
 
 ## :x partR2 {#x-partr2}
 
-When using a [:mixed model](https://en.wikipedia.org/wiki/Mixed_model), we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements *one* possible solution to estimate the semi-partial R^2^ in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the [manual](https://cran.r-project.org/web/packages/partR2/vignettes/Using_partR2.html)).
+When using a [:mixed model](https://en.wikipedia.org/wiki/Mixed_model), we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements *one* possible solution to estimate the semi-partial R^2^ in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the [manual](https://cran.r-project.org/web/packages/partR2/vignettes/Using_partR2.html)). `partR2` really complements `rptR` in that both together make it possible to get a sense of where the variance goes in your model.
 
 *Authors* \| **MA Stoffel**, S Nakagawa, H Schielzeth
 
 ## :x rptR {#x-rptR}
 
+The repeatability is also called the [:intra-class coefficient](https://en.wikipedia.org/wiki/Intraclass_correlation#:~:text=In%20statistics%2C%20the%20intraclass%20correlation,same%20group%20resemble%20each%20other.). In hierarchical data, we can measure the impact of group differences on a response variable using the repeatability. Using mixed models, the repeatability is simply the variation explained by a random (group-level) effect. `rptR` has a few tricks up the sleeve to estimate repeatability, confidence intervals and p-values for the most common model types and error distributions.
+
 *Authors* \| **MA Stoffel**, S Nakagawa, H Schielzeth
 
 ## :x inbreedR {#x-inbreedR}
 
+Sometimes, one just doesn't have enough genetic markers to be sure about the measured inbreeding coefficients (i.e. when using microsatellites). `inbreedR` implements functions to estimate variance in inbreeding which gives some insights into whether the correlation between heterozygosity and fitness is actually due to (genome-wide) inbreeding or not.
+
 ## :x GCalignR {#x-GCalignR}
+
+Gas-chromatography samples from the field can be messy. They'll have different concentrations, and  lots of dirt in them. However, we usually want to know whether the same peak in each sample corresponds to the same substance. To do this, we need to align all samples. `GCalignR` provides a simple, rule based algorithm which requires a bit of manual input but then works well for a wide range of samples.
+

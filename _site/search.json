@@ -11,21 +11,21 @@
     "href": "research.html#empirical-research",
     "title": "fantom filters",
     "section": "Empirical research",
-    "text": "Empirical research\nSelected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list here.\n1) Long runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell, :doubts\n2) Effect size and genetic basis of inbreeding depression in a small, wild population.\nNat Comms (2021) | Code\n:In a nutshell, :doubts\n3) Early life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n4) Industrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code\n:In a nutshell, :doubts\n5) Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts"
+    "text": "Empirical research\nSelected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list here.\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\nEffect size and genetic basis of inbreeding depression in a small, wild population.\nNat Comms (2021) | Code\n:In a nutshell, :doubts\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code\n:In a nutshell, :doubts\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts"
   },
   {
     "objectID": "research.html#software",
     "href": "research.html#software",
     "title": "fantom filters",
     "section": "Software",
-    "text": "Software\npartR2: partitioning R2 in mixed models.\npackage, paper, :In a nutshell\nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package, :In a nutshell\ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package, :In a nutshell\nGCalignR:aligning gas-chromatography data from messy field samples.\narticle, package, :In a nutshell"
+    "text": "Software\npartR2: partitioning R2 in mixed models.\npackage, paper, :In a nutshell\n    \nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package, :In a nutshell\n   \ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package, :In a nutshell\n  \nGCalignR:aligning gas-chromatography data from messy field samples.\narticle, package, :In a nutshell"
   },
   {
     "objectID": "research.html#x-roh",
     "href": "research.html#x-roh",
     "title": "fantom filters",
     "section": ":x roh",
-    "text": ":x roh\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+    "text": ":x roh\nThe fundamental question in this study was: Is the density of deleterious mutations in the genome higher in long runs of homozygosity (ROH)? If an individual inherits an ROH, this basically means that they inherited two copies the very same stretch of DNA (or haplotype) from both mum and dad. The longer such an ROH is, the fewer generations in thee past is it’s most recent common ancestor haplotype. Therefore, natural selection had less time to remove potential deleterious mutations from this stretch of DNA.\nOur simulations and empirical data for thousands of wild Soay sheep showed exactly this. Long ROH have a higher density of deleterious mutations, their frequencies are lower, and the harmful effect of each single mutation is on average higher than those of mutations in short ROH.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
   },
   {
     "objectID": "research.html#x-roh_doubts",
@@ -46,21 +46,21 @@
     "href": "research.html#x-id_doubts",
     "title": "fantom filters",
     "section": ":x id_doubts",
-    "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are often recessive and rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
+    "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are usually rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
   },
   {
     "objectID": "research.html#x-nes",
     "href": "research.html#x-nes",
     "title": "fantom filters",
     "section": ":x nes",
-    "text": ":x nes\nElephant seals have the largest sexual size dimorphism of any mammal.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
+    "text": ":x nes\n:Northern elephant seals have the second-largest sexual size dimorphism of any mammal (right after their Southern sister-species). Adult males can be 3-5 times as heavy as females. Why is that? Sexual selection has favored larger males because they are able to defend large harems of females on the beach against competitors.\nIn young elephant seals (pups) you can’t really spot a difference between males and females yet. However, when measuring their microbiome (the collection of bacteria in their guts) sampled with a very long cotton swab, we find very strong sex-differences from early on. This opens the possibility for microbes to provide an adaptation to these two very different life-histories of female and male elephant seals.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
   },
   {
     "objectID": "research.html#x-nes_doubts",
     "href": "research.html#x-nes_doubts",
     "title": "fantom filters",
     "section": ":x nes_doubts",
-    "text": ":x nes_doubts\nSome doubts here"
+    "text": ":x nes_doubts\nOne of the most important aspects of this study is that we ruled out that sex-differences in the gut microbiome are simply to due differences in diet, as all pups only ever fed on their mother’s milk and were fasting at the time of sampling. Therefore, it’s likely that male and female pups have a different gut microbiome due to intrinsic causes (genetics, physiology). However, this doesn’t mean that these differences are also adaptive and functional for things like development or the immune system."
   },
   {
     "objectID": "research.html#x-bot",
@@ -88,35 +88,35 @@
     "href": "research.html#x-chem_doubts",
     "title": "fantom filters",
     "section": ":x chem_doubts",
-    "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesizing these chemical signals."
+    "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesising these chemical signals and doing behavioural experiments. However, we know at least that sea lions can recognise their pups by scent alone."
   },
   {
     "objectID": "research.html#x-partr2",
     "href": "research.html#x-partr2",
     "title": "fantom filters",
     "section": ":x partR2",
-    "text": ":x partR2\nWhen using a :mixed model, we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements one possible solution to estimate the semi-partial R2 in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the manual).\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
+    "text": ":x partR2\nWhen using a :mixed model, we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements one possible solution to estimate the semi-partial R2 in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the manual). partR2 really complements rptR in that both together make it possible to get a sense of where the variance goes in your model.\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
   },
   {
     "objectID": "research.html#x-rptR",
     "href": "research.html#x-rptR",
     "title": "fantom filters",
     "section": ":x rptR",
-    "text": ":x rptR\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
+    "text": ":x rptR\nThe repeatability is also called the :intra-class coefficient. In hierarchical data, we can measure the impact of group differences on a response variable using the repeatability. Using mixed models, the repeatability is simply the variation explained by a random (group-level) effect. rptR has a few tricks up the sleeve to estimate repeatability, confidence intervals and p-values for the most common model types and error distributions.\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
   },
   {
     "objectID": "research.html#x-inbreedR",
     "href": "research.html#x-inbreedR",
     "title": "fantom filters",
     "section": ":x inbreedR",
-    "text": ":x inbreedR"
+    "text": ":x inbreedR\nSometimes, one just doesn’t have enough genetic markers to be sure about the measured inbreeding coefficients (i.e. when using microsatellites). inbreedR implements functions to estimate variance in inbreeding which gives some insights into whether the correlation between heterozygosity and fitness is actually due to (genome-wide) inbreeding or not."
   },
   {
     "objectID": "research.html#x-GCalignR",
     "href": "research.html#x-GCalignR",
     "title": "fantom filters",
     "section": ":x GCalignR",
-    "text": ":x GCalignR"
+    "text": ":x GCalignR\nGas-chromatography samples from the field can be messy. They’ll have different concentrations, and lots of dirt in them. However, we usually want to know whether the same peak in each sample corresponds to the same substance. To do this, we need to align all samples. GCalignR provides a simple, rule based algorithm which requires a bit of manual input but then works well for a wide range of samples."
   },
   {
     "objectID": "posts/ggplot_theme/making_a_ggplot_theme.html",
