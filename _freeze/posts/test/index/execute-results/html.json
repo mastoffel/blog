@@ -1,11 +1,14 @@
 {
-  "hash": "3a35aaeaa7adea708a6e57975627a847",
+  "hash": "9a1ce58601fdd4ea0b259b45ff9390f0",
   "result": {
-    "markdown": "---\ntitle: \"index\"\neditor: visual\n---\n\nThis is a Python code block:\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![A line plot on a polar axis](index_files/figure-html/fig-polar-output-1.png){#fig-polar width=443 height=432}\n:::\n:::\n\n\n",
-    "supporting": [
-      "index_files"
+    "markdown": "---\ntitle: \"exploration\"\ndescription: \"testest\"\ndraft: true\n---\n\n\n::: panel-tabset\n\n### R dplyr\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\n# subset a few columns for simplicity\nsw <- starwars[, 1:7]\n```\n:::\n\n\n### Python pandas\n\n::: {.cell}\n\n```{.python .cell-code}\nimport pandas as pd\n# this imports the sw dataset from the R code chunk\nsw = r.sw\n```\n:::\n\n:::\n\n## Subset rows and columns by index\n\n::: panel-tabset\n\n### dplyr\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# rows\nsw[1:3, ]\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 3 x 7\n  name           height  mass hair_color skin_color  eye_color birth_year\n  <chr>           <int> <dbl> <chr>      <chr>       <chr>          <dbl>\n1 Luke Skywalker    172    77 blond      fair        blue              19\n2 C-3PO             167    75 <NA>       gold        yellow           112\n3 R2-D2              96    32 <NA>       white, blue red               33\n```\n:::\n\n```{.r .cell-code}\n# columns\nsw[, 1:3]\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 87 x 3\n   name               height  mass\n   <chr>               <int> <dbl>\n 1 Luke Skywalker        172    77\n 2 C-3PO                 167    75\n 3 R2-D2                  96    32\n 4 Darth Vader           202   136\n 5 Leia Organa           150    49\n 6 Owen Lars             178   120\n 7 Beru Whitesun lars    165    75\n 8 R5-D4                  97    32\n 9 Biggs Darklighter     183    84\n10 Obi-Wan Kenobi        182    77\n# … with 77 more rows\n```\n:::\n:::\n\n\n### pandas\n\n\n::: {.cell}\n\n```{.python .cell-code}\n# rows\nsw.iloc[0:3]   \n# columns\n```\n\n```{.python .cell-code}\nsw.iloc[:, 0:3]\n```\n:::\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
     ],
-    "filters": [],
-    "includes": {}
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
   }
 }

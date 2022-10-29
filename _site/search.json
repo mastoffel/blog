@@ -28,13 +28,6 @@
     "text": ":x roh\nThe fundamental question in this study was: Is the density of deleterious mutations in the genome higher in long runs of homozygosity (ROH)? If an individual inherits an ROH, this basically means that they inherited two copies the very same stretch of DNA (or haplotype) from both mum and dad. The longer such an ROH is, the fewer generations in thee past is it’s most recent common ancestor haplotype. Therefore, natural selection had less time to remove potential deleterious mutations from this stretch of DNA.\nOur simulations and empirical data for thousands of wild Soay sheep showed exactly this. Long ROH have a higher density of deleterious mutations, their frequencies are lower, and the harmful effect of each single mutation is on average higher than those of mutations in short ROH.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
   },
   {
-    "objectID": "research.html#x-roh_doubts",
-    "href": "research.html#x-roh_doubts",
-    "title": "fantom filters",
-    "section": ":x roh_doubts",
-    "text": ":x roh_doubts"
-  },
-  {
     "objectID": "research.html#x-id",
     "href": "research.html#x-id",
     "title": "fantom filters",
@@ -189,17 +182,17 @@
     "text": "Where to go from here\n\nJenny Bryan’s purrr tutorials\nHadley Wickham’s “The joy of functional programming”\nR4DS chapter on iterations"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "fantom filters",
-    "section": "",
-    "text": "visualisation\n\n\ncode\n\n\n\n\nMake a custom theme!\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n \n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "Hi, I’m Martin."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "fantom filters",
+    "section": "",
+    "text": "Make a custom theme!\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n \n\n\n\n\nNo matching items"
   }
 ]

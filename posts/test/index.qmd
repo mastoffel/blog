@@ -1,0 +1,47 @@
+---
+title: "exploration"
+description: "testest"
+draft: true
+---
+
+::: panel-tabset
+
+### R dplyr
+
+```{r, message=FALSE}
+library(dplyr)
+# subset a few columns for simplicity
+sw <- starwars[, 1:7]
+```
+
+### Python pandas
+```{python}
+import pandas as pd
+# this imports the sw dataset from the R code chunk
+sw = r.sw
+```
+:::
+
+## Subset rows and columns by index
+
+::: panel-tabset
+
+### dplyr
+
+```{r, message=FALSE}
+# rows
+sw[1:3, ]
+# columns
+sw[, 1:3]
+```
+
+### pandas
+
+```{python, results=FALSE}
+# rows
+sw.iloc[0:3]   
+# columns
+sw.iloc[:, 0:3]
+```
+
+:::
