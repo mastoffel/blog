@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="testest">
+<meta name="description" content="r &amp; python">
 
-<title>fantom filters - exploration</title>
+<title>fantom filters - data.frame stuff in dplyr vs.&nbsp;pandas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -173,10 +173,10 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">exploration</h1>
+      <h1 class="title">data.frame stuff in dplyr vs.&nbsp;pandas</h1>
                   <div>
         <div class="description">
-          testest
+          r &amp; python
         </div>
       </div>
                 </div>
@@ -200,8 +200,10 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 
 
 
+<section id="load-data" class="level3">
+<h3 class="anchored" data-anchor-id="load-data">load data</h3>
 <div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">R dplyr</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python pandas</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">dplyr</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">pandas</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
@@ -219,49 +221,142 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<section id="subset-rows-and-columns-by-index" class="level2">
-<h2 class="anchored" data-anchor-id="subset-rows-and-columns-by-index">Subset rows and columns by index</h2>
+</section>
+<section id="subset-rows-and-columns-by-index" class="level3">
+<h3 class="anchored" data-anchor-id="subset-rows-and-columns-by-index">Subset rows and columns by index</h3>
 <div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">dplyr</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">pandas</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><code>slice</code> rows by index, <code>select</code> columns by index or name.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rows</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sw[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sw <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>      <span class="co"># rows</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="co"># columns</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 x 7
-  name           height  mass hair_color skin_color  eye_color birth_year
-  &lt;chr&gt;           &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
-1 Luke Skywalker    172    77 blond      fair        blue              19
-2 C-3PO             167    75 &lt;NA&gt;       gold        yellow           112
-3 R2-D2              96    32 &lt;NA&gt;       white, blue red               33</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># columns</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sw[, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 87 x 3
-   name               height  mass
-   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt;
- 1 Luke Skywalker        172    77
- 2 C-3PO                 167    75
- 3 R2-D2                  96    32
- 4 Darth Vader           202   136
- 5 Leia Organa           150    49
- 6 Owen Lars             178   120
- 7 Beru Whitesun lars    165    75
- 8 R5-D4                  97    32
- 9 Biggs Darklighter     183    84
-10 Obi-Wan Kenobi        182    77
-# … with 77 more rows</code></pre>
+<pre><code># A tibble: 3 x 3
+  name           height  mass
+  &lt;chr&gt;           &lt;int&gt; &lt;dbl&gt;
+1 Luke Skywalker    172    77
+2 C-3PO             167    75
+3 R2-D2              96    32</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><code>.iloc</code>, think <em>integer location</em> to subset rows and columns. For subsetting by name, use <code>loc</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rows</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sw.iloc[<span class="dv">0</span>:<span class="dv">3</span>]   </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># columns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sw.iloc[:, <span class="dv">0</span>:<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(sw   <span class="co"># rows</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>      .iloc[<span class="dv">0</span>:<span class="dv">3</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>       <span class="co"># columns</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      .iloc[:, <span class="dv">0</span>:<span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             name  height  mass
+0  Luke Skywalker     172  77.0
+1           C-3PO     167  75.0
+2           R2-D2      96  32.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="subset-rows-by-condition" class="level3">
+<h3 class="anchored" data-anchor-id="subset-rows-by-condition">Subset rows by condition</h3>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">dplyr</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">pandas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sw <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>((mass <span class="sc">&gt;</span> <span class="dv">100</span>) <span class="sc">&amp;</span> (height <span class="sc">&gt;</span> <span class="dv">200</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 x 7
+  name        height  mass hair_color skin_color   eye_color     birth_year
+  &lt;chr&gt;        &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;              &lt;dbl&gt;
+1 Darth Vader    202   136 none       white        yellow              41.9
+2 Chewbacca      228   112 brown      unknown      blue               200  
+3 Grievous       216   159 none       brown, white green, yellow       NA  
+4 Tarfful        234   136 brown      brown        blue                NA  </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sw[(sw.mass <span class="op">&gt;</span> <span class="dv">100</span>) <span class="op">&amp;</span> (sw.height <span class="op">&gt;</span> <span class="dv">200</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           name  height   mass  ...    skin_color      eye_color birth_year
+3   Darth Vader     202  136.0  ...         white         yellow       41.9
+12    Chewbacca     228  112.0  ...       unknown           blue      200.0
+76     Grievous     216  159.0  ...  brown, white  green, yellow        NaN
+77      Tarfful     234  136.0  ...         brown           blue        NaN
+
+[4 rows x 7 columns]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="group-by-and-summarise" class="level3">
+<h3 class="anchored" data-anchor-id="group-by-and-summarise">Group by and summarise</h3>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">dplyr</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">pandas</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sw <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">group_by</span>(eye_color) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">summarise</span>(<span class="at">mass_median =</span> <span class="fu">median</span>(mass, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">heigh_median =</span> <span class="fu">median</span>(height, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 15 x 3
+   eye_color     mass_median heigh_median
+   &lt;chr&gt;               &lt;dbl&gt;        &lt;dbl&gt;
+ 1 black                80            188
+ 2 blue                 81.5          180
+ 3 blue-gray            77            182
+ 4 brown                79            180
+ 5 dark                 NA             NA
+ 6 gold                 NA            191
+ 7 green, yellow       159            216
+ 8 hazel                66            174
+ 9 orange               74            184
+10 pink                 NA            180
+11 red                  90            190
+12 red, blue            NA             96
+13 unknown              31.5          136
+14 white                48            178
+15 yellow               80            175</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>(sw</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>      .groupby(<span class="st">'eye_color'</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>      .agg({<span class="st">'mass'</span>: <span class="st">'median'</span>, <span class="st">'height'</span>: <span class="st">'median'</span>}))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                mass        height
+eye_color                         
+black           80.0  1.830000e+02
+blue            81.5  1.800000e+02
+blue-gray       77.0  1.820000e+02
+brown           79.0  1.770000e+02
+dark             NaN -2.147484e+09
+gold             NaN  1.910000e+02
+green, yellow  159.0  2.160000e+02
+hazel           66.0  1.700000e+02
+orange          74.0  1.840000e+02
+pink             NaN  1.800000e+02
+red             90.0  1.900000e+02
+red, blue        NaN  9.600000e+01
+unknown         31.5  7.900000e+01
+white           48.0  1.780000e+02
+yellow          80.0  1.750000e+02</code></pre>
+</div>
 </div>
 </div>
 </div>

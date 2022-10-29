@@ -6,29 +6,57 @@ filters:
 
 *Under construction.*
 
-## Empirical research
-
 Selected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao).
+
+::: {layout="[25,85]"}
+
+![](pics/roh2.jpeg)
 
 [Long runs of homozygosity have a higher mutation load because their haplotypes are younger](https://onlinelibrary.wiley.com/doi/full/10.1002/evl3.229).\
 *Evol Letters* (2021) \| [Code](https://github.com/mastoffel/sheep_roh)\
 [:In a nutshell](#x-roh)
 
-[Effect size and genetic basis of inbreeding depression in a small, wild population](https://www.nature.com/articles/s41467-021-23222-9).\
+:::
+
+::: {layout="[25,85]"}
+
+![](pics/ID.jpeg)
+
+[Effect size and genetic basis of inbreeding depression in the wild](https://www.nature.com/articles/s41467-021-23222-9).\
 *Nat Comms* (2021) \| [Code](https://github.com/mastoffel/sheep_ID)\
 [:In a nutshell](#x-id), [:doubts](#x-id_doubts)
+
+:::
+
+::: {layout="[25,85]"}
+
+![](pics/nes_young.jpeg)
 
 [Early life gut microbiota predict extreme sex differences in Elephant Seals.](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.15385)\
 *Mol Ecol* (2020) \| [Code](https://github.com/mastoffel/nes_microbiome)\
 [:In a nutshell](#x-nes), [:doubts](#x-nes_doubts)
 
+:::
+
+::: {layout="[25,85]"}
+
+![](pics/pin_phylo2.jpeg)
+
 [Industrial exploitation brought one-third of pinniped species to the edge of extinction](https://www.nature.com/articles/s41467-018-06695-z).\
 *Nat Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)\
 [:In a nutshell](#x-bot), [:doubts](#x-bot_doubts)
 
+:::
+
+::: {layout="[25,85]"}
+
+![](pics/afs2.jpeg)
+
 [Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.](https://www.pnas.org/doi/abs/10.1073/pnas.1506076112)\
 *PNAS* (2015) \| [Code](https://github.com/mastoffel/seal_chemical_fingerprints/blob/master/analysis_markdown.pdf) \| Article in the [Sueddeutsche Zeitung](https://www.sueddeutsche.de/wissen/biologie-wie-robben-einander-finden-1.2604289).\
 [:In a nutshell](#x-chem), [:doubts](#x-chem_doubts)
+
+:::
 
 ## Software
 
