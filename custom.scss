@@ -1,16 +1,16 @@
 /*-- scss:defaults --*/
 
 // use litera as the base
-$theme: "litera" !default;
+$theme: "simplex" !default;
 
 // import google fonts
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Avenir');
 @import url('https://fonts.googleapis.com/css2?family=Avenir Next');
 @import url('https://fonts.googleapis.com/css2?family=Nunito');
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento');
+@import url('https://fonts.googleapis.com/css2?family=Allerta Stencil');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans');
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Exo');
 
 // use Lato font if available
 $font-family-sans-serif: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -25,21 +25,21 @@ p {
 // Navs
 
 .navbar-brand {
-  font-family: "Nunito", mono;
+  font-family: "Exo", mono;
   font-size: 1.5rem;
   font-weight: 500;
+  color: #2E3440 !important;
   //color: #D8DEE9 !important;
 }
 
 // Navbar
 
 .navbar {
-  font-family: "Nunito", mono;
-  font-size: 1rem;
-  //color: #D8DEE9 !important;
+  font-family: "Exo", mono;
+  font-size: 1.2rem;
+  color:  #4C566A !important;
 }
 
 // $toc-font-size: 0.5em;
-
-$navbar-dark-hover-color:           "#ff6700" !default;
-$navbar-light-hover-color:          "black" !default;
+$color-contrast-dark:      $black !default;
+$color-contrast-light:     $white !default;

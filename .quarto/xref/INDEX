@@ -28,5 +28,8 @@
   },
   "posts/test/index.rmarkdown": {
     "index.html": "4245e047"
+  },
+  "posts/ggplot_theme/index.qmd": {
+    "index.html": "ad6a448d"
   }
 }

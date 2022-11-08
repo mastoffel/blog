@@ -205,8 +205,10 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 
 
 <p>“Form follows function” - <em>Louis Sullivan</em></p>
-<p>Functional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions. A function can then be elegantly applied to many inputs. Here, we will do this with <code>purrr::map()</code>, which I’m using day in and day out and which is a great starting point to dive into the world of functional programming.</p>
-<p>Let’s go through some of the <code>map()</code>-magic with a minimal workflow to produce clean, robust and fast code. We will do a small genome-wide association study, an analysis looking at the association between genes and a trait by fitting a model over and over again for every SNP in the genome.</p>
+<p>One of the major steps in becoming a more effective R programmer for me was to really adopt functional programming. It made my code more readable, less error-prone, faster, and also simply for fun to write.</p>
+<p>Functional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions.</p>
+<p>A function can then be elegantly applied to many inputs. Here, we will do this with <code>purrr::map()</code>, which I’m using day in and day out and which is a great starting point to dive into the world of functional programming.</p>
+<p>Let’s go through some of the <code>map()</code>-magic with a minimal workflow to produce clean, robust and fast code. We will do a small <a href="https://en.wikipedia.org/wiki/Genome-wide_association_study">:genome-wide association study</a>, an analysis looking at the association between genes and a trait by fitting a model over and over again for every <a href="https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">:SNP</a> in the genome.</p>
 <p>Here are some my favorite packages.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr) <span class="co"># provides the key function here: map</span></span>
@@ -229,11 +231,11 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dat[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;   coffees snp1 snp2 snp3 snp4 snp5 snp6
-#&gt; 1       4    1    2    2    2    0    1
-#&gt; 2       6    2    1    2    2    0    1
-#&gt; 3       1    0    0    0    1    2    0
-#&gt; 4       1    2    2    1    2    1    2
-#&gt; 5       5    0    0    1    1    1    2</code></pre>
+#&gt; 1       3    2    2    0    0    1    1
+#&gt; 2       5    2    0    2    1    1    2
+#&gt; 3       3    2    0    1    1    2    0
+#&gt; 4       6    0    2    1    1    1    2
+#&gt; 5       4    2    2    1    1    2    2</code></pre>
 </div>
 </div>
 </section>
@@ -267,9 +269,9 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <pre><code>#&gt; # A tibble: 3 x 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1   0.0541      0.201    0.269    0.788
-#&gt; 2 snp2   0.00721     0.221    0.0326   0.974
-#&gt; 3 snp3  -0.0468      0.205   -0.228    0.820</code></pre>
+#&gt; 1 snp1    0.126      0.214     0.589   0.557
+#&gt; 2 snp2    0.210      0.223     0.942   0.349
+#&gt; 3 snp3    0.0821     0.225     0.365   0.716</code></pre>
 </div>
 </div>
 </section>
@@ -305,7 +307,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 #&gt; # A tibble: 1 x 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1    0.0541     0.201     0.269   0.788
+#&gt; 1 snp1     0.126     0.214     0.589   0.557
 #&gt; 
 #&gt; [[2]]$error
 #&gt; NULL</code></pre>
@@ -320,9 +322,9 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <pre><code>#&gt; # A tibble: 3 x 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1   0.0541      0.201    0.269    0.788
-#&gt; 2 snp2   0.00721     0.221    0.0326   0.974
-#&gt; 3 snp3  -0.0468      0.205   -0.228    0.820</code></pre>
+#&gt; 1 snp1    0.126      0.214     0.589   0.557
+#&gt; 2 snp2    0.210      0.223     0.942   0.349
+#&gt; 3 snp3    0.0821     0.225     0.365   0.716</code></pre>
 </div>
 </div>
 </section>
@@ -345,9 +347,9 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <pre><code>#&gt; # A tibble: 3 x 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1   0.0541      0.201    0.269    0.788
-#&gt; 2 snp2   0.00721     0.221    0.0326   0.974
-#&gt; 3 snp3  -0.0468      0.205   -0.228    0.820</code></pre>
+#&gt; 1 snp1    0.126      0.214     0.589   0.557
+#&gt; 2 snp2    0.210      0.223     0.942   0.349
+#&gt; 3 snp3    0.0821     0.225     0.365   0.716</code></pre>
 </div>
 </div>
 </section>
@@ -374,9 +376,9 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <pre><code>#&gt; # A tibble: 3 x 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1   0.0541      0.201    0.269    0.788
-#&gt; 2 snp2   0.00721     0.221    0.0326   0.974
-#&gt; 3 snp3  -0.0468      0.205   -0.228    0.820</code></pre>
+#&gt; 1 snp1    0.126      0.214     0.589   0.557
+#&gt; 2 snp2    0.210      0.223     0.942   0.349
+#&gt; 3 snp3    0.0821     0.225     0.365   0.716</code></pre>
 </div>
 </div>
 </section>

@@ -1,6 +1,6 @@
 ---
-title: "Always changing the default ggplot?"
-description: "Make a custom theme!"
+title: "Want a signature figure style?"
+description: "Make a custom ggplot theme!"
 #author: "Martin Stoffel"
 #date: "11/10/2022"
 categories: [visualisation, code]
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[ggplot2](https://ggplot2.tidyverse.org/) has become one of the most powerful and flexible visualisation tools, with a large community and lots of people working on new extensions every day. A large number of [ways to represent data](https://www.r-graph-gallery.com/) makes it possible to create nearly anything in `ggplot2`, from great [data journalism](https://bbc.github.io/rcookbook/) to [beautiful infographics](https://www.cedricscherer.com/top/dataviz/) and [generative art](https://www.data-imaginist.com/art). No postprocessing required anymore.
+[ggplot2](https://ggplot2.tidyverse.org/) has become one of the most powerful and flexible visualisation tools, with a large community and lots of people working on new extensions every day. A large number of [ways to represent data](https://www.r-graph-gallery.com/) makes it possible to create nearly anything in `ggplot2`, from great [data journalism](https://bbc.github.io/rcookbook/) to [beautiful infographics](https://www.cedricscherer.com/top/dataviz/) and [generative art](https://www.data-imaginist.com/art). No post-processing required anymore.
 
 The general look of a ggplot is controlled by a **theme**. Anyone using ggplot knows that the default grey theme is usually not what you want to show the world. Modifying themes is very flexible, but a little bit complicated. Even after using it for years, I have to google some things every single time. Creating your own theme is a way to give your plots a consistent and personal design, and will save you a lot of time and many lines of code.
 

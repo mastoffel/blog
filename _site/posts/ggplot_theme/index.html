@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Make a custom theme!">
+<meta name="description" content="Make a custom ggplot theme!">
 
-<title>fantom filters - Always changing the default ggplot?</title>
+<title>fantom filters - Want a signature figure style?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -173,10 +173,10 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Always changing the default ggplot?</h1>
+      <h1 class="title">Want a signature figure style?</h1>
                   <div>
         <div class="description">
-          Make a custom theme!
+          Make a custom ggplot theme!
         </div>
       </div>
                           <div class="quarto-categories">
@@ -204,7 +204,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 
 
 
-<p><a href="https://ggplot2.tidyverse.org/">ggplot2</a> has become one of the most powerful and flexible visualisation tools, with a large community and lots of people working on new extensions every day. A large number of <a href="https://www.r-graph-gallery.com/">ways to represent data</a> makes it possible to create nearly anything in <code>ggplot2</code>, from great <a href="https://bbc.github.io/rcookbook/">data journalism</a> to <a href="https://www.cedricscherer.com/top/dataviz/">beautiful infographics</a> and <a href="https://www.data-imaginist.com/art">generative art</a>. No postprocessing required anymore.</p>
+<p><a href="https://ggplot2.tidyverse.org/">ggplot2</a> has become one of the most powerful and flexible visualisation tools, with a large community and lots of people working on new extensions every day. A large number of <a href="https://www.r-graph-gallery.com/">ways to represent data</a> makes it possible to create nearly anything in <code>ggplot2</code>, from great <a href="https://bbc.github.io/rcookbook/">data journalism</a> to <a href="https://www.cedricscherer.com/top/dataviz/">beautiful infographics</a> and <a href="https://www.data-imaginist.com/art">generative art</a>. No post-processing required anymore.</p>
 <p>The general look of a ggplot is controlled by a <strong>theme</strong>. Anyone using ggplot knows that the default grey theme is usually not what you want to show the world. Modifying themes is very flexible, but a little bit complicated. Even after using it for years, I have to google some things every single time. Creating your own theme is a way to give your plots a consistent and personal design, and will save you a lot of time and many lines of code.</p>
 <section id="the-default-ggplot" class="level3">
 <h3 class="anchored" data-anchor-id="the-default-ggplot">The default ggplot</h3>
@@ -227,7 +227,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(Year, <span class="st">`</span><span class="at">Life Expectancy</span><span class="st">`</span>, <span class="at">color =</span> Continent)) <span class="sc">+</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="making_a_ggplot_theme_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="480"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 <p>There are a few things I change all the time:</p>
@@ -291,7 +291,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">wes_palette</span>(<span class="st">"Darjeeling2"</span>)) <span class="sc">+</span> </span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_simple</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="making_a_ggplot_theme_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="480"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 <p>Small tweaks can sometimes make a big aesthetic difference. <code>ggplot</code> comes with a few themes, like theme_classic(), which are sort of close to what I like my plots to be, but are just not quite there. If you feel the same, it’s time to make your own theme.</p>
@@ -332,7 +332,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">wes_palette</span>(<span class="st">"Darjeeling2"</span>)) <span class="sc">+</span> </span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_simple</span>(<span class="at">base_family =</span> <span class="st">"Press Start 2P"</span>, <span class="at">text_size =</span> <span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="making_a_ggplot_theme_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="480"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 <p>Other options to import fonts are <a href="https://cran.r-project.org/web/packages/extrafont/README.html">extrafont</a> and <a href="https://cran.rstudio.com/web/packages/showtext/vignettes/introduction.html">showtext</a>.</p>

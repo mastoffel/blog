@@ -4,10 +4,7 @@ description: "r & python"
 draft: true
 ---
 
-### load data
-
 ::: panel-tabset
-
 ### dplyr
 
 ```{r, message=FALSE}
@@ -17,6 +14,7 @@ sw <- starwars[, 1:7]
 ```
 
 ### pandas
+
 ```{python}
 import pandas as pd
 # this imports the sw dataset from the R code chunk
@@ -27,7 +25,6 @@ sw = r.sw
 ### Subset rows and columns by index
 
 ::: panel-tabset
-
 ### dplyr
 
 `slice` rows by index, `select` columns by index or name.
@@ -42,8 +39,7 @@ sw %>%
 
 ### pandas
 
-`.iloc`, think *integer location* to subset rows and columns. For subsetting
-by name, use `loc`.
+`.iloc`, think *integer location* to subset rows and columns. For subsetting by name, use `loc`.
 
 ```{python}
 (sw   # rows
@@ -51,31 +47,30 @@ by name, use `loc`.
        # columns
       .iloc[:, 0:3])
 ```
-
 :::
 
 ### Subset rows by condition
 
 ::: panel-tabset
-
 ### dplyr
+
 ```{r, message=FALSE}
 sw %>% 
       filter((mass > 100) & (height > 200))
 ```
 
 ### pandas
+
 ```{python}
 sw[(sw.mass > 100) & (sw.height > 200)]
 ```
-
 :::
 
 ### Group by and summarise
 
 ::: panel-tabset
-
 ### dplyr
+
 ```{r, message=FALSE}
 sw %>% 
       group_by(eye_color) %>% 
@@ -84,10 +79,10 @@ sw %>%
 ```
 
 ### pandas
+
 ```{python}
 (sw
       .groupby('eye_color')
       .agg({'mass': 'median', 'height': 'median'}))
 ```
-
 :::

@@ -16,9 +16,13 @@ knitr::opts_chunk$set(
 
 "Form follows function" - *Louis Sullivan*
 
-Functional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions. A function can then be elegantly applied to many inputs. Here, we will do this with `purrr::map()`, which I'm using day in and day out and which is a great starting point to dive into the world of functional programming.
+One of the major steps in becoming a more effective R programmer for me was to really adopt functional programming. It made my code more readable, less error-prone, faster, and also simply for fun to write.
 
-Let's go through some of the `map()`-magic with a minimal workflow to produce clean, robust and fast code. We will do a small genome-wide association study, an analysis looking at the association between genes and a trait by fitting a model over and over again for every SNP in the genome.
+Functional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions.
+
+A function can then be elegantly applied to many inputs. Here, we will do this with `purrr::map()`, which I'm using day in and day out and which is a great starting point to dive into the world of functional programming.
+
+Let's go through some of the `map()`-magic with a minimal workflow to produce clean, robust and fast code. We will do a small [:genome-wide association study](https://en.wikipedia.org/wiki/Genome-wide_association_study), an analysis looking at the association between genes and a trait by fitting a model over and over again for every [:SNP](https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism) in the genome.
 
 Here are some my favorite packages.
 
