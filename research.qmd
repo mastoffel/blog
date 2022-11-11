@@ -1,5 +1,6 @@
 ---
-editor: visual
+editor: 
+      render-on-save: true
 filters:
       - nutshell
 ---
@@ -33,11 +34,19 @@ Selected papers with simplified titles. Thinking back, I should have probably ch
 :::
 
 ::: {layout="[25,85]"}
-![](pics/pin_phylo2.jpeg)
+![](pics/pinnipeds_figure.jpeg)
 
 [Industrial exploitation brought one-third of pinniped species to the edge of extinction](https://www.nature.com/articles/s41467-018-06695-z).\
 *Nat Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)\
 [:In a nutshell](#x-bot), [:doubts](#x-bot_doubts)
+:::
+
+::: {layout="[25,85]"}
+![](pics/snowy.jpeg)
+
+[Biased sex ratios and the impact of early survival on female polygyny](https://www.pnas.org/doi/abs/10.1073/pnas.1620043114).\
+*PNAS* (2017) \| Code in Supplementary Material\
+[:In a nutshell](#x-plov)
 :::
 
 ::: {layout="[25,85]"}
@@ -47,6 +56,17 @@ Selected papers with simplified titles. Thinking back, I should have probably ch
 *PNAS* (2015) \| [Code](https://github.com/mastoffel/seal_chemical_fingerprints/blob/master/analysis_markdown.pdf) \| Article in the [Sueddeutsche Zeitung](https://www.sueddeutsche.de/wissen/biologie-wie-robben-einander-finden-1.2604289).\
 [:In a nutshell](#x-chem), [:doubts](#x-chem_doubts)
 :::
+
+## Research consulting
+
+::: {layout="[25,85]"}
+![](pics/racehorse.jpeg)
+
+[Impacts of inbreeding on racing in Thoroughbred horses.](https://royalsocietypublishing.org/doi/full/10.1098/rspb.2022.0487)  
+*Proceedings of the Royal Society B* (2022)  
+[:In a nutshell](#x-horse)
+:::
+
 
 ## Software
 
@@ -76,7 +96,7 @@ Our simulations and empirical data for thousands of wild Soay sheep showed exact
 
 ## :x id {#x-id}
 
-We know that inbreeding is bad for offspring fitness since [Darwin](https://charles-darwin.classic-literature.co.uk/the-effects-of-cross-and-self-fertilisation/) or maybe even since [biblical times](https://en.wikipedia.org/wiki/Incest_in_the_Bible#:~:text=Incest%20in%20the%20Bible%20refers,21%2C%20but%20also%20in%20Deuteronomy.). The phenomenon is called **inbreeding depression** and is relevant not just for animals but also for [humans](https://www.nature.com/articles/s41467-019-12283-6). Studying a densely pheno- and genotyped wild population of ancient sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.
+We know that inbreeding is bad for offspring fitness since [Darwin](https://charles-darwin.classic-literature.co.uk/the-effects-of-cross-and-self-fertilisation/) or maybe even since [biblical times](https://en.wikipedia.org/wiki/Incest_in_the_Bible#:~:text=Incest%20in%20the%20Bible%20refers,21%2C%20but%20also%20in%20Deuteronomy.). The phenomenon is called **inbreeding depression** and is relevant not just for animals but also for [humans](https://www.nature.com/articles/s41467-019-12283-6). Studying a densely pheno- and genotyped wild population of bronze-age sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.
 
 *Authors* \| **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
 
@@ -106,6 +126,12 @@ The scale of industrial seal hunting in the 18th-20th century was large, yet som
 
 To reconstruct the population histories of each species, we used **Approximate Bayesian Computation (ABC)**. The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be *good*. Alternative, untested population histories could have explained the patterns equally well or better.
 
+## :x plov {#x-plov}
+
+Around 60% of adult snowy plovers are males, which led to a mating system where females are polygynous (they get to have more than one partner per season). My buddy Luke led this project, where we wanted to know where this sex biases comes from! Born 50/50, most of the sex biases we see in adults actually originates in juveniles, where males have lower survival rates than males. We therefore argue that two-sex population models (as used in our study) are essential to understand population dynamics and can help to shed light on some of the remaining mysteries around sexual selection.
+
+*Authors* \| Luke J Eberhart-Phillips, Clemens Küpper, Tom EX Miller, Medardo Cruz-López, Kathryn H Maher, Natalie Dos Remedios, **Martin A Stoffel**, Joseph I Hoffman, Oliver Krüger, Tamás Székely
+
 ## :x chem {#x-chem}
 
 Fur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (`GCalignR`, see below) and borrowed analytical methods from psychology.
@@ -115,6 +141,13 @@ Fur seal mothers have to find their own offspring in dense colonies among thousa
 ## :x chem_doubts {#x-chem_doubts}
 
 Skin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn't mean these 'signals' are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesising these chemical signals and doing behavioural experiments. However, we know at least that sea lions can recognise their pups by [scent alone](https://royalsocietypublishing.org/doi/full/10.1098/rsbl.2010.0569?casa_token=dXG4dwFcjzAAAAAA%3AEVn-FEa6i8ojfD4e2zvZPc1EcV94Mykn8S_5mZXPKCSyR2BW5AV3iu5Pak5IY8iGwZWcZDm8SPPp4Q).
+
+## :x horse {#x-horse}
+We show that genomic inbreeding reduces the changes of a Thoroughbred horse ever making it to the racecourse, and pinpoint a genomic region where homozygosity has a particularly large effect, independent of genome-wide inbreeding.  
+
+Emmeline W Hill, **Martin A Stoffel**, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton
+
+Pic by DALL-E.
 
 ## :x partR2 {#x-partr2}
 
@@ -132,6 +165,11 @@ The repeatability is also called the [:intra-class coefficient](https://en.wikip
 
 Sometimes, one just doesn't have enough genetic markers to be sure about the measured inbreeding coefficients (i.e. when using microsatellites). `inbreedR` implements functions to estimate variance in inbreeding which gives some insights into whether the correlation between heterozygosity and fitness is actually due to (genome-wide) inbreeding or not.
 
+*Authors* \| **MA Stoffel**, M Esser, M Kardos, E Humble, H Nichols, P David, JI Hoffman
+
 ## :x GCalignR {#x-GCalignR}
 
 Gas-chromatography samples from the field can be messy. They'll have different concentrations, and lots of dirt in them. However, we usually want to know whether the same peak in each sample corresponds to the same substance. To do this, we need to align all samples. `GCalignR` provides a simple, rule based algorithm which requires a bit of manual input but then works well for a wide range of samples.
+
+*Authors* \| M Ottensmann, **MA Stoffel**, HJ Nichols, JI Hoffman\
+\* MO and MAS are shared first authors
