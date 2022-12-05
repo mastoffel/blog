@@ -10,6 +10,14 @@ filters:
 Selected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao).
 
 ::: {layout="[25,85]"}
+![](pics/kilda.jpg)
+
+[Exploring lethal mutations and their evolutionary dynamics.](https://www.biorxiv.org/content/10.1101/2022.12.02.518882v1)\
+*bioRxiv* (2022) \| [Code](https://github.com/mastoffel/haplotype_homozygosity)\
+[:In a nutshell](#x-el)
+:::
+
+::: {layout="[25,85]"}
 ![](pics/roh2.jpeg)
 
 [Long runs of homozygosity have a higher mutation load because their haplotypes are younger](https://onlinelibrary.wiley.com/doi/full/10.1002/evl3.229).\
@@ -85,6 +93,9 @@ Selected papers with simplified titles. Thinking back, I should have probably ch
 `GCalignR`:aligning gas-chromatography data from messy field samples.\
 [article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR), [:In a nutshell](#x-GCalignR)\
 ![Build Status](https://travis-ci.org/mottensmann/GCalignR.svg?branch=master) [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/GCalignR?color=blue)](https://cran.r-project.org/package=GCalignR) [![](https://img.shields.io/badge/Altmetric-13-Darkorange.svg)](https://www.altmetric.com/details/43624695)
+
+## :x el{#x-el}
+We scanned the Soay sheep population embryonic lethal mutations, found a few, and explored patterns of purifying and balancing selection of them. The key take-away is that strongly deleterious mutations exist even in small populations. These mutations are unlikely to contribute much to the usual estimates of inbreeding depression, because they can cause mortality pre-birth. They can be quickly purged by purifying selection, but they can also be maintained by balancing selection in small population, when they are linked to a beneficial mutation.
 
 ## :x roh {#x-roh}
 

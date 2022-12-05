@@ -34,5 +34,11 @@
   },
   "misc.qmd": {
     "misc.html": "1e8b4ba6"
+  },
+  "posts/collective_scientist/index.qmd": {
+    "index.html": "f889f841"
+  },
+  "posts/collective_scientist/new.ipynb": {
+    "new.html": "4a2b069c"
   }
 }

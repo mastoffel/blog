@@ -4,16 +4,16 @@
 $theme: "simplex" !default;
 
 // import google fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css2?family=Avenir');
-@import url('https://fonts.googleapis.com/css2?family=Avenir Next');
-@import url('https://fonts.googleapis.com/css2?family=Nunito');
-@import url('https://fonts.googleapis.com/css2?family=Allerta Stencil');
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Lora');
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans');
-@import url('https://fonts.googleapis.com/css2?family=Exo');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono');
 
 // use Lato font if available
-$font-family-sans-serif: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 /*-- scss:rules --*/
 
@@ -25,7 +25,7 @@ p {
 // Navs
 
 .navbar-brand {
-  font-family: "Exo", mono;
+  font-family: "Poppins";
   font-size: 1.5rem;
   font-weight: 500;
   color: #2E3440 !important;
@@ -35,8 +35,8 @@ p {
 // Navbar
 
 .navbar {
-  font-family: "Exo", mono;
-  font-size: 1.2rem;
+  font-family: "Poppins", mono;
+  font-size: 1.4rem;
   color:  #4C566A !important;
 }
 
