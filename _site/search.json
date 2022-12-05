@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "fantom filters",
     "section": "",
-    "text": "Make a custom ggplot theme!\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Make a custom ggplot theme!\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research.html",
@@ -151,7 +151,7 @@
     "href": "research.html#x-el",
     "title": "fantom filters",
     "section": ":x el",
-    "text": ":x el\nWe scanned the Soay sheep population embryonic lethal mutations, found a few, and explored patterns of purifying and balancing selection of them. The key take-away is that strongly deleterious mutations exist even in small populations. These mutations are unlikely to contribute much to the usual estimates of inbreeding depression, because they can cause mortality pre-birth. They can be quickly purged by purifying selection, but they can also be maintained by balancing selection in small population, when they are linked to a beneficial mutation."
+    "text": ":x el\nWe scanned the Soay sheep population for embryonic lethal mutations, found a few, and explored patterns of purifying and balancing selection of them. The key take-away is that strongly deleterious mutations exist even in small populations. These mutations are unlikely to contribute much to the usual estimates of inbreeding depression, because they can cause mortality pre-birth. They can be quickly purged by purifying selection, but they can also be maintained by balancing selection in small population, when they are linked to a beneficial mutation."
   },
   {
     "objectID": "about.html",
@@ -159,5 +159,68 @@
     "title": "About",
     "section": "",
     "text": "Hi, I’m Martin."
+  },
+  {
+    "objectID": "posts/magic_map/index.html",
+    "href": "posts/magic_map/index.html",
+    "title": "map()-magic",
+    "section": "",
+    "text": "“Form follows function” - Louis Sullivan\nOne of the major steps in becoming a more effective R programmer for me was to really adopt functional programming. It made my code more readable, less error-prone, faster, and also simply for fun to write.\nFunctional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions.\nA function can then be elegantly applied to many inputs. Here, we will do this with purrr::map(), which I’m using day in and day out and which is a great starting point to dive into the world of functional programming.\nLet’s go through some of the map()-magic with a minimal workflow to produce clean, robust and fast code. We will do a small :genome-wide association study, an analysis looking at the association between genes and a trait by fitting a model over and over again for every :SNP in the genome.\nHere are some my favorite packages.\nLet’s see whether drinking coffee has a genetic basis. We make up a trait (coffees per day) and 100 SNPs for 100 individuals."
+  },
+  {
+    "objectID": "posts/magic_map/index.html#simulate-data",
+    "href": "posts/magic_map/index.html#simulate-data",
+    "title": "map()-magic",
+    "section": "Simulate data",
+    "text": "Simulate data\n\ncoffees   <- sample(1:6, 100, TRUE)\nsnps      <- replicate(100, sample(c(0,1,2), 100, TRUE))\nsnp_names <- paste0(\"snp\", 1:100)\n\ndat <- data.frame(cbind(coffees, snps)) %>% \n            setNames(c(\"coffees\", snp_names))\n            \nhead(dat[1:5, 1:7])\n\n#>   coffees snp1 snp2 snp3 snp4 snp5 snp6\n#> 1       3    2    2    0    0    1    1\n#> 2       5    2    0    2    1    1    2\n#> 3       3    2    0    1    1    2    0\n#> 4       6    0    2    1    1    1    2\n#> 5       4    2    2    1    1    2    2"
+  },
+  {
+    "objectID": "posts/magic_map/index.html#write-a-function",
+    "href": "posts/magic_map/index.html#write-a-function",
+    "title": "map()-magic",
+    "section": "1) Write a function",
+    "text": "1) Write a function\nWe could now do 100 linear models manually by writing 100 lines of code, or we could do a for loop.\nInstead, let’s write a function to fit one model, and then apply this function to each SNP. We generally want the thing that changes (i.e. snp_name) to be the first argument. The function below fits a linear model of coffee consumption with a snp as predictor, and extracts the model estimate and p-value for the SNP. It returns a one-row data.frame. I generally like my functions to return data.frames, because that makes it easy to put together many function outputs into a big data.frame at the end.\n\nfit_model <- function(snp_name, dat) {\n      # write formula using SNP name\n      model_formula <- glue(\"coffees ~ {snp_name}\")\n      # fit linear model\n      fit <- lm(model_formula, data = dat) %>% \n                  broom::tidy() %>%        # tidy results\n                  filter(term == snp_name) # extract snp\n      return(fit)\n      \n}"
+  },
+  {
+    "objectID": "posts/magic_map/index.html#use-map-to-apply-function-to-every-snp",
+    "href": "posts/magic_map/index.html#use-map-to-apply-function-to-every-snp",
+    "title": "map()-magic",
+    "section": "2) Use map() to apply function to every SNP",
+    "text": "2) Use map() to apply function to every SNP\nUsing a vector with snp_names, we can apply the function to every SNP. The structure of map() is always the same: map(list/vector, function, additional_arguments). map() always returns a list. We can convert the list to a data.frame with dplyr::bind_rows().\n\n# run gwas\ngwas <- map(snp_names, fit_model, dat) %>% \n              bind_rows()\n# print first three SNPs\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    0.126      0.214     0.589   0.557\n#> 2 snp2    0.210      0.223     0.942   0.349\n#> 3 snp3    0.0821     0.225     0.365   0.716"
+  },
+  {
+    "objectID": "posts/magic_map/index.html#what-if-something-goes-wrong---map-safely",
+    "href": "posts/magic_map/index.html#what-if-something-goes-wrong---map-safely",
+    "title": "map()-magic",
+    "section": "3) What if something goes wrong? - map() safely",
+    "text": "3) What if something goes wrong? - map() safely\nLoops often fail becomes something goes wrong in one or a few iterations.Let’s introduce a non-existing SNP and try again to see how it fails\n\nsnp_names2 <- c(\"not_a_snp\", snp_names)\n\ngwas <- map(snp_names2, fit_model, dat) %>% \n      bind_rows()\n\n#> Error in eval(predvars, data, env): object 'not_a_snp' not found\n\n\nWe can make our gwas error-safe using purrr::safely(). This does some magic under the hood which isn’t so important now. For every iteration, it will return a list with two elements, one for the result and one for the error (equals NULL if there is no error). This way, we always get the results or errors of all our iterations back.\n\nfit_model_safely <- purrr::safely(fit_model)\n\ngwas <- map(snp_names2, fit_model_safely, dat)\ngwas[1:2]\n\n#> [[1]]\n#> [[1]]$result\n#> NULL\n#> \n#> [[1]]$error\n#> <simpleError in eval(predvars, data, env): object 'not_a_snp' not found>\n#> \n#> \n#> [[2]]\n#> [[2]]$result\n#> # A tibble: 1 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1     0.126     0.214     0.589   0.557\n#> \n#> [[2]]$error\n#> NULL\n\n\nmap() lets you extract a list element simply by its name. Here, we iterate over the list of results and extract all SNPs that worked.\n\ngwas <- map(gwas, \"result\") %>% \n            bind_rows()\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    0.126      0.214     0.589   0.557\n#> 2 snp2    0.210      0.223     0.942   0.349\n#> 3 snp3    0.0821     0.225     0.365   0.716"
+  },
+  {
+    "objectID": "posts/magic_map/index.html#what-if-it-takes-too-long---map-in-parallel",
+    "href": "posts/magic_map/index.html#what-if-it-takes-too-long---map-in-parallel",
+    "title": "map()-magic",
+    "section": "4) What if it takes too long? - map() in parallel",
+    "text": "4) What if it takes too long? - map() in parallel\nOnce the idea of map() is clear, we can easily parallelise it to run on multiple cores. There is some overhead in collecting computations from several cores so this doesn’t make much sense when the running time is short. But for longer computations, using 4 cores instead of 1 should make it nearly 4 times as fast.\nWe can use the furrr package here, which mimics purrr functions but can run in parallel. It is based on future, which is why all functions start with future_, for example future_map(). Unlike other ways of parallelising, this approach works on Windows, Mac and Linux. All we have to do now is to first set up a plan() …\n\n# check available cores\navailableCores()\n# parallelises across 4 cores\nplan(multiprocess, workers = 4)\n\n… and then replace map() with future_map().\n\ngwas <- future_map(snp_names, fit_model, dat) %>% \n            bind_rows()\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    0.126      0.214     0.589   0.557\n#> 2 snp2    0.210      0.223     0.942   0.349\n#> 3 snp3    0.0821     0.225     0.365   0.716"
+  },
+  {
+    "objectID": "posts/magic_map/index.html#the-full-minimal-workflow-for-a-robust-parallel-gwas",
+    "href": "posts/magic_map/index.html#the-full-minimal-workflow-for-a-robust-parallel-gwas",
+    "title": "map()-magic",
+    "section": "The full, minimal workflow for a robust, parallel gwas",
+    "text": "The full, minimal workflow for a robust, parallel gwas\n\nplan(multiprocess, workers = 4)\n\nfit_model <- function(snp_name, dat) {\n      model_formula <- glue(\"coffees ~ {snp_name}\")\n      fit <- lm(model_formula, data = dat) %>% \n                  broom::tidy() %>% \n                  filter(term == snp_name)\n      return(fit)\n}\n\nfit_model_safely <- purrr::safely(fit_model)\ngwas <- future_map(snp_names, fit_model_safely, dat) %>% \n                  map(\"result\") %>% \n                  bind_rows()\n\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1    0.126      0.214     0.589   0.557\n#> 2 snp2    0.210      0.223     0.942   0.349\n#> 3 snp3    0.0821     0.225     0.365   0.716"
+  },
+  {
+    "objectID": "posts/magic_map/index.html#general-thoughts-about-map",
+    "href": "posts/magic_map/index.html#general-thoughts-about-map",
+    "title": "map()-magic",
+    "section": "General thoughts about map",
+    "text": "General thoughts about map\nWhen to use map?\n\nWhenever more than two lines of code look similar, whenever a for loop needs two cups of coffee to be understood, map will be on your side\n\nCan every for-loop be replaced by a function and map?\n\nI think yes, but it becomes less practical when an iteration depends on the previous iteration, though I rarely encounter that problem\n\nWhat about the base R functions apply, sapply, lapply?\n\nlapply is very similar to map, though it lacks some very nice features which can be discovered over time. The other apply-functions can give surprising results, except for vapply, which is concise but slightly more complicated.\n\nWhat about map_df, map_lgl, map_dbl and all the other maps?\n\nAll these functions differ in what their output is. However, the list resulting from simple map() can easily be transformed into any of these. After getting to grips with map, all the other maps fall into place.\n\nWhat if I have more than one vector or list as input?\n\nmap2() takes two vectors as input and pmap() takes any number of vectors as input. I’m using pmap() to iterate over rows in a data.frame, but this is stuff for another blogpost I think."
+  },
+  {
+    "objectID": "posts/magic_map/index.html#where-to-go-from-here",
+    "href": "posts/magic_map/index.html#where-to-go-from-here",
+    "title": "map()-magic",
+    "section": "Where to go from here",
+    "text": "Where to go from here\n\nJenny Bryan’s purrr tutorials\nHadley Wickham’s “The joy of functional programming”\nR4DS chapter on iterations"
   }
 ]

@@ -14,13 +14,3 @@ Open science has it's problems. One of them: It's just not very exciting. Take c
 But times are changing. We don't upload code anymore simply to prove that our analysis is sound. Or to help the next meta-analysis figure out what we actually calculated. Or for some PhD student to spend hours trying to decipher it, only to find out that the analysis doesn't quite do what they need. 
 
 We upload code to evolve the `holoscientist`. The brain connecting all the dots. The magic emerging from all the individual efforts, the sweat and tears and blood that every single scientist puts in every day. The holoscientist is not human. It's an AI.
-
-
-
-
-
-
-
-
-
-
