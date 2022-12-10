@@ -1,5 +1,5 @@
 ---
-title: "Open research and the Anthro-cyber superholoscientist"
+title: ""
 description: ""
 #author: "Martin Stoffel"
 #date: "11/10/2022"

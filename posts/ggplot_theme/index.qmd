@@ -1,6 +1,6 @@
 ---
-title: "Want a signature figure style?"
-description: "Make a custom ggplot theme!"
+title: "Creating your own ggplot theme"
+description: "A short guide."
 #author: "Martin Stoffel"
 #date: "11/10/2022"
 categories: [visualisation, code]

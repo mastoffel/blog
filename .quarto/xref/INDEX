@@ -40,5 +40,11 @@
   },
   "posts/collective_scientist/new.ipynb": {
     "new.html": "4a2b069c"
+  },
+  "software.qmd": {
+    "software.html": "1f5e7d0f"
+  },
+  "code.qmd": {
+    "code.html": "dba9478f"
   }
 }

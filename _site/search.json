@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "fantom filters",
     "section": "",
-    "text": "Make a custom ggplot theme!\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "A short guide.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research.html",
     "href": "research.html",
     "title": "fantom filters",
     "section": "",
-    "text": "Under construction.\nSelected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list here."
+    "text": "Selected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list here.\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNat Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts"
   },
   {
     "objectID": "research.html#research-consulting",
@@ -135,7 +135,7 @@
   {
     "objectID": "posts/ggplot_theme/index.html",
     "href": "posts/ggplot_theme/index.html",
-    "title": "Want a signature figure style?",
+    "title": "Creating your own ggplot theme",
     "section": "",
     "text": "The general look of a ggplot is controlled by a theme. Anyone using ggplot knows that the default grey theme is usually not what you want to show the world. Modifying themes is very flexible, but a little bit complicated. Even after using it for years, I have to google some things every single time. Creating your own theme is a way to give your plots a consistent and personal design, and will save you a lot of time and many lines of code.\n\nThe default ggplot\nLet’s use the data from gapminder to see how a default plot looks like. We first load a few packages and do some data pre-processing.\n\nlibrary(ggplot2)\nlibrary(gapminder)\nlibrary(dplyr)\nlibrary(wesanderson)\nlibrary(systemfonts)\n# a bit of data processing\ndat <- gapminder %>% \n        group_by(year, continent) %>% \n        summarise(`Life Expectancy` = mean(lifeExp),\n                  Population = sum(as.numeric(pop))) %>% \n        rename(Year = year, Continent = continent)\n\nHere is a default theme_grey() scatterplot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n      geom_point()\n\n\n\n\nThere are a few things I change all the time:\n\nThe background, which I prefer simple plain, or only with x and y axis lines.\nGrid lines: I usually keep only major grid lines (as they are connected to values) or remove them entirely.\nThe spacing between axis, axis-labels and axis-titles.\nThe font.\nFor themes with axis lines, like theme_classic, the line thickness.\n\n\n\nMaking your own theme\nMaking a new theme is quite simple. We (1) create a function which starts with a standard theme, such as theme_minimal and (2) add all the theme aspects which we prefer for our plots. Finally (3), we add some arguments to make changing things easy which we need often, such as axis and grid lines and the text size. Below is the theme I am using, but of course you can change every other theme aspect too (see theme documentation). I’m often using the ‘Avenir Next’ font, which might not be installed on your system (at the end of this post is a little guide on how to install fancy fonts). Using ‘sans’ should always work.\n\ntheme_simple <- function(axis_lines = TRUE, \n                         grid_lines = FALSE,     \n                         text_size = 12,       \n                         line_size = 0.2,\n                         # replace with 'sans' if not working\n                         base_family= 'Avenir Next'){ \n        \n    # start with theme_minimal because it is really simple.\n    th <- ggplot2::theme_minimal(base_family = base_family, \n                               base_size = text_size)\n         \n    # remove the grid lines \n    th <- th + theme(panel.grid=element_blank())\n    \n    # if we want axis lines\n    if (axis_lines) {\n      # We add axis lines and give them our preferred thickness\n        th <- th + \n            theme(axis.line = element_line(size = line_size),\n                  axis.ticks = element_line(size = line_size))\n    } \n    # do we want grid lines?\n    if (grid_lines) {\n        th <- th + \n            theme(panel.grid.major = element_line(size = line_size))\n    }\n    \n    # more space for axis text/title and plot title \n    th <- th + theme(\n              axis.text.x=element_text(margin=margin(t=5)),\n              axis.text.y=element_text(margin=margin(r=5)),\n              axis.title.x=element_text(margin=margin(t=10)),\n              axis.title.y=element_text(margin=margin(r=10)),\n              plot.title=element_text(margin=margin(b=10)))\n    \n    return (th)\n}\n\n\n\nAdding theme_simple to the plot.\nNow, we can add theme_simple() to the plot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n    geom_point() +\n    scale_color_manual(values = wes_palette(\"Darjeeling2\")) + \n    theme_simple()\n\n\n\n\nSmall tweaks can sometimes make a big aesthetic difference. ggplot comes with a few themes, like theme_classic(), which are sort of close to what I like my plots to be, but are just not quite there. If you feel the same, it’s time to make your own theme.\nLastly, you can put the code for your theme into an R script and save it, for example as theme_simple.R. The next time you make plots, just source the script to load the theme_simple() function. To use it as the default theme, we can use theme_set like so:\n\nsource(\"theme_simple.R\") \n# set theme_simple as default theme\nggplot2::theme_set(theme_simple()) \n\nThat’s it!\nIf you are plotting in base R, you might say: You need a full blog post just to explain how to make ggplot look like base R with a different font! And I can only say: touché, my friend.\n\n\nAppendix: Fancy fonts made easy\nFonts can really make a big difference in the visual design of plots. A lot of freely available fonts are on https://fonts.google.com/. On Mac, I just download them, double click and they are installed. Then, we have to make them available in R. The systemfonts package magically finds all installed fonts from different directories.\n\n# install.packages(\"systemfonts)\nlibrary(systemfonts)\n# which fonts are installed?\n# print only top 5\nsystem_fonts()[1:5, ]\n\n#> # A tibble: 5 x 9\n#>   path             index name      family   style weight width  italic monospace\n#>   <chr>            <int> <chr>     <chr>    <chr> <ord>  <ord>  <lgl>  <lgl>    \n#> 1 /System/Library…     1 ShreeDev… Shree D… Bold  bold   normal FALSE  FALSE    \n#> 2 /Users/mstoffel…     0 FiraCode… Fira Co… Medi… medium normal FALSE  TRUE     \n#> 3 /System/Library…     0 AcademyE… Academy… Plain normal normal FALSE  FALSE    \n#> 4 /System/Library…     0 Impact    Impact   Regu… heavy  semic… FALSE  FALSE    \n#> 5 /Users/mstoffel…     0 IBMPlexS… IBM Ple… Thin  ultra… normal FALSE  FALSE\n\n\nI’ve just downloaded a font which looks like it’s from Pokemon Red and Blue on the old big grey Game boy, called Press Start 2P. We can first check if its there with match_font() and then just use it in the ggplot.\n\n# match_font('Press Start 2P')\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n    geom_point() +\n    scale_color_manual(values = wes_palette(\"Darjeeling2\")) + \n    theme_simple(base_family = \"Press Start 2P\", text_size = 9)\n\n\n\n\nOther options to import fonts are extrafont and showtext.\n\n\npdf-ing fancy fonts\nSometimes, especially for science publications, plots need to be saved as pdfs. With non-standard fonts, this can be problematic, because they have to be embedded, but a little tweak to ggsave() can help here.\n\nggsave(\"plot.pdf\", device = cairo_pdf)"
   },
@@ -151,7 +151,7 @@
     "href": "research.html#x-el",
     "title": "fantom filters",
     "section": ":x el",
-    "text": ":x el\nWe scanned the Soay sheep population for embryonic lethal mutations, found a few, and explored patterns of purifying and balancing selection of them. The key take-away is that strongly deleterious mutations exist even in small populations. These mutations are unlikely to contribute much to the usual estimates of inbreeding depression, because they can cause mortality pre-birth. They can be quickly purged by purifying selection, but they can also be maintained by balancing selection in small population, when they are linked to a beneficial mutation."
+    "text": ":x el\nWe scanned the Soay sheep population for embryonic lethal mutations, found a few, and explored patterns of purifying and balancing selection of them. The key take-away is that strongly deleterious mutations exist even in small populations. These mutations are unlikely to contribute much to the usual estimates of inbreeding depression, because they can cause mortality pre-birth. They can be quickly purged by purifying selection, but they can also be maintained by balancing selection in small population, when they are linked to a beneficial mutation.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
   },
   {
     "objectID": "about.html",
@@ -222,5 +222,124 @@
     "title": "map()-magic",
     "section": "Where to go from here",
     "text": "Where to go from here\n\nJenny Bryan’s purrr tutorials\nHadley Wickham’s “The joy of functional programming”\nR4DS chapter on iterations"
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "fantom filters",
+    "section": "",
+    "text": "partR2: partitioning R2 in mixed models.\npackage, paper, :In a nutshell\n    \nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package, :In a nutshell\n   \ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package, :In a nutshell\n  \nGCalignR:aligning gas-chromatography data from messy field samples.\narticle, package, :In a nutshell"
+  },
+  {
+    "objectID": "software.html#x-partr2",
+    "href": "software.html#x-partr2",
+    "title": "fantom filters",
+    "section": ":x partR2",
+    "text": ":x partR2\nWhen using a :mixed model, we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements one possible solution to estimate the semi-partial R2 in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the manual). partR2 really complements rptR in that both together make it possible to get a sense of where the variance goes in your model.\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
+  },
+  {
+    "objectID": "software.html#x-rptR",
+    "href": "software.html#x-rptR",
+    "title": "fantom filters",
+    "section": ":x rptR",
+    "text": ":x rptR\nThe repeatability is also called the :intra-class coefficient. In hierarchical data, we can measure the impact of group differences on a response variable using the repeatability. Using mixed models, the repeatability is simply the variation explained by a random (group-level) effect. rptR has a few tricks up the sleeve to estimate repeatability, confidence intervals and p-values for the most common model types and error distributions.\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
+  },
+  {
+    "objectID": "software.html#x-inbreedR",
+    "href": "software.html#x-inbreedR",
+    "title": "fantom filters",
+    "section": ":x inbreedR",
+    "text": ":x inbreedR\nSometimes, one just doesn’t have enough genetic markers to be sure about the measured inbreeding coefficients (i.e. when using microsatellites). inbreedR implements functions to estimate variance in inbreeding which gives some insights into whether the correlation between heterozygosity and fitness is actually due to (genome-wide) inbreeding or not.\nAuthors | MA Stoffel, M Esser, M Kardos, E Humble, H Nichols, P David, JI Hoffman"
+  },
+  {
+    "objectID": "software.html#x-GCalignR",
+    "href": "software.html#x-GCalignR",
+    "title": "fantom filters",
+    "section": ":x GCalignR",
+    "text": ":x GCalignR\nGas-chromatography samples from the field can be messy. They’ll have different concentrations, and lots of dirt in them. However, we usually want to know whether the same peak in each sample corresponds to the same substance. To do this, we need to align all samples. GCalignR provides a simple, rule based algorithm which requires a bit of manual input but then works well for a wide range of samples.\nAuthors | M Ottensmann, MA Stoffel, HJ Nichols, JI Hoffman\n* MO and MAS are shared first authors"
+  },
+  {
+    "objectID": "software.html#machine-learning",
+    "href": "software.html#machine-learning",
+    "title": "fantom filters",
+    "section": "machine learning",
+    "text": "machine learning\n\n\n\n\n\n\nA neural vocoder to reconstruct a waveform from a spectrogram, trained on cat meows.\n\n\n\nUpcoming:\n\n\n\n\n\n\nA Kingfisher classier.\n\n\n\n\n\n\n\n\n\nA decoder only Transformer built form scratch."
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "fantom filters",
+    "section": "",
+    "text": "partR2: partitioning R2 in mixed models.\npackage, paper, :In a nutshell\n    \nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package, :In a nutshell\n   \ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package, :In a nutshell\n  \nGCalignR:aligning gas-chromatography data from messy field samples.\narticle, package, :In a nutshell"
+  },
+  {
+    "objectID": "code.html#x-partr2",
+    "href": "code.html#x-partr2",
+    "title": "fantom filters",
+    "section": ":x partR2",
+    "text": ":x partR2\nWhen using a :mixed model, we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements one possible solution to estimate the semi-partial R2 in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the manual). partR2 really complements rptR in that both together make it possible to get a sense of where the variance goes in your model.\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
+  },
+  {
+    "objectID": "code.html#x-rptR",
+    "href": "code.html#x-rptR",
+    "title": "fantom filters",
+    "section": ":x rptR",
+    "text": ":x rptR\nThe repeatability is also called the :intra-class coefficient. In hierarchical data, we can measure the impact of group differences on a response variable using the repeatability. Using mixed models, the repeatability is simply the variation explained by a random (group-level) effect. rptR has a few tricks up the sleeve to estimate repeatability, confidence intervals and p-values for the most common model types and error distributions.\nAuthors | MA Stoffel, S Nakagawa, H Schielzeth"
+  },
+  {
+    "objectID": "code.html#x-inbreedR",
+    "href": "code.html#x-inbreedR",
+    "title": "fantom filters",
+    "section": ":x inbreedR",
+    "text": ":x inbreedR\nSometimes, one just doesn’t have enough genetic markers to be sure about the measured inbreeding coefficients (i.e. when using microsatellites). inbreedR implements functions to estimate variance in inbreeding which gives some insights into whether the correlation between heterozygosity and fitness is actually due to (genome-wide) inbreeding or not.\nAuthors | MA Stoffel, M Esser, M Kardos, E Humble, H Nichols, P David, JI Hoffman"
+  },
+  {
+    "objectID": "code.html#x-GCalignR",
+    "href": "code.html#x-GCalignR",
+    "title": "fantom filters",
+    "section": ":x GCalignR",
+    "text": ":x GCalignR\nGas-chromatography samples from the field can be messy. They’ll have different concentrations, and lots of dirt in them. However, we usually want to know whether the same peak in each sample corresponds to the same substance. To do this, we need to align all samples. GCalignR provides a simple, rule based algorithm which requires a bit of manual input but then works well for a wide range of samples.\nAuthors | M Ottensmann, MA Stoffel, HJ Nichols, JI Hoffman\n* MO and MAS are shared first authors"
+  },
+  {
+    "objectID": "code.html#machine-learning",
+    "href": "code.html#machine-learning",
+    "title": "fantom filters",
+    "section": "machine learning",
+    "text": "machine learning\n\n\n\n\n\n\nA neural vocoder to reconstruct a waveform from a spectrogram, trained on cat meows.\n\n\n\nUpcoming:\n\n\n\n\n\n\nA Kingfisher classier.\n\n\n\n\n\n\n\n\n\nA decoder only Transformer built form scratch."
+  },
+  {
+    "objectID": "research.html#consulting",
+    "href": "research.html#consulting",
+    "title": "fantom filters",
+    "section": "Consulting",
+    "text": "Consulting\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+  },
+  {
+    "objectID": "research.html#anal",
+    "href": "research.html#anal",
+    "title": "fantom filters",
+    "section": "Anal",
+    "text": "Anal\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+  },
+  {
+    "objectID": "research.html#analy",
+    "href": "research.html#analy",
+    "title": "fantom filters",
+    "section": "Analy",
+    "text": "Analy\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+  },
+  {
+    "objectID": "research.html#analyt",
+    "href": "research.html#analyt",
+    "title": "fantom filters",
+    "section": "Analyt",
+    "text": "Analyt\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+  },
+  {
+    "objectID": "research.html#data",
+    "href": "research.html#data",
+    "title": "fantom filters",
+    "section": "Data",
+    "text": "Data\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
   }
 ]

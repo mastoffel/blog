@@ -10,10 +10,11 @@ website:
         file: index.qmd
       - text: "research"
         file: research.qmd
+      - text: "code"
+        file: code.qmd
       - text: "about"
         file: about.qmd
-      #- text: "misc"
-      #  file: misc.qmd
+
       #- icon: github
         #href: https://github.com/mastoffel
       #- icon: twitter
