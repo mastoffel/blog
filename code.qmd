@@ -51,22 +51,24 @@ Gas-chromatography samples from the field can be messy. They'll have different c
 ## machine learning
 
 ::: {layout="[15,85]"}
+![](pics/wren.jpg)
+
+A (european) garden bird classifier.  
+[app](apps.qmd) 
+:::
+
+::: {layout="[15,85]"}
 ![](/pics/cat.png)
   
 
-A [neural vocoder](https://github.com/mastoffel/neural_vocoder/blob/main/neural_vocoder.ipynb) to reconstruct a waveform from a spectrogram, trained on cat meows.
+A neural [:vocoder](https://en.wikipedia.org/wiki/Vocoder) to reconstruct a waveform from a spectrogram, trained on cat meows. [code](https://github.com/mastoffel/neural_vocoder/blob/main/neural_vocoder.ipynb)
 :::
 
 *Upcoming:*
-
-::: {layout="[15,85]"}
-![](favicon.png)
-
-A Kingfisher classier.
-:::
 
 ::: {layout="[15,85]"}
 ![](pics/transformer.png)
 
 A decoder only Transformer built form scratch.
 :::
+
