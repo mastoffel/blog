@@ -54,7 +54,7 @@ Gas-chromatography samples from the field can be messy. They'll have different c
 ![](pics/wren.jpg)
 
 A (european) garden bird classifier.  
-[app](apps.qmd) 
+[app](birds.qmd), [code](https://github.com/mastoffel/birds)
 :::
 
 ::: {layout="[15,85]"}

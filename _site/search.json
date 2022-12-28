@@ -305,7 +305,7 @@
     "href": "code.html#machine-learning",
     "title": "fantom filters",
     "section": "machine learning",
-    "text": "machine learning\n\n\n\n\n\n\nA (european) garden bird classifier.\napp\n\n\n\n\n\n\n\n\n\nA neural :vocoder to reconstruct a waveform from a spectrogram, trained on cat meows. code\n\n\n\nUpcoming:\n\n\n\n\n\n\nA decoder only Transformer built form scratch."
+    "text": "machine learning\n\n\n\n\n\n\nA (european) garden bird classifier.\napp, code\n\n\n\n\n\n\n\n\n\nA neural :vocoder to reconstruct a waveform from a spectrogram, trained on cat meows. code\n\n\n\nUpcoming:\n\n\n\n\n\n\nA decoder only Transformer built form scratch."
   },
   {
     "objectID": "research.html#consulting",

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Open science, AI collaborators and feedback loops"
 description: ""
 #author: "Martin Stoffel"
 #date: "11/10/2022"
@@ -9,8 +9,3 @@ image: theme.png
 #  - visualisation
 ---
 
-Open science has it's problems. One of them: It's just not very exciting. Take code reproducibility for example. Cleaning up analysis code and uploading it to GitHub is a lot of work. And let's face it: It's rarely rewarded, and there is a *feeling* that most of it will never be looked at. 
-
-But times are changing. We don't upload code anymore simply to prove that our analysis is sound. Or to help the next meta-analysis figure out what we actually calculated. Or for some PhD student to spend hours trying to decipher it, only to find out that the analysis doesn't quite do what they need. 
-
-We upload code to evolve the `holoscientist`. The brain connecting all the dots. The magic emerging from all the individual efforts, the sweat and tears and blood that every single scientist puts in every day. The holoscientist is not human. It's an AI.
