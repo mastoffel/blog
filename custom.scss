@@ -10,7 +10,7 @@ $theme: "simplex" !default;
 @import url('https://fonts.googleapis.com/css2?family=Avenir+Next');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans');
-@import url('https://fonts.googleapis.com/css2?family=Baskerville');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
 // use Lato font if available
 $font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -25,10 +25,12 @@ $font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", 
 // Navs
 .navbar-brand {
   font-family: "Avenir Next";
-  font-size: 1.6rem;
-  //font-weight: bold;
+  font-size: 1.2rem;
+  //font-size: 1.6rem;
+  font-weight: 600;
   // light elegant grey
-  color: #4c566a !important;
+  color: #000000 !important;
+  //color: #4c566a !important;
   //color: #030b1b !important;
   //color: rgba(57, 57, 59, 0.461) !important;
 }
@@ -36,10 +38,11 @@ $font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", 
 // Navbar
 .navbar {
   font-family: "Avenir Next";
-  font-weight: 600;
+  font-weight: 300;
   font-size: 1.2rem;
   // same color as the brand
-  color: #4c566a82 !important;
+  //color: #4c566a82 !important;
+  color: #000000 !important;
   //color:  #4C566A !important;
   //color: #D8DEE9 !important;
 }
@@ -66,7 +69,8 @@ h3 {
   font-weight: 300;
   //font-style: 
   font-size: 1.3rem;
-  color: #4c566a !important;
+  color: #000000 !important;
+  //color: #4c566a !important;
 }
 
 // listing subtitles
@@ -75,7 +79,8 @@ h4 {
   font-weight: 600;
   font-style: bold;
   //font-size: 1.5rem;
-  color: #2E3440 !important;
+  color: #000000 !important;
+  //color: #2E3440 !important;
 }
 
 

@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -155,7 +155,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="visualisation,code" data-listing-file-modified-sort="1670417864123" data-listing-reading-time-sort="6.57">
+<div class="quarto-post image-right" data-index="0" data-categories="visualisation,code" data-listing-date-sort="1668034800000" data-listing-file-modified-sort="1672316017351" data-listing-reading-time-sort="6.57">
 <div class="thumbnail">
 <p><a href="./posts/ggplot_theme/index.html"> <img src="./posts/ggplot_theme/theme.png" class="thumnail-image"> </a></p>
 </div>
@@ -173,10 +173,14 @@ Creating your own ggplot theme
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/ggplot_theme/index.html"> </a>
+<a href="./posts/ggplot_theme/index.html">
+<div class="listing-date">
+Nov 10, 2022
+</div>
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="R,code" data-listing-file-modified-sort="1667936293289" data-listing-reading-time-sort="6.385">
+<div class="quarto-post image-right" data-index="1" data-categories="R,code" data-listing-date-sort="1641682800000" data-listing-file-modified-sort="1672316040676" data-listing-reading-time-sort="6.385">
 <div class="thumbnail">
 <p><a href="./posts/magic_map/index.html"> <img src="./posts/magic_map/map.png" class="thumnail-image"> </a></p>
 </div>
@@ -194,7 +198,11 @@ map()-magic
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/magic_map/index.html"> </a>
+<a href="./posts/magic_map/index.html">
+<div class="listing-date">
+Jan 9, 2022
+</div>
+</a>
 </div>
 </div>
 </div>

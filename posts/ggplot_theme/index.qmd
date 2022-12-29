@@ -2,7 +2,7 @@
 title: "Creating your own ggplot theme"
 description: "A short guide."
 #author: "Martin Stoffel"
-#date: "11/10/2022"
+date: "11/10/2022"
 categories: [visualisation, code]
 image: theme.png
 #  - visualisation

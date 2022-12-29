@@ -1,11 +1,16 @@
 ---
-title: "Open science, AI collaborators and feedback loops"
-description: ""
+title: "The collective scientist."
+description: "Feedback loops in an AI future."
 #author: "Martin Stoffel"
-#date: "11/10/2022"
+date: "29/12/2022"
 categories: [ideas]
 draft: true
-image: theme.png
+# image: ../pics/loop.png
 #  - visualisation
 ---
 
+![“An Erlenmeyer flask and a neural network in a strange loop by escher, dali, detailed recursive pencil drawing”](/pics/loop.png){fig-align="left" fig-width="30%"}
+
+Science is about to change. Everyone, from PhD to Professor, will have an AI buddy helping them to plan experiments, write code, do statistics, draft papers. This is not some distant future - the technology is already here. Self-supervised foundation models like [chatGPT](https://chat.openai.com/chat) are used by millions of people already for a wide range of tasks. 
+
+As so often, technological progress is faster than humanities ability to reflect on it. The future of science is at stake. Here, I'll argue that if we aren't careful, scientific inquiry can become highly centralized in a single AI system, which I call the *collective scientist*. This could lock-in parts of science and slow progress in unforeseeable ways.

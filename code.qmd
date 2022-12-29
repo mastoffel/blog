@@ -8,7 +8,7 @@ filters:
 ## scientific software
 
 `partR2`: partitioning R^2^ in mixed models.\
-[package](https://github.com/mastoffel/partR2), [paper](https://peerj.com/articles/11414/), [:In a nutshell](#x-partR2)\
+[paper](https://peerj.com/articles/11414/), [package](https://github.com/mastoffel/partR2), [:In a nutshell](#x-partR2)\
 ![Build Status](https://travis-ci.org/mastoffel/partR2.svg?branch=master) [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/partR2?color=blue)](https://cran.r-project.org/package=partR2) [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/partR2?color=blue)](https://CRAN.R-project.org/package=partR2) [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing) [![Codecov test coverage](https://codecov.io/gh/mastoffel/partR2/branch/master/graph/badge.svg)](https://codecov.io/gh/mastoffel/partR2?branch=master)
 
 `rptR`: repeatability estimation and variance decomposition in mixed models.\
@@ -20,7 +20,7 @@ filters:
 ![Build Status](https://travis-ci.org/mastoffel/inbreedR.svg?branch=master) [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/inbreedR?color=blue)](https://cran.r-project.org/package=inbreedR) [![Codecov test coverage](https://codecov.io/gh/mastoffel/inbreedR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/mastoffel/inbreedR?branch=master)
 
 `GCalignR`:aligning gas-chromatography data from messy field samples.\
-[article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR), [:In a nutshell](#x-GCalignR)\
+[paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR), [:In a nutshell](#x-GCalignR)\
 ![Build Status](https://travis-ci.org/mottensmann/GCalignR.svg?branch=master) [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/GCalignR?color=blue)](https://cran.r-project.org/package=GCalignR) [![](https://img.shields.io/badge/Altmetric-13-Darkorange.svg)](https://www.altmetric.com/details/43624695)
 
 ## :x partR2 {#x-partr2}
@@ -61,7 +61,8 @@ A (european) garden bird classifier.
 ![](/pics/cat.png)
   
 
-A neural [:vocoder](https://en.wikipedia.org/wiki/Vocoder) to reconstruct a waveform from a spectrogram, trained on cat meows. [code](https://github.com/mastoffel/neural_vocoder/blob/main/neural_vocoder.ipynb)
+A neural [:vocoder](https://en.wikipedia.org/wiki/Vocoder) to reconstruct a waveform from a spectrogram, trained on cat meows.  
+[code](https://github.com/mastoffel/neural_vocoder/blob/main/neural_vocoder.ipynb)
 :::
 
 *Upcoming:*
