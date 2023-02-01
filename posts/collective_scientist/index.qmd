@@ -9,8 +9,23 @@ draft: true
 #  - visualisation
 ---
 
-![“An Erlenmeyer flask and a neural network in a strange loop by escher, dali, detailed recursive pencil drawing”](/pics/loop.png){fig-align="left" fig-width="30%"}
+![“An Erlenmeyer flask and a neural network in a strange loop by escher, dali, detailed recursive pencil drawing”](/pics/loop.png){fig-align="left" width="50%"}
 
-Science is about to change. Everyone, from PhD to Professor, will have an AI buddy helping them to plan experiments, write code, do statistics, draft papers. This is not some distant future - the technology is already here. Self-supervised foundation models like [chatGPT](https://chat.openai.com/chat) are used by millions of people already for a wide range of tasks. 
+---
 
-As so often, technological progress is faster than humanities ability to reflect on it. The future of science is at stake. Here, I'll argue that if we aren't careful, scientific inquiry can become highly centralized in a single AI system, which I call the *collective scientist*. This could lock-in parts of science and slow progress in unforeseeable ways.
+Science is about to change. Everyone, from Undergrad to Professor, will have an AI buddy helping them to plan experiments, write code, do statistics, draft papers, communicate with collaborators. This is not some distant future - the technology is already here. AI models like [chatGPT](https://chat.openai.com/chat) are used by millions of people for lots of things *right now*, and further breakthroughs are around the corner. 
+
+The most broadly capable AI models are self-supervised. Instead of a human providing them with a ground truth (e.g. a correct label for a picture), they learn patterns from large streams of data by themselves. This simply means involves masking the next word during training, and letting the model predict it. Over time, the model parameters are tuned too get better and better predictions. This which works for text, code and maths alike and even all at once in the same model. 
+
+Technological progress is faster than humanities ability to reflect on it. Now,the future of science is at a crossroads. Knowledge, and indeed the scientific method itself as practiced by scientists around the world, are fed into large neural networks. 
+
+Perhaps surprisingly for neural networks, great scale comes with great power. With more data and larger models, new and surprising capabilities emerge. This happens at a pace that the creators 
+
+
+, which I call the *collective scientist*. At best, the collective scientist can be a great equaliser, bringing ivory tower knowledge to researchers all over the world. At worst, parts of science could be locked-in in unforseeable ways. 
+
+Let's think through the upsides. Currently, academia is highly inefficient in a number of ways. PhDs and Postdocs all over the world embark on ambitious scientific project, yet most lack access to resources and expertise. For example, few departments have capable statisticians and programmers with enough time to help students. Scientific writing is hard, yet many are left to their own devices, going through rejection after rejection when submitting their first paper. Some are lucky and end up with a capable and good supervisor and support system in the group, but many are not. 
+
+AI will quickly bridge the gap. Instead of being stuck for weeks with coding problems, stats or writing, we can ask the collective scientist. Access to human expertise will be less important than critical thinking, abstraction and creativity. Students at small universities will be more able to compete with those at top institutions than ever before. Science will be more diverse, and more accessible.
+
+The downsides are much harder to pin down. The challenge of creating AIs that do what want is it's own research field, [AI alignment](https://www.alignmentforum.org/). For something as complex as the collective scientist,  it's probably impossible to even define what exactly we want. 

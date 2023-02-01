@@ -270,7 +270,7 @@
     "href": "code.html",
     "title": "fantom filters",
     "section": "",
-    "text": "partR2: partitioning R2 in mixed models.\npaper, package, :In a nutshell\n    \nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package, :In a nutshell\n   \ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package, :In a nutshell\n  \nGCalignR:aligning gas-chromatography data from messy field samples.\npaper, package, :In a nutshell"
+    "text": "partR2: partitioning R2 in mixed models.\npaper, package, :In a nutshell\n \nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package, :In a nutshell\n \ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package, :In a nutshell\n \nGCalignR:aligning gas-chromatography data from messy field samples.\npaper, package, :In a nutshell"
   },
   {
     "objectID": "code.html#x-partr2",

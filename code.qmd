@@ -9,19 +9,19 @@ filters:
 
 `partR2`: partitioning R^2^ in mixed models.\
 [paper](https://peerj.com/articles/11414/), [package](https://github.com/mastoffel/partR2), [:In a nutshell](#x-partR2)\
-![Build Status](https://travis-ci.org/mastoffel/partR2.svg?branch=master) [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/partR2?color=blue)](https://cran.r-project.org/package=partR2) [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/partR2?color=blue)](https://CRAN.R-project.org/package=partR2) [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing) [![Codecov test coverage](https://codecov.io/gh/mastoffel/partR2/branch/master/graph/badge.svg)](https://codecov.io/gh/mastoffel/partR2?branch=master)
+[![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/partR2?color=blue)](https://cran.r-project.org/package=partR2) [![Codecov test coverage](https://codecov.io/gh/mastoffel/partR2/branch/master/graph/badge.svg)](https://codecov.io/gh/mastoffel/partR2?branch=master)
 
 `rptR`: repeatability estimation and variance decomposition in mixed models.\
 [paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12797), [package](https://github.com/mastoffel/rptR), [:In a nutshell](#x-rptR)\
-![Build Status](https://travis-ci.org/mastoffel/rptR.svg?branch=master) [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/rptR?color=blue)](https://cran.r-project.org/package=rptR) [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/rptR?color=blue)](https://CRAN.R-project.org/package=rptR) [![Codecov test coverage](https://codecov.io/gh/mastoffel/rptR/branch/master/graph/badge.svg)](https://codecov.io/gh/mastoffel/rptR?branch=master)
+[![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/rptR?color=blue)](https://cran.r-project.org/package=rptR) [![Codecov test coverage](https://codecov.io/gh/mastoffel/rptR/branch/master/graph/badge.svg)](https://codecov.io/gh/mastoffel/rptR?branch=master)
 
 `inbreedR`: analysing inbreeding with sparse genetic markers.\
 [paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12588), [package](https://github.com/mastoffel/inbreedR), [:In a nutshell](#x-inbreedR)\
-![Build Status](https://travis-ci.org/mastoffel/inbreedR.svg?branch=master) [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/inbreedR?color=blue)](https://cran.r-project.org/package=inbreedR) [![Codecov test coverage](https://codecov.io/gh/mastoffel/inbreedR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/mastoffel/inbreedR?branch=master)
+[![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/inbreedR?color=blue)](https://cran.r-project.org/package=inbreedR) [![Codecov test coverage](https://codecov.io/gh/mastoffel/inbreedR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/mastoffel/inbreedR?branch=master)
 
 `GCalignR`:aligning gas-chromatography data from messy field samples.\
 [paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR), [:In a nutshell](#x-GCalignR)\
-![Build Status](https://travis-ci.org/mottensmann/GCalignR.svg?branch=master) [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/GCalignR?color=blue)](https://cran.r-project.org/package=GCalignR) [![](https://img.shields.io/badge/Altmetric-13-Darkorange.svg)](https://www.altmetric.com/details/43624695)
+[![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/GCalignR?color=blue)](https://cran.r-project.org/package=GCalignR) 
 
 ## :x partR2 {#x-partr2}
 
