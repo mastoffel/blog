@@ -1,0 +1,14 @@
+{
+  "hash": "e0fae58cf1bb5c29ed7ff182f9dbc5d4",
+  "result": {
+    "markdown": "---\ntitle: \"Piping in Python\"\ndescription: \"Simplify data pipelines.\"\n#author: \"Martin Stoffel\"\ndate: \"01/02/2023\"\ncategories: [Python, code]\nimage: map.png\n---\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

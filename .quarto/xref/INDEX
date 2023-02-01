@@ -52,5 +52,8 @@
   },
   "birds.qmd": {
     "birds.html": "7a0802db"
+  },
+  "posts/piping_python/index.qmd": {
+    "index.html": "4cf16f42"
   }
 }

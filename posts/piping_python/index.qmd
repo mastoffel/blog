@@ -1,0 +1,15 @@
+---
+title: "Piping in Python"
+description: "Simplify data pipelines."
+#author: "Martin Stoffel"
+date: "01/02/2023"
+categories: [Python, code]
+image: map.png
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  #collapse = TRUE,
+  comment = "#>"
+)
+```

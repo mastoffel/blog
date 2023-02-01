@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "fantom filters",
     "section": "",
-    "text": "A short guide.\n\n\n\n\n\n\nNov 10, 2022\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n\n\nJan 9, 2022\n\n\n\n\n\n\nNo matching items"
+    "text": "Simplify data pipelines.\n\n\n\n\n\n\nJan 2, 2023\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\nA short guide.\n\n\n\n\n\n\nNov 10, 2022\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n\n\nJan 9, 2022\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research.html",
@@ -270,7 +270,7 @@
     "href": "code.html",
     "title": "fantom filters",
     "section": "",
-    "text": "partR2: partitioning R2 in mixed models.\npaper, package, :In a nutshell\n \nrptR: repeatability estimation and variance decomposition in mixed models.\npaper, package, :In a nutshell\n \ninbreedR: analysing inbreeding with sparse genetic markers.\npaper, package, :In a nutshell\n \nGCalignR:aligning gas-chromatography data from messy field samples.\npaper, package, :In a nutshell"
+    "text": "partR2: partitioning R2 in mixed models.\n:In a nutshell, paper, package | \nrptR: repeatability estimation and variance decomposition in mixed models.\n:In a nutshell, paper, package | \ninbreedR: analysing inbreeding with sparse genetic markers.\n:In a nutshell, paper, package | \nGCalignR:aligning gas-chromatography data from messy field samples.\n:In a nutshell, paper, package |"
   },
   {
     "objectID": "code.html#x-partr2",
