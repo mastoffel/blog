@@ -1,0 +1,14 @@
+{
+  "hash": "e8451b02d947e3a8bce6f287f291946e",
+  "result": {
+    "markdown": "---\ntitle: \"Piping in Python\"\ndescription: \"Simplified data pipelines.\"\n#author: \"Martin Stoffel\"\ndate: \"01/02/2023\"\ncategories: [Python, code]\nimage: pipe.png\n---\n\n\n\n\n\nIn R, we might do data-wrangling like this:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\n#> ✔ ggplot2 3.3.5     ✔ purrr   0.3.4\n#> ✔ tibble  3.1.2     ✔ dplyr   1.0.6\n#> ✔ tidyr   1.1.3     ✔ stringr 1.4.0\n#> ✔ readr   2.0.0     ✔ forcats 0.5.1\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\n#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n#> ✖ dplyr::filter() masks stats::filter()\n#> ✖ dplyr::lag()    masks stats::lag()\n```\n:::\n\n```{.r .cell-code}\n# load the iris dataset, filter, select, group, summarise\n\niris %>%\n  filter(Species == \"setosa\") %>%\n  select(Sepal.Length, Sepal.Width) %>%\n  group_by(Sepal.Length) %>%\n  summarise(mean_width = mean(Sepal.Width))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n#> # A tibble: 15 x 2\n#>    Sepal.Length mean_width\n#>           <dbl>      <dbl>\n#>  1          4.3       3   \n#>  2          4.4       3.03\n#>  3          4.5       2.3 \n#>  4          4.6       3.32\n#>  5          4.7       3.2 \n#>  6          4.8       3.18\n#>  7          4.9       3.2 \n#>  8          5         3.36\n#>  9          5.1       3.6 \n#> 10          5.2       3.67\n#> 11          5.3       3.7 \n#> 12          5.4       3.66\n#> 13          5.5       3.85\n#> 14          5.7       4.1 \n#> 15          5.8       4\n```\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

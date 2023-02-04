@@ -1,0 +1,100 @@
+---
+title: "Piping in Python"
+description: "Simplified data pipelines."
+#author: "Martin Stoffel"
+date: "01/02/2023"
+categories: [Python, code]
+image: pipe.png
+draft: true
+---
+
+```{r, include = FALSE}
+library(reticulate)
+knitr::opts_chunk$set(
+  #collapse = TRUE,
+  comment = "#>"
+)
+```
+
+In R, we might do data-wrangling like this:
+
+```{r}
+library(dplyr)
+
+# load the iris dataset, filter, select, group, summarise
+
+iris %>%
+  filter(Species == "setosa") %>%
+  select(Sepal.Length, Sepal.Width) %>%
+  group_by(Sepal.Length) %>%
+  summarise(mean_width = mean(Sepal.Width))
+```
+
+The usual way in Python's Pandas is much less elegant, as it requires a lot of intermediate variables:
+
+```{python}
+import pandas as pd
+
+# load the iris dataset, filter, select, group, summarise
+
+iris = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv")
+iris_setosa = iris[iris.Species == "setosa"]
+iris_setosa = iris_setosa[["Sepal.Length", "Sepal.Width"]]
+iris_setosa = iris_setosa.groupby("Sepal.Length")
+iris_setosa = iris_setosa.mean()
+iris_setosa
+```
+
+But we can actually pipe in Python, too! Something like this:
+
+```{python}
+import pandas as pd
+
+# load the iris dataset, filter, select, group, summarise
+
+(iris
+  .query("Species == 'setosa'")
+  .loc[:, ['Sepal.Length', 'Sepal.Width']]
+  .groupby('Sepal.Length')
+  .agg({'Sepal.Width': 'mean'})
+)
+```
+
+Some functions don't natively work in a pipe, but we can use the `pipe` function to make them work. For example, the renaming function `rename` doesn't work in a pipe, but we can use `pipe` to make it work:
+
+```{python}
+
+# load the iris dataset, filter, select, group, summarise
+
+(iris
+  .pipe(lambda df: df[df.Species == "setosa"])
+  .pipe(lambda df: df[["Sepal.Length", "Sepal.Width"]])
+  .pipe(lambda df: df.groupby("Sepal.Length"))
+  .pipe(lambda df: df.mean())
+)
+```
+
+If you'd like something just like R, there is a package called 'siuba' that is a port of the 'dplyr' package to Python. It's not as mature as 'dplyr' yet, but it's getting there. You can install it with `pip install siuba` and then use it like this:
+
+```{python}
+import pandas as pd
+from siuba import _, filter, select, group_by, summarize
+
+# load the iris dataset, filter, select, group, summarise
+
+(iris
+  >> filter(_.Species == "setosa")
+  >> select(_.Sepal.Length, _.Sepal.Width)
+  >> group_by(_.Sepal.Length)
+  >> summarize(mean_width = _.Sepal.Width.mean())
+)
+```
+
+
+Nice! We can see all of this next to each other in a table:
+
+| R | Python | Python (pipe) | Python (siuba) |
+|---|--------|---------------|----------------|
+| iris %>% filter(Species == "setosa") %>% select(Sepal.Length, Sepal.Width) %>% group_by(Sepal.Length) %>% summarise(mean_width = mean(Sepal.Width)) | iris[iris.Species == "setosa"][["Sepal.Length", "Sepal.Width"]].groupby("Sepal.Length").mean() | (iris .query("Species == 'setosa'") .loc[:, ['Sepal.Length', 'Sepal.Width']] .groupby('Sepal.Length') .agg({'Sepal.Width': 'mean'})) | (iris >> filter(_.Species == "setosa") >> select(_.Sepal.Length, _.Sepal.Width) >> group_by(_.Sepal.Length) >> summarize(mean_width = _.Sepal.Width.mean())) |
+
+I hope this helps you to write more elegant Python code!
