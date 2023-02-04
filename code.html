@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>fantom filters -</title>
+<title>fantom filters – code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -42,6 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/nutshell-1.0.0/nutshell.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,35 +60,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FYLF41PFGT"></script>
 
 <script type="text/javascript">
@@ -100,7 +70,6 @@ gtag('js', new Date());
 gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -122,7 +91,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">blog</span></a>
   </li>  
   <li class="nav-item">
@@ -130,7 +99,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
  <span class="menu-text">research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./code.html">
+    <a class="nav-link active" href="./code.html" aria-current="page">
  <span class="menu-text">code</span></a>
   </li>  
   <li class="nav-item">
@@ -149,96 +118,82 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
+<section id="scientific-software" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-software">scientific software</h2>
+<p><code>partR2</code>: partitioning R<sup>2</sup> in mixed models.<br>
+<a href="#x-partR2">:In a nutshell</a>, <a href="https://peerj.com/articles/11414/">paper</a>, <a href="https://github.com/mastoffel/partR2">package</a> | <a href="https://cran.r-project.org/package=partR2"><img src="https://cranlogs.r-pkg.org/badges/grand-total/partR2?color=red.png" class="img-fluid" alt="CRAN total downloads"></a></p>
+<p><code>rptR</code>: repeatability estimation and variance decomposition in mixed models.<br>
+<a href="#x-rptR">:In a nutshell</a>, <a href="https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12797">paper</a>, <a href="https://github.com/mastoffel/rptR">package</a> | <a href="https://cran.r-project.org/package=rptR"><img src="https://cranlogs.r-pkg.org/badges/grand-total/rptR?color=blue.png" class="img-fluid" alt="CRAN total downloads"></a></p>
+<p><code>inbreedR</code>: analysing inbreeding with sparse genetic markers.<br>
+<a href="#x-inbreedR">:In a nutshell</a>, <a href="https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12588">paper</a>, <a href="https://github.com/mastoffel/inbreedR">package</a> | <a href="https://cran.r-project.org/package=inbreedR"><img src="https://cranlogs.r-pkg.org/badges/grand-total/inbreedR?color=blue.png" class="img-fluid" alt="CRAN total downloads"></a></p>
+<p><code>GCalignR</code>:aligning gas-chromatography data from messy field samples.<br>
+<a href="#x-GCalignR">:In a nutshell</a>, <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311">paper</a>, <a href="https://github.com/mottensmann/GCalignR">package</a> | <a href="https://cran.r-project.org/package=GCalignR"><img src="https://cranlogs.r-pkg.org/badges/grand-total/GCalignR?color=blue.png" class="img-fluid" alt="CRAN total downloads"></a></p>
+</section>
+<section id="x-partr2" class="level2">
+<h2 class="anchored" data-anchor-id="x-partr2">:x partR2</h2>
+<p>When using a <a href="https://en.wikipedia.org/wiki/Mixed_model">:mixed model</a>, we might ask the question: How much variance does predictor X explain? For several reasons, this has been a rather unsolved problem.´partR2´ implements <em>one</em> possible solution to estimate the semi-partial R<sup>2</sup> in mixed models for single predictors and combinations of predictors. Yes, even interactions, though this is a bit tricky (see the <a href="https://cran.r-project.org/web/packages/partR2/vignettes/Using_partR2.html">manual</a>). <code>partR2</code> really complements <code>rptR</code> in that both together make it possible to get a sense of where the variance goes in your model.</p>
+<p><em>Authors</em> | <strong>MA Stoffel</strong>, S Nakagawa, H Schielzeth</p>
+</section>
+<section id="x-rptR" class="level2">
+<h2 class="anchored" data-anchor-id="x-rptR">:x rptR</h2>
+<p>The repeatability is also called the <a href="https://en.wikipedia.org/wiki/Intraclass_correlation#:~:text=In%20statistics%2C%20the%20intraclass%20correlation,same%20group%20resemble%20each%20other.">:intra-class coefficient</a>. In hierarchical data, we can measure the impact of group differences on a response variable using the repeatability. Using mixed models, the repeatability is simply the variation explained by a random (group-level) effect. <code>rptR</code> has a few tricks up the sleeve to estimate repeatability, confidence intervals and p-values for the most common model types and error distributions.</p>
+<p><em>Authors</em> | <strong>MA Stoffel</strong>, S Nakagawa, H Schielzeth</p>
+</section>
+<section id="x-inbreedR" class="level2">
+<h2 class="anchored" data-anchor-id="x-inbreedR">:x inbreedR</h2>
+<p>Sometimes, one just doesn’t have enough genetic markers to be sure about the measured inbreeding coefficients (i.e.&nbsp;when using microsatellites). <code>inbreedR</code> implements functions to estimate variance in inbreeding which gives some insights into whether the correlation between heterozygosity and fitness is actually due to (genome-wide) inbreeding or not.</p>
+<p><em>Authors</em> | <strong>MA Stoffel</strong>, M Esser, M Kardos, E Humble, H Nichols, P David, JI Hoffman</p>
+</section>
+<section id="x-GCalignR" class="level2">
+<h2 class="anchored" data-anchor-id="x-GCalignR">:x GCalignR</h2>
+<p>Gas-chromatography samples from the field can be messy. They’ll have different concentrations, and lots of dirt in them. However, we usually want to know whether the same peak in each sample corresponds to the same substance. To do this, we need to align all samples. <code>GCalignR</code> provides a simple, rule based algorithm which requires a bit of manual input but then works well for a wide range of samples.</p>
+<p><em>Authors</em> | M Ottensmann, <strong>MA Stoffel</strong>, HJ Nichols, JI Hoffman<br>
+* MO and MAS are shared first authors</p>
+</section>
+<section id="machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning">machine learning</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
+<p><img src="pics/wren.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: center;">
+<p>A (european) garden bird classifier.<br>
+<a href="./birds.html">app</a>, <a href="https://github.com/mastoffel/birds">code</a></p>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
+<p><img src="./pics/cat.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: center;">
+<p>A neural <a href="https://en.wikipedia.org/wiki/Vocoder">:vocoder</a> to reconstruct a waveform from a spectrogram, trained on cat meows.<br>
+<a href="https://github.com/mastoffel/neural_vocoder/blob/main/neural_vocoder.ipynb">code</a></p>
+</div>
+</div>
+</div>
+<p><em>Upcoming:</em></p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
+<p><img src="pics/transformer.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: center;">
+<p>A decoder only Transformer built form scratch.</p>
+</div>
+</div>
+</div>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Python,code" data-listing-date-sort="1672617600000" data-listing-file-modified-sort="1675519702707" data-listing-reading-time-sort="1.685">
-<div class="thumbnail">
-<p><a href="./posts/piping_python/index.html"> <img src="./posts/piping_python/pipe.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/piping_python/index.html">
-<h3 class="no-anchor listing-title">
-Piping in Python
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-<p>Simplified data pipelines.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/piping_python/index.html">
-<div class="listing-date">
-Jan 2, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="visualisation,code" data-listing-date-sort="1668038400000" data-listing-file-modified-sort="1675277080690" data-listing-reading-time-sort="6.57">
-<div class="thumbnail">
-<p><a href="./posts/ggplot_theme/index.html"> <img src="./posts/ggplot_theme/theme.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/ggplot_theme/index.html">
-<h3 class="no-anchor listing-title">
-Creating your own ggplot theme
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-<p>A short guide.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/ggplot_theme/index.html">
-<div class="listing-date">
-Nov 10, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="R,code" data-listing-date-sort="1641686400000" data-listing-file-modified-sort="1675277080690" data-listing-reading-time-sort="6.385">
-<div class="thumbnail">
-<p><a href="./posts/magic_map/index.html"> <img src="./posts/magic_map/map.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/magic_map/index.html">
-<h3 class="no-anchor listing-title">
-map()-magic
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-<p>Simple, fast, safe: functional programming in R.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/magic_map/index.html">
-<div class="listing-date">
-Jan 9, 2022
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

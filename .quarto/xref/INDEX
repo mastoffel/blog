@@ -55,5 +55,8 @@
   },
   "posts/piping_python/index.qmd": {
     "index.html": "4cf16f42"
+  },
+  "posts/piping_python/index.rmarkdown": {
+    "index.html": "6d5b571c"
   }
 }
