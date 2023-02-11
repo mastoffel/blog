@@ -26,14 +26,14 @@ format:
   html:
     theme: custom.scss
     css: styles.css
-    mainfont: "Lato"
+    #mainfont: "Lato"
     #monofont: "JetBrainsMono"
     footnotes-hover: true
-    fontsize: 1.1em
+    fontsize: 1em
     linkcolor: "black"
     linestretch: 1.7
   
-highlight-style: kate
+highlight-style: arrow
 callout-appearance: minimal
   
 editor: visual
