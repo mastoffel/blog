@@ -8,8 +8,7 @@ image: pipe.png
 draft: false
 ---
 
-## Data wrangling in Python *seems* clunky. 
-
+Data wrangling in Python *seems* clunky. 
 Yet, it doesn't have to be. Here is **how to pipe in Python.** 
 
 ## The problem
@@ -18,7 +17,7 @@ In `R`, we process data beautifully with `dplyr` and `%>%`:
 
 ```{r}
 #| output: false
-#| code-fold: true
+#| code-fold: false
 suppressMessages(library(dplyr))
 iris %>%
   mutate(sepal_ratio = Sepal.Width / Sepal.Length) %>%
@@ -32,7 +31,7 @@ In Python's `pandas`, most data wrangling code looks much less great, often like
 
 ```{python}
 #| output: false
-#| code-fold: true
+#| code-fold: false
 import pandas as pd
 url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
 iris = pd.read_csv(url)
@@ -44,9 +43,7 @@ iris = iris.groupby("species")            #group by
 iris = iris.agg({"sepal_ratio": "mean"})  #summarise
 ```
 
-Why is this not great?   
-- Hard to read  
-- Iris df gets re-assigned a lot
+This is hard to read because there's lots of repitition. 
 
 ## A new hope
 
@@ -105,7 +102,7 @@ Here's a quick summary over the most common data wrangling tasks and their pipea
 | rename columns | rename() | df.rename() |
 |
 
-Last tip: AI is your friend. If you're stuck, put your pandas code in chatgpt or co-pilot and ask it to re-write code as a pipe. Seems to work pretty well.
+Last tip: **AI** is your friend. If you're stuck, put your pandas code in chatgpt or GitHub Copilot and ask it to re-write code as a pipe. Seems to work pretty well.
 
 ## Not so secret bonus: `siuba`
 

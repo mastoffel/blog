@@ -15,4 +15,4 @@ about:
       href: https://www.linkedin.com/in/mastoffel/
 ---
 
-Hi, I'm Martin. 
+Hi, I'm Martin. At heart, I'm curious about nature and technology and everything in between. Until recently, I was a researcher working on evolutionary genetics and biostatistics at the University of Edinburgh, and a PIBBSS fellow working on AI alignment. Now, I'm a Research Data Scientist at the Alan Turing Institute, combining a passion for building things and tackling new challenges across disciplines. 

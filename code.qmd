@@ -5,22 +5,39 @@ filters:
       - nutshell
 ---
 
-## scientific software
+## Scientific software
+
+::: {layout="[15,85]"}
+![](pics/venn2.jpeg)
 
 `partR2`: partitioning R^2^ in mixed models.\
 [:In a nutshell](#x-partR2), [paper](https://peerj.com/articles/11414/), [package](https://github.com/mastoffel/partR2) | [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/partR2?color=red)](https://cran.r-project.org/package=partR2) 
+:::
+
+::: {layout="[15,85]"}
+![](pics/rptr.png)
 
 `rptR`: repeatability estimation and variance decomposition in mixed models.\
 [:In a nutshell](#x-rptR),
 [paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12797), [package](https://github.com/mastoffel/rptR) | [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/rptR?color=blue)](https://cran.r-project.org/package=rptR)
+:::
+
+::: {layout="[15,85]"}
+![](pics/inbreedr3.png)
 
 `inbreedR`: analysing inbreeding with sparse genetic markers.\
 [:In a nutshell](#x-inbreedR),
 [paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12588), [package](https://github.com/mastoffel/inbreedR) | [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/inbreedR?color=blue)](https://cran.r-project.org/package=inbreedR) 
+:::
+
+::: {layout="[15,85]"}
+
+![](pics/gcalignr.png)
 
 `GCalignR`:aligning gas-chromatography data from messy field samples.\
 [:In a nutshell](#x-GCalignR),
 [paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311), [package](https://github.com/mottensmann/GCalignR) | [![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/GCalignR?color=blue)](https://cran.r-project.org/package=GCalignR) 
+:::
 
 ## :x partR2 {#x-partr2}
 
@@ -47,7 +64,7 @@ Gas-chromatography samples from the field can be messy. They'll have different c
 *Authors* \| M Ottensmann, **MA Stoffel**, HJ Nichols, JI Hoffman\
 \* MO and MAS are shared first authors
 
-## machine learning
+## Machine learning
 
 ::: {layout="[15,85]"}
 ![](pics/wren.jpg)
@@ -69,6 +86,6 @@ A neural [:vocoder](https://en.wikipedia.org/wiki/Vocoder) to reconstruct a wave
 ::: {layout="[15,85]"}
 ![](pics/transformer.png)
 
-A decoder only Transformer built form scratch.
+A Transformer built from scratch.
 :::
 

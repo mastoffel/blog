@@ -219,16 +219,11 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 
 
 
-<section id="data-wrangling-in-python-seems-clunky." class="level2">
-<h2 class="anchored" data-anchor-id="data-wrangling-in-python-seems-clunky.">Data wrangling in Python <em>seems</em> clunky.</h2>
-<p>Yet, it doesn’t have to be. Here is <strong>how to pipe in Python.</strong></p>
-</section>
+<p>Data wrangling in Python <em>seems</em> clunky. Yet, it doesn’t have to be. Here is <strong>how to pipe in Python.</strong></p>
 <section id="the-problem" class="level2">
 <h2 class="anchored" data-anchor-id="the-problem">The problem</h2>
 <p>In <code>R</code>, we process data beautifully with <code>dplyr</code> and <code>%&gt;%</code>:</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(dplyr))</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sepal_ratio =</span> Sepal.Width <span class="sc">/</span> Sepal.Length) <span class="sc">%&gt;%</span></span>
@@ -236,12 +231,9 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Species, sepal_ratio) <span class="sc">%&gt;%</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_sepal_ratio =</span> <span class="fu">mean</span>(sepal_ratio))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>In Python’s <code>pandas</code>, most data wrangling code looks much less great, often like this:</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> pd.read_csv(url)</span>
@@ -251,11 +243,8 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> iris[[<span class="st">"species"</span>, <span class="st">"sepal_ratio"</span>]]   <span class="co">#select</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> iris.groupby(<span class="st">"species"</span>)            <span class="co">#group by</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> iris.agg({<span class="st">"sepal_ratio"</span>: <span class="st">"mean"</span>})  <span class="co">#summarise</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
-<p>Why is this not great?<br>
-- Hard to read<br>
-- Iris df gets re-assigned a lot</p>
+<p>This is hard to read because there’s lots of repitition.</p>
 </section>
 <section id="a-new-hope" class="level2">
 <h2 class="anchored" data-anchor-id="a-new-hope">A new hope</h2>
@@ -366,7 +355,7 @@ virginica      0.526112</code></pre>
 </tr>
 </tbody>
 </table>
-<p>Last tip: AI is your friend. If you’re stuck, put your pandas code in chatgpt or co-pilot and ask it to re-write code as a pipe. Seems to work pretty well.</p>
+<p>Last tip: <strong>AI</strong> is your friend. If you’re stuck, put your pandas code in chatgpt or GitHub Copilot and ask it to re-write code as a pipe. Seems to work pretty well.</p>
 </section>
 <section id="not-so-secret-bonus-siuba" class="level2">
 <h2 class="anchored" data-anchor-id="not-so-secret-bonus-siuba">Not so secret bonus: <code>siuba</code></h2>

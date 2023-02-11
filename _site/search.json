@@ -11,7 +11,7 @@
     "href": "research.html",
     "title": "fantom filters",
     "section": "",
-    "text": "Selected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list here.\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNat Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNat Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts"
+    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
   },
   {
     "objectID": "research.html#research-consulting",
@@ -158,7 +158,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hi, I’m Martin."
+    "text": "Hi, I’m Martin. At heart, I’m curious about nature and technology and everything in between. Until recently, I was a researcher working on evolutionary genetics and biostatistics at the University of Edinburgh, and a PIBBSS fellow working on AI alignment. Now, I’m a Research Data Scientist at the Alan Turing Institute, combining a passion for building things and tackling new challenges across disciplines."
   },
   {
     "objectID": "posts/magic_map/index.html",
@@ -270,7 +270,7 @@
     "href": "code.html",
     "title": "fantom filters",
     "section": "",
-    "text": "partR2: partitioning R2 in mixed models.\n:In a nutshell, paper, package | \nrptR: repeatability estimation and variance decomposition in mixed models.\n:In a nutshell, paper, package | \ninbreedR: analysing inbreeding with sparse genetic markers.\n:In a nutshell, paper, package | \nGCalignR:aligning gas-chromatography data from messy field samples.\n:In a nutshell, paper, package |"
+    "text": "partR2: partitioning R2 in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nrptR: repeatability estimation and variance decomposition in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\ninbreedR: analysing inbreeding with sparse genetic markers.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nGCalignR:aligning gas-chromatography data from messy field samples.\n:In a nutshell, paper, package |"
   },
   {
     "objectID": "code.html#x-partr2",
@@ -304,8 +304,8 @@
     "objectID": "code.html#machine-learning",
     "href": "code.html#machine-learning",
     "title": "fantom filters",
-    "section": "machine learning",
-    "text": "machine learning\n\n\n\n\n\n\nA (european) garden bird classifier.\napp, code\n\n\n\n\n\n\n\n\n\nA neural :vocoder to reconstruct a waveform from a spectrogram, trained on cat meows.\ncode\n\n\n\nUpcoming:\n\n\n\n\n\n\nA decoder only Transformer built form scratch."
+    "section": "Machine learning",
+    "text": "Machine learning\n\n\n\n\n\n\nA (european) garden bird classifier.\napp, code\n\n\n\n\n\n\n\n\n\nA neural :vocoder to reconstruct a waveform from a spectrogram, trained on cat meows.\ncode\n\n\n\nUpcoming:\n\n\n\n\n\n\nA Transformer built from scratch."
   },
   {
     "objectID": "research.html#consulting",
@@ -347,7 +347,7 @@
     "href": "posts/piping_python/index.html",
     "title": "Piping in Python",
     "section": "",
-    "text": "Yet, it doesn’t have to be. Here is how to pipe in Python."
+    "text": "Data wrangling in Python seems clunky. Yet, it doesn’t have to be. Here is how to pipe in Python."
   },
   {
     "objectID": "posts/piping_python/index.html#section",
@@ -382,14 +382,14 @@
     "href": "posts/piping_python/index.html#the-problem",
     "title": "Piping in Python",
     "section": "The problem",
-    "text": "The problem\nIn R, we process data beautifully with dplyr and %>%:\n\n\nCode\nsuppressMessages(library(dplyr))\niris %>%\n  mutate(sepal_ratio = Sepal.Width / Sepal.Length) %>%\n  filter(sepal_ratio > 0.5) %>%\n  select(Species, sepal_ratio) %>%\n  group_by(Species) %>%\n  summarise(mean_sepal_ratio = mean(sepal_ratio))\n\n\nIn Python’s pandas, most data wrangling code looks much less great, often like this:\n\n\nCode\nimport pandas as pd\nurl = \"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv\"\niris = pd.read_csv(url)\n\niris[\"sepal_ratio\"] = iris[\"sepal_width\"] / iris[\"sepal_length\"]\niris = iris[iris[\"sepal_ratio\"] > 0.5]    #filter\niris = iris[[\"species\", \"sepal_ratio\"]]   #select\niris = iris.groupby(\"species\")            #group by\niris = iris.agg({\"sepal_ratio\": \"mean\"})  #summarise\n\n\nWhy is this not great?\n- Hard to read\n- Iris df gets re-assigned a lot"
+    "text": "The problem\nIn R, we process data beautifully with dplyr and %>%:\n\nsuppressMessages(library(dplyr))\niris %>%\n  mutate(sepal_ratio = Sepal.Width / Sepal.Length) %>%\n  filter(sepal_ratio > 0.5) %>%\n  select(Species, sepal_ratio) %>%\n  group_by(Species) %>%\n  summarise(mean_sepal_ratio = mean(sepal_ratio))\n\nIn Python’s pandas, most data wrangling code looks much less great, often like this:\n\nimport pandas as pd\nurl = \"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv\"\niris = pd.read_csv(url)\n\niris[\"sepal_ratio\"] = iris[\"sepal_width\"] / iris[\"sepal_length\"]\niris = iris[iris[\"sepal_ratio\"] > 0.5]    #filter\niris = iris[[\"species\", \"sepal_ratio\"]]   #select\niris = iris.groupby(\"species\")            #group by\niris = iris.agg({\"sepal_ratio\": \"mean\"})  #summarise\n\nThis is hard to read because there’s lots of repitition."
   },
   {
     "objectID": "posts/piping_python/index.html#a-new-hope",
     "href": "posts/piping_python/index.html#a-new-hope",
     "title": "Piping in Python",
     "section": "A new hope",
-    "text": "A new hope\nBut don’t despair! We can pipe in Python, too. Here is how:\n\niris = pd.read_csv(url)\n\n(iris\n  .assign(sepal_ratio = lambda x: x.sepal_width / x.sepal_length)\n  .query(\"sepal_ratio > 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n            sepal_ratio\nspecies                \nsetosa         0.684248\nversicolor     0.530953\nvirginica      0.526112\n\n\nFor now, there are only two main principles to remember:\n\nUse . instead of %>% to pipe. Put . at the beginning of the line.\nUse () around the whole expression. Python will complain otherwise.\n\nThere is a pipeable method for most tasks. Sometimes, though, there isn’t, but you can still make it work.\n\nUse lambda to define a function on the fly (like in .assign() above).\nUse .pipe(), which takes a function as an argument and allows you to pipe it.\n\nHere is an example of .pipe():\n\ndef sepal_ratio(df):\n  return df.assign(sepal_ratio = df.sepal_width / df.sepal_length)\n\n(iris\n  .pipe(sepal_ratio)\n  .query(\"sepal_ratio > 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n            sepal_ratio\nspecies                \nsetosa         0.684248\nversicolor     0.530953\nvirginica      0.526112\n\n\nThat’s it! Some people don’t like piping because, they say, it’s harder to debug. I like to simply comment out lines, allowing you to run it line by line, which makes it actually very easy to debug. A pipe is also easy to read as it’s basically like a recipe. Start with a dataframe and change stuff step by step.\nHere’s a quick summary over the most common data wrangling tasks and their pipeable methods and functions in dplyr and pandas:\n\n\n\ntask\ndplyr\npandas\n\n\n\n\nfilter rows\nfilter()\ndf.query()\n\n\npick columns\nselect()\ndf.loc[]\n\n\ngroup by\ngroup_by()\ndf.groupby()\n\n\nsummarise\nsummarise()\ndf.agg()\n\n\nmake new variable\nmutate()\ndf.assign()\n\n\njoin dfs\ninner_join()\ndf.merge()\n\n\nsort df\narrange()\ndf.sort_values()\n\n\nrename columns\nrename()\ndf.rename()\n\n\n\n\n\n\n\n\nLast tip: AI is your friend. If you’re stuck, put your pandas code in chatgpt or co-pilot and ask it to re-write code as a pipe. Seems to work pretty well."
+    "text": "A new hope\nBut don’t despair! We can pipe in Python, too. Here is how:\n\niris = pd.read_csv(url)\n\n(iris\n  .assign(sepal_ratio = lambda x: x.sepal_width / x.sepal_length)\n  .query(\"sepal_ratio > 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n            sepal_ratio\nspecies                \nsetosa         0.684248\nversicolor     0.530953\nvirginica      0.526112\n\n\nFor now, there are only two main principles to remember:\n\nUse . instead of %>% to pipe. Put . at the beginning of the line.\nUse () around the whole expression. Python will complain otherwise.\n\nThere is a pipeable method for most tasks. Sometimes, though, there isn’t, but you can still make it work.\n\nUse lambda to define a function on the fly (like in .assign() above).\nUse .pipe(), which takes a function as an argument and allows you to pipe it.\n\nHere is an example of .pipe():\n\ndef sepal_ratio(df):\n  return df.assign(sepal_ratio = df.sepal_width / df.sepal_length)\n\n(iris\n  .pipe(sepal_ratio)\n  .query(\"sepal_ratio > 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n            sepal_ratio\nspecies                \nsetosa         0.684248\nversicolor     0.530953\nvirginica      0.526112\n\n\nThat’s it! Some people don’t like piping because, they say, it’s harder to debug. I like to simply comment out lines, allowing you to run it line by line, which makes it actually very easy to debug. A pipe is also easy to read as it’s basically like a recipe. Start with a dataframe and change stuff step by step.\nHere’s a quick summary over the most common data wrangling tasks and their pipeable methods and functions in dplyr and pandas:\n\n\n\ntask\ndplyr\npandas\n\n\n\n\nfilter rows\nfilter()\ndf.query()\n\n\npick columns\nselect()\ndf.loc[]\n\n\ngroup by\ngroup_by()\ndf.groupby()\n\n\nsummarise\nsummarise()\ndf.agg()\n\n\nmake new variable\nmutate()\ndf.assign()\n\n\njoin dfs\ninner_join()\ndf.merge()\n\n\nsort df\narrange()\ndf.sort_values()\n\n\nrename columns\nrename()\ndf.rename()\n\n\n\n\n\n\n\n\nLast tip: AI is your friend. If you’re stuck, put your pandas code in chatgpt or GitHub Copilot and ask it to re-write code as a pipe. Seems to work pretty well."
   },
   {
     "objectID": "posts/piping_python/index.html#not-so-secret-bonus-siuba",
@@ -397,5 +397,26 @@
     "title": "Piping in Python",
     "section": "Not so secret bonus: siuba",
     "text": "Not so secret bonus: siuba\nThere is also the beautiful siuba package. If you come from R, this might be the way to go. But even if not, it’s still less verbose than pandas. Last time I tried it, the package didn’t quite have everything I needed but I think it grew a lot since then. Here is the same pipeline, but with siuba:\n\nfrom siuba import _, mutate, filter, select, group_by, summarize\n\n(iris\n  >> mutate(sepal_ratio = _.sepal_width / _.sepal_length)\n  >> filter(_.sepal_ratio > 0.5)\n  >> select(_.species, _.sepal_ratio)\n  >> group_by(_.species)\n  >> summarize(mean_sepal_ratio = _.sepal_ratio.mean())\n  )\n\n      species  mean_sepal_ratio\n0      setosa          0.684248\n1  versicolor          0.530953\n2   virginica          0.526112"
+  },
+  {
+    "objectID": "research.html#quantitative-and-evolutionary-genetics",
+    "href": "research.html#quantitative-and-evolutionary-genetics",
+    "title": "fantom filters",
+    "section": "Quantitative and evolutionary genetics",
+    "text": "Quantitative and evolutionary genetics\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts"
+  },
+  {
+    "objectID": "research.html#molecular-ecology",
+    "href": "research.html#molecular-ecology",
+    "title": "fantom filters",
+    "section": "Molecular ecology",
+    "text": "Molecular ecology\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts"
+  },
+  {
+    "objectID": "research.html#behavioural-ecology",
+    "href": "research.html#behavioural-ecology",
+    "title": "fantom filters",
+    "section": "Behavioural ecology",
+    "text": "Behavioural ecology\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell"
   }
 ]

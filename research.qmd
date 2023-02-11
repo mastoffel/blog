@@ -5,9 +5,11 @@ filters:
       - nutshell
 ---
 
-## Research
+## Empricial research
 
-Selected papers with simplified titles. Thinking back, I should have probably chosen those titles in the first place. Full publication list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao).
+Selected papers with simplified titles. Full publication list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao).
+
+### Quantitative and evolutionary genetics
 
 ::: {layout="[25,85]"}
 ![](pics/kilda.jpg)
@@ -29,9 +31,11 @@ Selected papers with simplified titles. Thinking back, I should have probably ch
 ![](pics/ID.jpeg)
 
 [Effect size and genetic basis of inbreeding depression in the wild](https://www.nature.com/articles/s41467-021-23222-9).\
-*Nat Comms* (2021) \| [Code](https://github.com/mastoffel/sheep_ID)\
+*Nature Comms* (2021) \| [Code](https://github.com/mastoffel/sheep_ID)\
 [:In a nutshell](#x-id), [:doubts](#x-id_doubts)
 :::
+
+### Molecular ecology
 
 ::: {layout="[25,85]"}
 ![](pics/nes_young.jpeg)
@@ -45,16 +49,8 @@ Selected papers with simplified titles. Thinking back, I should have probably ch
 ![](pics/pinnipeds_figure.jpeg)
 
 [Industrial exploitation brought one-third of pinniped species to the edge of extinction](https://www.nature.com/articles/s41467-018-06695-z).\
-*Nat Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)\
+*Nature Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)\
 [:In a nutshell](#x-bot), [:doubts](#x-bot_doubts)
-:::
-
-::: {layout="[25,85]"}
-![](pics/snowy.jpeg)
-
-[Biased sex ratios and the impact of early survival on female polygyny](https://www.pnas.org/doi/abs/10.1073/pnas.1620043114).\
-*PNAS* (2017) \| Code in Supplementary Material\
-[:In a nutshell](#x-plov)
 :::
 
 ::: {layout="[25,85]"}
@@ -65,7 +61,19 @@ Selected papers with simplified titles. Thinking back, I should have probably ch
 [:In a nutshell](#x-chem), [:doubts](#x-chem_doubts)
 :::
 
-## Research consulting
+### Behavioural ecology
+
+::: {layout="[25,85]"}
+![](pics/snowy.jpeg)
+
+[Biased sex ratios and the impact of early survival on female polygyny](https://www.pnas.org/doi/abs/10.1073/pnas.1620043114).\
+*PNAS* (2017) \| Code in Supplementary Material\
+[:In a nutshell](#x-plov)
+:::
+
+
+
+### Research consulting
 
 ::: {layout="[25,85]"}
 ![](pics/racehorse.jpeg)
