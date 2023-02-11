@@ -5,7 +5,7 @@ filters:
       - nutshell
 ---
 
-## Scientific software
+## Open source software
 
 ::: {layout="[15,85]"}
 ![](pics/venn2.jpeg)
