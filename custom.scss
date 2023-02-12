@@ -5,7 +5,7 @@ $theme: "simplex" !default;
 
 // import google fonts
 @import url('https://fonts.googleapis.com/css2?family=Raleway');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
 @import url('https://fonts.googleapis.com/css2?family=Lato');
 @import url('https://fonts.googleapis.com/css2?family=Avenir+Next');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond');
@@ -24,7 +24,7 @@ $font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Sego
 
 // Navs
 .navbar-brand {
-  font-family: "Raleway";
+  font-family: "Lato";
   font-size: 1.2rem;
   //font-size: 1.6rem;
   font-weight: 600;
@@ -37,7 +37,7 @@ $font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Sego
 
 // Navbar
 .navbar {
-  font-family: "Raleway";
+  font-family: "Lato";
   font-weight: 300;
   font-size: 1.2rem;
   // same color as the brand
@@ -49,7 +49,7 @@ $font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Sego
 
 // headings
 h1 {
-  font-family: "Raleway";
+  font-family: "Lato";
   font-weight: bold;
   //font-size: 1.5rem;
   color: #2E3440 !important;
@@ -57,7 +57,7 @@ h1 {
 
 // subheadings as baskerville italic
 h2 {
-  font-family: "Raleway";
+  font-family: "Lato";
   //font-weight: lighter;
   //font-size: 1.5rem;
   color: #2E3440 !important;
@@ -65,8 +65,8 @@ h2 {
 
 // listing titles
 h3 {  
-  font-family: "Raleway";
-  font-weight: 300;
+  font-family: "Lato";
+  font-weight: 500;
   //font-style: 
   font-size: 1.2rem;
   color: #000000 !important;
@@ -75,7 +75,7 @@ h3 {
 
 // listing subtitles
 h4 {
-  font-family: "Raleway";
+  font-family: "Lato";
   font-weight: 600;
   //font-style: bold;
   font-size: 1rem;
@@ -86,4 +86,3 @@ h4 {
 // $toc-font-size: 0.5em;
 $color-contrast-dark:      $black !default;
 $color-contrast-light:     $white !default;
-
