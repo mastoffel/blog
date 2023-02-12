@@ -4,7 +4,7 @@
 $theme: "simplex" !default;
 
 // import google fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css2?family=Lato');
 @import url('https://fonts.googleapis.com/css2?family=Avenir+Next');
@@ -24,7 +24,7 @@ $font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Sego
 
 // Navs
 .navbar-brand {
-  font-family: "Avenir Next";
+  font-family: "Raleway";
   font-size: 1.2rem;
   //font-size: 1.6rem;
   font-weight: 600;
@@ -37,7 +37,7 @@ $font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Sego
 
 // Navbar
 .navbar {
-  font-family: "Avenir Next";
+  font-family: "Raleway";
   font-weight: 300;
   font-size: 1.2rem;
   // same color as the brand
@@ -49,7 +49,7 @@ $font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Sego
 
 // headings
 h1 {
-  font-family: "Avenir Next";
+  font-family: "Raleway";
   font-weight: bold;
   //font-size: 1.5rem;
   color: #2E3440 !important;
@@ -57,28 +57,28 @@ h1 {
 
 // subheadings as baskerville italic
 h2 {
-  font-family: "Avenir Next";
+  font-family: "Raleway";
   //font-weight: lighter;
   //font-size: 1.5rem;
   color: #2E3440 !important;
 }
 
 // listing titles
-h3 {
-  font-family: "Avenir Next";
+h3 {  
+  font-family: "Raleway";
   font-weight: 300;
   //font-style: 
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #000000 !important;
   //color: #4c566a !important;
 }
 
 // listing subtitles
 h4 {
-  font-family: "Avenir Next";
+  font-family: "Raleway";
   font-weight: 600;
-  font-style: bold;
-  //font-size: 1.5rem;
+  //font-style: bold;
+  font-size: 1rem;
   color: #000000 !important;
   //color: #2E3440 !important;
 }
