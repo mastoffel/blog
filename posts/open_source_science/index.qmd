@@ -1,0 +1,50 @@
+---
+title: "Open source science"
+description: "A radical approach"
+#author: "Martin Stoffel"
+date: "04/03/2023"
+categories: [ideas]
+draft: true
+image: ivory_tower.png
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  #collapse = TRUE,
+  comment = "#>"
+)
+```
+
+What if science would be truly **open** - not just the final product, but the process?
+
+What if there would be true collaboration, driven by curiosity rather than being lucky enough to be in the right research group at the right time?
+
+What if contribution could be measured fairly, and would not blurred by the order of authors on a paper?
+
+Sounds great, and something like it exists already: The world of open source software. So let us get inspired and think through what a full blown open source approach to science would look like for a research project.
+
+1. Set up a GitHub repository. This is the home. Everyone can contribute, see where the project is now, and what it was in the past. Everyone can see who is working on what. 
+
+*That's it*. At its core, open source science simply needs a platform which is open to everyone, version controlled, collaborative, and which can host all relevant information.
+
+But let's be *specific*. 
+
+1. Deciding on a directory structure. We want to have a place for the code, the data, the manuscript, the output. We also want to have a place for the documentation. 
+
+It could look something like this:
+
+- data
+- code
+- output
+- manuscript
+- documentation
+
+Next, we'd like a README file, which explains what the project is about and how to contribute. 
+
+2. 
+
+
+
+
+
+

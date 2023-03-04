@@ -58,5 +58,8 @@
   },
   "posts/piping_python/index.rmarkdown": {
     "index.html": "6d5b571c"
+  },
+  "posts/open_source_science/index.qmd": {
+    "index.html": "35f8bf40"
   }
 }
