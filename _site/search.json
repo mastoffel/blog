@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "fantom filters",
     "section": "",
-    "text": "Open source science\n\n\n\n\n\nA radical approach\n\n\n\n\n\n\nApr 3, 2023\n\n\n\n\n\n\n  \n\n\n\n\nPiping in Python\n\n\n\n\n\nSimplified data pipelines.\n\n\n\n\n\n\nFeb 11, 2023\n\n\n\n\n\n\n  \n\n\n\n\nCreating your own ggplot theme\n\n\n\n\n\nA short guide.\n\n\n\n\n\n\nNov 10, 2022\n\n\n\n\n\n\n  \n\n\n\n\nmap()-magic\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n\n\nJan 9, 2022\n\n\n\n\n\n\nNo matching items"
+    "text": "Piping in Python\n\n\n\n\n\nSimplified data pipelines.\n\n\n\n\n\n\nFeb 11, 2023\n\n\n\n\n\n\n  \n\n\n\n\nCreating your own ggplot theme\n\n\n\n\n\nA short guide.\n\n\n\n\n\n\nNov 10, 2022\n\n\n\n\n\n\n  \n\n\n\n\nmap()-magic\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n\n\nJan 9, 2022\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research.html",
@@ -418,12 +418,5 @@
     "title": "fantom filters",
     "section": "Behavioural ecology",
     "text": "Behavioural ecology\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell"
-  },
-  {
-    "objectID": "posts/open_source_science/index.html",
-    "href": "posts/open_source_science/index.html",
-    "title": "Open source science",
-    "section": "",
-    "text": "What if science would be truly open - not just the final product, but the process?\nWhat if there would be true collaboration, driven by curiosity rather than being lucky enough to be in the right research group at the right time?\nWhat if contribution could be measured fairly, and would not blurred by the order of authors on a paper?\nSounds great, and something like it exists already: The world of open source software. So let us get inspired and think through what a full blown open source approach to science would look like for a research project.\n\nSet up a GitHub repository. This is the home. Everyone can contribute, see where the project is now, and what it was in the past. Everyone can see who is working on what.\n\nThat’s it. At its core, open source science simply needs a platform which is open to everyone, version controlled, collaborative, and which can host all relevant information.\nBut let’s be specific.\nFirst, we decide on a directory structure. We want to have a place for the code, the data, the manuscript, and the figures. We also want to have a place for the project management, and a place for the documentation.\nIt could look something like this:\n\ndata\ncode\noutput\nmanuscript\ndocumentation"
   }
 ]
