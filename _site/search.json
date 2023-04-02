@@ -270,7 +270,7 @@
     "href": "code.html",
     "title": "fantom filters",
     "section": "",
-    "text": "partR2: partitioning R2 in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nrptR: repeatability estimation and variance decomposition in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\ninbreedR: analysing inbreeding with sparse genetic markers.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nGCalignR:aligning gas-chromatography data from messy field samples.\n:In a nutshell, paper, package |"
+    "text": "This is an example of the hover bubble textThis is the text displayed when hovering over 'text'. It can be a really long text, let's see how large the box gets eventually. What if it's loooooaads more words, I really don't know!!. Check it out!"
   },
   {
     "objectID": "code.html#x-partr2",
@@ -418,5 +418,12 @@
     "title": "fantom filters",
     "section": "Behavioural ecology",
     "text": "Behavioural ecology\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell"
+  },
+  {
+    "objectID": "code.html#open-source-software",
+    "href": "code.html#open-source-software",
+    "title": "fantom filters",
+    "section": "Open source software",
+    "text": "Open source software\n\n\n\n\n\n\npartR2: partitioning R2 in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nrptR: repeatability estimation and variance decomposition in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\ninbreedR: analysing inbreeding with sparse genetic markers.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nGCalignR:aligning gas-chromatography data from messy field samples.\n:In a nutshell, paper, package |"
   }
 ]

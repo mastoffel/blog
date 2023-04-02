@@ -2,6 +2,11 @@
 title: "Open source science"
 description: "A radical approach"
 #author: "Martin Stoffel"
+format:
+  html:
+    toc: true
+    html-math-method: katex
+    css: ../../hover-explanation.css
 date: "04/03/2023"
 categories: [ideas]
 draft: true
@@ -14,6 +19,12 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+
+<span class="hover-explanation">
+  Hover me
+  <span class="explanation">This is the explanation that will be displayed when you hover over the text.</span>
+</span>
+
 
 What if science would be truly **open** - not just the final product, but the process?
 
