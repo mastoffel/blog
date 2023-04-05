@@ -1,0 +1,49 @@
+---
+title: "AI, hidden information and the future of science"
+description: "A scenario"
+#author: "Martin Stoffel"
+date: "04/05/2023"
+categories: [ideas]
+draft: true
+#image: map.png
+---
+
+AI is changing science. Many scientists already use large language models, such as ChatGPT, to help them coding and writing. Few people think about the longer term consequences beyond fairness in exam questions or plagiarism in scientific papers. Here, I'll argue that the structure of science (and, in fact, all knowledge) will fundamentally change. Information will transition from publically available sources which humans can understand and critique, to neural network weights. As a consequence, we'll only be able to ask the AI about it's reasoning, and therefore will be relying on it to speak the truth. However, the problem of making an advanced AI doing what we want (see [AI alignment]{.hover-bubble hover-text="What's that?"} ) is fundamentally difficult. Probably more difficult than any other problem.
+
+Let's illustrate the problem of hidden information using Stackoverflow first. 
+
+Programming:
+
+*World pre-2022*  
+Question -> Stackoverflow -> Community reasoning and verification -> Program
+
+*World post-2022*  
+Question -> LLM -> Program -> New LLM
+
+Stackoverflow is *the* website for everyone who's stuck with their code. For a few decades now, people post well framed questions and would get detailed, thought through answers. The community would up- or downvote both, shaping Stackoverflow as a trustworthy platform of all programming knowledge. For any solution on the website, everyone can see and test and interact with the reasoning. Everyone who codes will know: whatever the problem is, there will be a solution on Stackoverflow. Now, everyone with access to GPT-4 or any of the advanced AI models will know that asking for or looking up solutions on Stackoverflow is barely necessary anymore. 
+
+So will the steady stream of information usually produced on Stackoverflow simply be lost? Not quite. In a 2023 human-AI interaction, the AI will have been trained mostly on non-AI code. That is, code which has been reasoned through and produced by humans, and is openly available on GitHub, Stackoverflow and other repositories. However, from now on, more and more code will be produced by AIs. As productivity increases, the latest AIs will have therefore been trained largely on AI generated code. Stackoverflow will be more or less dead, as nobody will invest the time and energy anymore to go through the laborious process of posting there. The reasoning process orginally produced by humans, often openly on the internet, will effectively be hidden in neural network weights. Of course, we can ask what the reasoning behind every bit of AI-produced knowledge is, but we won't be able to verify whether the answer is true. 
+
+This is programming. Programs are easily verifyable, they work or they don't, so it doesn't matter, right? Well, I'd argue it does, but this might be easier illustrated with science. While there is no platform as fundamental to science as Stackoverflow is to programming, I argue that papers have a very similar function. For most questions, there are at least a few scientific papers adressing them. These papers will usually have a conclusion, and will detail the reasoning behind that conclusion. LLMs are slightly behind here, but in a year or two, AIs will be good enough and connected enough to relevant sources of information to write papers. Productivity will increase again and more and more papers will be written by AIs. Eventually, new science AIs will be trained mostly on papers written by AIs. The human reasoning process has again been transfered to neural network weights. The real information is hidden. The AIs reasoning can be written down by the AI itself, but how do we know it's correct? Any sufficiently intelligent AI will easily be able to deceive us, whether willingly or not. 
+
+Science:
+
+*World pre-2022*
+Question -> Science -> Article 
+
+*World post-2022*
+Question -> AI -> Science -> Article
+
+But what about peer-review? Humans would surely catch flaws in reasoning and thinking about science? Well, peer review is much less useful than we think (in fact, it might be harmful). Many mistakes aren't caught, and, as AI-generated reasoning and knowledge accumulates, it will be increasingly impossible for any one scientist to dig into all fundamental assumptions and thoughts of a paper. AI generated knowledge will permeate, and human reasoning will be diluted in an ocean of neural network weights, re-trained and re-trained on self generated knowledge.
+
+Ultimately, we could be moving away entirely from open, human generated and interpretable knowledge and become dependent on the AI overlords and their complex web of centralized matrix-shaped knowledge.
+
+So what can we do? Here are two wild, not-thought through suggestions:
+
+1) We need to abandon the current peer-review system where a few reviewers judge the quality of a paper and essentially give it the trademark of "correct science", after which it is cited uncritically and more-or-less assumed to be established knowledge. If the system stays like this, AI-generated reasoning and knowledge good enough to pass critical reviewer eyes will slowly infiltrate science.  
+Instead, we should move to a democratic, community-led science where papers don't cross a binary threshold but are constantly re-evaluated in the light of new evidence. We then need to find a threshold for which papers will be the training data for new models. Instead of quantity (which will exponentially increase with AI advancements), we should value quality, community feedback, and have clear guidelines for statistics, interpretations, and data going into meta-analyses.
+
+2) We need to be able to clearly track the trajectory of ideas in the spirit of a distributed ledged or the internet request of comments. Only by being able to trace the history of important scientific advancements can we have an overview over whether the chosen path makes sense or whether alternative paths should be followed too. We would also have to start right now as long as most information is still human generated.
+
+Fundamentally, humanities knowledge is moving away form a descriptive, human-readable, possibl-to-follow set of ideas and reasoning to the black box which are trillions of neural network weights. LLMs can explain their reasoning too, but we don't know whether they are telling the truth. At this point, we should be open to diversifing the process of science and lay-off traditional, rarely-validated ideas of the importance of quantity and peer-review, in exchange for a radical new open source science.
+

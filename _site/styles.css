@@ -36,6 +36,13 @@
   padding: 5px;
   border-radius: 3px;
   z-index: 100;
+
+  /* Set the width and max-height */
+  width: 250px;
+  max-height: 150px;
+
+  /* Add overflow property to handle the extra content */
+  overflow: auto;
 }
 
 .hover-bubble .hover-text {
@@ -48,14 +55,6 @@
   border-radius: 4px;
   z-index: 1;
 
- 
-  /* Set the min-width and max-height */
-  min-width: 200px;
-  max-width: 350px;
-  max-height: 250px;
-
-  /* Add overflow property to handle the extra content */
-  overflow: auto;
 }
 
 
@@ -65,13 +64,13 @@
 
 .hover-bubble {
   /* Change the color of the text */
-  color: #4a90e2;
+  color: darkorchid;
 
   /* Add an underline to the text */
   /*text-decoration: underline;
 
   /* Change the font-weight to bold */
-  /*font-weight: bold;
+  font-weight: bold;
 
   /* Add the following line to set the position property to relative */
   position: relative;
@@ -102,7 +101,5 @@
   /* Align the symbol vertically to the top */
   vertical-align: top;
 }
-
-
 
 

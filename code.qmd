@@ -6,9 +6,6 @@ filters:
       - hover-bubble
 ---
 
-This is an example of the hover bubble [text]{.hover-bubble hover-text="This is the text displayed when hovering over 'text'. It can be a really long text, let's see how large the box gets eventually. What if it's loooooaads more words, I really don't know!!"}. Check it out!
-
-
 
 ## Open source software
 
