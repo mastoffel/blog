@@ -1,14 +1,28 @@
 ---
-title: "AI, hidden information and the future of science"
+title: "AI, hidden information and the future of knowledge"
 description: "A scenario"
 #author: "Martin Stoffel"
 date: "04/05/2023"
 categories: [ideas]
 draft: true
+filters: 
+    - hover-bubble
 #image: map.png
 ---
 
-AI is changing science. Many scientists already use large language models, such as ChatGPT, to help them coding and writing. Few people think about the longer term consequences beyond fairness in exam questions or plagiarism in scientific papers. Here, I'll argue that the structure of science (and, in fact, all knowledge) will fundamentally change. Information will transition from publically available sources which humans can understand and critique, to neural network weights. As a consequence, we'll only be able to ask the AI about it's reasoning, and therefore will be relying on it to speak the truth. However, the problem of making an advanced AI doing what we want (see [AI alignment]{.hover-bubble hover-text="What's that?"} ) is fundamentally difficult. Probably more difficult than any other problem.
+"If I am what I have and if what I have is lost, then who am I?"  
+- *Erich Fromm*  
+
+The AI revolution is here. Before too long, *most code and text* will be written with or by AI-assistants. The future of science and human knowledge is at stake, but there is little discussion about it. AI is critised on rather low-impact grounds such as exam cheating or plagiarism. It is also critised on extremely high-impact grounds up to the potential extinction of humanity caused by artificial general intelligence (AGI). Here, I'll argue for another type of risk. Comparatively slow and hard to detect, it will permeate the very foundation of science and knowledge: **hidden information**.  
+
+Let's start with an example: [Stackoverflow](https://stackoverflow.com/) is the central repository for most human programming knowledge. It works well because the community ensures that questions are well-defined and answers are well-reasoned and on point. Question-answer pairs are rarely duplicated, as duplication is swiftly detected by the community. This makes Stackoverflow a clean, well-structured reposity of human knowledge. In essence, the (often collective) problem-solving process, not just the solution, is available to everyone. 
+
+This is about to change. Who will put the effort in to create a reproducible example and write a well-framed question if ChatGPT can give you an answer in a few seconds? The open, collective knowledge-generating process on Stackoverflow will be replaced by one-to-one, human-to-AI interactions. The results of those interactions will then be fed into the next generation of AI models. Information about the knowledge generation process will be hidden in neural network weights.
+
+Now, we could just ask the AI to explain the reasoning behind any answer it gives. But how do we the answer is [true]{.hover-bubble hover-text="Mostly, you don't even want a deterministic answer, but rather different outputs each time you ask."}? How do we know we are even asking the right question? Maybe we should rather ask: If humans would have come up with the same solution, what would the reasoning have been? 
+
+The world pre-2023
+
 
 Let's illustrate the problem of hidden information using Stackoverflow first. 
 
@@ -47,3 +61,18 @@ Instead, we should move to a democratic, community-led science where papers don'
 
 Fundamentally, humanities knowledge is moving away form a descriptive, human-readable, possibl-to-follow set of ideas and reasoning to the black box which are trillions of neural network weights. LLMs can explain their reasoning too, but we don't know whether they are telling the truth. At this point, we should be open to diversifing the process of science and lay-off traditional, rarely-validated ideas of the importance of quantity and peer-review, in exchange for a radical new open source science.
 
+
+
+
+
+
+
+AI is changing science. Many scientists already use large language models, such as ChatGPT, to help them coding and writing. Few people think about the longer term consequences beyond fairness in exam questions or plagiarism in scientific papers. Here, I'll argue that the structure of science (and, in fact, all knowledge) will fundamentally change. Information will transition from publically available sources which humans can understand and critique, to neural network weights. As a consequence, we'll only be able to ask the AI about it's reasoning, and therefore will be relying on it to speak the truth. However, the problem of making an advanced AI doing what we want (see [AI alignment]{.hover-bubble hover-text="What's that?"} ) is fundamentally difficult. Probably more difficult than any other problem.
+
+
+```{mermaid}
+flowchart LR
+  A(Coding Question) --> B{Stackoverflow}
+  B --> C(Solution)
+  C --> A
+```
