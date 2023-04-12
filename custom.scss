@@ -4,16 +4,18 @@
 $theme: "simplex" !default;
 
 // import google fonts
-@import url('https://fonts.googleapis.com/css2?family=Raleway');
-@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Megrim');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css2?family=Lato');
-@import url('https://fonts.googleapis.com/css2?family=Avenir+Next');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento');
+@import url('https://fonts.googleapis.com/css2?family=Monoton');
+@import url('https://fonts.googleapis.com/css2?family=Karla');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif');
 
 // use Lato font if available
-$font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: "Quattrocento", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 /*-- scss:rules --*/
 
@@ -24,7 +26,7 @@ $font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Sego
 
 // Navs
 .navbar-brand {
-  font-family: "Lato";
+  font-family: "Megrim";
   font-size: 1.2rem;
   //font-size: 1.6rem;
   font-weight: 600;
@@ -37,7 +39,7 @@ $font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Sego
 
 // Navbar
 .navbar {
-  font-family: "Lato";
+  font-family: "Source Code Pro";
   font-weight: 300;
   font-size: 1.2rem;
   // same color as the brand
@@ -49,7 +51,7 @@ $font-family-sans-serif: "Nunito+Sans", -apple-system, BlinkMacSystemFont, "Sego
 
 // headings
 h1 {
-  font-family: "Lato";
+  font-family: "Source Code Pro";
   font-weight: bold;
   //font-size: 1.5rem;
   color: #2E3440 !important;
@@ -57,7 +59,7 @@ h1 {
 
 // subheadings as baskerville italic
 h2 {
-  font-family: "Lato";
+  font-family: "Source Code Pro";
   //font-weight: lighter;
   //font-size: 1.5rem;
   color: #2E3440 !important;
@@ -65,7 +67,7 @@ h2 {
 
 // listing titles
 h3 {  
-  font-family: "Lato";
+  font-family: "Source Code Pro";
   font-weight: 500;
   //font-style: 
   font-size: 1.2rem;
@@ -75,7 +77,7 @@ h3 {
 
 // listing subtitles
 h4 {
-  font-family: "Lato";
+  font-family: "Source Code Pro";
   font-weight: 600;
   //font-style: bold;
   font-size: 1rem;

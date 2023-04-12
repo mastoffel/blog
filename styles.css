@@ -48,15 +48,12 @@
 .hover-bubble .hover-text {
   display: none;
   position: absolute;
-  
   color: #333;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   z-index: 1;
-
 }
-
 
 .hover-bubble:hover .hover-text {
   display: block;
@@ -64,23 +61,18 @@
 
 .hover-bubble {
   /* Change the color of the text */
-  color: darkorchid;
-
-  /* Add an underline to the text */
-  /*text-decoration: underline;
-
+  color: #5E81AC;
+  
   /* Change the font-weight to bold */
-  font-weight: bold;
+  font-weight: normal;
 
   /* Add the following line to set the position property to relative */
   position: relative;
-
-  /* You can add any other styles you want */
 }
 
 .hover-bubble::after {
   /* Add the cloud symbol using a pseudo-element */
-  content: "☁";
+  content: "\2192";
   
   /* Set the position property to absolute */
   position: absolute;
@@ -88,12 +80,9 @@
   /* Adjust the top and left properties to position the symbol relative to the text */
   top: 0;
   left: 100%;
-  
-  /* Add a small margin to create space between the text and the symbol */
-  /*margin-left: 3px;
 
   /* Add a small margin to create space between the text and the symbol */
-  margin-left: -0.2em;
+  margin-left: -1em;
 
   /* Set the font size to half the size */
   font-size: 0.5em;

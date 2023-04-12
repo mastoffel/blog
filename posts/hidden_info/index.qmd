@@ -1,25 +1,40 @@
 ---
-title: "AI, hidden information and the future of knowledge"
+title: "AI, hidden information, strange loops and the future of science"
 description: "A scenario"
 #author: "Martin Stoffel"
 date: "04/05/2023"
 categories: [ideas]
-draft: true
+draft: false
 filters: 
     - hover-bubble
-#image: map.png
+image: ivory2.png
 ---
 
 "If I am what I have and if what I have is lost, then who am I?"  
 - *Erich Fromm*  
 
-The AI revolution is here. Before too long, *most code and text* will be written with or by AI-assistants. The future of science and human knowledge is at stake, but there is little discussion about it. AI is critised on rather low-impact grounds such as exam cheating or plagiarism. It is also critised on extremely high-impact grounds up to the potential extinction of humanity caused by artificial general intelligence (AGI). Here, I'll argue for another type of risk. Comparatively slow and hard to detect, it will permeate the very foundation of science and knowledge: **hidden information**.  
+The future of knowledge is at a crossroads. Before long, most text and code will be written with or by AI models. What was once explicit human reasoning will instead become neural network weights, undecipherable changes in evergrowing matrices. Model outputs will soon become inputs, and in an endless loop new models will make new futures. 
 
-Let's start with an example: [Stackoverflow](https://stackoverflow.com/) is the central repository for most human programming knowledge. It works well because the community ensures that questions are well-defined and answers are well-reasoned and on point. Question-answer pairs are rarely duplicated, as duplication is swiftly detected by the community. This makes Stackoverflow a clean, well-structured reposity of human knowledge. In essence, the (often collective) problem-solving process, not just the solution, is available to everyone. 
+For people who code, Stackoverflow is where problems are discussed and solutions are found. The community makes sure that precise questions are asked and that the best answers are on top. More than direct answers to problems, the platform makes the reasoning process explicit, as well as the community consensus, while also showing alternative solution. It essentially documents how we, as humans, think about stuff. Now, why should we still spend time browsing Stackoverflow or even spend time asking a well formulated question using a minimal reproducible example, if ChatGPT can give us a working solution right away? Soon, the once open question-discussion-solution process on Stackoverflow is replaced with private human-to-AI interactions. The result might still be pushed to GitHub and be open. However, the knowledge-generating process is hidden. It doesn't rely anymore on human collective reasoning. Stackoverflow will stop in 2023, what grows are the models.
 
-This is about to change. Who will put the effort in to create a reproducible example and write a well-framed question if ChatGPT can give you an answer in a few seconds? The open, collective knowledge-generating process on Stackoverflow will be replaced by one-to-one, human-to-AI interactions. The results of those interactions will then be fed into the next generation of AI models. Information about the knowledge generation process will be hidden in neural network weights.
+Code, arguably, is easy to validate. We know when it does what we want, so the reasoning process behind it isn't that important. But let's talk about *science*. When AI outputs experimental designs, collects and analyses data, draws conclusions and reviews papers, human input will be more and more abstract. While GPT-4's training data is largely human generated, GPT-10's training will have been produced by GPT-4 - GPT-9. Of most purely-human reasoning stops in 2023, what trajectory will science 
 
-Now, we could just ask the AI to explain the reasoning behind any answer it gives. But how do we the answer is [true]{.hover-bubble hover-text="Mostly, you don't even want a deterministic answer, but rather different outputs each time you ask."}? How do we know we are even asking the right question? Maybe we should rather ask: If humans would have come up with the same solution, what would the reasoning have been? 
+
+  there will be an important difference to AI-driven code: It is much harder to *validate* good science than good code. So what happens if we rely on AI reasoning instead of thinking ourselves
+
+
+
+The AI revolution is here. Before too long, *most code and text* will be written with or by AI-assistants. The future of science and human knowledge is at stake, but there is little discussion about it. AI is critised on rather low-impact grounds such as exam cheating or plagiarism. It is also critised on extremely high-impact grounds such as the potential extinction of humanity once AI systems are smart enough. Here, I'll argue for another type of risk. Comparatively slow and hard to detect, it will permeate the very foundation of science and knowledge: **hidden information**.  
+
+## The Meaning of Code
+Let's start with an example: [Stackoverflow](https://stackoverflow.com/) is the central repository for most programming knowledge. It works well because the community ensures that questions are well-defined and answers are well-reasoned and on point. Question-answer pairs are rarely duplicated, as duplication is swiftly detected by the community. This makes Stackoverflow a clean, well-structured reposity of human knowledge. In essence, the (often collective) problem-solving process, not just the solution, is available to everyone. 
+
+This is about to change. Why invest time crafting a reproducible example and articulating a well-structured query when ChatGPT can deliver answers in mere moments? Instead of open knowledge transfers on Stackoverflow, there will be one-to-one, human-to-AI interactions. The outcome of those interactions will then be fed into the next generation of AI models. Information about the knowledge generation process will be hidden in neural network weights.
+
+Now, we could just ask the AI to explain the reasoning behind any answer it gives. But how do we know the answer is [true]{.hover-bubble hover-text="Mostly, you don't even want a deterministic answer, but rather different outputs each time you ask."}? How do we know that we are even asking the right question? Maybe we should ask: If humans would have come up with the same solution, what would the reasoning have been? However, an AI answer to how it got to a conclusion is again simply the most probable sequence of words, given a prompt. It won't be comparable to the reasoning process of a human. 
+
+## The Science machine
+This is different in science. So what happens if more and more of the study design, data analysis and writing of papers is done by AI? At one point, again, most AI training data will have been produced by AIs. All the AI generated knowledge will largly rely on a foundation of pre-2023 human generated knowledge. 
 
 The world pre-2023
 
@@ -40,7 +55,10 @@ So will the steady stream of information usually produced on Stackoverflow simpl
 
 This is programming. Programs are easily verifyable, they work or they don't, so it doesn't matter, right? Well, I'd argue it does, but this might be easier illustrated with science. While there is no platform as fundamental to science as Stackoverflow is to programming, I argue that papers have a very similar function. For most questions, there are at least a few scientific papers adressing them. These papers will usually have a conclusion, and will detail the reasoning behind that conclusion. LLMs are slightly behind here, but in a year or two, AIs will be good enough and connected enough to relevant sources of information to write papers. Productivity will increase again and more and more papers will be written by AIs. Eventually, new science AIs will be trained mostly on papers written by AIs. The human reasoning process has again been transfered to neural network weights. The real information is hidden. The AIs reasoning can be written down by the AI itself, but how do we know it's correct? Any sufficiently intelligent AI will easily be able to deceive us, whether willingly or not. 
 
-Science:
+ 
+
+
+
 
 *World pre-2022*
 Question -> Science -> Article 
@@ -60,7 +78,6 @@ Instead, we should move to a democratic, community-led science where papers don'
 2) We need to be able to clearly track the trajectory of ideas in the spirit of a distributed ledged or the internet request of comments. Only by being able to trace the history of important scientific advancements can we have an overview over whether the chosen path makes sense or whether alternative paths should be followed too. We would also have to start right now as long as most information is still human generated.
 
 Fundamentally, humanities knowledge is moving away form a descriptive, human-readable, possibl-to-follow set of ideas and reasoning to the black box which are trillions of neural network weights. LLMs can explain their reasoning too, but we don't know whether they are telling the truth. At this point, we should be open to diversifing the process of science and lay-off traditional, rarely-validated ideas of the importance of quantity and peer-review, in exchange for a radical new open source science.
-
 
 
 
