@@ -2,7 +2,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/hidden_info/index.html",
       "/posts/piping_python/index.html",
       "/posts/ggplot_theme/index.html",
       "/posts/magic_map/index.html"
