@@ -5,8 +5,6 @@ description: "A scenario"
 date: "04/05/2023"
 categories: [ideas]
 draft: true
-filters: 
-    - hover-bubble
 image: ivory2.png
 ---
 
