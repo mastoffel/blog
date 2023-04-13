@@ -1,90 +1,107 @@
 /*-- scss:defaults --*/
 
-// use litera as the base
 $theme: "simplex" !default;
 
-// import google fonts
-@import url('https://fonts.googleapis.com/css2?family=Megrim');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro');
-@import url('https://fonts.googleapis.com/css2?family=Lato');
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento');
-@import url('https://fonts.googleapis.com/css2?family=Monoton');
-@import url('https://fonts.googleapis.com/css2?family=Karla');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif');
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
 
-// use Lato font if available
-$font-family-sans-serif: "Quattrocento", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// Define font families
+$font-family-headers: "Fira Sans", sans-serif !default;
+$font-family-body: "Cormorant", serif !default;
+
+
+$primary-color: #344955; // Dark blue-gray
+$secondary-color: #F9AA33; // Orange-yellow
+$accent-color: #4A6E78; // Steel blue
+
 
 /*-- scss:rules --*/
 
-// litera is serif by default: revert to san-serif
-//p {
-//  font-family: $font-family-sans-serif;
-//}
+// Apply font families
+h1, h2, h3, h4 {
+  font-family: $font-family-headers;
+}
 
-// Navs
+p {
+  font-family: $font-family-body;
+}
+
+// Apply color scheme
 .navbar-brand {
-  font-family: "Megrim";
-  font-size: 1.2rem;
-  //font-size: 1.6rem;
-  font-weight: 600;
-  // light elegant grey
-  color: #000000 !important;
-  //color: #4c566a !important;
-  //color: #030b1b !important;
-  //color: rgba(57, 57, 59, 0.461) !important;
+  color: $accent-color !important;
 }
 
-// Navbar
 .navbar {
-  font-family: "Source Code Pro";
-  font-weight: 300;
-  font-size: 1.2rem;
-  // same color as the brand
-  //color: #4c566a82 !important;
-  color: #000000 !important;
-  //color:  #4C566A !important;
-  //color: #D8DEE9 !important;
+  color: $secondary-color !important;
 }
 
-// headings
+h1, h2, h3, h4 {
+  color: $primary-color !important;
+}
+
+a {
+  color: $accent-color;
+}
+
+a:hover {
+  color: $secondary-color;
+}
+
+// Adjust font sizes and weights
 h1 {
-  font-family: "Source Code Pro";
+  font-size: 2rem;
   font-weight: bold;
-  //font-size: 1.5rem;
-  color: #2E3440 !important;
 }
 
-// subheadings as baskerville italic
 h2 {
-  font-family: "Source Code Pro";
-  //font-weight: lighter;
-  //font-size: 1.5rem;
-  color: #2E3440 !important;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-// listing titles
-h3 {  
-  font-family: "Source Code Pro";
+h3 {
+  font-size: 1.25rem;
   font-weight: 500;
-  //font-style: 
-  font-size: 1.2rem;
-  color: #000000 !important;
-  //color: #4c566a !important;
 }
 
-// listing subtitles
 h4 {
-  font-family: "Source Code Pro";
-  font-weight: 600;
-  //font-style: bold;
-  font-size: 1rem;
-  color: #000000 !important;
-  //color: #2E3440 !important;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-// $toc-font-size: 0.5em;
-$color-contrast-dark:      $black !default;
-$color-contrast-light:     $white !default;
+p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+// Increase line height for improved readability
+p {
+  line-height: 1.6;
+}
+
+// Add whitespace around elements
+p {
+  padding-bottom: 1rem;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+// Customize navbar-brand for a unique touch
+.navbar-brand {
+  font-family: $font-family-headers;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+strong {
+  font-weight: 700;
+}
+

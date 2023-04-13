@@ -1,5 +1,3 @@
-
--- Create hover bubble
 function Span(el)
   if el.classes:includes("hover-bubble") then
       local hover_text = el.attributes['hover-text']
