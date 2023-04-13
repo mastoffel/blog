@@ -1,4 +1,12 @@
-
+---
+title: "AI, hidden information, strange loops and the future of science"
+description: "A scenario"
+#author: "Martin Stoffel"
+date: "04/05/2023"
+categories: [ideas]
+draft: true
+image: ivory2.png
+---
 
 "If I am what I have and if what I have is lost, then who am I?"  
 - *Erich Fromm*  
