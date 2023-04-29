@@ -9,6 +9,7 @@ filters:
 
 Selected papers with simplified titles. Full publication list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao).
 
+
 ### Quantitative and evolutionary genetics
 
 ::: {layout="[25,85]"}
@@ -61,6 +62,15 @@ Selected papers with simplified titles. Full publication list [here](https://sch
 [:In a nutshell](#x-chem), [:doubts](#x-chem_doubts)
 :::
 
+### Conservation genetics
+::: {layout="[25,85]"}
+![](pics/oryx.png)
+
+[Conservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.](https://www.pnas.org/doi/10.1073/pnas.2210756120)\
+*PNAS* (2023) \| 
+[:In a nutshell](#x-oryx)
+:::
+
 ### Behavioural ecology
 
 ::: {layout="[25,85]"}
@@ -70,7 +80,6 @@ Selected papers with simplified titles. Full publication list [here](https://sch
 *PNAS* (2017) \| Code in Supplementary Material\
 [:In a nutshell](#x-plov)
 :::
-
 
 
 ### Research consulting
@@ -85,7 +94,7 @@ Selected papers with simplified titles. Full publication list [here](https://sch
 
 
 ## :x el{#x-el}
-We scanned the Soay sheep population for embryonic lethal mutations, found a few, and explored patterns of purifying and balancing selection of them. The key take-away is that strongly deleterious mutations exist even in small populations. These mutations are unlikely to contribute much to the usual estimates of inbreeding depression, because they can cause mortality pre-birth. They can be quickly purged by purifying selection, but they can also be maintained by balancing selection in small population, when they are linked to a beneficial mutation.
+We scanned the genomes of thousands of Soay sheep for embryonic lethal mutations. These mutations prevent an individual from being born, should it be unlucky enough to receive the same genetic variant from both mum and dad. We found a few semi-lethal mutations in the population, and show that these are under selection. We show that despite their negative effects, these mutations can be maintained when they are genetically linked to beneficial genetic variants.
 
 *Authors* \| **MA Stoffel**, SE Johnston, JG Pilkington, JM Pemberton
 
@@ -151,4 +160,9 @@ We show that genomic inbreeding reduces the changes of a Thoroughbred horse ever
 Emmeline W Hill, **Martin A Stoffel**, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton
 
 Pic by DALL-E.
+
+# :x oryx {#x-oryx}
+to do
+
+Emily Humble, **Martin A. Stoffel**, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden
 

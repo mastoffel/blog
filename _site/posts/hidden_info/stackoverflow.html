@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>fantom filters - Stackoverflow</title>
+<title>fantom filters - Are Python questions on stackoverflow dropping since ChatGPT?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,7 +152,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Stackoverflow</h1>
+      <h1 class="title">Are Python questions on stackoverflow dropping since ChatGPT?</h1>
                       </div>
   </div>
     
@@ -175,10 +175,10 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 
 
 
-<section id="are-python-questions-on-stackoverflow-dropping-since-chatgpt" class="level1">
-<h1>Are Python questions on stackoverflow dropping since ChatGPT?</h1>
-<p>This notebook * fetches the number of stackoverflow questions per month with the <code>Python</code> tag from stackoverflow using their API * plots them</p>
-<div class="cell" data-execution_count="1">
+<p>This notebook<br>
+* fetches the number of stackoverflow questions per month with the <code>Python</code> tag from stackoverflow using their API<br>
+* plots them</p>
+<div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -222,7 +222,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="5">
+<div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nov_2022_data <span class="op">=</span> df[df[<span class="st">"month"</span>] <span class="op">==</span> <span class="st">"2022-11"</span>].iloc[<span class="dv">0</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"white"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">"font.family"</span>] <span class="op">=</span> <span class="st">"sans-serif"</span></span>
@@ -263,12 +263,16 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">False</span>)</span>
 <span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>sns.despine()</span>
 <span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
+<div class="cell quarto-layout-panel" data-execution_count="8">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
 <div id="stackoverflow" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="stackoverflow_files/figure-html/stackoverflow-output-1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The number of python questions on Stackoverflow is dropping since ChatGPT was released. Data from Stackoverflow API.</figcaption>
+<figcaption class="figure-caption">The number of python questions on Stackoverflow. Data: Stackoverflow API.</figcaption>
 </figure>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -277,7 +281,6 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

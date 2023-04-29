@@ -9,9 +9,9 @@
   {
     "objectID": "research.html",
     "href": "research.html",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": "",
-    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
   },
   {
     "objectID": "research.html#research-consulting",
@@ -30,77 +30,77 @@
   {
     "objectID": "research.html#x-roh",
     "href": "research.html#x-roh",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x roh",
     "text": ":x roh\nThe fundamental question in this study was: Is the density of deleterious mutations in the genome higher in long runs of homozygosity (ROH)? If an individual inherits an ROH, this basically means that they inherited two copies the very same stretch of DNA (or haplotype) from both mum and dad. The longer such an ROH is, the fewer generations in thee past is it’s most recent common ancestor haplotype. Therefore, natural selection had less time to remove potential deleterious mutations from this stretch of DNA.\nOur simulations and empirical data for thousands of wild Soay sheep showed exactly this. Long ROH have a higher density of deleterious mutations, their frequencies are lower, and the harmful effect of each single mutation is on average higher than those of mutations in short ROH.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
   },
   {
     "objectID": "research.html#x-id",
     "href": "research.html#x-id",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x id",
     "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of bronze-age sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
   },
   {
     "objectID": "research.html#x-id_doubts",
     "href": "research.html#x-id_doubts",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x id_doubts",
     "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are usually rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
   },
   {
     "objectID": "research.html#x-nes",
     "href": "research.html#x-nes",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x nes",
     "text": ":x nes\n:Northern elephant seals have the second-largest sexual size dimorphism of any mammal (right after their Southern sister-species). Adult males can be 3-5 times as heavy as females. Why is that? Sexual selection has favored larger males because they are able to defend large harems of females on the beach against competitors.\nIn young elephant seals (pups) you can’t really spot a difference between males and females yet. However, when measuring their microbiome (the collection of bacteria in their guts) sampled with a very long cotton swab, we find very strong sex-differences from early on. This opens the possibility for microbes to provide an adaptation to these two very different life-histories of female and male elephant seals.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
   },
   {
     "objectID": "research.html#x-nes_doubts",
     "href": "research.html#x-nes_doubts",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x nes_doubts",
     "text": ":x nes_doubts\nOne of the most important aspects of this study is that we ruled out that sex-differences in the gut microbiome are simply to due differences in diet, as all pups only ever fed on their mother’s milk and were fasting at the time of sampling. Therefore, it’s likely that male and female pups have a different gut microbiome due to intrinsic causes (genetics, physiology). However, this doesn’t mean that these differences are also adaptive and functional for things like development or the immune system."
   },
   {
     "objectID": "research.html#x-bot",
     "href": "research.html#x-bot",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x bot",
     "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
   },
   {
     "objectID": "research.html#x-bot_doubts",
     "href": "research.html#x-bot_doubts",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x bot_doubts",
     "text": ":x bot_doubts\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better."
   },
   {
     "objectID": "research.html#x-plov",
     "href": "research.html#x-plov",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x plov",
     "text": ":x plov\nAround 60% of adult snowy plovers are males, which led to a mating system where females are polygynous (they get to have more than one partner per season). My buddy Luke led this project, where we wanted to know where this sex biases comes from! Born 50/50, most of the sex biases we see in adults actually originates in juveniles, where males have lower survival rates than males. We therefore argue that two-sex population models (as used in our study) are essential to understand population dynamics and can help to shed light on some of the remaining mysteries around sexual selection.\nAuthors | Luke J Eberhart-Phillips, Clemens Küpper, Tom EX Miller, Medardo Cruz-López, Kathryn H Maher, Natalie Dos Remedios, Martin A Stoffel, Joseph I Hoffman, Oliver Krüger, Tamás Székely"
   },
   {
     "objectID": "research.html#x-chem",
     "href": "research.html#x-chem",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x chem",
     "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
   },
   {
     "objectID": "research.html#x-chem_doubts",
     "href": "research.html#x-chem_doubts",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x chem_doubts",
     "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesising these chemical signals and doing behavioural experiments. However, we know at least that sea lions can recognise their pups by scent alone."
   },
   {
     "objectID": "research.html#x-horse",
     "href": "research.html#x-horse",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x horse",
     "text": ":x horse\nWe show that genomic inbreeding reduces the changes of a Thoroughbred horse ever making it to the racecourse, and pinpoint a genomic region where homozygosity has a particularly large effect, independent of genome-wide inbreeding.\nEmmeline W Hill, Martin A Stoffel, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton\nPic by DALL-E."
   },
@@ -149,65 +149,65 @@
   {
     "objectID": "research.html#x-el",
     "href": "research.html#x-el",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": ":x el",
-    "text": ":x el\nWe scanned the Soay sheep population for embryonic lethal mutations, found a few, and explored patterns of purifying and balancing selection of them. The key take-away is that strongly deleterious mutations exist even in small populations. These mutations are unlikely to contribute much to the usual estimates of inbreeding depression, because they can cause mortality pre-birth. They can be quickly purged by purifying selection, but they can also be maintained by balancing selection in small population, when they are linked to a beneficial mutation.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+    "text": ":x el\nWe scanned the genomes of thousands of Soay sheep for embryonic lethal mutations. These mutations prevent an individual from being born, should it be unlucky enough to receive the same genetic variant from both mum and dad. We found a few semi-lethal mutations in the population, and show that these are under selection. We show that despite their negative effects, these mutations can be maintained when they are genetically linked to beneficial genetic variants.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hi, I’m Martin. At heart, I’m curious about nature and technology and everything in between. Until recently, I was a researcher at the University of Edinburgh working on evolutionary genetics and biostatistics, and also a PIBBSS fellow exploring risks from future AI systems. Now, I’m a Research Data Scientist in the Research Engineering Group at the Alan Turing Institute, combining my passion for building things and tackling new challenges across disciplines.\nOutside of work, I like kettlebells, remote islands, wingspan, 5s football, open water swimming, trying to read Gödel Escher Bach, cold plunges, conversations without time-pressure, pull-ups, Rumo, forests, the Economist, intermittend fasting and northern elephant seals.\nAlways happy to chat, so feel free to get in touch."
+    "text": "Hi, I’m Martin. At heart, I’m curious about nature and technology and everything in between. Until recently, I was a researcher at the University of Edinburgh working on evolutionary genetics and biostatistics, and also a PIBBSS fellow exploring risks from future AI systems. Now, I’m a Research Data Scientist in the Research Engineering Group at the Alan Turing Institute, combining my passion for building things and tackling new challenges across disciplines.\nOutside of work, I like kettlebells, remote islands, wingspan, 5s football, open water swimming, conversations without time-pressure, pull-ups, Rumo, forests, the Economist, cold showers, time-restricted eating and northern elephant seals.\nAlways happy to chat, so feel free to get in touch."
   },
   {
     "objectID": "posts/magic_map/index.html",
     "href": "posts/magic_map/index.html",
     "title": "map()-magic",
     "section": "",
-    "text": "“Form follows function” - Louis Sullivan\nOne of the major steps in becoming a more effective R programmer for me was to really adopt functional programming. It made my code more readable, less error-prone, faster, and also simply for fun to write.\nFunctional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions.\nA function can then be elegantly applied to many inputs. Here, we will do this with purrr::map(), which I’m using day in and day out and which is a great starting point to dive into the world of functional programming.\nLet’s go through some of the map()-magic with a minimal workflow to produce clean, robust and fast code. We will do a small :genome-wide association study, an analysis looking at the association between genes and a trait by fitting a model over and over again for every :SNP in the genome.\nHere are some my favorite packages.\nLet’s see whether drinking coffee has a genetic basis. We make up a trait (coffees per day) and 100 SNPs for 100 individuals."
+    "text": "“Form follows function” - Louis Sullivan\nOne of the major steps in becoming a more effective R programmer for me was to really adopt functional programming. It made my code more readable, less error-prone, faster, and also simply for fun to write.\nFunctional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions.\nA function can then be elegantly applied to many inputs. Here, we will do this with purrr::map(), which I’m using day in and day out and which is a great starting point to dive into the world of functional programming.\nLet’s go through some of the map()-magic with a minimal workflow to produce clean, robust and fast code. We will do a small :genome-wide association study, an analysis looking at the association between genes and a trait by fitting a model over and over again for every :SNP in the genome.\nHere are some my favorite packages.\nlibrary(purrr) # provides the key function here: map\nlibrary(furrr) # does map in parallel\nlibrary(dplyr) # does all sorts of magic\nlibrary(glue)  # concatenates strings beautifully\nlibrary(broom) # takes a model and returns a tidy data.frame\nLet’s see whether drinking coffee has a genetic basis. We make up a trait (coffees per day) and 100 SNPs for 100 individuals."
   },
   {
     "objectID": "posts/magic_map/index.html#simulate-data",
     "href": "posts/magic_map/index.html#simulate-data",
     "title": "map()-magic",
     "section": "Simulate data",
-    "text": "Simulate data\n\ncoffees   <- sample(1:6, 100, TRUE)\nsnps      <- replicate(100, sample(c(0,1,2), 100, TRUE))\nsnp_names <- paste0(\"snp\", 1:100)\n\ndat <- data.frame(cbind(coffees, snps)) %>% \n            setNames(c(\"coffees\", snp_names))\n            \nhead(dat[1:5, 1:7])\n\n#>   coffees snp1 snp2 snp3 snp4 snp5 snp6\n#> 1       6    2    2    1    0    0    1\n#> 2       3    1    1    0    2    1    2\n#> 3       5    0    0    0    0    2    0\n#> 4       3    2    1    0    2    1    0\n#> 5       3    0    0    1    2    0    1"
+    "text": "Simulate data\n\ncoffees   &lt;- sample(1:6, 100, TRUE)\nsnps      &lt;- replicate(100, sample(c(0,1,2), 100, TRUE))\nsnp_names &lt;- paste0(\"snp\", 1:100)\n\ndat &lt;- data.frame(cbind(coffees, snps)) %&gt;% \n            setNames(c(\"coffees\", snp_names))\n            \nhead(dat[1:5, 1:7])\n\n#&gt;   coffees snp1 snp2 snp3 snp4 snp5 snp6\n#&gt; 1       6    2    2    1    0    0    1\n#&gt; 2       3    1    1    0    2    1    2\n#&gt; 3       5    0    0    0    0    2    0\n#&gt; 4       3    2    1    0    2    1    0\n#&gt; 5       3    0    0    1    2    0    1"
   },
   {
     "objectID": "posts/magic_map/index.html#write-a-function",
     "href": "posts/magic_map/index.html#write-a-function",
     "title": "map()-magic",
     "section": "1) Write a function",
-    "text": "1) Write a function\nWe could now do 100 linear models manually by writing 100 lines of code, or we could do a for loop.\nInstead, let’s write a function to fit one model, and then apply this function to each SNP. We generally want the thing that changes (i.e. snp_name) to be the first argument. The function below fits a linear model of coffee consumption with a snp as predictor, and extracts the model estimate and p-value for the SNP. It returns a one-row data.frame. I generally like my functions to return data.frames, because that makes it easy to put together many function outputs into a big data.frame at the end.\n\nfit_model <- function(snp_name, dat) {\n      # write formula using SNP name\n      model_formula <- glue(\"coffees ~ {snp_name}\")\n      # fit linear model\n      fit <- lm(model_formula, data = dat) %>% \n                  broom::tidy() %>%        # tidy results\n                  filter(term == snp_name) # extract snp\n      return(fit)\n      \n}"
+    "text": "1) Write a function\nWe could now do 100 linear models manually by writing 100 lines of code, or we could do a for loop.\nInstead, let’s write a function to fit one model, and then apply this function to each SNP. We generally want the thing that changes (i.e. snp_name) to be the first argument. The function below fits a linear model of coffee consumption with a snp as predictor, and extracts the model estimate and p-value for the SNP. It returns a one-row data.frame. I generally like my functions to return data.frames, because that makes it easy to put together many function outputs into a big data.frame at the end.\n\nfit_model &lt;- function(snp_name, dat) {\n      # write formula using SNP name\n      model_formula &lt;- glue(\"coffees ~ {snp_name}\")\n      # fit linear model\n      fit &lt;- lm(model_formula, data = dat) %&gt;% \n                  broom::tidy() %&gt;%        # tidy results\n                  filter(term == snp_name) # extract snp\n      return(fit)\n      \n}"
   },
   {
     "objectID": "posts/magic_map/index.html#use-map-to-apply-function-to-every-snp",
     "href": "posts/magic_map/index.html#use-map-to-apply-function-to-every-snp",
     "title": "map()-magic",
     "section": "2) Use map() to apply function to every SNP",
-    "text": "2) Use map() to apply function to every SNP\nUsing a vector with snp_names, we can apply the function to every SNP. The structure of map() is always the same: map(list/vector, function, additional_arguments). map() always returns a list. We can convert the list to a data.frame with dplyr::bind_rows().\n\n# run gwas\ngwas <- map(snp_names, fit_model, dat) %>% \n              bind_rows()\n# print first three SNPs\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1   -0.0509     0.203    -0.250   0.803\n#> 2 snp2    0.106      0.206     0.515   0.608\n#> 3 snp3   -0.282      0.214    -1.32    0.190"
+    "text": "2) Use map() to apply function to every SNP\nUsing a vector with snp_names, we can apply the function to every SNP. The structure of map() is always the same: map(list/vector, function, additional_arguments). map() always returns a list. We can convert the list to a data.frame with dplyr::bind_rows().\n\n# run gwas\ngwas &lt;- map(snp_names, fit_model, dat) %&gt;% \n              bind_rows()\n# print first three SNPs\ngwas[1:3, ]\n\n#&gt; # A tibble: 3 x 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803\n#&gt; 2 snp2    0.106      0.206     0.515   0.608\n#&gt; 3 snp3   -0.282      0.214    -1.32    0.190"
   },
   {
     "objectID": "posts/magic_map/index.html#what-if-something-goes-wrong---map-safely",
     "href": "posts/magic_map/index.html#what-if-something-goes-wrong---map-safely",
     "title": "map()-magic",
     "section": "3) What if something goes wrong? - map() safely",
-    "text": "3) What if something goes wrong? - map() safely\nLoops often fail becomes something goes wrong in one or a few iterations.Let’s introduce a non-existing SNP and try again to see how it fails\n\nsnp_names2 <- c(\"not_a_snp\", snp_names)\n\ngwas <- map(snp_names2, fit_model, dat) %>% \n      bind_rows()\n\n#> Error in eval(predvars, data, env): object 'not_a_snp' not found\n\n\nWe can make our gwas error-safe using purrr::safely(). This does some magic under the hood which isn’t so important now. For every iteration, it will return a list with two elements, one for the result and one for the error (equals NULL if there is no error). This way, we always get the results or errors of all our iterations back.\n\nfit_model_safely <- purrr::safely(fit_model)\n\ngwas <- map(snp_names2, fit_model_safely, dat)\ngwas[1:2]\n\n#> [[1]]\n#> [[1]]$result\n#> NULL\n#> \n#> [[1]]$error\n#> <simpleError in eval(predvars, data, env): object 'not_a_snp' not found>\n#> \n#> \n#> [[2]]\n#> [[2]]$result\n#> # A tibble: 1 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1   -0.0509     0.203    -0.250   0.803\n#> \n#> [[2]]$error\n#> NULL\n\n\nmap() lets you extract a list element simply by its name. Here, we iterate over the list of results and extract all SNPs that worked.\n\ngwas <- map(gwas, \"result\") %>% \n            bind_rows()\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1   -0.0509     0.203    -0.250   0.803\n#> 2 snp2    0.106      0.206     0.515   0.608\n#> 3 snp3   -0.282      0.214    -1.32    0.190"
+    "text": "3) What if something goes wrong? - map() safely\nLoops often fail becomes something goes wrong in one or a few iterations.Let’s introduce a non-existing SNP and try again to see how it fails\n\nsnp_names2 &lt;- c(\"not_a_snp\", snp_names)\n\ngwas &lt;- map(snp_names2, fit_model, dat) %&gt;% \n      bind_rows()\n\n#&gt; Error in eval(predvars, data, env): object 'not_a_snp' not found\n\n\nWe can make our gwas error-safe using purrr::safely(). This does some magic under the hood which isn’t so important now. For every iteration, it will return a list with two elements, one for the result and one for the error (equals NULL if there is no error). This way, we always get the results or errors of all our iterations back.\n\nfit_model_safely &lt;- purrr::safely(fit_model)\n\ngwas &lt;- map(snp_names2, fit_model_safely, dat)\ngwas[1:2]\n\n#&gt; [[1]]\n#&gt; [[1]]$result\n#&gt; NULL\n#&gt; \n#&gt; [[1]]$error\n#&gt; &lt;simpleError in eval(predvars, data, env): object 'not_a_snp' not found&gt;\n#&gt; \n#&gt; \n#&gt; [[2]]\n#&gt; [[2]]$result\n#&gt; # A tibble: 1 x 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803\n#&gt; \n#&gt; [[2]]$error\n#&gt; NULL\n\n\nmap() lets you extract a list element simply by its name. Here, we iterate over the list of results and extract all SNPs that worked.\n\ngwas &lt;- map(gwas, \"result\") %&gt;% \n            bind_rows()\ngwas[1:3, ]\n\n#&gt; # A tibble: 3 x 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803\n#&gt; 2 snp2    0.106      0.206     0.515   0.608\n#&gt; 3 snp3   -0.282      0.214    -1.32    0.190"
   },
   {
     "objectID": "posts/magic_map/index.html#what-if-it-takes-too-long---map-in-parallel",
     "href": "posts/magic_map/index.html#what-if-it-takes-too-long---map-in-parallel",
     "title": "map()-magic",
     "section": "4) What if it takes too long? - map() in parallel",
-    "text": "4) What if it takes too long? - map() in parallel\nOnce the idea of map() is clear, we can easily parallelise it to run on multiple cores. There is some overhead in collecting computations from several cores so this doesn’t make much sense when the running time is short. But for longer computations, using 4 cores instead of 1 should make it nearly 4 times as fast.\nWe can use the furrr package here, which mimics purrr functions but can run in parallel. It is based on future, which is why all functions start with future_, for example future_map(). Unlike other ways of parallelising, this approach works on Windows, Mac and Linux. All we have to do now is to first set up a plan() …\n\n# check available cores\navailableCores()\n# parallelises across 4 cores\nplan(multiprocess, workers = 4)\n\n… and then replace map() with future_map().\n\ngwas <- future_map(snp_names, fit_model, dat) %>% \n            bind_rows()\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1   -0.0509     0.203    -0.250   0.803\n#> 2 snp2    0.106      0.206     0.515   0.608\n#> 3 snp3   -0.282      0.214    -1.32    0.190"
+    "text": "4) What if it takes too long? - map() in parallel\nOnce the idea of map() is clear, we can easily parallelise it to run on multiple cores. There is some overhead in collecting computations from several cores so this doesn’t make much sense when the running time is short. But for longer computations, using 4 cores instead of 1 should make it nearly 4 times as fast.\nWe can use the furrr package here, which mimics purrr functions but can run in parallel. It is based on future, which is why all functions start with future_, for example future_map(). Unlike other ways of parallelising, this approach works on Windows, Mac and Linux. All we have to do now is to first set up a plan() …\n\n# check available cores\navailableCores()\n# parallelises across 4 cores\nplan(multiprocess, workers = 4)\n\n… and then replace map() with future_map().\n\ngwas &lt;- future_map(snp_names, fit_model, dat) %&gt;% \n            bind_rows()\ngwas[1:3, ]\n\n#&gt; # A tibble: 3 x 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803\n#&gt; 2 snp2    0.106      0.206     0.515   0.608\n#&gt; 3 snp3   -0.282      0.214    -1.32    0.190"
   },
   {
     "objectID": "posts/magic_map/index.html#the-full-minimal-workflow-for-a-robust-parallel-gwas",
     "href": "posts/magic_map/index.html#the-full-minimal-workflow-for-a-robust-parallel-gwas",
     "title": "map()-magic",
     "section": "The full, minimal workflow for a robust, parallel gwas",
-    "text": "The full, minimal workflow for a robust, parallel gwas\n\nplan(multiprocess, workers = 4)\n\nfit_model <- function(snp_name, dat) {\n      model_formula <- glue(\"coffees ~ {snp_name}\")\n      fit <- lm(model_formula, data = dat) %>% \n                  broom::tidy() %>% \n                  filter(term == snp_name)\n      return(fit)\n}\n\nfit_model_safely <- purrr::safely(fit_model)\ngwas <- future_map(snp_names, fit_model_safely, dat) %>% \n                  map(\"result\") %>% \n                  bind_rows()\n\ngwas[1:3, ]\n\n#> # A tibble: 3 x 5\n#>   term  estimate std.error statistic p.value\n#>   <chr>    <dbl>     <dbl>     <dbl>   <dbl>\n#> 1 snp1   -0.0509     0.203    -0.250   0.803\n#> 2 snp2    0.106      0.206     0.515   0.608\n#> 3 snp3   -0.282      0.214    -1.32    0.190"
+    "text": "The full, minimal workflow for a robust, parallel gwas\n\nplan(multiprocess, workers = 4)\n\nfit_model &lt;- function(snp_name, dat) {\n      model_formula &lt;- glue(\"coffees ~ {snp_name}\")\n      fit &lt;- lm(model_formula, data = dat) %&gt;% \n                  broom::tidy() %&gt;% \n                  filter(term == snp_name)\n      return(fit)\n}\n\nfit_model_safely &lt;- purrr::safely(fit_model)\ngwas &lt;- future_map(snp_names, fit_model_safely, dat) %&gt;% \n                  map(\"result\") %&gt;% \n                  bind_rows()\n\ngwas[1:3, ]\n\n#&gt; # A tibble: 3 x 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803\n#&gt; 2 snp2    0.106      0.206     0.515   0.608\n#&gt; 3 snp3   -0.282      0.214    -1.32    0.190"
   },
   {
     "objectID": "posts/magic_map/index.html#general-thoughts-about-map",
@@ -429,9 +429,9 @@
   {
     "objectID": "research.html#empricial-research",
     "href": "research.html#empricial-research",
-    "title": "fantom filters",
+    "title": ":x oryx",
     "section": "",
-    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
   },
   {
     "objectID": "posts/hidden_info/index.html",
@@ -446,5 +446,12 @@
     "title": "AI, hidden information and the future of knowledge.",
     "section": ":x graph",
     "text": ":x graph\nNote: the peak in the graph marks the beginning of the COVID-19 lockdown, where people suddenly had more time to code and ask questions. However, the increase in interest declined relatively quickly. The drop following the peak is therefore unusual and can’t really be compared to the drop at the end."
+  },
+  {
+    "objectID": "posts/hidden_info/stackoverflow.html",
+    "href": "posts/hidden_info/stackoverflow.html",
+    "title": "Are Python questions on stackoverflow dropping since ChatGPT?",
+    "section": "",
+    "text": "This notebook\n* fetches the number of stackoverflow questions per month with the Python tag from stackoverflow using their API\n* plots them\n\nimport requests\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom matplotlib.dates import date2num\nfrom plotnine import *\nfrom datetime import datetime, timedelta\n\n\n# Set the API URL for fetching data\nbase_url = \"https://api.stackexchange.com/2.3/questions\"\n\n# Set the parameters\nparams = {\n    \"site\": \"stackoverflow\",\n    \"tagged\": \"python\",\n    \"pagesize\": 1,\n    \"fromdate\": None,\n    \"todate\": None,\n    \"filter\": \"total\",\n}\n\n\n# Get stackoverflow data for the last 96 months\ncurrent_date = datetime.now()\nend_date = current_date.replace(day=1) - timedelta(days=1)\nstart_date = end_date - timedelta(days=96*30)  \n\nmonths = pd.date_range(start=start_date, end=end_date + pd.Timedelta(days=1), freq='MS')\ndata = []\n\n# Fetch the data from the API\nfor i in range(len(months) - 1):\n    params[\"fromdate\"] = int(months[i].timestamp())\n    params[\"todate\"] = int(months[i+1].timestamp())\n    \n    response = requests.get(base_url, params=params)\n    total_questions = response.json()[\"total\"]\n    \n    data.append({\"month\": months[i].strftime(\"%Y-%m\"), \"questions\": total_questions})\n    \ndf = pd.DataFrame(data)\n\n\nnov_2022_data = df[df[\"month\"] == \"2022-11\"].iloc[0]\nsns.set(style=\"white\")\nplt.rcParams[\"font.family\"] = \"sans-serif\"\nfig, ax = plt.subplots(figsize=(7, 3.5))\nsns.lineplot(\n    x=\"month\", y=\"questions\", data=df, ax=ax, linewidth=2, color=\"#1f77b4\"\n)\nsns.scatterplot(\n    x=\"month\", y=\"questions\", data=df, ax=ax, color=\"#1f77b4\", s=20\n)\nax.axvline(x=nov_2022_data[\"month\"], ymin=0, ymax=1, linestyle=\"--\", color=\"grey\")\nax.annotate(\n    \"ChatGPT\\nrelease\",\n    xy=(nov_2022_data[\"month\"], nov_2022_data[\"questions\"] + 1000),\n    xytext=(5, 30),\n    textcoords=\"offset points\",\n    arrowprops=dict(arrowstyle=\"-&gt;\", color=\"#3B4252\"),\n    color=\"#3B4252\",\n)\n\nnum_labels = 5\nstep = len(df[\"month\"]) // (num_labels - 1)\nxticks = sorted(\n    list(set(df[\"month\"][::step].tolist() + [nov_2022_data[\"month\"]]))[:-1]\n)\nax.set_xticks(xticks)\nplt.xticks(rotation=60, fontsize=12)\nax.set_ylim(5000, 30000)\nax.set_yticks(range(10000, 31000, 10000))\nplt.yticks(fontsize=12)\nax.set_xlabel(\"Month\", fontsize=14, fontweight=\"bold\", labelpad=15)\nax.set_ylabel(\n    \"# of questions with python tag\", fontsize=14, fontweight=\"bold\", labelpad=15\n)\nax.tick_params(axis=\"both\", colors=\"grey\")\nfor spine in [\"bottom\", \"left\"]:\n    ax.spines[spine].set_color(\"grey\")\nax.grid(False)\nsns.despine()\nplt.show()\n\n\n\n\n\n\nThe number of python questions on Stackoverflow. Data: Stackoverflow API.\n\n\n\n\n\n\n\n#df.to_csv(\"stackoverflow_python_questions.csv\", index=False)"
   }
 ]
