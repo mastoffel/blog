@@ -157,12 +157,12 @@ Skin chemicals co-vary with relatedness, genetic make-up and colony membership. 
 ## :x horse {#x-horse}
 We show that genomic inbreeding reduces the changes of a Thoroughbred horse ever making it to the racecourse, and pinpoint a genomic region where homozygosity has a particularly large effect, independent of genome-wide inbreeding.  
 
-Emmeline W Hill, **Martin A Stoffel**, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton
+*Authors* \| Emmeline W Hill, **Martin A Stoffel**, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton
 
 Pic by DALL-E.
 
-# :x oryx {#x-oryx}
+## :x oryx {#x-oryx}
 to do
 
-Emily Humble, **Martin A. Stoffel**, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden
+*Authors* \| Emily Humble, **Martin A. Stoffel**, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden
 
