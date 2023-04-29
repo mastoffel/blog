@@ -1,6 +1,6 @@
 ---
 title: "map()-magic"
-description: "Simple, fast, safe: functional programming in R."
+description: "Functional programming in R."
 #author: "Martin Stoffel"
 date: "01/09/2022"
 categories: [R, code]

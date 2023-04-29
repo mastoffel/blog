@@ -64,5 +64,9 @@
   },
   "posts/hidden_info/index.qmd": {
     "index.html": "2452b80a"
+  },
+  "posts/hidden_info/stackoverflow.ipynb": {
+    "stackoverflow.html": "4bfa54a7",
+    "stackoverflow.ipynb.html": "5343974b"
   }
 }

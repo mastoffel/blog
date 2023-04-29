@@ -38,3 +38,5 @@ callout-appearance: minimal
   
 editor: visual
 
+render:
+  "!*.ipynb"

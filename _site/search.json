@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "fantom filters",
     "section": "",
-    "text": "Piping in Python\n\n\n\n\n\nSimplified data pipelines.\n\n\n\n\n\n\nFeb 11, 2023\n\n\n\n\n\n\n  \n\n\n\n\nCreating your own ggplot theme\n\n\n\n\n\nA short guide.\n\n\n\n\n\n\nNov 10, 2022\n\n\n\n\n\n\n  \n\n\n\n\nmap()-magic\n\n\n\n\n\nSimple, fast, safe: functional programming in R.\n\n\n\n\n\n\nJan 9, 2022\n\n\n\n\n\n\nNo matching items"
+    "text": "AI, hidden information and the future of knowledge.\n\n\n\n\n\nSome thoughts.\n\n\n\n\n\n\nApr 5, 2023\n\n\n\n\n\n\n  \n\n\n\n\nPiping in Python\n\n\n\n\n\nSimplified data pipelines.\n\n\n\n\n\n\nFeb 11, 2023\n\n\n\n\n\n\n  \n\n\n\n\nCreating your own ggplot theme\n\n\n\n\n\nA short guide.\n\n\n\n\n\n\nNov 10, 2022\n\n\n\n\n\n\n  \n\n\n\n\nmap()-magic\n\n\n\n\n\nFunctional programming in R.\n\n\n\n\n\n\nJan 9, 2022\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research.html",
@@ -423,7 +423,28 @@
     "objectID": "code.html#open-source-software",
     "href": "code.html#open-source-software",
     "title": "fantom filters",
-    "section": "Open source software",
-    "text": "Open source software\n\n\n\n\n\n\npartR2: partitioning R2 in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nrptR: repeatability estimation and variance decomposition in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\ninbreedR: analysing inbreeding with sparse genetic markers.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nGCalignR:aligning gas-chromatography data from messy field samples.\n:In a nutshell, paper, package |"
+    "section": "",
+    "text": "partR2: partitioning R2 in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nrptR: repeatability estimation and variance decomposition in mixed models.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\ninbreedR: analysing inbreeding with sparse genetic markers.\n:In a nutshell, paper, package | \n\n\n\n\n\n\n\n\n\nGCalignR:aligning gas-chromatography data from messy field samples.\n:In a nutshell, paper, package |"
+  },
+  {
+    "objectID": "research.html#empricial-research",
+    "href": "research.html#empricial-research",
+    "title": "fantom filters",
+    "section": "",
+    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+  },
+  {
+    "objectID": "posts/hidden_info/index.html",
+    "href": "posts/hidden_info/index.html",
+    "title": "AI, hidden information and the future of knowledge.",
+    "section": "",
+    "text": "“If I am what I have and if what I have is lost, then who am I?”\n- Erich Fromm\nThe future of knowledge is at a crossroads. Before long, most text and code will be written by or with AI models. What was once explicit human reasoning will become information hidden in neural network weights, undecipherable changes in evergrowing matrices. Model outputs will soon become inputs, and the trajectory of knowledge becomes unclear once we outsourced thinking to the machine.\nFor people who code, Stackoverflow is the place where problems are discussed and solutions are found. The community makes sure that precise questions are asked and that answers are ranked, corrected and accepted. More than merely providing solutions, the platform makes the human reasoning process explicit and open. Stackoverflow documents how we, as humans, think about code. But this could soon be over.\nWhy would anyone go through the effort of constructing a minimal reproducible example, formulating a precise question and waiting for hours or days to get an answer, if ChatGPT gives a decent answer straight away and hassle-free? To get some insights into this, I had a look at the number of questions with a Python tag on Stackoverflow over time. While Python questions were increasing :for years, there is a clear drop since ChatGPT was released.\nThe decline isn’t super strong yet, but we can see where this is going. Stackoverflow, an open catalogue of human reasoning, will be replaced by private human-to-AI interactions. Human-readable information becomes hidden in neural network weights. Knowledge-generation is outsourced into AI systems with billions of parameters.\nCode, arguably, is easy to validate. At least we roughly know when it does what we want. This is different in science, where the reasoning process itself is key to the validity of the results. Soon, AI reasoning will permeate the very foundation of science. AI’s are going to plan experiments, collect and analyse data, draw conclusions and write papers. Much of the human input to new knowledge will be evaluating AI outputs rather than reasoning ourselves.\nWhether AI will outperform human reasoning or be subtly wrong more often than humans, we can’t let the reasoning underpinning science be hidden in AI models. To keep the upper hand, we need to transition to a true open source science, where the community has the opportunity to collectively understand and verify scientific progress. The current peer review system, possibly a failed experiment anyway, won’t be able to keep up with a flood of AI-generated papers. Rather than receiving a scientific stamp-of-approval after being reviewed by only two or three peers, scientific papers should be continously open to scrutiny and improvement by the community. For inspiration, we could have a look at Stackoverflow."
+  },
+  {
+    "objectID": "posts/hidden_info/index.html#x-graph",
+    "href": "posts/hidden_info/index.html#x-graph",
+    "title": "AI, hidden information and the future of knowledge.",
+    "section": ":x graph",
+    "text": ":x graph\nNote: the peak in the graph marks the beginning of the COVID-19 lockdown, where people suddenly had more time to code and ask questions. However, the increase in interest declined relatively quickly. The drop following the peak is therefore unusual and can’t really be compared to the drop at the end."
   }
 ]
