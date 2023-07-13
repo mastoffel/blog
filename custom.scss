@@ -27,6 +27,13 @@ p {
   font-family: $font-family-body;
 }
 
+// apply font family to bullet points
+ul {
+  font-family: $font-family-body;
+  // font size same as p
+  font-size: 1.2rem;
+}
+
 // Apply color scheme
 .navbar-brand {
   color: $accent-color !important;
