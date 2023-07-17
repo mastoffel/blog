@@ -49,32 +49,43 @@ These vectors are called [:embeddings](#x-embeddings). Here, each embedding vect
 [0.1,0.3,0.2]    [0.2,0.1,0.3]    [0.3,0.2,0.1]    [0.1,0.3,0.2]    [0.2,0.1,0.3]
 --------------------------------------------------------------------------------
 ```
-For simplicity, we don't really care about the exact vectors here, so we initialise them randomly. We call the number of tokens in our input $T$ for 'Time' as each token comes after the next and the number of dimensions in our embedding $C$, for Channels. That's just convention. To make attention efficient, these vectors are stacked on top of each other to form a matrix. Voila, we have our input. 
+For simplicity, we don't really care about the exact vectors here, so we initialise them randomly. We call the number of tokens in our input `T` for 'Time' as each token comes after the next and the number of dimensions in our embedding `C`, for Channels. That's just convention. To make attention efficient, these vectors are stacked on top of each other to form a matrix. Voila, we have our input. 
 
 ```{python}
 import torch
 
 T, C = 5, 3          # T = Time (#tokens), C = Channels (#dimensions)
 X = torch.rand(T, C) # X is our input, a matrix of size T x C
-X
+print('Input matrix X, each row represents a token:')
+print(X)
 ```
 
-## 2. The citadel of embeddings
+## 2. Embeddings to keys, queries and values
 
 <figure>
-    <img src="ricks.png" width="250"/>
-    <figcaption>The citadel of Ricks</figcaption>
+    <img src="ricks2.png" width="400"/>
+    <figcaption>Ricks</figcaption>
 </figure>
 
-Now into the nitty gritty of attention. Attention actually doesn't operator on the embedding vectors directly. Instead, each vector gets three representations, a _key_, a _query_ and a _value_ vector. To get there, we simply matrix multiply the embedding vector (1, C) with three different weight matrices (C, C) $W_k$, $W_q$ and $W_v$. These are again just randomly initialised. 
+Now into the nitty gritty of attention. Attention actually doesn't operate on the "raw" embedding vector `x` directly. Instead, it works with three different representations of `x`:
+
+$$ key: k = xW_k $$
+$$ query: q = xW_q $$
+$$ value: v = xW_v $$
+
+These three representations are called _key_ (`k`), _query_ (`q`) and _value_ (`v`) and are vectors too. They can have the same dimensionality as `x`, but don't have to. 
+
+Key, query and value are simple linear projections from `x`. We multiply `x` (1, C) with a weight matrix `Wk` (C, C) to get `k`, with `Wq` to get `q` and with `Wv` to get `v`. 
+
+ simply matrix multiply the embedding vector $x$ (1, C) with three different weight matrices (C, C) $W_k$, $W_q$ and $W_v$. These are again just randomly initialised. 
 
 This gives us three new random number vectors $k$, $q$ and $v$. We're here now with a bunch or random numbers. Keys queries and values are just projected randomness from random embeddings. This doesn't make sense yet, and things will only fall into place once everything is optimized through gradient descent.
 
 
 ```{python}
-Wk = torch.rand(C, C) # Wk is a matrix of size C x C
-Wq = torch.rand(C, C) # Wq is a matrix of size C x C
-Wv = torch.rand(C, C) # Wv is a matrix of size C x C
+Wk = torch.randn(C, C) # Wk is a matrix of size C x C
+Wq = torch.randn(C, C) # Wq is a matrix of size C x C
+Wv = torch.randn(C, C) # Wv is a matrix of size C x C
 
 k0 = X[0] @ Wk # k0 is a vector of size 1 x C
 q0 = X[0] @ Wq # q0 is a vector of size 1 x C
