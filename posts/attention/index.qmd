@@ -14,6 +14,8 @@ filters:
     - nutshell
 ---
 
+{{< video att.mp4 >}}
+
 [key]{.key} [query]{.query} [value]{.value}
 
 We navigate this world by paying attention. Every moment is filled with a sea of information around us, and to make _any_ decision we have to filter out most things, and focus on what's really important. What's important however is not necessarily the loudest, largest or closest thing. A subtle smell can alarm us of a nearby fire, a faint sound can tell us that a predator is approaching.
