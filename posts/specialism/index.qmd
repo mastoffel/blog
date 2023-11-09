@@ -1,0 +1,10 @@
+---
+title: "Generalism in a specialist world"
+description: "A radical approach"
+#author: "Martin Stoffel"
+date: "04/03/2023"
+categories: [ideas]
+draft: true
+---
+
+At many points in my career I asked my self: Should I go deeper and specialise or zoom out and learn about new stuff, becoming even more of a generalist? 

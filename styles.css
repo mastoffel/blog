@@ -91,4 +91,18 @@
   vertical-align: top;
 }
 
+.key {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.query {
+  color: #28A745;
+  font-weight: bold;
+}
+
+.value {
+  color: #6F42C1;
+  font-weight: bold;
+}
 
