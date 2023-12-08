@@ -3,7 +3,8 @@ title: ""
 listing:
   contents: posts/*/*.qmd
   sort: "date desc"
-  type: default
+  type: grid
+  #fields: [date, title]
   categories: false
   sort-ui: false
   filter-ui: false
