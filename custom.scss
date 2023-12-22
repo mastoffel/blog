@@ -6,18 +6,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+// merriweather
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+
+// // Customize navbar-brand for a unique touch
+// .navbar-brand {
+//   font-family: $font-family-headers;
+//   font-size: 1.3rem;
+//   font-weight: 600;
+//   letter-spacing: 0.05em;
+// }
 
 
 // $font-family-sans-serif: "Lato";
 // Define font families
-// $font-family-headers: "Fira Sans", sans-serif !default;
-// $font-family-body: "Cormorant", serif !default;
-
+// $font-family-headers: "Rethink sans", sans-serif !default;
+//$font-family-body: "Cormorant", serif !default;
 // make background white
 $body-bg: #fff;
 
 // make code background white
-$code-bg: #fff;
+//$code-bg: #fff;
+
+// listings page modifications
+.custom-list {
+    //font-size: 16px;
+    list-style-type: none; /* This removes bullet points for .custom-list only */
+    //color: #205cd3
+    // center listings in the middle of the page
+    // center text
+    // show text without underline
+    //text-decoration: none;
+}
+
+.custom-list a {
+    text-decoration: none; /* Removes the underline */
+    color: #1751c4; /* Sets the link color, choose any color you like */
+    // center text
+    text-align: center;
+}
+
+.custom-list .title {
+    vertical-align: top; /* Aligns the title with the top of the date */
+}
+
+.custom-list li {
+    margin-bottom: 10px;
+}
+
+.custom-list .date {
+    //font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    width: 120px; /* Adjust the width as needed */
+    margin-right: 5px; /* Space between date and title */
+    color: #4C566A;
+}
+
+
 
 
 // $primary-color: #344955; // Dark blue-gray
@@ -27,21 +73,7 @@ $code-bg: #fff;
 
 // /*-- scss:rules --*/
 
-// // Apply font families
-// h1, h2, h3, h4 {
-//   font-family: $font-family-headers;
-// }
 
-// p {
-//   font-family: $font-family-body;
-// }
-
-// // apply font family to bullet points
-// ul {
-//   font-family: $font-family-body;
-//   // font size same as p
-//   font-size: 1.2rem;
-// }
 
 // // Apply color scheme
 // .navbar-brand {
@@ -105,17 +137,6 @@ $code-bg: #fff;
 //   margin-bottom: 1rem;
 // }
 
-// .navbar {
-//   padding: 0.5rem 1rem;
-// }
-
-// // Customize navbar-brand for a unique touch
-// .navbar-brand {
-//   font-family: $font-family-headers;
-//   font-size: 1.3rem;
-//   font-weight: 600;
-//   letter-spacing: 0.05em;
-// }
 
 // strong {
 //   font-weight: 700;

@@ -2,6 +2,7 @@
 title: ""
 listing:
   contents: posts/*/*.qmd
+  template: gallery.ejs
   sort: "date desc"
   type: table
   fields: [date, title]

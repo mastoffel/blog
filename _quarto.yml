@@ -6,6 +6,7 @@ website:
   title: "fantom filters"
   site-url: https://www.mstoffel.xyz/
   description: "personal blog"
+  search: false
   navbar:
     right:
       - text: "blog"
@@ -16,11 +17,6 @@ website:
         file: code.qmd
       - text: "about"
         file: about.qmd
-
-      #- icon: github
-        #href: https://github.com/mastoffel
-      #- icon: twitter
-        #href: https://twitter.com
       # - icon: rss
       #   href: index.xml
   favicon: favicon.png
