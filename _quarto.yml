@@ -4,6 +4,8 @@ project:
 
 website:
   title: "fantom filters"
+  site-url: https://www.mstoffel.xyz/
+  description: "personal blog"
   navbar:
     right:
       - text: "blog"
@@ -19,6 +21,8 @@ website:
         #href: https://github.com/mastoffel
       #- icon: twitter
         #href: https://twitter.com
+      # - icon: rss
+      #   href: index.xml
   favicon: favicon.png
   google-analytics: "G-FYLF41PFGT"
 

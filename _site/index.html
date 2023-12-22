@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -103,7 +103,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-</head>
+<link rel="alternate" type="application/rss+xml" title="fantom filters" href="index.xml"></head>
 
 <body class="nav-fixed fullcontent">
 
@@ -159,109 +159,55 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="ideas" data-listing-date-sort="1680649200000" data-listing-file-modified-sort="1702032455407" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<a href="./posts/hidden_info/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/hidden_info/ivory2.png" class="thumbnail-image card-img" style="height: 10em;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-AI, hidden information and the future of knowledge.
-</h5>
-<div class="card-text listing-description">
-Some thoughts.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 
-</div>
-<div class="listing-date">
-Apr 5, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Python,code" data-listing-date-sort="1676073600000" data-listing-file-modified-sort="1682535646072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<a href="./posts/piping_python/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/piping_python/pipe2.png" class="thumbnail-image card-img" style="height: 10em;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Piping in Python
-</h5>
-<div class="card-text listing-description">
-Simplified data pipelines.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="ideas" data-listing-date-sort="1680645600000" data-listing-file-modified-sort="1702032455407" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="AI, hidden information and the future of knowledge." data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Apr 5, 2023</span>
+</td>
+<td>
+<a href="./posts/hidden_info/index.html" class="title listing-title">AI, hidden information and the future of knowledge.</a>
+</td>
+</tr>
+<tr data-index="1" data-categories="Python,code" data-listing-date-sort="1676070000000" data-listing-file-modified-sort="1682535646072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Piping in Python" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Feb 11, 2023</span>
+</td>
+<td>
+<a href="./posts/piping_python/index.html" class="title listing-title">Piping in Python</a>
+</td>
+</tr>
+<tr data-index="2" data-categories="visualisation,code" data-listing-date-sort="1668034800000" data-listing-file-modified-sort="1699552271473" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-title-sort="Creating your own ggplot theme" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Nov 10, 2022</span>
+</td>
+<td>
+<a href="./posts/ggplot_theme/index.html" class="title listing-title">Creating your own ggplot theme</a>
+</td>
+</tr>
+<tr data-index="3" data-categories="R,code" data-listing-date-sort="1641682800000" data-listing-file-modified-sort="1682769085600" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-title-sort="map()-magic" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jan 9, 2022</span>
+</td>
+<td>
+<a href="./posts/magic_map/index.html" class="title listing-title">map()-magic</a>
+</td>
+</tr>
+</tbody>
 
-</div>
-<div class="listing-date">
-Feb 11, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="visualisation,code" data-listing-date-sort="1668038400000" data-listing-file-modified-sort="1699552271473" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
-<a href="./posts/ggplot_theme/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/ggplot_theme/theme.png" class="thumbnail-image card-img" style="height: 10em;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Creating your own ggplot theme
-</h5>
-<div class="card-text listing-description">
-A short guide.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Nov 10, 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="R,code" data-listing-date-sort="1641686400000" data-listing-file-modified-sort="1682769085600" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
-<a href="./posts/magic_map/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/magic_map/map.png" class="thumbnail-image card-img" style="height: 10em;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-map()-magic
-</h5>
-<div class="card-text listing-description">
-Functional programming in R.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Jan 9, 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

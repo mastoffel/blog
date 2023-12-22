@@ -1,0 +1,1386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>fantom filters</title>
+<link>https://www.mstoffel.xyz/index.html</link>
+<atom:link href="https://www.mstoffel.xyz/index.xml" rel="self" type="application/rss+xml"/>
+<description>personal blog</description>
+<generator>quarto-1.3.340</generator>
+<lastBuildDate>Tue, 04 Apr 2023 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>AI, hidden information and the future of knowledge.</title>
+  <link>https://www.mstoffel.xyz/posts/hidden_info/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>“If I am what I have and if what I have is lost, then who am I?”<br>
+- <em>Erich Fromm</em></p>
+<p>The future of knowledge is at a crossroads. Before long, most text and code will be written by or with AI models. What was once explicit human reasoning will become information hidden in neural network weights, undecipherable changes in evergrowing matrices. Model outputs will soon become inputs, and the trajectory of knowledge becomes unclear once we outsourced thinking to the machine.</p>
+<p>For people who code, <a href="https://stackoverflow.com/">Stackoverflow</a> is <em>the</em> place where problems are discussed and solutions are found. The community makes sure that precise questions are asked and that answers are ranked, corrected and accepted. More than merely providing solutions, the platform makes the human reasoning process explicit and open. Stackoverflow documents how we, as humans, think about code. But this could soon be over.</p>
+<p>Why would anyone go through the effort of constructing a minimal reproducible example, formulating a precise question and waiting for hours or days to get an answer, if ChatGPT gives a decent answer straight away and hassle-free? To get some insights into this, I had a look at the number of questions with a <code>Python</code> tag on Stackoverflow over time. While <code>Python</code> questions were increasing :for years, there is a clear drop since ChatGPT was released.</p>
+<div class="quarto-embed-nb-cell">
+<div class="cell quarto-layout-panel" data-execution_count="8">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output cell-output-display quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div id="stackoverflow" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://www.mstoffel.xyz/posts/hidden_info/index_files/figure-html/stackoverflow-output-1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">The number of python questions on Stackoverflow. Data: Stackoverflow API.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<a class="quarto-notebook-link" id="nblink-1" href="stackoverflow.ipynb.html">Source: stackoverflow.ipynb</a></div>
+<p>The decline isn’t super strong yet, but we can see where this is going. Stackoverflow, an open catalogue of human reasoning, will be replaced by private human-to-AI interactions. Human-readable information becomes hidden in neural network weights. Knowledge-generation is outsourced into AI systems with billions of parameters.</p>
+<p>Code, arguably, is easy to validate. At least we roughly know when it does what we want. This is different in <em>science</em>, where the reasoning process itself is key to the validity of the results. Soon, AI reasoning will permeate the very foundation of science. AI’s are going to plan experiments, collect and analyse data, draw conclusions and write papers. Much of the human input to new knowledge will be evaluating AI outputs rather than reasoning ourselves.</p>
+<p>Whether AI will outperform human reasoning or be subtly wrong more often than humans, we can’t let the reasoning underpinning science be hidden in AI models. To keep the upper hand, we need to transition to a true open source science, where the community has the opportunity to collectively understand and verify scientific progress. The current peer review system, possibly a <a href="https://www.experimental-history.com/p/the-rise-and-fall-of-peer-review">failed experiment</a> anyway, won’t be able to keep up with a flood of AI-generated papers. Rather than receiving a scientific stamp-of-approval after being reviewed by only two or three peers, scientific papers should be continously open to scrutiny and improvement by the community. For inspiration, we could have a look at Stackoverflow.</p>
+<section id="x-graph" class="level2">
+<h2 class="anchored" data-anchor-id="x-graph">:x graph</h2>
+<p>Note: the peak in the graph marks the beginning of the COVID-19 lockdown, where people suddenly had more time to code and ask questions. However, the increase in interest declined relatively quickly. The drop following the peak is therefore unusual and can’t really be compared to the drop at the end.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ideas</category>
+  <guid>https://www.mstoffel.xyz/posts/hidden_info/index.html</guid>
+  <pubDate>Tue, 04 Apr 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://www.mstoffel.xyz/posts/hidden_info/ivory2.png" medium="image" type="image/png" height="143" width="144"/>
+</item>
+<item>
+  <title>Piping in Python</title>
+  <link>https://www.mstoffel.xyz/posts/piping_python/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Data wrangling in Python <em>seems</em> clunky. Yet, it doesn’t have to be. Here is <strong>how to pipe in Python.</strong></p>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The problem</h2>
+<p>In <code>R</code>, we process data beautifully with <code>dplyr</code> and <code>%&gt;%</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">suppressMessages</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr))</span>
+<span id="cb1-2">iris <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sepal_ratio =</span> Sepal.Width <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> Sepal.Length) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(sepal_ratio <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(Species, sepal_ratio) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(Species) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean_sepal_ratio =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(sepal_ratio))</span></code></pre></div>
+</div>
+<p>In Python’s <code>pandas</code>, most data wrangling code looks much less great, often like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb2-2">url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"</span></span>
+<span id="cb2-3">iris <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(url)</span>
+<span id="cb2-4"></span>
+<span id="cb2-5">iris[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio"</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> iris[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_width"</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> iris[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_length"</span>]</span>
+<span id="cb2-6">iris <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> iris[iris[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio"</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>]    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#filter</span></span>
+<span id="cb2-7">iris <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> iris[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"species"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio"</span>]]   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#select</span></span>
+<span id="cb2-8">iris <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> iris.groupby(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"species"</span>)            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#group by</span></span>
+<span id="cb2-9">iris <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> iris.agg({<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio"</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mean"</span>})  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#summarise</span></span></code></pre></div>
+</div>
+<p>This is hard to read because there’s lots of repitition.</p>
+</section>
+<section id="a-new-hope" class="level2">
+<h2 class="anchored" data-anchor-id="a-new-hope">A new hope</h2>
+<p>But don’t despair! We can pipe in Python, too. Here is how:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">iris <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(url)</span>
+<span id="cb3-2"></span>
+<span id="cb3-3">(iris</span>
+<span id="cb3-4">  .assign(sepal_ratio <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span> x: x.sepal_width <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> x.sepal_length)</span>
+<span id="cb3-5">  .query(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio &gt; 0.5"</span>)</span>
+<span id="cb3-6">  .loc[:, [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"species"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio"</span>]]</span>
+<span id="cb3-7">  .groupby(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"species"</span>)</span>
+<span id="cb3-8">  .agg({<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio"</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mean"</span>})</span>
+<span id="cb3-9">  )</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            sepal_ratio
+species                
+setosa         0.684248
+versicolor     0.530953
+virginica      0.526112</code></pre>
+</div>
+</div>
+<p>For now, there are only two main principles to remember:</p>
+<ol type="1">
+<li>Use <code>.</code> instead of <code>%&gt;%</code> to pipe. Put <code>.</code> at the beginning of the line.</li>
+<li>Use <code>()</code> around the whole expression. Python will complain otherwise.</li>
+</ol>
+<p>There is a pipeable method for most tasks. Sometimes, though, there isn’t, but you can still make it work.</p>
+<ol type="1">
+<li>Use <code>lambda</code> to define a function on the fly (like in .assign() above).</li>
+<li>Use <code>.pipe()</code>, which takes a function as an argument and allows you to pipe it.</li>
+</ol>
+<p>Here is an example of .pipe():</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> sepal_ratio(df):</span>
+<span id="cb5-2">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> df.assign(sepal_ratio <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> df.sepal_width <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> df.sepal_length)</span>
+<span id="cb5-3"></span>
+<span id="cb5-4">(iris</span>
+<span id="cb5-5">  .pipe(sepal_ratio)</span>
+<span id="cb5-6">  .query(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio &gt; 0.5"</span>)</span>
+<span id="cb5-7">  .loc[:, [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"species"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio"</span>]]</span>
+<span id="cb5-8">  .groupby(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"species"</span>)</span>
+<span id="cb5-9">  .agg({<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sepal_ratio"</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mean"</span>})</span>
+<span id="cb5-10">  )</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            sepal_ratio
+species                
+setosa         0.684248
+versicolor     0.530953
+virginica      0.526112</code></pre>
+</div>
+</div>
+<p>That’s it! Some people don’t like piping because, they say, it’s harder to debug. I like to simply comment out lines, allowing you to run it line by line, which makes it actually very easy to debug. A pipe is also easy to read as it’s basically like a recipe. Start with a dataframe and change stuff step by step.</p>
+<p>Here’s a quick summary over the most common data wrangling tasks and their pipeable methods and functions in <code>dplyr</code> and <code>pandas</code>:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>task</th>
+<th>dplyr</th>
+<th>pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>filter rows</td>
+<td>filter()</td>
+<td>df.query()</td>
+</tr>
+<tr class="even">
+<td>pick columns</td>
+<td>select()</td>
+<td>df.loc[]</td>
+</tr>
+<tr class="odd">
+<td>group by</td>
+<td>group_by()</td>
+<td>df.groupby()</td>
+</tr>
+<tr class="even">
+<td>summarise</td>
+<td>summarise()</td>
+<td>df.agg()</td>
+</tr>
+<tr class="odd">
+<td>make new variable</td>
+<td>mutate()</td>
+<td>df.assign()</td>
+</tr>
+<tr class="even">
+<td>join dfs</td>
+<td>inner_join()</td>
+<td>df.merge()</td>
+</tr>
+<tr class="odd">
+<td>sort df</td>
+<td>arrange()</td>
+<td>df.sort_values()</td>
+</tr>
+<tr class="even">
+<td>rename columns</td>
+<td>rename()</td>
+<td>df.rename()</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Last tip: <strong>AI</strong> is your friend. If you’re stuck, put your pandas code in chatgpt or GitHub Copilot and ask it to re-write code as a pipe. Seems to work pretty well.</p>
+</section>
+<section id="not-so-secret-bonus-siuba" class="level2">
+<h2 class="anchored" data-anchor-id="not-so-secret-bonus-siuba">Not so secret bonus: <code>siuba</code></h2>
+<p>There is also the beautiful <a href="https://siuba.org/">siuba</a> package. If you come from <code>R</code>, this might be the way to go. But even if not, it’s still less verbose than <code>pandas</code>. Last time I tried it, the package didn’t quite have everything I needed but I think it grew a lot since then. Here is the same pipeline, but with <code>siuba</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> siuba <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> _, mutate, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">filter</span>, select, group_by, summarize</span>
+<span id="cb7-2"></span>
+<span id="cb7-3">(iris</span>
+<span id="cb7-4">  <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&gt;</span> mutate(sepal_ratio <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> _.sepal_width <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> _.sepal_length)</span>
+<span id="cb7-5">  <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">filter</span>(_.sepal_ratio <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>)</span>
+<span id="cb7-6">  <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&gt;</span> select(_.species, _.sepal_ratio)</span>
+<span id="cb7-7">  <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&gt;</span> group_by(_.species)</span>
+<span id="cb7-8">  <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&gt;</span> summarize(mean_sepal_ratio <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> _.sepal_ratio.mean())</span>
+<span id="cb7-9">  )</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      species  mean_sepal_ratio
+0      setosa          0.684248
+1  versicolor          0.530953
+2   virginica          0.526112</code></pre>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>code</category>
+  <guid>https://www.mstoffel.xyz/posts/piping_python/index.html</guid>
+  <pubDate>Fri, 10 Feb 2023 23:00:00 GMT</pubDate>
+  <media:content url="https://www.mstoffel.xyz/posts/piping_python/pipe2.png" medium="image" type="image/png" height="142" width="144"/>
+</item>
+<item>
+  <title>Creating your own ggplot theme</title>
+  <link>https://www.mstoffel.xyz/posts/ggplot_theme/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://ggplot2.tidyverse.org/">ggplot2</a> has become one of the most powerful and flexible visualisation tools, with a large community and lots of people working on new extensions every day. A large number of <a href="https://www.r-graph-gallery.com/">ways to represent data</a> makes it possible to create nearly anything in <code>ggplot2</code>, from great <a href="https://bbc.github.io/rcookbook/">data journalism</a> to <a href="https://www.cedricscherer.com/top/dataviz/">beautiful infographics</a> and <a href="https://www.data-imaginist.com/art">generative art</a>. No post-processing required anymore.</p>
+<p>The general look of a ggplot is controlled by a <strong>theme</strong>. Anyone using ggplot knows that the default grey theme is usually not what you want to show the world. Modifying themes is very flexible, but a little bit complicated. Even after using it for years, I have to google some things every single time. Creating your own theme is a way to give your plots a consistent and personal design, and will save you a lot of time and many lines of code.</p>
+<section id="the-default-ggplot" class="level3">
+<h3 class="anchored" data-anchor-id="the-default-ggplot">The default ggplot</h3>
+<p>Let’s use the data from <a href="https://www.gapminder.org/">gapminder</a> to see how a default plot looks like. We first load a few packages and do some data pre-processing.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(gapminder)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(wesanderson)</span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(systemfonts)</span>
+<span id="cb1-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># a bit of data processing</span></span>
+<span id="cb1-7">dat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> gapminder <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb1-8">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(year, continent) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb1-9">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Life Expectancy</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(lifeExp),</span>
+<span id="cb1-10">                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Population =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sum</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.numeric</span>(pop))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb1-11">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rename</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Year =</span> year, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Continent =</span> continent)</span></code></pre></div>
+</div>
+<p>Here is a default <code>theme_grey()</code> scatterplot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(dat, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(Year, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Life Expectancy</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> Continent)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-2">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://www.mstoffel.xyz/posts/ggplot_theme/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+<p>There are a few things I change all the time:</p>
+<ul>
+<li><p>The background, which I prefer simple plain, or only with x and y axis lines.</p></li>
+<li><p>Grid lines: I usually keep only major grid lines (as they are connected to values) or remove them entirely.</p></li>
+<li><p>The spacing between axis, axis-labels and axis-titles.</p></li>
+<li><p>The font.</p></li>
+<li><p>For themes with axis lines, like theme_classic, the line thickness.</p></li>
+</ul>
+</section>
+<section id="making-your-own-theme" class="level3">
+<h3 class="anchored" data-anchor-id="making-your-own-theme">Making your own theme</h3>
+<p>Making a new theme is quite simple. We (1) create a function which starts with a standard theme, such as <code>theme_minimal</code> and (2) add all the theme aspects which we prefer for our plots. Finally (3), we add some arguments to make changing things easy which we need often, such as axis and grid lines and the text size. Below is the theme I am using, but of course you can change every other theme aspect too (see <a href="https://ggplot2.tidyverse.org/reference/theme.html">theme documentation</a>). I’m often using the ‘Avenir Next’ font, which might not be installed on your system (at the end of this post is a little guide on how to install fancy fonts). Using ‘sans’ should always work.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">theme_simple <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis_lines =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>, </span>
+<span id="cb3-2">                         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">grid_lines =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>,     </span>
+<span id="cb3-3">                         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">text_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>,       </span>
+<span id="cb3-4">                         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">line_size =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.2</span>,</span>
+<span id="cb3-5">                         <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># replace with 'sans' if not working</span></span>
+<span id="cb3-6">                         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">base_family=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Avenir Next'</span>){ </span>
+<span id="cb3-7">        </span>
+<span id="cb3-8">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># start with theme_minimal because it is really simple.</span></span>
+<span id="cb3-9">    th <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">base_family =</span> base_family, </span>
+<span id="cb3-10">                               <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">base_size =</span> text_size)</span>
+<span id="cb3-11">         </span>
+<span id="cb3-12">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># remove the grid lines </span></span>
+<span id="cb3-13">    th <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> th <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>())</span>
+<span id="cb3-14">    </span>
+<span id="cb3-15">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># if we want axis lines</span></span>
+<span id="cb3-16">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (axis_lines) {</span>
+<span id="cb3-17">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># We add axis lines and give them our preferred thickness</span></span>
+<span id="cb3-18">        th <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> th <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span id="cb3-19">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.line =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> line_size),</span>
+<span id="cb3-20">                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.ticks =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> line_size))</span>
+<span id="cb3-21">    } </span>
+<span id="cb3-22">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># do we want grid lines?</span></span>
+<span id="cb3-23">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (grid_lines) {</span>
+<span id="cb3-24">        th <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> th <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span id="cb3-25">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid.major =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> line_size))</span>
+<span id="cb3-26">    }</span>
+<span id="cb3-27">    </span>
+<span id="cb3-28">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># more space for axis text/title and plot title </span></span>
+<span id="cb3-29">    th <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> th <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb3-30">              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.text.x=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">margin=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">margin</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">t=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)),</span>
+<span id="cb3-31">              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.text.y=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">margin=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">margin</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">r=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)),</span>
+<span id="cb3-32">              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.title.x=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">margin=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">margin</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">t=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)),</span>
+<span id="cb3-33">              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.title.y=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">margin=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">margin</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">r=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)),</span>
+<span id="cb3-34">              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">margin=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">margin</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">b=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)))</span>
+<span id="cb3-35">    </span>
+<span id="cb3-36">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">return</span> (th)</span>
+<span id="cb3-37">}</span></code></pre></div>
+</div>
+</section>
+<section id="adding-theme_simple-to-the-plot." class="level3">
+<h3 class="anchored" data-anchor-id="adding-theme_simple-to-the-plot.">Adding <code>theme_simple</code> to the plot.</h3>
+<p>Now, we can add <code>theme_simple()</code> to the plot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(dat, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(Year, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Life Expectancy</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> Continent)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-2">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-3">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_manual</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">wes_palette</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Darjeeling2"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span id="cb4-4">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_simple</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://www.mstoffel.xyz/posts/ggplot_theme/index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+<p>Small tweaks can sometimes make a big aesthetic difference. <code>ggplot</code> comes with a few themes, like theme_classic(), which are sort of close to what I like my plots to be, but are just not quite there. If you feel the same, it’s time to make your own theme.</p>
+<p>Lastly, you can put the code for your theme into an R script and save it, for example as theme_simple.R. The next time you make plots, just source the script to load the <code>theme_simple()</code> function. To use it as the default theme, we can use theme_set like so:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">source</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"theme_simple.R"</span>) </span>
+<span id="cb5-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># set theme_simple as default theme</span></span>
+<span id="cb5-3">ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_set</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_simple</span>()) </span></code></pre></div>
+</div>
+<p>That’s it!</p>
+<p>If you are plotting in base R, you might say: You need a full blog post just to explain how to make ggplot look like base R with a different font! And I can only say: touché, my friend.</p>
+</section>
+<section id="appendix-fancy-fonts-made-easy" class="level3">
+<h3 class="anchored" data-anchor-id="appendix-fancy-fonts-made-easy">Appendix: Fancy fonts made easy</h3>
+<p>Fonts can really make a big difference in the visual design of plots. A lot of freely available fonts are on <a href="https://fonts.google.com/" class="uri">https://fonts.google.com/</a>. On Mac, I just download them, double click and they are installed. Then, we have to make them available in R. The <code>systemfonts</code> package magically finds all installed fonts from different directories.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># install.packages("systemfonts)</span></span>
+<span id="cb6-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(systemfonts)</span>
+<span id="cb6-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># which fonts are installed?</span></span>
+<span id="cb6-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># print only top 5</span></span>
+<span id="cb6-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">system_fonts</span>()[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, ]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; # A tibble: 5 x 9
+#&gt;   path             index name      family   style weight width  italic monospace
+#&gt;   &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt; &lt;ord&gt;  &lt;ord&gt;  &lt;lgl&gt;  &lt;lgl&gt;    
+#&gt; 1 /System/Library…     1 ShreeDev… Shree D… Bold  bold   normal FALSE  FALSE    
+#&gt; 2 /Users/mstoffel…     0 FiraCode… Fira Co… Medi… medium normal FALSE  TRUE     
+#&gt; 3 /System/Library…     0 AcademyE… Academy… Plain normal normal FALSE  FALSE    
+#&gt; 4 /System/Library…     0 Impact    Impact   Regu… heavy  semic… FALSE  FALSE    
+#&gt; 5 /Users/mstoffel…     0 IBMPlexS… IBM Ple… Thin  ultra… normal FALSE  FALSE</code></pre>
+</div>
+</div>
+<p>I’ve just downloaded a font which looks like it’s from Pokemon Red and Blue on the old big grey Game boy, called Press Start 2P. We can first check if its there with <code>match_font()</code> and then just use it in the ggplot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># match_font('Press Start 2P')</span></span>
+<span id="cb8-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(dat, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(Year, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Life Expectancy</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> Continent)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb8-3">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb8-4">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_manual</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">wes_palette</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Darjeeling2"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span id="cb8-5">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_simple</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">base_family =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Press Start 2P"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">text_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://www.mstoffel.xyz/posts/ggplot_theme/index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+<p>Other options to import fonts are <a href="https://cran.r-project.org/web/packages/extrafont/README.html">extrafont</a> and <a href="https://cran.rstudio.com/web/packages/showtext/vignettes/introduction.html">showtext</a>.</p>
+</section>
+<section id="pdf-ing-fancy-fonts" class="level3">
+<h3 class="anchored" data-anchor-id="pdf-ing-fancy-fonts">pdf-ing fancy fonts</h3>
+<p>Sometimes, especially for science publications, plots need to be saved as pdfs. With non-standard fonts, this can be problematic, because they have to be embedded, but a little tweak to <code>ggsave()</code> can help here.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggsave</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot.pdf"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">device =</span> cairo_pdf)</span></code></pre></div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>visualisation</category>
+  <category>code</category>
+  <guid>https://www.mstoffel.xyz/posts/ggplot_theme/index.html</guid>
+  <pubDate>Wed, 09 Nov 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://www.mstoffel.xyz/posts/ggplot_theme/theme.png" medium="image" type="image/png" height="113" width="144"/>
+</item>
+<item>
+  <title>map()-magic</title>
+  <link>https://www.mstoffel.xyz/posts/magic_map/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>“Form follows function” - <em>Louis Sullivan</em></p>
+<p>One of the major steps in becoming a more effective R programmer for me was to really adopt functional programming. It made my code more readable, less error-prone, faster, and also simply for fun to write.</p>
+<p>Functional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions.</p>
+<p>A function can then be elegantly applied to many inputs. Here, we will do this with <code>purrr::map()</code>, which I’m using day in and day out and which is a great starting point to dive into the world of functional programming.</p>
+<p>Let’s go through some of the <code>map()</code>-magic with a minimal workflow to produce clean, robust and fast code. We will do a small <a href="https://en.wikipedia.org/wiki/Genome-wide_association_study">:genome-wide association study</a>, an analysis looking at the association between genes and a trait by fitting a model over and over again for every <a href="https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">:SNP</a> in the genome.</p>
+<p>Here are some my favorite packages.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(purrr) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># provides the key function here: map</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(furrr) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># does map in parallel</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># does all sorts of magic</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(glue)  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># concatenates strings beautifully</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(broom) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># takes a model and returns a tidy data.frame</span></span></code></pre></div>
+</div>
+<p>Let’s see whether drinking coffee has a genetic basis. We make up a trait (coffees per day) and 100 SNPs for 100 individuals.</p>
+<section id="simulate-data" class="level2">
+<h2 class="anchored" data-anchor-id="simulate-data">Simulate data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">coffees   <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span>
+<span id="cb2-2">snps      <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">replicate</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>), <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>))</span>
+<span id="cb2-3">snp_names <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"snp"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb2-4"></span>
+<span id="cb2-5">dat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cbind</span>(coffees, snps)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb2-6">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">setNames</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"coffees"</span>, snp_names))</span>
+<span id="cb2-7">            </span>
+<span id="cb2-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">head</span>(dat[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>])</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   coffees snp1 snp2 snp3 snp4 snp5 snp6
+#&gt; 1       6    2    2    1    0    0    1
+#&gt; 2       3    1    1    0    2    1    2
+#&gt; 3       5    0    0    0    0    2    0
+#&gt; 4       3    2    1    0    2    1    0
+#&gt; 5       3    0    0    1    2    0    1</code></pre>
+</div>
+</div>
+</section>
+<section id="write-a-function" class="level2">
+<h2 class="anchored" data-anchor-id="write-a-function">1) Write a function</h2>
+<p>We could now do 100 linear models manually by writing 100 lines of code, or we could do a <code>for</code> loop.</p>
+<p>Instead, let’s write a function to fit <em>one</em> model, and then apply this function to each SNP. We generally want the thing that changes (i.e.&nbsp;snp_name) to be the first argument. The function below fits a linear model of coffee consumption with a snp as predictor, and extracts the model estimate and p-value for the SNP. It returns a one-row <code>data.frame</code>. I generally like my functions to return data.frames, because that makes it easy to put together many function outputs into a big data.frame at the end.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">fit_model <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(snp_name, dat) {</span>
+<span id="cb4-2">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># write formula using SNP name</span></span>
+<span id="cb4-3">      model_formula <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"coffees ~ {snp_name}"</span>)</span>
+<span id="cb4-4">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># fit linear model</span></span>
+<span id="cb4-5">      fit <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(model_formula, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> dat) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb4-6">                  broom<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tidy</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span>        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># tidy results</span></span>
+<span id="cb4-7">                  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(term <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> snp_name) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># extract snp</span></span>
+<span id="cb4-8">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">return</span>(fit)</span>
+<span id="cb4-9">      </span>
+<span id="cb4-10">}</span></code></pre></div>
+</div>
+</section>
+<section id="use-map-to-apply-function-to-every-snp" class="level2">
+<h2 class="anchored" data-anchor-id="use-map-to-apply-function-to-every-snp">2) Use <code>map()</code> to apply function to every SNP</h2>
+<p>Using a vector with <code>snp_names</code>, we can apply the function to every SNP. The structure of <code>map()</code> is always the same: map(list/vector, function, additional_arguments). <code>map()</code> always returns a list. We can convert the list to a data.frame with <code>dplyr::bind_rows()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># run gwas</span></span>
+<span id="cb5-2">gwas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(snp_names, fit_model, dat) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb5-3">              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bind_rows</span>()</span>
+<span id="cb5-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># print first three SNPs</span></span>
+<span id="cb5-5">gwas[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, ]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; # A tibble: 3 x 5
+#&gt;   term  estimate std.error statistic p.value
+#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803
+#&gt; 2 snp2    0.106      0.206     0.515   0.608
+#&gt; 3 snp3   -0.282      0.214    -1.32    0.190</code></pre>
+</div>
+</div>
+</section>
+<section id="what-if-something-goes-wrong---map-safely" class="level2">
+<h2 class="anchored" data-anchor-id="what-if-something-goes-wrong---map-safely">3) What if something goes wrong? - <code>map()</code> safely</h2>
+<p>Loops often fail becomes something goes wrong in one or a few iterations.Let’s introduce a non-existing SNP and try again to see how it fails</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">snp_names2 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"not_a_snp"</span>, snp_names)</span>
+<span id="cb7-2"></span>
+<span id="cb7-3">gwas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(snp_names2, fit_model, dat) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb7-4">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bind_rows</span>()</span></code></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>#&gt; Error in eval(predvars, data, env): object 'not_a_snp' not found</code></pre>
+</div>
+</div>
+<p>We can make our gwas error-safe using <code>purrr::safely()</code>. This does some magic under the hood which isn’t so important now. For every iteration, it will return a list with two elements, one for the result and one for the error (equals NULL if there is no error). This way, we always get the results or errors of all our iterations back.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">fit_model_safely <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> purrr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">safely</span>(fit_model)</span>
+<span id="cb9-2"></span>
+<span id="cb9-3">gwas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(snp_names2, fit_model_safely, dat)</span>
+<span id="cb9-4">gwas[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [[1]]
+#&gt; [[1]]$result
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$error
+#&gt; &lt;simpleError in eval(predvars, data, env): object 'not_a_snp' not found&gt;
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]]$result
+#&gt; # A tibble: 1 x 5
+#&gt;   term  estimate std.error statistic p.value
+#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803
+#&gt; 
+#&gt; [[2]]$error
+#&gt; NULL</code></pre>
+</div>
+</div>
+<p><code>map()</code> lets you extract a list element simply by its name. Here, we iterate over the list of results and extract all SNPs that worked.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">gwas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(gwas, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"result"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb11-2">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bind_rows</span>()</span>
+<span id="cb11-3">gwas[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, ]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; # A tibble: 3 x 5
+#&gt;   term  estimate std.error statistic p.value
+#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803
+#&gt; 2 snp2    0.106      0.206     0.515   0.608
+#&gt; 3 snp3   -0.282      0.214    -1.32    0.190</code></pre>
+</div>
+</div>
+</section>
+<section id="what-if-it-takes-too-long---map-in-parallel" class="level2">
+<h2 class="anchored" data-anchor-id="what-if-it-takes-too-long---map-in-parallel">4) What if it takes too long? - <code>map()</code> in parallel</h2>
+<p>Once the idea of <code>map()</code> is clear, we can easily parallelise it to run on multiple cores. There is some overhead in collecting computations from several cores so this doesn’t make much sense when the running time is short. But for longer computations, using 4 cores instead of 1 should make it nearly 4 times as fast.</p>
+<p>We can use the <code>furrr</code> package here, which mimics <code>purrr</code> functions but can run in parallel. It is based on <a href="https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html">future</a>, which is why all functions start with <code>future_</code>, for example <code>future_map()</code>. Unlike other ways of parallelising, this approach works on Windows, Mac and Linux. All we have to do now is to first set up a <code>plan()</code> …</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># check available cores</span></span>
+<span id="cb13-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">availableCores</span>()</span>
+<span id="cb13-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># parallelises across 4 cores</span></span>
+<span id="cb13-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plan</span>(multiprocess, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">workers =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>)</span></code></pre></div>
+</div>
+<p>… and then replace <code>map()</code> with <code>future_map()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1">gwas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">future_map</span>(snp_names, fit_model, dat) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb14-2">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bind_rows</span>()</span>
+<span id="cb14-3">gwas[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, ]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; # A tibble: 3 x 5
+#&gt;   term  estimate std.error statistic p.value
+#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803
+#&gt; 2 snp2    0.106      0.206     0.515   0.608
+#&gt; 3 snp3   -0.282      0.214    -1.32    0.190</code></pre>
+</div>
+</div>
+</section>
+<section id="the-full-minimal-workflow-for-a-robust-parallel-gwas" class="level2">
+<h2 class="anchored" data-anchor-id="the-full-minimal-workflow-for-a-robust-parallel-gwas">The full, minimal workflow for a robust, parallel gwas</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plan</span>(multiprocess, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">workers =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>)</span>
+<span id="cb16-2"></span>
+<span id="cb16-3">fit_model <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(snp_name, dat) {</span>
+<span id="cb16-4">      model_formula <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"coffees ~ {snp_name}"</span>)</span>
+<span id="cb16-5">      fit <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(model_formula, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> dat) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb16-6">                  broom<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tidy</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb16-7">                  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(term <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> snp_name)</span>
+<span id="cb16-8">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">return</span>(fit)</span>
+<span id="cb16-9">}</span>
+<span id="cb16-10"></span>
+<span id="cb16-11">fit_model_safely <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> purrr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">safely</span>(fit_model)</span>
+<span id="cb16-12">gwas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">future_map</span>(snp_names, fit_model_safely, dat) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb16-13">                  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"result"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span> </span>
+<span id="cb16-14">                  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bind_rows</span>()</span>
+<span id="cb16-15"></span>
+<span id="cb16-16">gwas[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, ]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; # A tibble: 3 x 5
+#&gt;   term  estimate std.error statistic p.value
+#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+#&gt; 1 snp1   -0.0509     0.203    -0.250   0.803
+#&gt; 2 snp2    0.106      0.206     0.515   0.608
+#&gt; 3 snp3   -0.282      0.214    -1.32    0.190</code></pre>
+</div>
+</div>
+</section>
+<section id="general-thoughts-about-map" class="level2">
+<h2 class="anchored" data-anchor-id="general-thoughts-about-map">General thoughts about map</h2>
+<p><em>When to use map?</em></p>
+<ul>
+<li>Whenever more than two lines of code look similar, whenever a for loop needs two cups of coffee to be understood, map will be on your side</li>
+</ul>
+<p><em>Can every for-loop be replaced by a function and map?</em></p>
+<ul>
+<li>I think yes, but it becomes less practical when an iteration depends on the previous iteration, though I rarely encounter that problem</li>
+</ul>
+<p><em>What about the base R functions apply, sapply, lapply?</em></p>
+<ul>
+<li>lapply is very similar to map, though it lacks some very nice features which can be discovered over time. The other apply-functions can give surprising results, except for vapply, which is concise but slightly more complicated.</li>
+</ul>
+<p><em>What about map_df, map_lgl, map_dbl and all the other maps?</em></p>
+<ul>
+<li>All these functions differ in what their output is. However, the list resulting from simple map() can easily be transformed into any of these. After getting to grips with map, all the other maps fall into place.</li>
+</ul>
+<p><em>What if I have more than one vector or list as input?</em></p>
+<ul>
+<li>map2() takes two vectors as input and pmap() takes any number of vectors as input. I’m using pmap() to iterate over rows in a data.frame, but this is stuff for another blogpost I think.</li>
+</ul>
+</section>
+<section id="where-to-go-from-here" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-go-from-here">Where to go from here</h2>
+<ul>
+<li><p>Jenny Bryan’s <a href="https://jennybc.github.io/purrr-tutorial/index.html">purrr tutorials</a></p></li>
+<li><p>Hadley Wickham’s <a href="https://www.youtube.com/watch?v=bzUmK0Y07ck&amp;t=2589s%5D">“The joy of functional programming”</a></p></li>
+<li><p>R4DS chapter on <a href="https://r4ds.had.co.nz/iteration.html">iterations</a></p></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>R</category>
+  <category>code</category>
+  <guid>https://www.mstoffel.xyz/posts/magic_map/index.html</guid>
+  <pubDate>Sat, 08 Jan 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://www.mstoffel.xyz/posts/magic_map/map.png" medium="image" type="image/png" height="110" width="144"/>
+</item>
+</channel>
+</rss>
