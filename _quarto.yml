@@ -39,7 +39,7 @@ format:
 
 
   
-highlight-style: nord #kate / printing
+highlight-style: kate #/ printing #nord
 callout-appearance: minimal
   
 editor: visual
