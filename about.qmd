@@ -20,7 +20,7 @@ about:
 
 Hi, I'm Martin. I'm a research engineer at the Alan Turing Institute where I code and build things which might be useful, like [a package to emulate simulations in digital twins](https://github.com/alan-turing-institute/autoemulate). Before that, I was an evolutionary geneticist [doing](https://www.nature.com/articles/s41467-018-06695-z) [research](https://www.nature.com/articles/s41467-021-23222-9), being on remote islands, and sometimes writing [open source stats software](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12797). Somewhere in between, I joined [PIBBSS](https://www.pibbss.ai/) as a fellow to think about how evolution, culture and scaling can help us understand future AI risks. 
 
-Outside of work, some things I like are kettlebells, 5s football, northern elephant seals, having burritos with friends, surfing, Rumo, swimming, The Bear, pull-ups, Economist, cold showers, long-distance cycling, and peanut butter banana sandwiches.
+Outside of work, some things I like are kettlebells, 5s football, northern elephant seals, having burritos with friends, surfing, Rumo, swimming, The Bear, pull-ups, The Economist, cold showers, long-distance cycling, and peanut butter banana sandwiches.
 
 Always happy to chat, so feel free to get in touch.
 
