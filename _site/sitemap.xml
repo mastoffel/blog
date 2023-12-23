@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mstoffel.xyz/index.html</loc>
-    <lastmod>2023-12-22T10:04:43.295Z</lastmod>
+    <lastmod>2023-12-23T09:59:06.382Z</lastmod>
   </url>
   <url>
     <loc>https://www.mstoffel.xyz/about.html</loc>
-    <lastmod>2023-12-22T09:59:16.808Z</lastmod>
+    <lastmod>2023-12-23T09:46:26.733Z</lastmod>
   </url>
   <url>
     <loc>https://www.mstoffel.xyz/research.html</loc>
-    <lastmod>2023-12-22T10:02:39.721Z</lastmod>
+    <lastmod>2023-12-23T09:46:17.541Z</lastmod>
   </url>
   <url>
     <loc>https://www.mstoffel.xyz/posts/hidden_info/index.html</loc>
-    <lastmod>2023-12-22T10:00:43.027Z</lastmod>
+    <lastmod>2023-12-23T09:45:23.689Z</lastmod>
   </url>
   <url>
     <loc>https://www.mstoffel.xyz/posts/piping_python/index.html</loc>
-    <lastmod>2023-12-22T08:41:29.590Z</lastmod>
+    <lastmod>2023-12-23T09:49:20.351Z</lastmod>
   </url>
   <url>
     <loc>https://www.mstoffel.xyz/posts/ggplot_theme/index.html</loc>
-    <lastmod>2023-12-22T08:00:06.189Z</lastmod>
+    <lastmod>2023-12-23T09:58:55.631Z</lastmod>
   </url>
   <url>
     <loc>https://www.mstoffel.xyz/code.html</loc>
-    <lastmod>2023-12-22T09:59:16.001Z</lastmod>
+    <lastmod>2023-12-23T09:45:55.412Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mstoffel.xyz/birds.html</loc>
+    <lastmod>2023-12-23T07:41:21.164Z</lastmod>
   </url>
 </urlset>

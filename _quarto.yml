@@ -25,15 +25,18 @@ website:
 format:
   html:
     theme: 
-     - simplex #custom.scss
+     - simplex
      - custom.scss
     #css: styles.css
-    #mainfont: "Lato"
+    mainfont: "Ubuntu"
     #monofont: "JetBrainsMono"
     footnotes-hover: true
     fontsize: 1em
     linkcolor: "black"
+    monofont: "Fira Code"
+    #monobackgroundcolor: "blue"
     linestretch: 1.7
+
 
   
 highlight-style: arrow

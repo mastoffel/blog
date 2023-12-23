@@ -1,5 +1,5 @@
 ---
-title: "Creating your own ggplot theme"
+title: "create your own ggplot theme"
 description: "A short guide."
 #author: "Martin Stoffel"
 date: "11/10/2022"
