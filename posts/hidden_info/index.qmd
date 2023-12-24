@@ -1,6 +1,6 @@
 ---
-title: "AI, hidden information and the future of knowledge."
-description: "Some thoughts."
+title: "hidden information"
+description: "the future of knowledge and AI"
 #author: "Martin Stoffel"
 date: "04/05/2023"
 categories: [ideas]
