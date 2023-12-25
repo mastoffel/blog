@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mstoffel.xyz/index.html</loc>
-    <lastmod>2023-12-24T08:35:40.459Z</lastmod>
+    <lastmod>2023-12-25T15:54:39.603Z</lastmod>
   </url>
   <url>
     <loc>https://www.mstoffel.xyz/about.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://www.mstoffel.xyz/research.html</loc>
-    <lastmod>2023-12-23T10:47:03.631Z</lastmod>
+    <lastmod>2023-12-24T12:26:02.637Z</lastmod>
   </url>
   <url>
     <loc>https://www.mstoffel.xyz/posts/hidden_info/index.html</loc>
@@ -35,5 +35,9 @@
   <url>
     <loc>https://www.mstoffel.xyz/posts/magic_map/index.html</loc>
     <lastmod>2023-12-23T10:44:47.176Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mstoffel.xyz/posts/2024/index.html</loc>
+    <lastmod>2023-12-25T15:54:38.135Z</lastmod>
   </url>
 </urlset>

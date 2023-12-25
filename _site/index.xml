@@ -10,7 +10,65 @@
 <atom:link href="https://www.mstoffel.xyz/index.xml" rel="self" type="application/rss+xml"/>
 <description>personal blog</description>
 <generator>quarto-1.3.340</generator>
-<lastBuildDate>Tue, 04 Apr 2023 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 11 Jan 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>stuff to learn in 2024</title>
+  <link>https://www.mstoffel.xyz/posts/2024/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>In progress</strong></p>
+<p>“People overestimate what they can do in one day and underestimate what they can do in one year.”<br>
+- <em>someone</em></p>
+<hr>
+<p>let’s maybe learn stuff with a bit of intro and a project. Alternatively <a href="https://augmentingcognition.com/ltm.html">Anki</a>.</p>
+<ul>
+<li>Game Theory
+<ul>
+<li><a href="https://www.youtube.com/watch?v=mScpHTIi-kM">What the Prisoner’s Dilemma revearls about life, the Universe and everthing</a></li>
+<li><a href="https://www.lesswrong.com/sequences/ZNNi2uNx9E6iwGKKG">Introduction to Game Theory</a></li>
+<li><a href="https://ncase.me/trust/">The Evolution of Trust</a></li>
+<li>Project: Implement a Prisoner’s Dilemma Simulator to let different strategies compete, see <a href="https://en.wikipedia.org/wiki/The_Evolution_of_Cooperation">Axelrod’s Tournament</a></li>
+</ul></li>
+<li>Computing
+<ul>
+<li>brushing over the basics using <a href="https://missing.csail.mit.edu/">the missing semester</a></li>
+<li>doing stuff quicker with VS code shortcuts / vim</li>
+</ul></li>
+<li>Linear Algebra
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">3Blue1Brown’s Essence of Linear Algebra</a></li>
+<li><a href="https://linear.axler.net/">Linear Algebra Done Right</a></li>
+<li>Project: Implement a Gaussian Process Model</li>
+</ul></li>
+<li>Graph Theory
+<ul>
+<li><a href="https://youtu.be/LFKZLXVO-Dg">Intro</a></li>
+<li>Project: Implement a Graph Neural Network</li>
+</ul></li>
+<li>PyTorch / NNs
+<ul>
+<li><a href="https://karpathy.ai/zero-to-hero.html">Karpthy’s Zero to Hero</a></li>
+<li><a href="https://www.fast.ai/">fastai</a></li>
+</ul></li>
+<li>Entropy
+<ul>
+<li><a href="https://www.youtube.com/watch?v=DxL2HoqLbyA">The most misunderstood concept in physics</a></li>
+<li><a href="https://www.youtube.com/watch?v=89Mq6gmPo0s">I don’t believe the 2nd law of themodynamics</a></li>
+<li><a href="https://www.lesswrong.com/sequences/t6KTt378yQHJSbDis">Entropy from first principles</a></li>
+<li>Project: Implement a simple compression algorithm</li>
+</ul></li>
+</ul>
+
+
+
+ ]]></description>
+  <category>misc</category>
+  <guid>https://www.mstoffel.xyz/posts/2024/index.html</guid>
+  <pubDate>Sat, 11 Jan 2025 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>hidden information</title>
   <link>https://www.mstoffel.xyz/posts/hidden_info/index.html</link>

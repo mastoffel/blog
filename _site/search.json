@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "fantom filters",
     "section": "",
-    "text": "Apr 5, 2023 hidden information\n\n\nFeb 11, 2023 piping in python\n\n\nNov 10, 2022 create your own ggplot theme\n\n\nJan 9, 2022 map()-magic\n\n\n\nNo matching items"
+    "text": "Jan 12, 2025 stuff to learn in 2024\n\n\nApr 5, 2023 hidden information\n\n\nFeb 11, 2023 piping in python\n\n\nNov 10, 2022 create your own ggplot theme\n\n\nJan 9, 2022 map()-magic\n\n\n\nNo matching items"
   },
   {
     "objectID": "research.html",
@@ -460,5 +460,12 @@
     "title": "fantom filters",
     "section": ":x oryx",
     "text": ":x oryx\nto do\nAuthors | sEmily Humble, Martin A. Stoffel, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden"
+  },
+  {
+    "objectID": "posts/2024/index.html",
+    "href": "posts/2024/index.html",
+    "title": "stuff to learn in 2024",
+    "section": "",
+    "text": "In progress\n“People overestimate what they can do in one day and underestimate what they can do in one year.”\n- someone\n\nlet’s maybe learn stuff with a bit of intro and a project. Alternatively Anki.\n\nGame Theory\n\nWhat the Prisoner’s Dilemma revearls about life, the Universe and everthing\nIntroduction to Game Theory\nThe Evolution of Trust\nProject: Implement a Prisoner’s Dilemma Simulator to let different strategies compete, see Axelrod’s Tournament\n\nComputing\n\nbrushing over the basics using the missing semester\ndoing stuff quicker with VS code shortcuts / vim\n\nLinear Algebra\n\n3Blue1Brown’s Essence of Linear Algebra\nLinear Algebra Done Right\nProject: Implement a Gaussian Process Model\n\nGraph Theory\n\nIntro\nProject: Implement a Graph Neural Network\n\nPyTorch / NNs\n\nKarpthy’s Zero to Hero\nfastai\n\nEntropy\n\nThe most misunderstood concept in physics\nI don’t believe the 2nd law of themodynamics\nEntropy from first principles\nProject: Implement a simple compression algorithm"
   }
 ]

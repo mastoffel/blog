@@ -1,0 +1,51 @@
+---
+title: "stuff to learn in 2024"
+description: ""
+#author: "Martin Stoffel"
+date: "25/12/2023"
+categories: [misc]
+draft: true
+format:
+  html:
+    code-fold: true
+---
+
+**In progress**
+
+
+"People overestimate what they can do in one day and underestimate what they can do in one year."  
+- *someone*
+
+-----------------
+
+let's maybe learn stuff with a bit of intro and a project. Alternatively [Anki](https://augmentingcognition.com/ltm.html).
+
+* Game Theory
+    *  [What the Prisoner's Dilemma revearls about life, the Universe and everthing](https://www.youtube.com/watch?v=mScpHTIi-kM)
+    * [Introduction to Game Theory](https://www.lesswrong.com/sequences/ZNNi2uNx9E6iwGKKG)
+    * [The Evolution of Trust](https://ncase.me/trust/)
+    * Project: Implement a Prisoner's Dilemma Simulator to let different strategies compete, see [Axelrod's Tournament](https://en.wikipedia.org/wiki/The_Evolution_of_Cooperation)
+
+* Computing
+    * brushing over the basics using [the missing semester](https://missing.csail.mit.edu/)
+    * doing stuff quicker with VS code shortcuts / vim
+
+
+* Linear Algebra
+    * [3Blue1Brown's Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+    * [Linear Algebra Done Right](https://linear.axler.net/)
+    * Project: Implement a Gaussian Process Model
+
+* Graph Theory
+    * [Intro](https://youtu.be/LFKZLXVO-Dg)
+    * Project: Implement a Graph Neural Network
+
+* PyTorch / NNs
+    * [Karpthy's Zero to Hero](https://karpathy.ai/zero-to-hero.html)
+    * [fastai](https://www.fast.ai/)
+
+* Entropy
+    * [The most misunderstood concept in physics](https://www.youtube.com/watch?v=DxL2HoqLbyA)
+    * [I don't believe the 2nd law of themodynamics](https://www.youtube.com/watch?v=89Mq6gmPo0s)
+    * [Entropy from first principles](https://www.lesswrong.com/sequences/t6KTt378yQHJSbDis)
+    * Project: Implement a simple compression algorithm
