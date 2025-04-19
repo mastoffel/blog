@@ -1,0 +1,33 @@
+# R specific files
+*.Rhistory
+*.Rproj
+*.RData
+.Rproj.user/
+.Rapp.history
+.RDataTmp
+.Ruserdata
+
+# Quarto specific files
+/.quarto/
+/_freeze/
+/_site/
+/.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment and dependency files
+.env
+.Renviron
+renv/library/
+renv/local/
+renv/lock/
+renv/python/
+.venv/
+.conda/
+
+# Temporary files
+*.log
+*.tmp
+*~

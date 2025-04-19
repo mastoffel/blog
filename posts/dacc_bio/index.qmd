@@ -1,0 +1,25 @@
+---
+title: "d/acc bio"
+author: "Martin Stoffel"
+date: "2025-04-19"
+categories: [biosecurity]
+---
+
+Biological laboratories are [less safe](https://en.wikipedia.org/wiki/List_of_laboratory_biosecurity_incidents) than one might think. Looking at [known incidents between 2000 and 2021](https://www.thelancet.com/journals/lanmic/article/PIIS2666-5247(23)00319-1/fulltext) roughly every couple of weeks a lab worker accidentally gets infected, and roughly once a year, a pathogen escapes the lab. These are only reported accidents, likely to be an underestimate.
+
+Some of them are hard to believe. The only human infectious disease that we ever managed to eradicate is smallpox, caused by the variola virus. Since its eradication in 1980, there should just be two high-security stashes of it worldwide, one in the US and one in Russia. Yet, a [third stash was discovered in 2014](https://www.fda.gov/media/101811/download), in a six decade old cardboard box in an unsecured storage room on the NIH campus. Just a year later, the Pentagon accidentally sent [live Anthrax samples](https://www.independent.co.uk/news/world/americas/deadly-anthrax-samples-mistakenly-sent-out-to-nine-states-and-a-base-in-south-korea-by-us-military-laboratory-10280211.html) to various places, including South Korea.
+
+And the list goes on. [Brucella leaked](https://jglobalbiosecurity.com/index.php/up-j-gb/article/view/108) from a biopharma plant in Lanzhou, infecting 10k people. The [1977 Russian flu](https://en.wikipedia.org/wiki/1977_Russian_flu) pandemic had signs of a lab leak; the underlying H1N1 flu strain resembled a virus circulating 30 years earlier. 
+
+Biosecurity is simply not that easy, humans make mistakes and accidents happen. But accidents are only part of the risk.
+
+Bioweapons have a [long history](https://www.siumed.edu/im/overview-potential-agents-biological-terrorism.html#hist). From catapulting plague-infected bodies to blankets infected with smallpox, humans have found many ways to weaponise biological agents. Several countries had biological weapons programs, and some are suspected to still run them. Yet, the Biological Weapons Convention, an international treaty with the mission to effectively ban the development of bioweapons, runs with a handful of employees on roughly the [budget of an average McDonald's](https://councilonstrategicrisks.org/2023/04/11/expanding-on-future-biological-weapons-convention-verification-an-interview-with-dr-piers-millett/). 
+
+Then there's bioterrorism. In 1984, the [Rajneeshee sect](https://en.wikipedia.org/wiki/1984_Rajneeshee_bioterror_attack#:~:text=In%201984%2C%20751%20people%20suffered,ten%20local%20restaurants%20with%20Salmonella.) contaminated salads in restaurants in Oregon with Salmonella, poisening 750 people. [Aum Shinrikyo](https://www.jstor.org/stable/resrep06323?seq=2#metadata_info_tab_contents), a Japanese doomsday cult, tried and failed to develop bioweapons but managed to carry out a chemical weapons attack on the Tokyo subway in 1995, killing and injuring many. In 2001, a US scientist sent anthrax letters to various senators and journals, resulting in several casualties and injuries. 
+
+In the near future, it will become increasingly possible for terrorists to design much more dangerous bio-agents.
+
+First, biotech is becoming increasingly cheap and available. Sequencing a human genome cost 100 million dollars in 2001, now it's a few hundred. We can [order synthesised DNA](https://www.twistbioscience.com/products/genes?type=application&product=Genes) and get it shipped to us in a week. While most companies do screen orders for potentially dangerous sequences, around [20% don't](https://www.nti.org/about/programs-projects/project/preventing-the-misuse-of-dna-synthesis-technology/). Soon, it might even be possible to just synthesise DNA at home on a [small benchtop device](https://kilobaser.com/). With the right DNA, a real virus can be created using [reverse genetics](https://en.wikipedia.org/wiki/Reverse_genetics).  While this is not that easy, future AI models will be increasingly [capable assistants](https://arxiv.org/abs/2503.15182) for biotech work, allowing less and less knowledgable actors to create pathogens in the lab.
+
+So, the stakes are high. But don't despair. In the spirit of [d\acc](https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html#dacc), in the next few posts I'll have a look at biosecurity technologies that will help safeguard humanity against ever more likely biological threats. d\acc is the idea that we should **d**ifferentially focus on developing **d**efensive, **d**emocratic and **d**ecentralised technologies. Think [early-detection systems](https://www.rivm.nl/en/coronavirus-covid-19/research/wastewater) and [open source vaccines](https://www.bu.edu/gdp/2022/02/06/open-source-covid-19-vaccine-offers-potential-pathway-for-vaccinating-the-world/) instead of gain-of-function research. Let's have a look what else is out there.
+

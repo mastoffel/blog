@@ -1,0 +1,18 @@
+/* css styles */
+
+/* Add margins to create space on the sides */
+.quarto-title-block .quarto-title-banner,
+main.content {
+  max-width: 800px;  /* Adjust this value to your preference */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* For the listing table */
+.quarto-listing-container {
+  max-width: 800px;  /* Match the width above */
+  margin-left: auto;
+  margin-right: auto;
+}
