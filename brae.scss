@@ -16,7 +16,8 @@ $gray-800: #333 !default;
 $gray-900: #222 !default;
 $black:    #000 !default;
 
-$blue:    #eb6864 !default;
+// $blue:    #eb6864 !default;
+$blue:    #4B3F72 !default; // links
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -38,9 +39,12 @@ $dark:          $gray-900 !default;
 
 $min-contrast-ratio:   1.28 !default;
 
+// web font
+$web-font-path: "https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400;700&display=swap" !default;
+
 // Fonts
 
-$font-family-sans-serif: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif !default;
+$font-family-sans-serif: 'Gentium Plus', -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif !default;
 $font-size-root: 16px !default;
 $headings-font-weight: 700 !default;
 $headings-line-height: 1.1 !default;
@@ -68,7 +72,6 @@ $pagination-hover-border-color: $primary !default;
 
 // Variables
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" !default;
 @if $web-font-path {
   @import url($web-font-path);
 }
@@ -84,10 +87,12 @@ div.quarto-post a {
   color: inherit;
 }
 
+// links 
 a {
   color: inherit;
   text-decoration-color: $blue;
-  // text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
+  //text-decoration-style: dotted; 
   // text-underline-offset: 0.0625em;
   transition: color .2s;
 }
