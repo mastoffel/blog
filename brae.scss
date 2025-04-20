@@ -1,6 +1,8 @@
+// theme modified from https://github.com/seeM/blog
+
 /*-- scss:defaults --*/
 
-$theme: "seem" !default;
+$theme: "brae" !default;
 
 // Colors
 
@@ -17,7 +19,7 @@ $gray-900: #222 !default;
 $black:    #000 !default;
 
 // $blue:    #eb6864 !default;
-$blue:    #4B3F72 !default; // links
+$blue:    #2b93e8 !default; // links
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -40,11 +42,12 @@ $dark:          $gray-900 !default;
 $min-contrast-ratio:   1.28 !default;
 
 // web font
-$web-font-path: "https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400;700&display=swap" !default;
-
+// $web-font-path: "https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400;700&display=swap" !default;
+$web-font-path: "https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Source+San+Pro:wght@500;700;800&display=swap" !default;
 // Fonts
 
 $font-family-sans-serif: 'Gentium Plus', -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif !default;
+$headings-font-family: 'Source Sans Pro', sans-serif !default;
 $font-size-root: 16px !default;
 $headings-font-weight: 700 !default;
 $headings-line-height: 1.1 !default;
@@ -143,6 +146,12 @@ a sup {
 div.quarto-post .thumbnail img { border-radius: .25rem; }
 
 td .listing-date { font-family: monospace; font-size: 0.9rem; color: $gray-600; white-space: nowrap; }
+
+// Make date column more compact
+.quarto-listing-table td:first-child {
+  width: 110px; // Set a fixed width for date column
+  padding-right: 0.5rem; // Specific padding between date and title
+}
 
 // Disable listing borders.
 .table { border: 0; }

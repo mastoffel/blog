@@ -4,16 +4,19 @@ project:
 website:
   title: "fantom filters"
   navbar:
-    right:
-      - about.qmd
-      - icon: github
-        href: https://github.com/mastoffel
+    left:
+      - text: posts
+        file: index.qmd
+      - text: about
+        file: about.qmd
+      # - icon: github
+      #   href: https://github.com/mastoffel
       # - icon: twitter
       #   href: https://twitter.com
 format:
   html:
     theme: brae.scss
-    highlight-style: brae.theme
+    highlight-style: kate
 
 
 
