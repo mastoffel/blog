@@ -3,6 +3,7 @@ title: "d/acc bio"
 author: "Martin Stoffel"
 date: "2025-04-19"
 categories: [biosecurity]
+title-block-banner: false
 ---
 
 Biological laboratories are [less safe](https://en.wikipedia.org/wiki/List_of_laboratory_biosecurity_incidents) than one might think. Looking at [known incidents between 2000 and 2021](https://www.thelancet.com/journals/lanmic/article/PIIS2666-5247(23)00319-1/fulltext) roughly every couple of weeks a lab worker accidentally gets infected, and roughly once a year, a pathogen escapes the lab. These are only reported accidents, likely to be an underestimate.

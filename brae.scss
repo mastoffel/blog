@@ -48,7 +48,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght
 
 $font-family-sans-serif: 'Gentium Plus', -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif !default;
 $headings-font-family: 'Source Sans Pro', sans-serif !default;
-$font-size-root: 16px !default;
+$font-size-root: 18px !default;
 $headings-font-weight: 700 !default;
 $headings-line-height: 1.1 !default;
 
@@ -199,7 +199,7 @@ blockquote > pre {
 }
 
 .table {
-  font-size: 16px;
+  font-size: 18px;
   /* disable striped tables */
   --bs-table-striped-bg: var(--bs-table-bg);
 }
