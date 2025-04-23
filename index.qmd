@@ -13,4 +13,6 @@ page-layout: article
 title-block-banner: false
 ---
 
-# Blog
+## About biology, AI and other things.
+
+![](pics/snowy.jpg){width=100%}
