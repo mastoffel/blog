@@ -11,7 +11,7 @@ It's April 2025, more than five years after COVID-19 started. Yet, every few mon
 
 We urgently need technology that can help us figuring out where a virus or bacterium came from. To quickly fix safety issues in biological laboratories when things accidently went wrong, but also to deter bad actors dabbling in bio-weapons like [Aum Shinrikyo](https://en.wikipedia.org/wiki/Aum_Shinrikyo) or [Al-Qaeda](https://www.rand.org/content/dam/rand/pubs/research_reports/RRA600/RRA612-1/RAND_RRA612-1.pdf). 
 
-Luckily, we're making some progress here. Every man-made organism carries fingerprints of its creators in its DNA. Genetic engineering requires many choices, from methods to getting the new DNA into cells to controlling their expression. Different labs and even different countries have preferred combinations of techniques to do this. Hence, we should be able to have 
+How would that work? Every man-made organism carries fingerprints of its creators in its DNA. Genetic engineering requires many choices, from methods to getting the new DNA into cells to controlling their expression. Different labs and even different countries have preferred combinations of techniques to do this. 
 
 
 

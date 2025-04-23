@@ -4,6 +4,7 @@ project:
 website:
   title: "fantom filters"
   favicon: "favicon.png"
+  google-analytics: "G-FYLF41PFGT"
   navbar:
     left:
       - text: blog
