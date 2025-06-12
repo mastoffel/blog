@@ -13,6 +13,4 @@ page-layout: article
 title-block-banner: false
 ---
 
-## bio x AI
-
 ![](pics/snowy.jpg){width=100%}

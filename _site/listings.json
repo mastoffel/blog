@@ -2,7 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/dacc-bio/index.html"
+      "/posts/dacc-bio/index.html",
+      "/posts/theme/index.html"
     ]
   }
 ]

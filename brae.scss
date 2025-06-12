@@ -216,14 +216,13 @@ blockquote > pre {
 // Text
 
 h1 {
+  margin-top: 0;
   margin-bottom: 1rem;
   font-size: 50px;
-  font-weight: bold;
+  font-weight: $headings-font-weight;
 }
 
-h1, .h1, h2, .h2 {
-  margin: 0;
-}
+// Removed conflicting margin rule - individual header margins will apply
 
 #title-block-header.quarto-title-block.default .description, #title-block-header.quarto-title-block.default .abstract {
   margin-top: 1rem;
@@ -235,7 +234,7 @@ h2 {
   margin-bottom: 1rem;
   border-bottom: none;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: $headings-font-weight;
 }
 
 @media (max-width: 991.98px) {
