@@ -1,6 +1,7 @@
 ---
 title: "d/acc bio"
-author: "Martin Stoffel"
+description: "safeguarding biology"
+# author: "Martin Stoffel"
 date: "2025-04-19"
 categories: [biosecurity]
 title-block-banner: false

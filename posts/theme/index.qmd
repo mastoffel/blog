@@ -1,5 +1,6 @@
 ---
 title: "gg themes"
+description: "make your own ggplot2 theme."
 #author: "Martin Stoffel"
 date: "11/10/2022"
 categories: [visualisation, code]

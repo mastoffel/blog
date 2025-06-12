@@ -1,0 +1,39 @@
+---
+title: "hidden info"
+description: "the future of knowledge and AI"
+#author: "Martin Stoffel"
+date: "04/05/2023"
+categories: [ideas]
+draft: false
+image: ivory2.png
+fig-cap-location: bottom
+format:
+  html:
+    code-fold: true
+filters:
+  - nutshell
+---
+
+"If I am what I have and if what I have is lost, then who am I?"   
+- *Erich Fromm*  
+
+
+The future of knowledge is at a crossroads. Before long, most text and code will be written by or with AI models. What was once explicit human reasoning will become information hidden in neural network weights, undecipherable changes in evergrowing matrices. Model outputs will soon become inputs, and the trajectory of knowledge becomes unclear once we outsourced thinking to the machine.
+
+For people who code, [Stackoverflow](https://stackoverflow.com/) is *the* place where problems are discussed and solutions are found. The community makes sure that precise questions are asked and that answers are ranked, corrected and accepted. More than merely providing solutions, the platform makes the human reasoning process explicit and open. Stackoverflow documents how we, as humans, think about code. But this could soon be over. 
+
+Why would anyone go through the effort of constructing a minimal reproducible example, formulating a precise question and waiting for hours or days to get an answer, if ChatGPT gives a decent answer straight away and hassle-free? To get some insights into this, I had a look at the number of questions with a `Python` tag on Stackoverflow over time. While `Python` questions were increasing [:for years](#x-graph), there is a clear drop since ChatGPT was released. 
+
+
+
+{{< embed stackoverflow.ipynb#stackoverflow >}}
+
+The decline isn't super strong yet, but we can see where this is going. Stackoverflow, an open catalogue of human reasoning, will be replaced by private human-to-AI interactions. Human-readable information becomes hidden in neural network weights. Knowledge-generation is outsourced into AI systems with billions of parameters. 
+
+Code, arguably, is easy to validate. At least we roughly know when it does what we want. This is different in *science*, where the reasoning process itself is key to the validity of the results. Soon, AI reasoning will permeate the very foundation of science. AI's are going to plan experiments, collect and analyse data, draw conclusions and write papers. Much of the human input to new knowledge will be evaluating AI outputs rather than reasoning ourselves. 
+
+Whether AI will outperform human reasoning or be subtly wrong more often than humans, we can't let the reasoning underpinning science be hidden in AI models. To keep the upper hand, we need to transition to a true open source science, where the community has the opportunity to collectively understand and verify scientific progress. The current peer review system, possibly a [failed experiment](https://www.experimental-history.com/p/the-rise-and-fall-of-peer-review) anyway, won't be able to keep up with a flood of AI-generated papers. Rather than receiving a scientific stamp-of-approval after being reviewed by only two or three peers, scientific papers should be continously open to scrutiny and improvement by the community. For inspiration, we could have a look at Stackoverflow. 
+
+
+## :x graph {#x-graph}
+Note: the peak in the graph marks the beginning of the COVID-19 lockdown, where people suddenly had more time to code and ask questions. However, the increase in interest declined relatively quickly. The drop following the peak is therefore unusual and can't really be compared to the drop at the end.

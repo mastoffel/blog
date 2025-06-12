@@ -3,7 +3,10 @@
     "listing": "/index.html",
     "items": [
       "/posts/dacc-bio/index.html",
-      "/posts/theme/index.html"
+      "/posts/info/index.html",
+      "/posts/piping/index.html",
+      "/posts/theme/index.html",
+      "/posts/map/index.html"
     ]
   }
 ]

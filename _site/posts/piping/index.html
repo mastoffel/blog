@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-02-11">
+<meta name="description" content="Simplified data pipelines.">
 
-<title>index</title>
+<title>piping in python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,28 +23,60 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-a0b8f7824cab871fe7735f1fe8ba4cd9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7d6b1117e234107fff9f23b59e8ba4f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-a0b8f7824cab871fe7735f1fe8ba4cd9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7d6b1117e234107fff9f23b59e8ba4f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,35 +104,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FYLF41PFGT"></script>
 
 <script type="text/javascript">
@@ -115,12 +120,12 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./favicon.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../favicon.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -130,11 +135,11 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">about</span></a>
   </li>  
 </ul>
@@ -145,80 +150,205 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">piping in python</h1>
+                  <div>
+        <div class="description">
+          Simplified data pipelines.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">code</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 11, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<p><img src="pics/snowy.jpg" class="img-fluid" style="width:100.0%"></p>
 
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
+<p>Data wrangling in Python <em>seems</em> clunky. Yet, it doesn’t have to be. Here is <strong>how to pipe in Python.</strong></p>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The problem</h2>
+<p>In <code>R</code>, we process data beautifully with <code>dplyr</code> and <code>%&gt;%</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(dplyr))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sepal_ratio =</span> Sepal.Width <span class="sc">/</span> Sepal.Length) <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sepal_ratio <span class="sc">&gt;</span> <span class="fl">0.5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Species, sepal_ratio) <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_sepal_ratio =</span> <span class="fu">mean</span>(sepal_ratio))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In Python’s <code>pandas</code>, most data wrangling code looks much less great, often like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>iris[<span class="st">"sepal_ratio"</span>] <span class="op">=</span> iris[<span class="st">"sepal_width"</span>] <span class="op">/</span> iris[<span class="st">"sepal_length"</span>]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> iris[iris[<span class="st">"sepal_ratio"</span>] <span class="op">&gt;</span> <span class="fl">0.5</span>]    <span class="co">#filter</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> iris[[<span class="st">"species"</span>, <span class="st">"sepal_ratio"</span>]]   <span class="co">#select</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> iris.groupby(<span class="st">"species"</span>)            <span class="co">#group by</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> iris.agg({<span class="st">"sepal_ratio"</span>: <span class="st">"mean"</span>})  <span class="co">#summarise</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This is hard to read because there’s lots of repitition.</p>
+</section>
+<section id="a-new-hope" class="level2">
+<h2 class="anchored" data-anchor-id="a-new-hope">A new hope</h2>
+<p>But don’t despair! We can pipe in Python, too. Here is how:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>(iris</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  .assign(sepal_ratio <span class="op">=</span> <span class="kw">lambda</span> x: x.sepal_width <span class="op">/</span> x.sepal_length)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  .query(<span class="st">"sepal_ratio &gt; 0.5"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  .loc[:, [<span class="st">"species"</span>, <span class="st">"sepal_ratio"</span>]]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  .groupby(<span class="st">"species"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  .agg({<span class="st">"sepal_ratio"</span>: <span class="st">"mean"</span>})</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            sepal_ratio
+species                
+setosa         0.684248
+versicolor     0.530953
+virginica      0.526112</code></pre>
+</div>
+</div>
+<p>For now, there are only two main principles to remember:</p>
+<ol type="1">
+<li>Use <code>.</code> instead of <code>%&gt;%</code> to pipe. Put <code>.</code> at the beginning of the line.</li>
+<li>Use <code>()</code> around the whole expression. Python will complain otherwise.</li>
+</ol>
+<p>There is a pipeable method for most tasks. Sometimes, though, there isn’t, but you can still make it work.</p>
+<ol type="1">
+<li>Use <code>lambda</code> to define a function on the fly (like in .assign() above).</li>
+<li>Use <code>.pipe()</code>, which takes a function as an argument and allows you to pipe it.</li>
+</ol>
+<p>Here is an example of .pipe():</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sepal_ratio(df):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> df.assign(sepal_ratio <span class="op">=</span> df.sepal_width <span class="op">/</span> df.sepal_length)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>(iris</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  .pipe(sepal_ratio)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  .query(<span class="st">"sepal_ratio &gt; 0.5"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  .loc[:, [<span class="st">"species"</span>, <span class="st">"sepal_ratio"</span>]]</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  .groupby(<span class="st">"species"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  .agg({<span class="st">"sepal_ratio"</span>: <span class="st">"mean"</span>})</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            sepal_ratio
+species                
+setosa         0.684248
+versicolor     0.530953
+virginica      0.526112</code></pre>
+</div>
+</div>
+<p>That’s it! Some people don’t like piping because, they say, it’s harder to debug. I like to simply comment out lines, allowing you to run it line by line, which makes it actually very easy to debug. A pipe is also easy to read as it’s basically like a recipe. Start with a dataframe and change stuff step by step.</p>
+<p>Here’s a quick summary over the most common data wrangling tasks and their pipeable methods and functions in <code>dplyr</code> and <code>pandas</code>:</p>
+<table class="caption-top table">
 <thead>
-<tr>
-<th>
-Date
-</th>
-<th>
-Title
-</th>
+<tr class="header">
+<th>task</th>
+<th>dplyr</th>
+<th>pandas</th>
 </tr>
 </thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Ymlvc2VjdXJpdHk=" data-listing-date-sort="1745017200000" data-listing-file-modified-sort="1749741471530" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="527" data-listing-title-sort="d/acc bio" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">2025-04-19</span>
-</td>
-<td>
-<a href="./posts/dacc-bio/index.html" class="title listing-title">d/acc bio</a>
-</td>
+<tbody>
+<tr class="odd">
+<td>filter rows</td>
+<td>filter()</td>
+<td>df.query()</td>
 </tr>
-<tr data-index="1" data-categories="aWRlYXM=" data-listing-date-sort="1680649200000" data-listing-file-modified-sort="1749741548107" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="512" data-listing-title-sort="hidden info" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">2023-04-05</span>
-</td>
-<td>
-<a href="./posts/info/index.html" class="title listing-title">hidden info</a>
-</td>
+<tr class="even">
+<td>pick columns</td>
+<td>select()</td>
+<td>df.loc[]</td>
 </tr>
-<tr data-index="2" data-categories="UHl0aG9uJTJDY29kZQ==" data-listing-date-sort="1676073600000" data-listing-file-modified-sort="1749741439195" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="550" data-listing-title-sort="piping python" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">2023-02-11</span>
-</td>
-<td>
-<a href="./posts/piping/index.html" class="title listing-title">piping python</a>
-</td>
+<tr class="odd">
+<td>group by</td>
+<td>group_by()</td>
+<td>df.groupby()</td>
 </tr>
-<tr data-index="3" data-categories="dmlzdWFsaXNhdGlvbiUyQ2NvZGU=" data-listing-date-sort="1668038400000" data-listing-file-modified-sort="1749741496692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1237" data-listing-title-sort="gg themes" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">2022-11-10</span>
-</td>
-<td>
-<a href="./posts/theme/index.html" class="title listing-title">gg themes</a>
-</td>
+<tr class="even">
+<td>summarise</td>
+<td>summarise()</td>
+<td>df.agg()</td>
 </tr>
-<tr data-index="4" data-categories="UiUyQ2NvZGU=" data-listing-date-sort="1641686400000" data-listing-file-modified-sort="1749741052152" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1277" data-listing-title-sort="map()-magic" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">2022-01-09</span>
-</td>
-<td>
-<a href="./posts/map/index.html" class="title listing-title">map()-magic</a>
-</td>
+<tr class="odd">
+<td>make new variable</td>
+<td>mutate()</td>
+<td>df.assign()</td>
+</tr>
+<tr class="even">
+<td>join dfs</td>
+<td>inner_join()</td>
+<td>df.merge()</td>
+</tr>
+<tr class="odd">
+<td>sort df</td>
+<td>arrange()</td>
+<td>df.sort_values()</td>
+</tr>
+<tr class="even">
+<td>rename columns</td>
+<td>rename()</td>
+<td>df.rename()</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<div class="listing-no-matching d-none">
-No matching items
+<p>Last tip: <strong>AI</strong> is your friend. If you’re stuck, put your pandas code in chatgpt or GitHub Copilot and ask it to re-write code as a pipe. Seems to work pretty well.</p>
+</section>
+<section id="not-so-secret-bonus-siuba" class="level2">
+<h2 class="anchored" data-anchor-id="not-so-secret-bonus-siuba">Not so secret bonus: <code>siuba</code></h2>
+<p>There is also the beautiful <a href="https://siuba.org/">siuba</a> package. If you come from <code>R</code>, this might be the way to go. But even if not, it’s still less verbose than <code>pandas</code>. Last time I tried it, the package didn’t quite have everything I needed but I think it grew a lot since then. Here is the same pipeline, but with <code>siuba</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> siuba <span class="im">import</span> _, mutate, <span class="bu">filter</span>, select, group_by, summarize</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>(iris</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">&gt;&gt;</span> mutate(sepal_ratio <span class="op">=</span> _.sepal_width <span class="op">/</span> _.sepal_length)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">&gt;&gt;</span> <span class="bu">filter</span>(_.sepal_ratio <span class="op">&gt;</span> <span class="fl">0.5</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">&gt;&gt;</span> select(_.species, _.sepal_ratio)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">&gt;&gt;</span> group_by(_.species)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">&gt;&gt;</span> summarize(mean_sepal_ratio <span class="op">=</span> _.sepal_ratio.mean())</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div></main> <!-- /main -->
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

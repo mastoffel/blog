@@ -1,6 +1,6 @@
 ---
-title: "piping in python"
-description: "Simplified data pipelines."
+title: "piping python"
+description: "simple data pipelines"
 #author: "Martin Stoffel"
 date: "02/11/2023"
 categories: [Python, code]
