@@ -7,6 +7,7 @@ $theme: "brae" !default;
 // Colors
 
 $white:    #fff !default;
+$gray-50:  #fafafa !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #eee !default;
 $gray-300: #dee2e6 !default;
@@ -42,12 +43,11 @@ $dark:          $gray-900 !default;
 $min-contrast-ratio:   1.28 !default;
 
 // web font
-// $web-font-path: "https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400;700&display=swap" !default;
-$web-font-path: "https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Source+San+Pro:wght@500;700;800&display=swap" !default;
+$web-font-path: "https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Fira+Code:wght@400;500&display=swap" !default;
 // Fonts
 
-$font-family-sans-serif: 'Gentium Plus', -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif !default;
-$headings-font-family: 'Source Sans Pro', sans-serif !default;
+$font-family-sans-serif: 'Work Sans', -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif !default;
+$headings-font-family: 'Fraunces', serif !default;
 $font-size-root: 18px !default;
 $headings-font-weight: 700 !default;
 $headings-line-height: 1.1 !default;
@@ -145,7 +145,7 @@ a sup {
 
 div.quarto-post .thumbnail img { border-radius: .25rem; }
 
-td .listing-date { font-family: monospace; font-size: 0.9rem; color: $gray-600; white-space: nowrap; }
+td .listing-date { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: $gray-600; white-space: nowrap; }
 
 // Make date column more compact
 .quarto-listing-table td:first-child {
@@ -182,6 +182,7 @@ td .listing-date { font-family: monospace; font-size: 0.9rem; color: $gray-600; 
   background: none;
   border-left: 2px solid $blue;
   border-radius: 0;
+  font-family: 'Fira Code', monospace;
 }
 
 .cell-output > .sourceCode {
@@ -358,4 +359,88 @@ div.callout-tip.callout {
 // Make listings metadata fit content
 div.quarto-post .metadata {
   flex-basis: auto;
+}
+
+// Homepage split layout
+.homepage-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+.hero-left {
+  position: sticky;
+  top: 2rem;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+.hero-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: $gray-900;
+}
+
+.hero-right em {
+  font-size: 1.1rem;
+  color: $gray-600;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.hero-right p {
+  font-size: 1rem;
+  color: $gray-700;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+// Post listings in right column
+.quarto-listing-default {
+  margin-top: 0;
+}
+
+.quarto-listing-table tbody tr {
+  line-height: 1.6;
+}
+
+
+.quarto-listing-table tbody td {
+  padding: 0.8rem 0;
+}
+
+// Mobile responsive
+@media (max-width: 768px) {
+  .homepage-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero-left {
+    position: static;
+  }
+  
+  .hero-right h1 {
+    font-size: 2rem;
+  }
+}
+
+.quarto-listing-table tbody tr {
+  line-height: 1.4;
+}
+
+.quarto-listing-table tbody td {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }

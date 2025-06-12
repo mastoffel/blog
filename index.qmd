@@ -14,4 +14,14 @@ page-layout: article
 title-block-banner: false
 ---
 
-![](pics/snowy.jpg){width=100%}
+::: {.homepage-layout}
+
+::: {.hero-left}
+# posts
+
+::: {.hero-right}
+![](pics/snowy.jpg){.hero-image}
+:::
+
+:::
+:::
