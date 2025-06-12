@@ -13,6 +13,6 @@ page-layout: article
 title-block-banner: false
 ---
 
-## About biology, AI and other things.
+## bio x AI
 
 ![](pics/snowy.jpg){width=100%}
