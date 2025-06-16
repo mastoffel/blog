@@ -73,10 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-a0b8f7824cab871fe7735f1fe8ba4cd9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e8fb9d25728d58bfeac61b497e4a6629.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7d6b1117e234107fff9f23b59e8ba4f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-55a5241d4fbd08b1b19b2c60d0ad10c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -219,11 +219,11 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dat[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;   coffees snp1 snp2 snp3 snp4 snp5 snp6
-#&gt; 1       2    2    0    1    2    1    2
-#&gt; 2       2    1    2    1    1    1    0
-#&gt; 3       6    1    2    1    2    1    1
-#&gt; 4       6    1    0    1    1    0    1
-#&gt; 5       6    1    2    2    0    2    2</code></pre>
+#&gt; 1       4    0    1    0    0    2    1
+#&gt; 2       1    2    2    0    0    0    0
+#&gt; 3       4    2    0    1    0    2    0
+#&gt; 4       2    1    2    2    0    1    2
+#&gt; 5       3    1    2    2    1    0    1</code></pre>
 </div>
 </div>
 </section>
@@ -257,9 +257,9 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <pre><code>#&gt; # A tibble: 3 × 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1     0.264     0.230     1.15   0.255 
-#&gt; 2 snp2     0.409     0.225     1.82   0.0715
-#&gt; 3 snp3     0.182     0.244     0.748  0.456</code></pre>
+#&gt; 1 snp1  -0.227       0.211   -1.08     0.285
+#&gt; 2 snp2  -0.00634     0.208   -0.0305   0.976
+#&gt; 3 snp3  -0.00640     0.214   -0.0299   0.976</code></pre>
 </div>
 </div>
 </section>
@@ -298,7 +298,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 #&gt; # A tibble: 1 × 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1     0.264     0.230      1.15   0.255
+#&gt; 1 snp1    -0.227     0.211     -1.08   0.285
 #&gt; 
 #&gt; [[2]]$error
 #&gt; NULL</code></pre>
@@ -313,9 +313,9 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <pre><code>#&gt; # A tibble: 3 × 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1     0.264     0.230     1.15   0.255 
-#&gt; 2 snp2     0.409     0.225     1.82   0.0715
-#&gt; 3 snp3     0.182     0.244     0.748  0.456</code></pre>
+#&gt; 1 snp1  -0.227       0.211   -1.08     0.285
+#&gt; 2 snp2  -0.00634     0.208   -0.0305   0.976
+#&gt; 3 snp3  -0.00640     0.214   -0.0299   0.976</code></pre>
 </div>
 </div>
 </section>
@@ -338,9 +338,9 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <pre><code>#&gt; # A tibble: 3 × 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1     0.264     0.230     1.15   0.255 
-#&gt; 2 snp2     0.409     0.225     1.82   0.0715
-#&gt; 3 snp3     0.182     0.244     0.748  0.456</code></pre>
+#&gt; 1 snp1  -0.227       0.211   -1.08     0.285
+#&gt; 2 snp2  -0.00634     0.208   -0.0305   0.976
+#&gt; 3 snp3  -0.00640     0.214   -0.0299   0.976</code></pre>
 </div>
 </div>
 </section>
@@ -367,9 +367,9 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <pre><code>#&gt; # A tibble: 3 × 5
 #&gt;   term  estimate std.error statistic p.value
 #&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 snp1     0.264     0.230     1.15   0.255 
-#&gt; 2 snp2     0.409     0.225     1.82   0.0715
-#&gt; 3 snp3     0.182     0.244     0.748  0.456</code></pre>
+#&gt; 1 snp1  -0.227       0.211   -1.08     0.285
+#&gt; 2 snp2  -0.00634     0.208   -0.0305   0.976
+#&gt; 3 snp3  -0.00640     0.214   -0.0299   0.976</code></pre>
 </div>
 </div>
 </section>

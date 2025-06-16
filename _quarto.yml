@@ -19,7 +19,7 @@ website:
 format:
   html:
     theme: brae.scss
-    highlight-style: kate
+    highlight-style: atom-one
     html-math-method: plain
     minimal: false
 
