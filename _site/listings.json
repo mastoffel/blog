@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/sci-mcp/index.html",
       "/posts/dacc-bio/index.html",
       "/posts/info/index.html",
       "/posts/piping/index.html",
