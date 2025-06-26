@@ -12,7 +12,7 @@ about:
     - icon: linkedin
       href: https://linkedin.com/in/mastoffel/
     - icon: file-earmark-person-fill
-      href: ./blog/files/cv.pdf
+      href: /files/cv.pdf
 ---
 
 I'm Martin, an independent researcher. At the moment I'm thinking about the intersection of AI safety and biology funded by an Open Philantropy grant, while building AI agents for a small company on the side.  Previously, I led the development of [AutoEmulate](https://github.com/alan-turing-institute/autoemulate), an open-source package to emulate physics simulations using machine learning at the Turing Institute; explored parallels between cultural evolution and AI progress as a [PIBBSS fellow](https://pibbss.ai/); studied [deleterious](https://www.nature.com/articles/s41467-021-23222-9) [mutations](https://academic.oup.com/evlett/article/5/3/187/6697630) in a bronze-age island sheep population; discovered genetic traces of the 19th century overhunting in [pinniped populations](https://www.nature.com/articles/s41467-018-06695-z) around the world, consulted on whether [racehorse breeding](https://royalsocietypublishing.org/doi/full/10.1098/rspb.2022.0487) actually works, and built [scientific](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12797) [open](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198311) [source](https://peerj.com/articles/11414/) [software](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588).
