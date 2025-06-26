@@ -9,11 +9,11 @@ title-block-banner: false
 
 At first, AIs were created to understand the world. Now, a world is created that AIs can understand better.
 
-The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) defines a standardised interface between *things* and AI. Until MCP, AIs like ChatGPT or Claude had to figure out themselves where to look for data, how to use an application, or how to navigate a website. This is often goes wrong, because there is so much variation. 
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) defines a standardised interface between *things* and AI. Until MCP, LLMs like ChatGPT or Claude had to figure out where to look for data, how to use an application, or how to navigate a website. This often goes wrong, because apps are all different, and data is often not accessible. 
 
-Now, if you'd like an AI to easily access your (app, system, data), you can create an MCP server. An MCP consists of a few fundamental building blocks  like tools, resources and prompts for whethever task it is you'd like AIs to do. Eventually, if everything from browsers to online shopping to booking flights has MCP server, AIs will be able to easily do all these things for us, because they know how to use them.
+Now, if you'd like an AI to easily access your (app, system, data), you can create an MCP server. An MCP consists of a few fundamental building blocks like tools, resources and prompts for whethever task it is you'd like AIs to do. These building blocks are attached to your app and provide exactly the information that an AI needs to use it. Eventually, if everything from browsers to online shopping to booking flights has MCP servers, AIs will be able to easily do all these things for us, because they'll know how to use them.
 
-Wouldn't it be cool if science had MCPs? Say, each paper has its own MCP server that cleanly exposes all important parts, such as methods, conclusions, code and data, independent of the layout of the journal or the structure of the code or data repo? Each paper-MCP would also be registered, so that AIs can just search for it, like in a search engine. Let's call this protocol the **Science Model Context Protocol (SMCP)**.
+Wouldn't it be cool if science had MCPs? Say, each paper has its own MCP server that cleanly exposes all important parts, such as methods, conclusions, code and data, independent of the layout of the journal or the structure of the code or data repo? Each paper-MCP would also be registered somewhere, so that AIs can just search for it. Let's call this protocol the **Science Model Context Protocol (SMCP)**.
 
 Here's a list of things that a high-bandwidth, high-accuracy AI-science interface through SMCPs would enable:
 
@@ -25,7 +25,7 @@ Here's a list of things that a high-bandwidth, high-accuracy AI-science interfac
 
 Let's be clear though, there are risks too:  
 
-* streamlining science information for AIs speeds up the trajectory of agentic self-improvement in frontier-models. Are we ready for this?
+* streamlining scientific information for AIs will speed up AGI timelines. Are we ready for this?
 * it also makes it easier for bad actors to access knowledge via AI, e.g. biotech, weapons 
 
 Whenever we decentralise information, it comes with benefits and risks. In the age of AI, the trajectory is less clear than ever. Should we free science?
