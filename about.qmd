@@ -11,6 +11,8 @@ about:
       href: mailto:martin.adam.stoffel@gmail.com
     - icon: linkedin
       href: https://linkedin.com/in/mastoffel/
+    - icon: file-earmark-person-fill
+      href: files/cv.pdf
 
 ---
 
