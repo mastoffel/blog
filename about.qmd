@@ -1,5 +1,7 @@
 ---
 title: "About"
+resources:
+    - files/cv.pdf 
 about:
   template: jolla
   links:
