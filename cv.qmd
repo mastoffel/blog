@@ -1,0 +1,98 @@
+---
+title: ""
+format:
+  html:
+    toc: false
+    css: cv-style.css
+---
+
+::: {.header-section}
+## Martin Stoffel
+[mstoffel@posteo.de](mailto:mstoffel@posteo.de)
+
+**AI engineer-researcher working in-between tech, bio, and society. Open-source software with 2,000+ citations; 24 publications (incl. Nature Communications, PNAS) with code pipelines; 8 yrs leading research & data-science teams.**
+:::
+
+::: {.cv-container}
+
+::: {.sidebar}
+
+### Links
+- [GitHub](https://github.com/mastoffel)
+- [Google Scholar](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao)
+- [LinkedIn](https://linkedin.com/in/mastoffel)
+
+### Software
+Developed five open-source libraries with 150k+ downloads; 2,000+ citations:
+
+- [AutoEmulate](https://github.com/alan-turing-institute/autoemulate) – physics ML
+- [rptR](https://github.com/mastoffel/rptR) & [partR2](https://github.com/mastoffel/partR2) – stats
+- [inbreedR](https://github.com/mastoffel/inbreedR) & [GCalignR](https://github.com/mastoffel/GCalignR) – bio
+
+### Skills
+- **Languages:** Python, R, Bash
+- **ML:** PyTorch, scikit-learn, Bayesian modelling
+- **DevOps:** Git, Docker, AWS, Azure, CI/CD, HPC
+- **Other:** Bioinformatics, Visualisation, AI agents
+
+### Studies
+[MSc](https://www.uni-bielefeld.de/fakultaeten/biologie/studium/studieninteressierte/master/bfnme/#:~:text=The%20study%20programme%20aims%20to,have%20been%20shaped%20by%20evolution.) From Neural Mechanisms to Evolution; BSc Psychology
+
+### Grants
+- Open Philanthropy - $40k Career Development Grant (AI safety / biosecurity)
+- [PIBBSS](https://www.pibbss.ai/) AI Alignment Fellowship - $10k
+- German Research Foundation Fellowship - €69k (Evolutionary Genomics)
+- LJMU PhD Scholarship - €60k (Molecular Ecology)
+
+:::
+
+::: {.main-content}
+
+### Experience
+
+#### Independent Researcher / AI Engineer
+*Since Mar 2025*
+
+• Researching technical biosecurity solutions and safety of biological foundation models.  
+• Building AI agents (AWS/SQL/Python/FastAPI + Claude) for a German SME.
+
+#### Research Data Scientist / Software Engineer
+*Jan 2023 - Feb 2025 | The Alan Turing Institute, Research Engineering Group*
+
+• Created [AutoEmulate](https://github.com/alan-turing-institute/autoemulate), a machine learning pipeline to emulate physics simulations and cut runtime and compute by orders of magnitude; grew team 1→10 in a year; mentored PhD students; [presented](https://www.youtube.com/watch?v=GuPCJvH2QCA&t=1s) at AI UK; selected as part of Turing's 2025 strategic roadmap.
+
+• Other projects: built DL models to [detect artisanal rare-earth mines](https://www.turing.ac.uk/news/publications/data-study-group-final-report-global-witness-identifying-unregulated-mining-sites) in Myanmar for Global Witness; co-created a [citizen science platform](https://github.com/alan-turing-institute/AutSPACEs); and worked on a digital twin for an [underground farm](https://github.com/alan-turing-institute/CROP).
+
+#### Fellow | AI alignment
+*June - September 2022 | Principles of Intelligent Behaviour in Biological and Social Systems fellowship*
+
+Explored AI alignment and parallels to cultural & biological evolution.
+
+#### Consultant | Data Science
+*Jun – Oct 2021 • PlusVital & University College Dublin*
+
+Delivered in under 5 months a genome-wide study of 6,000+ Thoroughbred horses; evidence for industry-wide inbreeding harms in health/performance and pinpointing genetic loci using a novel method — work published in [Proceedings of the Royal Society](https://royalsocietypublishing.org/doi/full/10.1098/rspb.2022.0487) and now protected by [patent](https://patents.google.com/patent/WO2023232779A1/en?inventor=Emmeline+Hill).
+
+#### Research Fellow | Evolutionary Genomics
+*Apr 2019 - January 2023 | University of Edinburgh*
+
+Led research projects in Genomics, Ecology and Evolution; produced six peer-reviewed papers (incl. [Nature Communications](https://www.nature.com/articles/s41467-021-23222-9) and [PNAS](https://www.pnas.org/doi/abs/10.1073/pnas.2210756120) with >250 citations), and released open-source code pipelines on [GitHub](https://github.com/mastoffel/sheep_ID).
+
+#### PhD | Molecular Ecology (summa cum laude)
+*Jan 2015 - Dec 2018 | Bielefeld University & Liverpool John Moores University*
+
+Joint PhD in high-throughput genomics, biostatistics and software engineering; published eight papers (> 2,500 citations); led a 10-country [collaboration](https://www.nature.com/articles/s41467-018-06695-z) to study overhunting in global pinniped populations and built three open-source software packages; won the University's **best thesis award** in Biology.
+
+### Selected Publications
+24 papers incl. PNAS, Nature Communications, Nature Ecology & Evolution; 12 as lead-author, >3,000 citations.  
+Full list → [Google Scholar](https://scholar.google.de/citations?user=58uLFHoAAAAJ&hl=en&oi=ao)
+
+**Stoffel**, Li, et al. 'AutoEmulate: A Python package for semi-automated emulation', [Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.07626)
+
+**Stoffel**, Johnston, et al. 'Genetic architecture and lifetime dynamics of inbreeding depression in a wild mammal.' [Nature Communications](https://www.nature.com/articles/s41467-021-23222-9)
+
+**Stoffel**, Nakagawa, et al. 'rptR: Repeatability estimation and variance decomposition by generalized linear mixed-effects models.' [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12797)
+
+:::
+
+:::
