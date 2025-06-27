@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I’m Martin, an independent researcher. I’m currently thinking about the intersection of AI safety and biology funded by an Open Philantropy grant, while building AI agents for a small company on the side. Previously, I led the development of AutoEmulate, an open-source package to emulate physics simulations using machine learning at the Turing Institute; explored parallels between cultural evolution and AI progress as a PIBBSS fellow; studied deleterious mutations in a bronze-age island sheep population; discovered genetic traces of the 19th century overhunting in pinniped populations around the world, consulted on whether racehorse breeding actually works, and built scientific open source software.\nThings I like: trying to write a blog, Pokemon Red, Steel Maces, Open Water Swimming, The Tao of Pooh, cycling against the wind on Snaefellsnes, playing Ukulele with my 1 year old, saying serious things in spontaneous conversations.\nPlease get in touch if you’d like to chat!"
+    "text": "I’m Martin, an independent researcher. At the moment I’m thinking about the intersection of AI safety and biology funded by an Open Philantropy grant, while building AI agents for a small company on the side. Previously, I led the development of AutoEmulate, an open-source package to emulate physics simulations using machine learning at the Turing Institute; explored parallels between cultural evolution and AI progress as a PIBBSS fellow; studied deleterious mutations in a bronze-age island sheep population; discovered genetic traces of the 19th century overhunting in pinniped populations around the world, consulted on whether racehorse breeding actually works, and built scientific open source software.\nThings I like: trying to write a blog, Pokemon Red, Steel Maces, Open Water Swimming, The Tao of Pooh, cycling against the wind on Snaefellsnes, playing Ukulele with my 1 year old, saying serious things in spontaneous conversations.\nPlease get in touch if you’d like to chat!"
   },
   {
     "objectID": "posts/dacc-bio/index.html",
@@ -172,7 +172,7 @@
     "href": "cv.html",
     "title": "Martin Stoffel",
     "section": "",
-    "text": "mstoffel@posteo.de\nAI engineer-researcher working in-between tech, bio, and society. Open-source software with 2,000+ citations; 24 publications (incl. Nature Communications, PNAS) with code pipelines; 8 yrs leading research & data-science teams."
+    "text": "mstoffel@posteo.de · GitHub · Google Scholar · LinkedIn\nAI engineer-researcher working in-between tech, bio, and society. Open-source software with 2,000+ citations; 24 publications (incl. Nature Communications, PNAS) with code pipelines; 8 yrs leading research & data-science teams."
   },
   {
     "objectID": "cv.html#martin-stoffel",
@@ -180,5 +180,75 @@
     "title": "Martin Stoffel",
     "section": "",
     "text": "mstoffel@posteo.de\nAI engineer-researcher working in-between tech, bio, and society. Open-source software with 2,000+ citations; 24 publications (incl. Nature Communications, PNAS) with code pipelines; 8 yrs leading research & data-science teams."
+  },
+  {
+    "objectID": "cv.html#experience",
+    "href": "cv.html#experience",
+    "title": "Martin Stoffel",
+    "section": "Experience",
+    "text": "Experience\n\nIndependent Researcher / AI Engineer\nSince Mar 2025\nResearching technical biosecurity solutions and safety of biological foundation models. Building AI agents (AWS/SQL/Python/FastAPI + Claude) for a German SME.\n\n\nResearch Data Scientist / Software Engineer\nThe Alan Turing Institute, Jan 2023 - Feb 2025\nCreated AutoEmulate, a machine learning pipeline to emulate physics simulations and cut runtime and compute by orders of magnitude; grew team 1→10 in a year; mentored PhD students; presented at AI UK; selected as part of Turing’s 2025 strategic roadmap.\nOther projects: built DL models to detect artisanal rare-earth mines in Myanmar for Global Witness; co-created a citizen science platform; and worked on a digital twin for an underground farm.\n\n\nFellow | AI alignment\nPIBBSS, June - September 2022\nExplored AI alignment and parallels to cultural & biological evolution.\n\n\nConsultant | Data Science\nPlusVital & University College Dublin, Jun – Oct 2021\nDelivered in under 5 months a genome-wide study of 6,000+ Thoroughbred horses; evidence for industry-wide inbreeding harms in health/performance — work published in Proceedings of the Royal Society and now protected by patent.\n\n\nResearch Fellow | Evolutionary Genomics\nUniversity of Edinburgh, Apr 2019 - Jan 2023\nLed research projects in Genomics, Ecology and Evolution; produced six peer-reviewed papers (incl. Nature Communications and PNAS with &gt;250 citations), and released open-source code pipelines on GitHub.\n\n\nPhD | Molecular Ecology\nBielefeld University & Liverpool John Moores University, Jan 2015 - Dec 2018\nJoint PhD in high-throughput genomics, biostatistics and software engineering; published eight papers (&gt; 2,500 citations); led a 10-country collaboration to study overhunting in global pinniped populations and built three open-source software packages; won the University’s best thesis award in Biology (summa cum laude)."
+  },
+  {
+    "objectID": "cv.html#open-source-software",
+    "href": "cv.html#open-source-software",
+    "title": "Martin Stoffel",
+    "section": "{{< fa code >}} Open Source Software",
+    "text": "{{&lt; fa code &gt;}} Open Source Software\n\n\nAutoEmulate\nPhysics ML • Machine learning pipeline to emulate physics simulations\n\n\nrptR & partR2\nStatistics • Repeatability estimation and variance decomposition tools\n\n\ninbreedR & GCalignR\nBioinformatics • Genomic analysis and alignment tools\n\n\nImpact: 150k+ downloads; 2,000+ citations across five libraries"
+  },
+  {
+    "objectID": "cv.html#education-skills",
+    "href": "cv.html#education-skills",
+    "title": "Martin Stoffel",
+    "section": "{{< fa graduation-cap >}} Education & Skills",
+    "text": "{{&lt; fa graduation-cap &gt;}} Education & Skills\n\n\nEducation\n\nMSc From Neural Mechanisms to Evolution, University of Bielefeld\nBSc Psychology\n\n\n\nTechnical Skills\n\nLanguages: Python, R, Bash\nML/AI: PyTorch, scikit-learn, Bayesian modelling\nDevOps: Git, Docker, AWS, Azure, CI/CD, HPC\nDomain: Bioinformatics, Visualisation, AI agents"
+  },
+  {
+    "objectID": "cv.html#grants-funding",
+    "href": "cv.html#grants-funding",
+    "title": "Martin Stoffel",
+    "section": "{{< fa trophy >}} Grants & Funding",
+    "text": "{{&lt; fa trophy &gt;}} Grants & Funding\n\n\nOpen Philanthropy - $40k Career Development Grant (AI safety / biosecurity)\nPIBBSS - $10k AI Alignment Fellowship\nGerman Research Foundation - €69k Fellowship (Evolutionary Genomics)\nLiverpool John Moores University - €60k PhD Scholarship (Molecular Ecology)"
+  },
+  {
+    "objectID": "cv.html#selected-publications",
+    "href": "cv.html#selected-publications",
+    "title": "Martin Stoffel",
+    "section": "{{< fa book >}} Selected Publications",
+    "text": "{{&lt; fa book &gt;}} Selected Publications\n24 papers including Nature Communications, PNAS, Nature Ecology & Evolution; 12 as lead author with &gt;3,000 citations. View all on Google Scholar →\n\n\nStoffel, Li, et al. (2024). AutoEmulate: A Python package for semi-automated emulation. Journal of Open Source Software\nStoffel, Johnston, et al. (2021). Genetic architecture and lifetime dynamics of inbreeding depression in a wild mammal. Nature Communications\nStoffel, Nakagawa, et al. (2017). rptR: Repeatability estimation and variance decomposition by generalized linear mixed-effects models. Methods in Ecology and Evolution"
+  },
+  {
+    "objectID": "cv.html#software",
+    "href": "cv.html#software",
+    "title": "Martin Stoffel",
+    "section": "Software",
+    "text": "Software\nDeveloped five open-source libraries with 150k+ downloads and 2,000+ citations:\n\nAutoEmulate – Machine learning pipeline for physics simulations\nrptR & partR2 – Statistical tools for repeatability and variance decomposition\ninbreedR & GCalignR – Bioinformatics analysis tools"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Martin Stoffel",
+    "section": "Skills",
+    "text": "Skills\nLanguages: Python, R, Bash · ML: PyTorch, scikit-learn, Bayesian modelling · DevOps: Git, Docker, AWS, Azure, CI/CD, HPC · Other: Bioinformatics, Visualisation, AI agents"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Martin Stoffel",
+    "section": "Education",
+    "text": "Education\nMSc From Neural Mechanisms to Evolution, University of Bielefeld\nBSc Psychology"
+  },
+  {
+    "objectID": "cv.html#grants",
+    "href": "cv.html#grants",
+    "title": "Martin Stoffel",
+    "section": "Grants",
+    "text": "Grants\n\nOpen Philanthropy - $40k Career Development Grant (AI safety / biosecurity)\nPIBBSS AI Alignment Fellowship - $10k\nGerman Research Foundation Fellowship - €69k (Evolutionary Genomics)\nLJMU PhD Scholarship - €60k (Molecular Ecology)"
+  },
+  {
+    "objectID": "cv.html#publications",
+    "href": "cv.html#publications",
+    "title": "Martin Stoffel",
+    "section": "Publications",
+    "text": "Publications\n24 papers including Nature Communications, PNAS, Nature Ecology & Evolution; 12 as lead author with &gt;3,000 citations. Full list →\nStoffel, Li, et al. (2024). AutoEmulate: A Python package for semi-automated emulation. Journal of Open Source Software\nStoffel, Johnston, et al. (2021). Genetic architecture and lifetime dynamics of inbreeding depression in a wild mammal. Nature Communications\nStoffel, Nakagawa, et al. (2017). rptR: Repeatability estimation and variance decomposition by generalized linear mixed-effects models. Methods in Ecology and Evolution"
   }
 ]
