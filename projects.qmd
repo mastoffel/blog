@@ -26,7 +26,7 @@ filters:
 ::: {layout="[20,85]"}
 ![](pics/venn2.jpeg)
 
-[`partR2`: R2 for individual fixed effects in hierarchical models.](https://peerj.com/articles/11414/)\
+[`partR2`: $R^2$ for individual fixed effects in hierarchical models.](https://peerj.com/articles/11414/)\
 *PeerJ* (2021) \| [Code](https://github.com/mastoffel/partR2)\
 [:In a nutshell](#x-p2)
 :::
@@ -34,7 +34,7 @@ filters:
 ::: {layout="[20,85]"}
 ![](pics/inbreedr3.png)
 
-[`inbreedR`: identity disequlibria and more.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588)\
+[`inbreedR`: Identity disequlibria and more.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588)\
 *Methods in Ecology and Evolution* (2016) \| [Code](https://github.com/mastoffel/inbreedR)\
 [:In a nutshell](#x-in)
 :::
@@ -42,7 +42,7 @@ filters:
 ::: {layout="[20,85]"}
 ![](pics/gcalignr.png)
 
-[`GCalignR`: identity disequlibria and more.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588)\
+[`GCalignR`: Aligning gas chromatography samples.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588)\
 *Plos One (2018)* \| [Code](https://github.com/mottensmann/GCalignR/graphs/contributors)\
 [:In a nutshell](#x-gc)
 :::
