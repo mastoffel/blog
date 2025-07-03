@@ -43,7 +43,7 @@ filters:
 ![](pics/gcalignr.png)
 
 [`GCalignR`: identity disequlibria and more.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588)\
-** Plos One (2018) \| [Code](https://github.com/mottensmann/GCalignR/graphs/contributors)\
+*Plos One (2018)* \| [Code](https://github.com/mottensmann/GCalignR/graphs/contributors)\
 [:In a nutshell](#x-gc)
 :::
 
