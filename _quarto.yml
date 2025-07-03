@@ -12,6 +12,8 @@ website:
         file: index.qmd
       - text: about
         file: about.qmd
+      - text: projects
+        file: projects.qmd
       # - icon: github
       #   href: https://github.com/mastoffel
       # - icon: twitter

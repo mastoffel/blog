@@ -250,5 +250,306 @@
     "title": "Martin Stoffel",
     "section": "Publications",
     "text": "Publications\n24 papers including Nature Communications, PNAS, Nature Ecology & Evolution; 12 as lead author with &gt;3,000 citations. Full list →\nStoffel, Li, et al. (2024). AutoEmulate: A Python package for semi-automated emulation. Journal of Open Source Software\nStoffel, Johnston, et al. (2021). Genetic architecture and lifetime dynamics of inbreeding depression in a wild mammal. Nature Communications\nStoffel, Nakagawa, et al. (2017). rptR: Repeatability estimation and variance decomposition by generalized linear mixed-effects models. Methods in Ecology and Evolution"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": ":x in",
+    "section": "",
+    "text": "AutoEmulate: Speeding up physics simulations using machine learning.\nJOSS (2025) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nrptR: Intra-class coefficients for hierarchical models.\nJOSS (2025) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\npartR2: R2 for individual fixed effects in hierarchical models.\nJOSS (2025) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\ninbreedR: identity disequlibria and more.\nJOSS (2025) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nGCalignR: identity disequlibria and more.\nJOSS (2025) | Code\n:In a nutshell"
+  },
+  {
+    "objectID": "projects.html#x-el",
+    "href": "projects.html#x-el",
+    "title": ":x in",
+    "section": ":x el",
+    "text": ":x el\nWe scanned the genomes of thousands of wild Soay sheep for embryonic lethal mutations. These mutations prevent an individual from being born, should it be unlucky enough to receive the same genetic variant from both mum and dad. We found a few and wondered how they are maintained in the population. We show that despite their negative effects, these mutations can persist when genetically linked to beneficial variants.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "projects.html#quantitative-and-evolutionary-genetics",
+    "href": "projects.html#quantitative-and-evolutionary-genetics",
+    "title": "Research Portfolio",
+    "section": "🧬 Quantitative and Evolutionary Genetics",
+    "text": "🧬 Quantitative and Evolutionary Genetics\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics\nbioRxiv (2022) • Code • :In a nutshell\nScanning thousands of sheep genomes for embryonic lethal mutations\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger\nEvolution Letters (2021) • Code • :In a nutshell\nWhy long runs of homozygosity carry higher mutation load\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild\nNature Communications (2021) • Code • :In a nutshell • :doubts\nHow inbreeding affects survival in wild populations"
+  },
+  {
+    "objectID": "projects.html#molecular-ecology",
+    "href": "projects.html#molecular-ecology",
+    "title": "Research Portfolio",
+    "section": "🦭 Molecular Ecology",
+    "text": "🦭 Molecular Ecology\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals\nMolecular Ecology (2020) • Code • :In a nutshell • :doubts\nHow gut microbes predict sex differences in elephant seals\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction\nNature Communications (2018) • Code • :In a nutshell • :doubts\nHow industrial hunting nearly wiped out seals and sea lions\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals\nPNAS (2015) • Code • Press • :In a nutshell • :doubts\nHow seals use scent to navigate their social world"
+  },
+  {
+    "objectID": "projects.html#conservation-genetics",
+    "href": "projects.html#conservation-genetics",
+    "title": "Research Portfolio",
+    "section": "🦌 Conservation Genetics",
+    "text": "🦌 Conservation Genetics\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx\nPNAS (2023) • :In a nutshell\nBringing back the scimitar-horned oryx from extinction"
+  },
+  {
+    "objectID": "projects.html#behavioral-ecology",
+    "href": "projects.html#behavioral-ecology",
+    "title": "Research Portfolio",
+    "section": "🐦 Behavioral Ecology",
+    "text": "🐦 Behavioral Ecology\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny\nPNAS (2017) • Code in Supplementary Material • :In a nutshell\nHow skewed survival creates unusual mating systems"
+  },
+  {
+    "objectID": "projects.html#research-consulting",
+    "href": "projects.html#research-consulting",
+    "title": "Research Portfolio",
+    "section": "🐎 Research Consulting",
+    "text": "🐎 Research Consulting\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses\nProceedings of the Royal Society B (2022) • :In a nutshell\nHow inbreeding affects racing performance"
+  },
+  {
+    "objectID": "projects.html#in-depth-explanations",
+    "href": "projects.html#in-depth-explanations",
+    "title": "Research Portfolio",
+    "section": "🔬 In-Depth Explanations",
+    "text": "🔬 In-Depth Explanations\nClick the links above to dive deeper into each study"
+  },
+  {
+    "objectID": "projects.html#x-roh",
+    "href": "projects.html#x-roh",
+    "title": ":x in",
+    "section": ":x roh",
+    "text": ":x roh\nRuns of homozygosity (ROH) are long stretches of homozygous genotypes, and turn out to be a weirdly insightful feature of the genome. The longer an ROH is, the fewer generations in the past is it’s common ancestor haplotype. We show using simulation and empirical genome data that such long ROH have a higher density of deleterious mutations, as natural selection had less time to select against them, compared to short ROH. This has been hypothesised before, but never been shown using real fitness data.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-id",
+    "href": "projects.html#x-id",
+    "title": ":x in",
+    "section": ":x id",
+    "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of bronze-age sheep, we show that the effects of even slight inbreeding on survival are severe. We uncover some of the underlying genetic mechanisms using a novel type of genome-wide association study to estimate the effects of deleterious mutations across the genome. This is possibly the most extensive study of its kind, outside of humans.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-id_doubts",
+    "href": "projects.html#x-id_doubts",
+    "title": "",
+    "section": ":x id_doubts",
+    "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are usually rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
+  },
+  {
+    "objectID": "projects.html#x-nes",
+    "href": "projects.html#x-nes",
+    "title": ":x in",
+    "section": ":x nes",
+    "text": ":x nes\n:Northern elephant seals have the second-largest sexual size dimorphism of any mammal (right after their Southern sister-species). Adult males can be 3-5 times as heavy as females. Why is that? Sexual selection has favored larger males because they are able to defend large harems of females on the beach against competitors.\nIn young elephant seals (pups) you can’t really spot a difference between males and females yet. However, when measuring their gut microbiome, sampled with a very long cotton swab, we find very strong sex-differences from early on. This opens the possibility for microbes to provide an adaptation to these two very different life-history strategies of female and male elephant seals.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
+  },
+  {
+    "objectID": "projects.html#x-nes_doubts",
+    "href": "projects.html#x-nes_doubts",
+    "title": "",
+    "section": ":x nes_doubts",
+    "text": ":x nes_doubts\nOne of the most important aspects of this study is that we ruled out that sex-differences in the gut microbiome are simply to due differences in diet, as all pups only ever fed on their mother’s milk and were fasting at the time of sampling. Therefore, it’s likely that male and female pups have a different gut microbiome due to intrinsic causes (genetics, physiology). However, this doesn’t mean that these differences are also adaptive and functional for things like development or the immune system."
+  },
+  {
+    "objectID": "projects.html#x-bot",
+    "href": "projects.html#x-bot",
+    "title": ":x in",
+    "section": ":x bot",
+    "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
+  },
+  {
+    "objectID": "projects.html#x-bot_doubts",
+    "href": "projects.html#x-bot_doubts",
+    "title": "",
+    "section": ":x bot_doubts",
+    "text": ":x bot_doubts\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better."
+  },
+  {
+    "objectID": "projects.html#x-plov",
+    "href": "projects.html#x-plov",
+    "title": ":x in",
+    "section": ":x plov",
+    "text": ":x plov\nAround 60% of adult snowy plovers are males, which led to a mating system where females are polygynous (they get to have more than one partner per season). My buddy Luke led this project, where we wanted to know where this sex biases comes from! Born 50/50, most of the sex biases we see in adults actually originates in juveniles, where males have lower survival rates than males. We therefore argue that two-sex population models (as used in our study) are essential to understand population dynamics and can help to shed light on some of the remaining mysteries around sexual selection.\nAuthors | Luke J Eberhart-Phillips, Clemens Küpper, Tom EX Miller, Medardo Cruz-López, Kathryn H Maher, Natalie Dos Remedios, Martin A Stoffel, Joseph I Hoffman, Oliver Krüger, Tamás Székely"
+  },
+  {
+    "objectID": "projects.html#x-chem",
+    "href": "projects.html#x-chem",
+    "title": ":x in",
+    "section": ":x chem",
+    "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
+  },
+  {
+    "objectID": "projects.html#x-chem_doubts",
+    "href": "projects.html#x-chem_doubts",
+    "title": "",
+    "section": ":x chem_doubts",
+    "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesising these chemical signals and doing behavioural experiments. However, we know at least that sea lions can recognise their pups by scent alone."
+  },
+  {
+    "objectID": "projects.html#x-horse",
+    "href": "projects.html#x-horse",
+    "title": ":x in",
+    "section": ":x horse",
+    "text": ":x horse\nWe show that genomic inbreeding reduces the changes of a Thoroughbred horse ever making it to the racecourse, and pinpoint a genomic region where homozygosity has a particularly large effect, independent of genome-wide inbreeding. Results were a paper, the full reproducible analysis and a patent for the method.\nAuthors | Emmeline W Hill, Martin A Stoffel, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-oryx",
+    "href": "projects.html#x-oryx",
+    "title": ":x in",
+    "section": ":x oryx",
+    "text": ":x oryx\nto do\nAuthors | sEmily Humble, Martin A. Stoffel, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "",
+    "section": "",
+    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+  },
+  {
+    "objectID": "research.html#empricial-research",
+    "href": "research.html#empricial-research",
+    "title": "",
+    "section": "",
+    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+  },
+  {
+    "objectID": "research.html#x-el",
+    "href": "research.html#x-el",
+    "title": "",
+    "section": ":x el",
+    "text": ":x el\nWe scanned the genomes of thousands of Soay sheep for embryonic lethal mutations. These mutations prevent an individual from being born, should it be unlucky enough to receive the same genetic variant from both mum and dad. We found a few semi-lethal mutations in the population, and show that these are under selection. We show that despite their negative effects, these mutations can be maintained when they are genetically linked to beneficial genetic variants.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "research.html#x-roh",
+    "href": "research.html#x-roh",
+    "title": "",
+    "section": ":x roh",
+    "text": ":x roh\nThe fundamental question in this study was: Is the density of deleterious mutations in the genome higher in long runs of homozygosity (ROH)? If an individual inherits an ROH, this basically means that they inherited two copies the very same stretch of DNA (or haplotype) from both mum and dad. The longer such an ROH is, the fewer generations in thee past is it’s most recent common ancestor haplotype. Therefore, natural selection had less time to remove potential deleterious mutations from this stretch of DNA.\nOur simulations and empirical data for thousands of wild Soay sheep showed exactly this. Long ROH have a higher density of deleterious mutations, their frequencies are lower, and the harmful effect of each single mutation is on average higher than those of mutations in short ROH.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "research.html#x-id",
+    "href": "research.html#x-id",
+    "title": "",
+    "section": ":x id",
+    "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of bronze-age sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "research.html#x-id_doubts",
+    "href": "research.html#x-id_doubts",
+    "title": "",
+    "section": ":x id_doubts",
+    "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are usually rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
+  },
+  {
+    "objectID": "research.html#x-nes",
+    "href": "research.html#x-nes",
+    "title": "",
+    "section": ":x nes",
+    "text": ":x nes\n:Northern elephant seals have the second-largest sexual size dimorphism of any mammal (right after their Southern sister-species). Adult males can be 3-5 times as heavy as females. Why is that? Sexual selection has favored larger males because they are able to defend large harems of females on the beach against competitors.\nIn young elephant seals (pups) you can’t really spot a difference between males and females yet. However, when measuring their microbiome (the collection of bacteria in their guts) sampled with a very long cotton swab, we find very strong sex-differences from early on. This opens the possibility for microbes to provide an adaptation to these two very different life-histories of female and male elephant seals.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
+  },
+  {
+    "objectID": "research.html#x-nes_doubts",
+    "href": "research.html#x-nes_doubts",
+    "title": "",
+    "section": ":x nes_doubts",
+    "text": ":x nes_doubts\nOne of the most important aspects of this study is that we ruled out that sex-differences in the gut microbiome are simply to due differences in diet, as all pups only ever fed on their mother’s milk and were fasting at the time of sampling. Therefore, it’s likely that male and female pups have a different gut microbiome due to intrinsic causes (genetics, physiology). However, this doesn’t mean that these differences are also adaptive and functional for things like development or the immune system."
+  },
+  {
+    "objectID": "research.html#x-bot",
+    "href": "research.html#x-bot",
+    "title": "",
+    "section": ":x bot",
+    "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
+  },
+  {
+    "objectID": "research.html#x-bot_doubts",
+    "href": "research.html#x-bot_doubts",
+    "title": "",
+    "section": ":x bot_doubts",
+    "text": ":x bot_doubts\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better."
+  },
+  {
+    "objectID": "research.html#x-plov",
+    "href": "research.html#x-plov",
+    "title": "",
+    "section": ":x plov",
+    "text": ":x plov\nAround 60% of adult snowy plovers are males, which led to a mating system where females are polygynous (they get to have more than one partner per season). My buddy Luke led this project, where we wanted to know where this sex biases comes from! Born 50/50, most of the sex biases we see in adults actually originates in juveniles, where males have lower survival rates than males. We therefore argue that two-sex population models (as used in our study) are essential to understand population dynamics and can help to shed light on some of the remaining mysteries around sexual selection.\nAuthors | Luke J Eberhart-Phillips, Clemens Küpper, Tom EX Miller, Medardo Cruz-López, Kathryn H Maher, Natalie Dos Remedios, Martin A Stoffel, Joseph I Hoffman, Oliver Krüger, Tamás Székely"
+  },
+  {
+    "objectID": "research.html#x-chem",
+    "href": "research.html#x-chem",
+    "title": "",
+    "section": ":x chem",
+    "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
+  },
+  {
+    "objectID": "research.html#x-chem_doubts",
+    "href": "research.html#x-chem_doubts",
+    "title": "",
+    "section": ":x chem_doubts",
+    "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesising these chemical signals and doing behavioural experiments. However, we know at least that sea lions can recognise their pups by scent alone."
+  },
+  {
+    "objectID": "research.html#x-horse",
+    "href": "research.html#x-horse",
+    "title": "",
+    "section": ":x horse",
+    "text": ":x horse\nWe show that genomic inbreeding reduces the changes of a Thoroughbred horse ever making it to the racecourse, and pinpoint a genomic region where homozygosity has a particularly large effect, independent of genome-wide inbreeding.\nAuthors | Emmeline W Hill, Martin A Stoffel, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton\nPic by DALL-E."
+  },
+  {
+    "objectID": "research.html#x-oryx",
+    "href": "research.html#x-oryx",
+    "title": "",
+    "section": ":x oryx",
+    "text": ":x oryx\nto do\nAuthors | sEmily Humble, Martin A. Stoffel, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden"
+  },
+  {
+    "objectID": "projects.html#research",
+    "href": "projects.html#research",
+    "title": ":x in",
+    "section": "Research",
+    "text": "Research\nselected, full list here.\n\nQuantitative and evolutionary genetics\n\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nEvol letters (2024) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell\n\n\n\n\n\nMolecular ecology\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell\n\n\n\n\n\nConservation genetics\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :In a nutshell\n\n\n\n\n\nBehavioural ecology\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\nResearch consulting\n\n\n\n\n\n\n\n\n\nImpacts of systemic inbreeding in Thoroughbred racehorses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
+  },
+  {
+    "objectID": "projects.html#software",
+    "href": "projects.html#software",
+    "title": ":x in",
+    "section": "",
+    "text": "AutoEmulate: Speeding up physics simulations using machine learning.\nJOSS (2025) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nrptR: Intra-class coefficients for hierarchical models.\nJOSS (2025) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\npartR2: R2 for individual fixed effects in hierarchical models.\nJOSS (2025) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\ninbreedR: identity disequlibria and more.\nJOSS (2025) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nGCalignR: identity disequlibria and more.\nJOSS (2025) | Code\n:In a nutshell"
+  },
+  {
+    "objectID": "projects.html#x-ae",
+    "href": "projects.html#x-ae",
+    "title": ":x in",
+    "section": ":x ae",
+    "text": ":x ae\nSimulations of complex systems are slow. To speed them up for research and application, we have to emulate them, often using machine learning. This is difficult though. AutoEmulate’s goal is to provide a low-code platform to do all this automatically. I’ve created the package and was lead developer during my time at the Turing Institute. On the left is the old hex logo."
+  },
+  {
+    "objectID": "projects.html#x-rp",
+    "href": "projects.html#x-rp",
+    "title": ":x in",
+    "section": ":x rp",
+    "text": ":x rp\nrptR calculates intra-class coefficients (also called repeatabilities, hence the name) based on generalised linear mixed models. It does just that, but pretty well, and has somehow become a standard in various fields. Hence the 191x field-citation ratio."
+  },
+  {
+    "objectID": "projects.html#x-p2",
+    "href": "projects.html#x-p2",
+    "title": ":x in",
+    "section": ":x p2",
+    "text": ":x p2\npartR2 uses a few tricks to calculate the explained variance per fixed effect in GLMMs. There’s not much else doing this properly, so it has become quite popular. But take care: it’s key to think what exactly it is that you want to know, especally for more complicated models involving interactions etc."
+  },
+  {
+    "objectID": "projects.html#side",
+    "href": "projects.html#side",
+    "title": ":x in",
+    "section": "Side",
+    "text": "Side\n\n\n\n\n\n\n\n\n\nDeep learning to detect artisinal mining in Myanmar\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nMinimal transformer trained on all Sherlock Holmes stories"
+  },
+  {
+    "objectID": "projects.html#side-projects",
+    "href": "projects.html#side-projects",
+    "title": ":x in",
+    "section": "Side projects",
+    "text": "Side projects\nDeep learning:\n\n\n\n\n\n\n\n\n\nDetect artisinal mining in Myanmar\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nMinimal transformer\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeural Vocoder\n\n\n\n\nhttps://github.com/mastoffel/neural_vocoder"
+  },
+  {
+    "objectID": "projects.html#deep-learning-side-projects",
+    "href": "projects.html#deep-learning-side-projects",
+    "title": ":x in",
+    "section": "Deep learning side projects",
+    "text": "Deep learning side projects\n\n\n\n\n\n\n\n\n\nDetecting artisanal mines in Myanmar from satellites\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Minimal transformer\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Neural Vocoder"
   }
 ]
