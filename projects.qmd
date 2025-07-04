@@ -12,23 +12,23 @@ filters:
 
 [`AutoEmulate`: Speeding up physics simulations using machine learning.](https://joss.theoj.org/papers/10.21105/joss.07626)\
 *JOSS* (2025) \| [Code](https://github.com/alan-turing-institute/autoemulate)\
-[:In a nutshell](#x-ae)
+[:🥥](#x-ae)
 :::
 
 ::: {layout="[20,85]"}
-![](pics/rptr.png)
+![](pics/rptr2.png)
 
 [`rptR`: Intra-class coefficients for hierarchical models.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12797)\
 *Methods in Ecology and Evolution* (2017) \| [Code](https://github.com/mastoffel/rptR)\
-[:In a nutshell](#x-rp)
+[:🥥](#x-rp)
 :::
 
 ::: {layout="[20,85]"}
-![](pics/venn2.jpeg)
+![](pics/venn.png)
 
 [`partR2`: $R^2$ for individual fixed effects in hierarchical models.](https://peerj.com/articles/11414/)\
 *PeerJ* (2021) \| [Code](https://github.com/mastoffel/partR2)\
-[:In a nutshell](#x-p2)
+[:🥥](#x-p2)
 :::
 
 ::: {layout="[20,85]"}
@@ -36,7 +36,7 @@ filters:
 
 [`inbreedR`: Identity disequlibria and more.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588)\
 *Methods in Ecology and Evolution* (2016) \| [Code](https://github.com/mastoffel/inbreedR)\
-[:In a nutshell](#x-in)
+[:🥥](#x-in)
 :::
 
 ::: {layout="[20,85]"}
@@ -44,7 +44,7 @@ filters:
 
 [`GCalignR`: Aligning gas chromatography samples.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588)\
 *Plos One (2018)* \| [Code](https://github.com/mottensmann/GCalignR/graphs/contributors)\
-[:In a nutshell](#x-gc)
+[:🥥](#x-gc)
 :::
 
 
@@ -60,7 +60,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 [Exploring lethal mutations and their evolutionary dynamics.](https://academic.oup.com/evlett/article/8/2/222/7327097)\
 *Evol letters* (2024) \| [Code](https://github.com/mastoffel/haplotype_homozygosity)\
-[:In a nutshell](#x-el)
+[:🥥](#x-el)
 :::
 
 ::: {layout="[20,85]"}
@@ -68,7 +68,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 [Long runs of homozygosity have a higher mutation load because their haplotypes are younger](https://onlinelibrary.wiley.com/doi/full/10.1002/evl3.229).\
 *Evol Letters* (2021) \| [Code](https://github.com/mastoffel/sheep_roh)\
-[:In a nutshell](#x-roh)
+[:🥥](#x-roh)
 :::
 
 ::: {layout="[20,85]"}
@@ -76,7 +76,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 [Effect size and genetic basis of inbreeding depression in the wild](https://www.nature.com/articles/s41467-021-23222-9).\
 *Nature Comms* (2021) \| [Code](https://github.com/mastoffel/sheep_ID)\
-[:In a nutshell](#x-id)
+[:🥥](#x-id)
 :::
 
 ### Molecular ecology
@@ -86,7 +86,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 [Early life gut microbiota predict extreme sex differences in Elephant Seals.](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.15385)\
 *Mol Ecol* (2020) \| [Code](https://github.com/mastoffel/nes_microbiome)\
-[:In a nutshell](#x-nes)
+[:🥥](#x-nes)
 :::
 
 ::: {layout="[20,85]"}
@@ -94,7 +94,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 [Industrial exploitation brought one-third of pinniped species to the edge of extinction](https://www.nature.com/articles/s41467-018-06695-z).\
 *Nature Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)\
-[:In a nutshell](#x-bot)
+[:🥥](#x-bot)
 :::
 
 ::: {layout="[20,85]"}
@@ -102,7 +102,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 [Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.](https://www.pnas.org/doi/abs/10.1073/pnas.1506076112)\
 *PNAS* (2015) \| [Code](https://github.com/mastoffel/seal_chemical_fingerprints/blob/master/analysis_markdown.pdf) \| Article in the [Sueddeutsche Zeitung](https://www.sueddeutsche.de/wissen/biologie-wie-robben-einander-finden-1.2604289).\
-[:In a nutshell](#x-chem)
+[:🥥](#x-chem)
 :::
 
 ### Conservation genetics
@@ -111,7 +111,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 [Conservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.](https://www.pnas.org/doi/10.1073/pnas.2210756120)\
 *PNAS* (2023) \| 
-[:In a nutshell](#x-oryx)
+[:🥥](#x-oryx)
 :::
 
 ### Behavioural ecology
@@ -121,7 +121,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 [Biased sex ratios and the impact of early survival on female polygyny](https://www.pnas.org/doi/abs/10.1073/pnas.1620043114).\
 *PNAS* (2017) \| Code in Supplementary Material\
-[:In a nutshell](#x-plov)
+[:🥥](#x-plov)
 :::
 
 
@@ -132,17 +132,17 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 [Impacts of systemic inbreeding in Thoroughbred racehorses.](https://royalsocietypublishing.org/doi/full/10.1098/rspb.2022.0487)  
 *Proceedings of the Royal Society B* (2022)  
-[:In a nutshell](#x-horse)
+[:🥥](#x-horse)
 :::
 
 
-## Deep learning side projects
+## Side projects 
 
 ::: {layout="[10,85]"}
 ![](pics/mining.png)
 
 [Detecting artisanal mines in Myanmar from satellites](https://www.turing.ac.uk/news/publications/data-study-group-final-report-global-witness-identifying-unregulated-mining-sites)\
-[:In a nutshell](#x-mi)
+[:🥥](#x-mi)
 :::
 
 ::: {layout="[10,85]"}
