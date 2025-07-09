@@ -1,0 +1,25 @@
+---
+title: "engineered-DNA forensics"
+description: "how to make genetic engineering attribution work?"
+# author: "Martin Stoffel"
+date: "2025-07-25"
+categories: [biosecurity]
+title-block-banner: false
+draft: False
+---
+
+genetic engineering attribution, also: 
+* lab-of-origin prediction
+* engineered-DNA forensics
+* biosec sequence attribution
+
+```{mermaid}
+%%| label: fig-mermaid
+%%| fig-cap: bio-forensics
+
+flowchart TD
+    A[bio-agent] --> B(natural)
+    A            --> C(engineered)
+    C            --> D(country-of-origin)
+    C            --> E(lab-of-origin)    
+```

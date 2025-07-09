@@ -88,7 +88,7 @@
     "href": "index.html",
     "title": "posts",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\n\n\n\n\n2025-06-25\n\n\nfree science\n\n\n\n\n2025-04-19\n\n\nd/acc bio\n\n\n\n\n2023-04-05\n\n\nhidden info\n\n\n\n\n2023-02-11\n\n\npiping python\n\n\n\n\n2022-11-10\n\n\ngg themes\n\n\n\n\n2022-01-09\n\n\nmap()-magic\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\n\n\n\n\n2025-07-25\n\n\nengineered-DNA forensics\n\n\n\n\n2025-06-25\n\n\nfree science\n\n\n\n\n2025-04-19\n\n\nd/acc bio\n\n\n\n\n2023-04-05\n\n\nhidden info\n\n\n\n\n2023-02-11\n\n\npiping python\n\n\n\n\n2022-11-10\n\n\ngg themes\n\n\n\n\n2022-01-09\n\n\nmap()-magic\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/piping/index.html",
@@ -551,5 +551,12 @@
     "title": ":x in",
     "section": "Deep learning side projects",
     "text": "Deep learning side projects\n\n\n\n\n\n\n\n\n\nDetecting artisanal mines in Myanmar from satellites\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Minimal transformer\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Neural Vocoder"
+  },
+  {
+    "objectID": "posts/gea/index.html",
+    "href": "posts/gea/index.html",
+    "title": "engineered-DNA forensics",
+    "section": "",
+    "text": "genetic engineering attribution, also: * lab-of-origin prediction * engineered-DNA forensics * biosec sequence attribution\n\n\n\n\n\n\nflowchart TD\n    A[🦠 Bio-Agent] --&gt; B{🌿 Natural}\n    A --&gt; C{🧬 Engineered}\n    \n    B --&gt; F[🔬 Species Analysis]\n    B --&gt; G[🌍 Geographic Tracing]\n    B --&gt; H[⏰ Temporal Analysis]\n    \n    C --&gt; D[🏛️ Country Attribution]\n    C --&gt; E[🥼 Lab Attribution]\n    \n    D --&gt; I[🗺️ Strain Databases]\n    D --&gt; J[🔍 Signature Analysis]\n    \n    E --&gt; K[👨‍🔬 Researcher Fingerprints]\n    E --&gt; L[🛠️ Technical Methods]\n    E --&gt; M[📊 Statistical Models]\n    \n    F --&gt; N[📝 Forensic Report]\n    G --&gt; N\n    H --&gt; N\n    I --&gt; N\n    J --&gt; N\n    K --&gt; N\n    L --&gt; N\n    M --&gt; N\n    \n    classDef naturalBox fill:#e8f5e8,stroke:#4caf50,stroke-width:2px\n    classDef engineeredBox fill:#fff3e0,stroke:#ff9800,stroke-width:2px\n    classDef analysisBox fill:#e3f2fd,stroke:#2196f3,stroke-width:2px\n    classDef reportBox fill:#f3e5f5,stroke:#9c27b0,stroke-width:3px\n    \n    class B,F,G,H naturalBox\n    class C,D,E,I,J,K,L,M engineeredBox\n    class N reportBox\n\n\n\n\nFigure 1: bio-forensics"
   }
 ]
