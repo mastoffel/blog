@@ -193,7 +193,7 @@ The scale of industrial seal hunting in the 18th-20th century was large, yet som
 
 ## :x plov {#x-plov}
 
-Around 60% of adult snowy plovers are males, which led to a mating system where females are polygynous (they get to have more than one partner per season). My buddy Luke led this project, where we wanted to know where this sex biases comes from! Born 50/50, most of the sex biases we see in adults actually originates in juveniles, where males have lower survival rates than males. We therefore argue that two-sex population models (as used in our study) are essential to understand population dynamics and can help to shed light on some of the remaining mysteries around sexual selection.
+Around 60% of adult snowy plovers are male, leading to a mating system where females are polygynous, because they can chose. My friend Luke led this project, where we wanted to know where this sex bias comes from. Turns out, at birth its 50/50, and most of the sex-bias in adults starts in juveniles, where males have lower survival rates than females. We argue that two-sex population models (as used in our study) are underused but essential to understand population dynamics and light on the remaining mysteries around sexual selection.
 
 *Authors* \| Luke J Eberhart-Phillips, Clemens Küpper, Tom EX Miller, Medardo Cruz-López, Kathryn H Maher, Natalie Dos Remedios, **Martin A Stoffel**, Joseph I Hoffman, Oliver Krüger, Tamás Székely
 

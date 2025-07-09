@@ -171,40 +171,10 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <div aria-describedby="fig-mermaid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-mermaid">flowchart TD
-    A[🦠 Bio-Agent] --&gt; B{🌿 Natural}
-    A --&gt; C{🧬 Engineered}
-    
-    B --&gt; F[🔬 Species Analysis]
-    B --&gt; G[🌍 Geographic Tracing]
-    B --&gt; H[⏰ Temporal Analysis]
-    
-    C --&gt; D[🏛️ Country Attribution]
-    C --&gt; E[🥼 Lab Attribution]
-    
-    D --&gt; I[🗺️ Strain Databases]
-    D --&gt; J[🔍 Signature Analysis]
-    
-    E --&gt; K[👨‍🔬 Researcher Fingerprints]
-    E --&gt; L[🛠️ Technical Methods]
-    E --&gt; M[📊 Statistical Models]
-    
-    F --&gt; N[📝 Forensic Report]
-    G --&gt; N
-    H --&gt; N
-    I --&gt; N
-    J --&gt; N
-    K --&gt; N
-    L --&gt; N
-    M --&gt; N
-    
-    classDef naturalBox fill:#e8f5e8,stroke:#4caf50,stroke-width:2px
-    classDef engineeredBox fill:#fff3e0,stroke:#ff9800,stroke-width:2px
-    classDef analysisBox fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
-    classDef reportBox fill:#f3e5f5,stroke:#9c27b0,stroke-width:3px
-    
-    class B,F,G,H naturalBox
-    class C,D,E,I,J,K,L,M engineeredBox
-    class N reportBox
+    A[bio-agent] --&gt; B(natural)
+    A            --&gt; C(engineered)
+    C            --&gt; D(country-of-origin)
+    C            --&gt; E(lab-of-origin)    
 </pre>
 </div>
 </div>
@@ -215,6 +185,13 @@ Figure&nbsp;1: bio-forensics
 </div>
 </div>
 </div>
+<p>We’re at an inflection point, where CRISPR and gene drives let us alter biology like never before, where genome-engineering technology is rapidly becoming cheaper and smaller and where AI changes the scale on which we understand the mechanisms underpinning everything. Therefore, we should take the possibility seriously that biotech will be misused and push safeguarding technologies in the spirit of <a href="../dacc-bio/"><strong>d/acc</strong></a> to prevent that.</p>
+<p>One early-stage technology is <strong>genetic engineering attribution (GEA)</strong>. It’s the idea that we can identify the designer of an engineered virus or bacterium by its DNA sequence.</p>
+<p>attribution security benefits: * inform response (motives? capabilities?) * identify responsible parties for penalty * succesful attribution can deter other actors</p>
+<p>info for attribution: * non-technical: location, epidemiological features (middle of conlict? labs nearby? accidental vs purposeful) * intelligence: whistleblowers, interc. comms, surveillance * technical forensics: properties of the agent</p>
+<p>engineered vs natural * IARPA FELIX program</p>
+<p>security potential of GEA * avoiding mistaken attribution is key * deterrence</p>
+<p>limits: * attribution techniques don’t detect whether the agent was engineered in the first place (it follows engineering detection) * risk of false positives * releases of “non-engineered agents” wouldn’t be captured * designer might not be mis-user * some actors want to claim that it was them! * data is from genetic engineers operating “in the clear” * sophisticated actors might obfuscate or misdirect attribution, e.g.&nbsp;use the methodological signature of another actor * but these attempts will leave their own signatures</p>
 
 
 

@@ -5,13 +5,37 @@ description: "how to make genetic engineering attribution work?"
 date: "2025-07-25"
 categories: [biosecurity]
 title-block-banner: false
-draft: False
+draft: True
 ---
 
-genetic engineering attribution, also: 
-* lab-of-origin prediction
-* engineered-DNA forensics
-* biosec sequence attribution
+
+New synthetic bio-agents are created in labs around the world. Often enough, something goes wrong and a virus escapes the lab. More worringly, bad actors could misuse biotech to create vastly more dangerous weapons than ever before. Unlike with non-biological things, its difficult to figure out **who** developed a bio-agent in the first place.
+
+Luckily, there's a new field for this: **Genetic engineering attribution (GEA)**. It's the idea that *engineered* bio-agents can be traced back to their designer through signatures in their DNA. Every lab uses their own designs and tools to create synthetic organisms, the combination if which can cause a unique pattern in the organisms DNA. 
+
+GEA as a defensive technology would allow to quickly inform a response to outbreaks, identify the responsible researcher/lab/country-of-origin and deter bad actors. But how far are we?
+
+### The beginnings: Nielsen & Voigt, 2018
+
+The early days of GEA using machine learning. Suprisingly timely, given COVID-19. 
+
+They used (engineered) Plasmid sequences from [Addgene](https://www.addgene.org/), where each entry has it's lab as meta-data. After cleaning, they worked with 36,764 plasmid sequences from 827 labs. Then, they simply one-hot encoded each nucleotide matrix (sequence length was sequence+reverse complement) into a simple CNN to predict which of the labs the sequence came from. 
+
+```{mermaid}
+%%| label: fig-cnn
+%%| fig-cap: Nielsen & Voigt CNN Architecture for Lab-of-Origin Prediction
+
+flowchart LR
+    A["DNA Sequence<br/>A T G C<br/>1 0 0 0<br/>0 1 0 0<br/>0 0 1 0<br/>0 0 0 1<br/>...<br/>16,048 × 4"] --> B["Conv<br/>+<br/>MaxPool"] --> C["Fully<br/>Connected"] --> D["827 labs<br/>Softmax"]
+    
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px
+    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px
+```
+
+The CNN predicted the correct lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10. 
+Then, they compared it to BLAST.
 
 ```{mermaid}
 %%| label: fig-mermaid
@@ -20,6 +44,52 @@ genetic engineering attribution, also:
 flowchart TD
     A[bio-agent] --> B(natural)
     A            --> C(engineered)
-    C            --> D(country-of-origin)
-    C            --> E(lab-of-origin)    
+    C            --> D(general info)
+    C            --> E(intelligence)
+    C            --> F(GEA)
+    F            --> G(country-of-origin)
+    F            --> H(lab-of-origin)    
 ```
+
+
+
+
+
+Therefore, we should take the possibility seriously that biotech will be misused and push safeguarding technologies in the spirit of [**d/acc**](../dacc-bio/) to prevent that.
+
+One early-stage technology is **genetic engineering attribution (GEA)**. It's the idea that we can identify the designer of an engineered virus or bacterium by its DNA sequence. 
+
+How's that possible? Like everything humans do, genetic engineering leaves a unique footprint in DNA, the combination of all the unique choices the lab made about design and tools. There's a myriad ways on how to do genetic engineering, and therefore everyone leaves their
+
+attribution security benefits:
+* inform response (motives? capabilities?)
+* identify responsible parties for penalty
+* succesful attribution can deter other actors
+
+info for attribution:
+* non-technical: location, epidemiological features (middle of conlict? labs nearby? accidental vs purposeful)
+* intelligence: whistleblowers, interc. comms, surveillance
+* technical forensics: properties of the agent
+
+engineered vs natural
+* IARPA FELIX program
+
+security potential of GEA
+* avoiding mistaken attribution is key
+* deterrence
+
+limits:
+* attribution techniques don't detect whether the agent was engineered in the first place (it follows engineering detection)
+* risk of false positives
+* releases of "non-engineered agents" wouldn't be captured
+* designer might not be mis-user
+* some actors want to claim that it was them!
+* data is from genetic engineers operating "in the clear" 
+* sophisticated actors might obfuscate or misdirect attribution,
+e.g. use the methodological signature of another actor
+    * but these attempts will leave their own signatures
+
+genetic engineering attribution, also:  
+* lab-of-origin prediction
+* engineered-DNA forensics
+* biosec sequence attribution
