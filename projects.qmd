@@ -1,4 +1,5 @@
 ---
+title: "projects"
 editor: 
       render-on-save: true
 filters:
