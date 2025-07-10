@@ -82,6 +82,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<meta name="quarto:status" content="draft">
 
 
 </head>
@@ -89,7 +90,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -163,7 +164,37 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 </header>
 
 
-<p>genetic engineering attribution, also: * lab-of-origin prediction * engineered-DNA forensics * biosec sequence attribution</p>
+<p>New synthetic bio-agents are created in labs around the world. Often enough, something goes wrong and a virus escapes the lab. More worringly, bad actors could misuse biotech to create vastly more dangerous weapons than ever before. Unlike with non-biological things, its difficult to figure out <strong>who</strong> developed a bio-agent in the first place.</p>
+<p>Luckily, there’s a new field for this: <strong>Genetic engineering attribution (GEA)</strong>. It’s the idea that <em>engineered</em> bio-agents can be traced back to their designer through signatures in their DNA. Every lab uses their own designs and tools to create synthetic organisms, the combination if which can cause a unique pattern in the organisms DNA.</p>
+<p>GEA as a defensive technology would allow to quickly inform a response to outbreaks, identify the responsible researcher/lab/country-of-origin and deter bad actors. But how far are we?</p>
+<section id="the-beginnings-nielsen-voigt-2018" class="level3">
+<h3 class="anchored" data-anchor-id="the-beginnings-nielsen-voigt-2018">The beginnings: Nielsen &amp; Voigt, 2018</h3>
+<p>The early days of GEA using machine learning. Suprisingly timely, given COVID-19.</p>
+<p>They used (engineered) Plasmid sequences from <a href="https://www.addgene.org/">Addgene</a>, where each entry has it’s lab as meta-data. After cleaning, they worked with 36,764 plasmid sequences from 827 labs. Then, they simply one-hot encoded each nucleotide matrix (sequence length was sequence+reverse complement) into a simple CNN to predict which of the labs the sequence came from.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-cnn" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cnn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-cnn">flowchart LR
+    A["DNA Sequence&lt;br/&gt;A T G C&lt;br/&gt;1 0 0 0&lt;br/&gt;0 1 0 0&lt;br/&gt;0 0 1 0&lt;br/&gt;0 0 0 1&lt;br/&gt;...&lt;br/&gt;16,048 × 4"] --&gt; B["Conv&lt;br/&gt;+&lt;br/&gt;MaxPool"] --&gt; C["Fully&lt;br/&gt;Connected"] --&gt; D["827 labs&lt;br/&gt;Softmax"]
+    
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px
+    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cnn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Nielsen &amp; Voigt CNN Architecture for Lab-of-Origin Prediction
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The CNN predicted the correct lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10. Then, they compared it to BLAST.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-mermaid" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -173,27 +204,34 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <pre class="mermaid mermaid-js" data-label="fig-mermaid">flowchart TD
     A[bio-agent] --&gt; B(natural)
     A            --&gt; C(engineered)
-    C            --&gt; D(country-of-origin)
-    C            --&gt; E(lab-of-origin)    
+    C            --&gt; D(general info)
+    C            --&gt; E(intelligence)
+    C            --&gt; F(GEA)
+    F            --&gt; G(country-of-origin)
+    F            --&gt; H(lab-of-origin)    
 </pre>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mermaid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: bio-forensics
+Figure&nbsp;2: bio-forensics
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>We’re at an inflection point, where CRISPR and gene drives let us alter biology like never before, where genome-engineering technology is rapidly becoming cheaper and smaller and where AI changes the scale on which we understand the mechanisms underpinning everything. Therefore, we should take the possibility seriously that biotech will be misused and push safeguarding technologies in the spirit of <a href="../dacc-bio/"><strong>d/acc</strong></a> to prevent that.</p>
+<p>Therefore, we should take the possibility seriously that biotech will be misused and push safeguarding technologies in the spirit of <a href="../dacc-bio/"><strong>d/acc</strong></a> to prevent that.</p>
 <p>One early-stage technology is <strong>genetic engineering attribution (GEA)</strong>. It’s the idea that we can identify the designer of an engineered virus or bacterium by its DNA sequence.</p>
+<p>How’s that possible? Like everything humans do, genetic engineering leaves a unique footprint in DNA, the combination of all the unique choices the lab made about design and tools. There’s a myriad ways on how to do genetic engineering, and therefore everyone leaves their</p>
 <p>attribution security benefits: * inform response (motives? capabilities?) * identify responsible parties for penalty * succesful attribution can deter other actors</p>
 <p>info for attribution: * non-technical: location, epidemiological features (middle of conlict? labs nearby? accidental vs purposeful) * intelligence: whistleblowers, interc. comms, surveillance * technical forensics: properties of the agent</p>
 <p>engineered vs natural * IARPA FELIX program</p>
 <p>security potential of GEA * avoiding mistaken attribution is key * deterrence</p>
 <p>limits: * attribution techniques don’t detect whether the agent was engineered in the first place (it follows engineering detection) * risk of false positives * releases of “non-engineered agents” wouldn’t be captured * designer might not be mis-user * some actors want to claim that it was them! * data is from genetic engineers operating “in the clear” * sophisticated actors might obfuscate or misdirect attribution, e.g.&nbsp;use the methodological signature of another actor * but these attempts will leave their own signatures</p>
+<p>genetic engineering attribution, also:<br>
+* lab-of-origin prediction * engineered-DNA forensics * biosec sequence attribution</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
