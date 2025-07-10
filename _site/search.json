@@ -7,11 +7,179 @@
     "text": "I’m Martin, an independent researcher. At the moment I’m thinking about the intersection of AI safety and biology funded by an Open Philantropy grant, while building AI agents for a small company on the side. Previously, I led the development of AutoEmulate, an open-source package to emulate physics simulations using machine learning at the Turing Institute; explored parallels between cultural evolution and AI progress as a PIBBSS fellow; studied deleterious mutations in a bronze-age island sheep population; discovered genetic traces of the 19th century overhunting in pinniped populations around the world, consulted on whether racehorse breeding actually works, and built scientific open source software.\nThings I like: trying to write a blog, Pokemon Red, Steel Maces, Open Water Swimming, The Tao of Pooh, cycling against the wind on Snaefellsnes, playing Ukulele with my 1 year old, saying serious things in spontaneous conversations.\nPlease get in touch if you’d like to chat!"
   },
   {
-    "objectID": "posts/dacc-bio/index.html",
-    "href": "posts/dacc-bio/index.html",
-    "title": "d/acc bio",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "projects",
     "section": "",
-    "text": "Biological laboratories are less safe than one might think. Looking at known incidents between 2000 and 2021 roughly every couple of weeks a lab worker accidentally gets infected, and roughly once a year, a pathogen escapes the lab. These are only reported accidents, likely to be an underestimate.\nSome of them are hard to believe. The only human infectious disease that we ever managed to eradicate is smallpox, caused by the variola virus. Since its eradication in 1980, there should just be two high-security stashes of it worldwide, one in the US and one in Russia. Yet, a third stash was discovered in 2014, in a six decade old cardboard box in an unsecured storage room on the NIH campus. Just a year later, the Pentagon accidentally sent live Anthrax samples to various places, including South Korea.\nAnd the list goes on. Brucella leaked from a biopharma plant in Lanzhou, infecting 10k people. The 1977 Russian flu pandemic had signs of a lab leak; the underlying H1N1 flu strain resembled a virus circulating 30 years earlier.\nBiosecurity is simply not that easy, humans make mistakes and accidents happen. But accidents are only part of the risk.\nBioweapons have a long history. From catapulting plague-infected bodies to blankets infected with smallpox, humans have found many ways to weaponise biological agents. Several countries had biological weapons programs, and some are suspected to still run them. Yet, the Biological Weapons Convention, an international treaty with the mission to effectively ban the development of bioweapons, runs with a handful of employees on roughly the budget of an average McDonald’s.\nThen there’s bioterrorism. In 1984, the Rajneeshee sect contaminated salads in restaurants in Oregon with Salmonella, poisening 750 people. Aum Shinrikyo, a Japanese doomsday cult, tried and failed to develop bioweapons but managed to carry out a chemical weapons attack on the Tokyo subway in 1995, killing and injuring many. In 2001, a US scientist sent anthrax letters to various senators and journals, resulting in several casualties and injuries.\nIn the near future, it will become increasingly possible for terrorists to design much more dangerous bio-agents.\nFirst, biotech is becoming increasingly cheap and available. Sequencing a human genome cost 100 million dollars in 2001, now it’s a few hundred. We can order synthesised DNA and get it shipped to us in a week. While most companies do screen orders for potentially dangerous sequences, around 20% don’t. Soon, it might even be possible to just synthesise DNA at home on a small benchtop device. With the right DNA, a real virus can be created using reverse genetics. While this is not that easy, future AI models will be increasingly capable assistants for biotech work, allowing less and less knowledgable actors to create pathogens in the lab.\nSo, the stakes are high. But don’t despair. In the spirit of d/acc, in the next few posts I’ll have a look at biosecurity technologies that will help safeguard humanity against ever more likely biological threats. d/acc is the idea that we should differentially focus on developing defensive, democratic and decentralised technologies. Think early-detection systems and open source vaccines instead of gain-of-function research. Let’s have a look what is out there."
+    "text": "AutoEmulate: Speeding up physics simulations using machine learning.\nJOSS (2025) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nrptR: Intra-class coefficients for hierarchical models.\nMethods in Ecology and Evolution (2017) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\npartR2: R2 for individual fixed effects in hierarchical models.\nPeerJ (2021) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\ninbreedR: Identity disequlibria and more.\nMethods in Ecology and Evolution (2016) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nGCalignR: Aligning gas chromatography samples.\nPlos One (2018) | Code\n:🥥"
+  },
+  {
+    "objectID": "projects.html#software",
+    "href": "projects.html#software",
+    "title": "projects",
+    "section": "",
+    "text": "AutoEmulate: Speeding up physics simulations using machine learning.\nJOSS (2025) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nrptR: Intra-class coefficients for hierarchical models.\nMethods in Ecology and Evolution (2017) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\npartR2: R2 for individual fixed effects in hierarchical models.\nPeerJ (2021) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\ninbreedR: Identity disequlibria and more.\nMethods in Ecology and Evolution (2016) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nGCalignR: Aligning gas chromatography samples.\nPlos One (2018) | Code\n:🥥"
+  },
+  {
+    "objectID": "projects.html#research",
+    "href": "projects.html#research",
+    "title": "projects",
+    "section": "Research",
+    "text": "Research\nselected, full list here.\n\nQuantitative and evolutionary genetics\n\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nEvol letters (2024) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:🥥\n\n\n\n\n\nMolecular ecology\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:🥥\n\n\n\n\n\nConservation genetics\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :🥥\n\n\n\n\n\nBehavioural ecology\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:🥥\n\n\n\n\n\nResearch consulting\n\n\n\n\n\n\n\n\n\nImpacts of systemic inbreeding in Thoroughbred racehorses.\nProceedings of the Royal Society B (2022)\n:🥥"
+  },
+  {
+    "objectID": "projects.html#side-projects",
+    "href": "projects.html#side-projects",
+    "title": "projects",
+    "section": "Side projects",
+    "text": "Side projects\n\n\n\n\n\n\n\n\n\nDetecting artisanal mines in Myanmar from satellites\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Minimal transformer\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Neural Vocoder"
+  },
+  {
+    "objectID": "projects.html#x-el",
+    "href": "projects.html#x-el",
+    "title": "projects",
+    "section": ":x el",
+    "text": ":x el\nWe scanned the genomes of thousands of wild Soay sheep for embryonic lethal mutations. These mutations prevent an individual from being born, should it be unlucky enough to receive the same genetic variant from both mum and dad. We found a few and wondered how they are maintained in the population. We show that despite their negative effects, these mutations can persist when genetically linked to beneficial variants.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-roh",
+    "href": "projects.html#x-roh",
+    "title": "projects",
+    "section": ":x roh",
+    "text": ":x roh\nRuns of homozygosity (ROH) are long stretches of homozygous genotypes, and turn out to be a weirdly insightful feature of the genome. The longer an ROH is, the fewer generations in the past is it’s common ancestor haplotype. We show using simulation and empirical genome data that such long ROH have a higher density of deleterious mutations, as natural selection had less time to select against them, compared to short ROH. This has been hypothesised before, but never been shown using real fitness data.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-id",
+    "href": "projects.html#x-id",
+    "title": "projects",
+    "section": ":x id",
+    "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of bronze-age sheep, we show that the effects of even slight inbreeding on survival are severe. We uncover some of the underlying genetic mechanisms using a novel type of genome-wide association study to estimate the effects of deleterious mutations across the genome. This is possibly the most extensive study of its kind, outside of humans.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-nes",
+    "href": "projects.html#x-nes",
+    "title": "projects",
+    "section": ":x nes",
+    "text": ":x nes\n:Northern elephant seals have the second-largest sexual size dimorphism of any mammal (right after their Southern sister-species). Adult males can be 3-5 times as heavy as females. Why is that? Sexual selection has favored larger males because they are able to defend large harems of females on the beach against competitors.\nIn young elephant seals (pups) you can’t really spot a difference between males and females yet. However, when measuring their gut microbiome, sampled with a very long cotton swab, we find very strong sex-differences from early on. This opens the possibility for microbes to provide an adaptation to these two very different life-history strategies of female and male elephant seals.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
+  },
+  {
+    "objectID": "projects.html#x-bot",
+    "href": "projects.html#x-bot",
+    "title": "projects",
+    "section": ":x bot",
+    "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
+  },
+  {
+    "objectID": "projects.html#x-plov",
+    "href": "projects.html#x-plov",
+    "title": "projects",
+    "section": ":x plov",
+    "text": ":x plov\nAround 60% of adult snowy plovers are male, leading to a mating system where females are polygynous, because they can chose. My friend Luke led this project, where we wanted to know where this sex bias comes from. Turns out, at birth its 50/50, and most of the sex-bias in adults starts in juveniles, where males have lower survival rates than females. We argue that two-sex population models (as used in our study) are underused but essential to understand population dynamics and light on the remaining mysteries around sexual selection.\nAuthors | Luke J Eberhart-Phillips, Clemens Küpper, Tom EX Miller, Medardo Cruz-López, Kathryn H Maher, Natalie Dos Remedios, Martin A Stoffel, Joseph I Hoffman, Oliver Krüger, Tamás Székely"
+  },
+  {
+    "objectID": "projects.html#x-chem",
+    "href": "projects.html#x-chem",
+    "title": "projects",
+    "section": ":x chem",
+    "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
+  },
+  {
+    "objectID": "projects.html#x-horse",
+    "href": "projects.html#x-horse",
+    "title": "projects",
+    "section": ":x horse",
+    "text": ":x horse\nWe show that genomic inbreeding reduces the changes of a Thoroughbred horse ever making it to the racecourse, and pinpoint a genomic region where homozygosity has a particularly large effect, independent of genome-wide inbreeding. Results were a paper, the full reproducible analysis and a patent for the method.\nAuthors | Emmeline W Hill, Martin A Stoffel, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-oryx",
+    "href": "projects.html#x-oryx",
+    "title": "projects",
+    "section": ":x oryx",
+    "text": ":x oryx\nto do\nAuthors | sEmily Humble, Martin A. Stoffel, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden"
+  },
+  {
+    "objectID": "projects.html#x-ae",
+    "href": "projects.html#x-ae",
+    "title": "projects",
+    "section": ":x ae",
+    "text": ":x ae\nSimulations of complex systems are slow. To speed them up for research and application, we have to emulate them, often using machine learning. This is difficult though. AutoEmulate’s goal is to provide a low-code platform to do all this automatically. I’ve created the package and was lead developer during my time at the Turing Institute. On the left is the old hex logo."
+  },
+  {
+    "objectID": "projects.html#x-rp",
+    "href": "projects.html#x-rp",
+    "title": "projects",
+    "section": ":x rp",
+    "text": ":x rp\nrptR calculates intra-class coefficients (also called repeatabilities, hence the name) based on generalised linear mixed models. It does just that, but pretty well, and has somehow become a standard in various fields. Hence the 191x field-citation ratio."
+  },
+  {
+    "objectID": "projects.html#x-p2",
+    "href": "projects.html#x-p2",
+    "title": "projects",
+    "section": ":x p2",
+    "text": ":x p2\npartR2 uses a few tricks to calculate the explained variance per fixed effect in GLMMs. There’s not much else doing this properly, so it has become quite popular. But take care: it’s key to think what exactly it is that you want to know, especally for more complicated models involving interactions etc."
+  },
+  {
+    "objectID": "posts/theme/index.html",
+    "href": "posts/theme/index.html",
+    "title": "gg themes",
+    "section": "",
+    "text": "ggplot2 has become one of the most powerful and flexible visualisation tools, with a large community and lots of people working on new extensions every day. A large number of ways to represent data makes it possible to create nearly anything in ggplot2, from great data journalism to beautiful infographics and generative art. No post-processing required anymore.\nThe general look of a ggplot is controlled by a theme. Anyone using ggplot knows that the default grey theme is usually not what you want to show the world. Modifying themes is very flexible, but a little bit complicated. Even after using it for years, I have to google some things every single time. Creating your own theme is a way to give your plots a consistent and personal design, and will save you a lot of time and many lines of code.\n\nThe default ggplot\nLet’s use the data from gapminder to see how a default plot looks like. We first load a few packages and do some data pre-processing.\n\nlibrary(ggplot2)\nlibrary(gapminder)\nlibrary(dplyr)\nlibrary(wesanderson)\nlibrary(systemfonts)\n# a bit of data processing\ndat &lt;- gapminder %&gt;% \n        group_by(year, continent) %&gt;% \n        summarise(`Life Expectancy` = mean(lifeExp),\n                  Population = sum(as.numeric(pop)), \n                  .groups = 'drop') %&gt;% \n        rename(Year = year, Continent = continent)\n\nHere is a default theme_grey() scatterplot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n      geom_point()\n\n\n\n\n\n\n\n\nThere are a few things I change all the time:\n\nThe background, which I prefer simple plain, or only with x and y axis lines.\nGrid lines: I usually keep only major grid lines (as they are connected to values) or remove them entirely.\nThe spacing between axis, axis-labels and axis-titles.\nThe font.\nFor themes with axis lines, like theme_classic, the line thickness.\n\n\n\nMaking your own theme\nMaking a new theme is quite simple. We (1) create a function which starts with a standard theme, such as theme_minimal and (2) add all the theme aspects which we prefer for our plots. Finally (3), we add some arguments to make changing things easy which we need often, such as axis and grid lines and the text size. Below is the theme I am using, but of course you can change every other theme aspect too (see theme documentation). I’m often using the ‘Avenir Next’ font, which might not be installed on your system. Using ‘sans’ should always work.\n\ntheme_simple &lt;- function(axis_lines = TRUE, \n                         grid_lines = FALSE,     \n                         text_size = 12,       \n                         line_width = 0.2,\n                         # replace with 'sans' if not working\n                         base_family= 'Avenir Next'){ \n        \n    # start with theme_minimal because it is really simple.\n    th &lt;- ggplot2::theme_minimal(base_family = base_family, \n                               base_size = text_size)\n         \n    # remove the grid lines \n    th &lt;- th + theme(panel.grid=element_blank())\n    \n    # if we want axis lines\n    if (axis_lines) {\n      # We add axis lines and give them our preferred thickness\n        th &lt;- th + \n            theme(axis.line = element_line(linewidth = line_width),\n                  axis.ticks = element_line(linewidth = line_width))\n    } \n    # do we want grid lines?\n    if (grid_lines) {\n        th &lt;- th + \n            theme(panel.grid.major = element_line(linewidth = line_width))\n    }\n    \n    # more space for axis text/title and plot title \n    th &lt;- th + theme(\n              axis.text.x=element_text(margin=margin(t=5)),\n              axis.text.y=element_text(margin=margin(r=5)),\n              axis.title.x=element_text(margin=margin(t=10)),\n              axis.title.y=element_text(margin=margin(r=10)),\n              plot.title=element_text(margin=margin(b=10)))\n    \n    return (th)\n}\n\n\n\nAdding theme_simple to the plot.\nNow, we can add theme_simple() to the plot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n    geom_point() +\n    scale_color_manual(values = wes_palette(\"Darjeeling2\")) + \n    theme_simple()\n\n\n\n\n\n\n\n\nSmall tweaks can sometimes make a big aesthetic difference. ggplot comes with a few themes, like theme_classic(), which are sort of close to what I like my plots to be, but are just not quite there. If you feel the same, it’s time to make your own theme.\nLastly, you can put the code for your theme into an R script and save it, for example as theme_simple.R. The next time you make plots, just source the script to load the theme_simple() function. To use it as the default theme, we can use theme_set like so:\n\nsource(\"theme_simple.R\") \n# set theme_simple as default theme\nggplot2::theme_set(theme_simple()) \n\nThat’s it!\nIf you are plotting in base R, you might say: You need a full blog post just to explain how to make ggplot look like base R with a different font! And I can only say: touché, my friend.\n\n\nAppendix: Installing fonts\nFonts can really make a big difference in the visual design of plots. A lot of freely available fonts are on https://fonts.google.com/. On Mac, I just download them, double click and they are installed. Then, we have to make them available in R. The systemfonts package magically finds all installed fonts from different directories.\n\n# install.packages(\"systemfonts\")\nlibrary(systemfonts)\n# which fonts are installed?\n# print only top 5\nsystem_fonts()[1:5, ]\n\n#&gt; # A tibble: 5 × 9\n#&gt;   path                    index name  family style weight width italic monospace\n#&gt;   &lt;chr&gt;                   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;ord&gt;  &lt;ord&gt; &lt;lgl&gt;  &lt;lgl&gt;    \n#&gt; 1 /System/Library/Assets…     0 Balo… Baloo… Regu… normal norm… FALSE  FALSE    \n#&gt; 2 /System/Library/Assets…     8 Nira… Niram… Light light  norm… FALSE  FALSE    \n#&gt; 3 /System/Library/Assets…     0 Shob… Shobh… Regu… normal norm… FALSE  FALSE    \n#&gt; 4 /System/Library/Fonts/…     1 Telu… Telug… Bold  bold   norm… FALSE  FALSE    \n#&gt; 5 /Users/msto/Library/Fo…     0 JetB… JetBr… Semi… semib… norm… FALSE  TRUE\n\n\nOther options to import fonts are extrafont and showtext.\n\n\npdf-ing\nSometimes, especially for science publications, plots need to be saved as pdfs. With non-standard fonts, this can be problematic, because they have to be embedded, but a little tweak to ggsave() can help here.\n\nggsave(\"plot.pdf\", device = cairo_pdf)"
+  },
+  {
+    "objectID": "posts/info/stackoverflow.html",
+    "href": "posts/info/stackoverflow.html",
+    "title": "Are Python questions on stackoverflow dropping since ChatGPT?",
+    "section": "",
+    "text": "This notebook\n* fetches the number of stackoverflow questions per month with the Python tag from stackoverflow using their API\n* plots them\n\nimport requests\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom matplotlib.dates import date2num\nfrom plotnine import *\nfrom datetime import datetime, timedelta\n\n\n# Set the API URL for fetching data\nbase_url = \"https://api.stackexchange.com/2.3/questions\"\n\n# Set the parameters\nparams = {\n    \"site\": \"stackoverflow\",\n    \"tagged\": \"python\",\n    \"pagesize\": 1,\n    \"fromdate\": None,\n    \"todate\": None,\n    \"filter\": \"total\",\n}\n\n\n# Get stackoverflow data for the last 96 months\ncurrent_date = datetime.now()\nend_date = current_date.replace(day=1) - timedelta(days=1)\nstart_date = end_date - timedelta(days=96*30)  \n\nmonths = pd.date_range(start=start_date, end=end_date + pd.Timedelta(days=1), freq='MS')\ndata = []\n\n# Fetch the data from the API\nfor i in range(len(months) - 1):\n    params[\"fromdate\"] = int(months[i].timestamp())\n    params[\"todate\"] = int(months[i+1].timestamp())\n    \n    response = requests.get(base_url, params=params)\n    total_questions = response.json()[\"total\"]\n    \n    data.append({\"month\": months[i].strftime(\"%Y-%m\"), \"questions\": total_questions})\n    \ndf = pd.DataFrame(data)\n\nnov_2022_data = df[df[\"month\"] == \"2022-11\"].iloc[0]\nsns.set(style=\"white\")\nplt.rcParams[\"font.family\"] = \"sans-serif\"\nfig, ax = plt.subplots(figsize=(7, 3.5))\nsns.lineplot(\n    x=\"month\", y=\"questions\", data=df, ax=ax, linewidth=2, color=\"#1f77b4\"\n)\nsns.scatterplot(\n    x=\"month\", y=\"questions\", data=df, ax=ax, color=\"#1f77b4\", s=20\n)\nax.axvline(x=nov_2022_data[\"month\"], ymin=0, ymax=1, linestyle=\"--\", color=\"grey\")\nax.annotate(\n    \"ChatGPT\\nrelease\",\n    xy=(nov_2022_data[\"month\"], nov_2022_data[\"questions\"] + 1000),\n    xytext=(5, 30),\n    textcoords=\"offset points\",\n    arrowprops=dict(arrowstyle=\"-&gt;\", color=\"#3B4252\"),\n    color=\"#3B4252\",\n)\n\nnum_labels = 5\nstep = len(df[\"month\"]) // (num_labels - 1)\nxticks = sorted(\n    list(set(df[\"month\"][::step].tolist() + [nov_2022_data[\"month\"]]))[:-1]\n)\nax.set_xticks(xticks)\nplt.xticks(rotation=60, fontsize=12)\nax.set_ylim(5000, 30000)\nax.set_yticks(range(10000, 31000, 10000))\nplt.yticks(fontsize=12)\nax.set_xlabel(\"Month\", fontsize=14, fontweight=\"bold\", labelpad=15)\nax.set_ylabel(\n    \"# of questions with python tag\", fontsize=14, fontweight=\"bold\", labelpad=15\n)\nax.tick_params(axis=\"both\", colors=\"grey\")\nfor spine in [\"bottom\", \"left\"]:\n    ax.spines[spine].set_color(\"grey\")\nax.grid(False)\nsns.despine()\nplt.show()\n\n\n\n\n\n\nThe number of python questions on Stackoverflow. Data: Stackoverflow API.\n\n\n\n\n\n\n#df.to_csv(\"stackoverflow_python_questions.csv\", index=False)"
+  },
+  {
+    "objectID": "posts/smcp/index.html",
+    "href": "posts/smcp/index.html",
+    "title": "free science",
+    "section": "",
+    "text": "At first, AIs were created to understand the world. Now, a world is created that AIs can understand better.\nThe Model Context Protocol (MCP) defines a standardised interface between things and AI. Until MCP, LLMs like ChatGPT or Claude had to figure out where to look for data, how to use an application, or how to navigate a website. This often goes wrong, because apps are all different, and data is often not accessible.\nNow, if you’d like an AI to easily access your (app, system, data), you can create an MCP server. An MCP consists of a few fundamental building blocks like tools, resources and prompts for whethever task it is you’d like AIs to do. These building blocks are attached to your app and provide exactly the information that an AI needs to use it. Eventually, if everything from browsers to online shopping to booking flights has MCP servers, AIs will be able to easily do all these things for us, because they’ll know how to use them.\nWouldn’t it be cool if science had MCPs? Say, each paper has its own MCP server that cleanly exposes all important parts, such as methods, conclusions, code and data, independent of the layout of the journal or the structure of the code or data repo? Each paper-MCP would also be registered somewhere, so that AIs can just search for it. Let’s call this protocol the Science Model Context Protocol (SMCP).\nHere’s a list of things that a high-bandwidth, high-accuracy AI-science interface through SMCPs would enable:\n\nautomated synthesis: AI agents could reliably synthesise knowledge through systematic-reviews and meta-analyses, effectively enabling anyone to summarise state of the art knowledge on any question. This could dramatically accelerate science and improve/save many lives.\ndecentralised knowledge: tacit knowledge and skills are highly centralised within few institutions. I was a Postdoc at the University of Edinburgh, which is a hub for stats and genetics, making it much easier to produce high quality publications even as a fresh PhD student. What if everyone, no matter their University, could have easy access to the models, code, and rational behind them? This is what SCMPs will do.\nde-duplicating efforts: Too much time is spent replicating code for data-processing and analyses. Through an SCMP, AI can recreate them and adapt them to different use cases, freeing up time and capacity for researchers to explore new things.\nlive science + digital twins: most research is a one-off. Get the data, run the experiment, analyse, publish. However, what if more data comes along? Especially in the context of a research synthesis? SCMPs will facilitate continuous analyses, added more data and updating the results over time. I imagine that many important papers will have live “digital twins” which incorporate and publish continuous updates.\nstreamlined evaluation: AI agents can review bugs in code, flaws in statistical modelling and experimental design. Humans can think evaluate the bigger picture and conclusions. This wouldn’t just save time, but upskill humans and AIs in the process.\n\nLet’s be clear though, there are risks too:\n\nstreamlining scientific information for AIs will speed up AGI timelines. Are we ready for this?\nit also makes it easier for bad actors to access knowledge via AI, e.g. biotech, weapons\n\nWhenever we decentralise information, it comes with benefits and risks. In the age of AI, the trajectory is less clear than ever. Should we free science?"
+  },
+  {
+    "objectID": "posts/piping/index.html",
+    "href": "posts/piping/index.html",
+    "title": "piping in python",
+    "section": "",
+    "text": "Data wrangling in Python seems clunky. Yet, it doesn’t have to be. Here is how to pipe in Python."
+  },
+  {
+    "objectID": "posts/piping/index.html#the-problem",
+    "href": "posts/piping/index.html#the-problem",
+    "title": "piping in python",
+    "section": "The problem",
+    "text": "The problem\nIn R, we process data beautifully with dplyr and %&gt;%:\n\nsuppressMessages(library(dplyr))\niris %&gt;%\n  mutate(sepal_ratio = Sepal.Width / Sepal.Length) %&gt;%\n  filter(sepal_ratio &gt; 0.5) %&gt;%\n  select(Species, sepal_ratio) %&gt;%\n  group_by(Species) %&gt;%\n  summarise(mean_sepal_ratio = mean(sepal_ratio))\n\nIn Python’s pandas, most data wrangling code looks much less great, often like this:\n\nimport pandas as pd\nurl = \"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv\"\niris = pd.read_csv(url)\n\niris[\"sepal_ratio\"] = iris[\"sepal_width\"] / iris[\"sepal_length\"]\niris = iris[iris[\"sepal_ratio\"] &gt; 0.5]    #filter\niris = iris[[\"species\", \"sepal_ratio\"]]   #select\niris = iris.groupby(\"species\")            #group by\niris = iris.agg({\"sepal_ratio\": \"mean\"})  #summarise\n\nThis is hard to read because there’s lots of repitition."
+  },
+  {
+    "objectID": "posts/piping/index.html#a-new-hope",
+    "href": "posts/piping/index.html#a-new-hope",
+    "title": "piping in python",
+    "section": "A new hope",
+    "text": "A new hope\nBut don’t despair! We can pipe in Python, too. Here is how:\n\niris = pd.read_csv(url)\n\n(iris\n  .assign(sepal_ratio = lambda x: x.sepal_width / x.sepal_length)\n  .query(\"sepal_ratio &gt; 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n            sepal_ratio\nspecies                \nsetosa         0.684248\nversicolor     0.530953\nvirginica      0.526112\n\n\nFor now, there are only two main principles to remember:\n\nUse . instead of %&gt;% to pipe. Put . at the beginning of the line.\nUse () around the whole expression. Python will complain otherwise.\n\nThere is a pipeable method for most tasks. Sometimes, though, there isn’t, but you can still make it work.\n\nUse lambda to define a function on the fly (like in .assign() above).\nUse .pipe(), which takes a function as an argument and allows you to pipe it.\n\nHere is an example of .pipe():\n\ndef sepal_ratio(df):\n  return df.assign(sepal_ratio = df.sepal_width / df.sepal_length)\n\n(iris\n  .pipe(sepal_ratio)\n  .query(\"sepal_ratio &gt; 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n            sepal_ratio\nspecies                \nsetosa         0.684248\nversicolor     0.530953\nvirginica      0.526112\n\n\nThat’s it! Some people don’t like piping because, they say, it’s harder to debug. I like to simply comment out lines, allowing you to run it line by line, which makes it actually very easy to debug. A pipe is also easy to read as it’s basically like a recipe. Start with a dataframe and change stuff step by step.\nHere’s a quick summary over the most common data wrangling tasks and their pipeable methods and functions in dplyr and pandas:\n\n\n\ntask\ndplyr\npandas\n\n\n\n\nfilter rows\nfilter()\ndf.query()\n\n\npick columns\nselect()\ndf.loc[]\n\n\ngroup by\ngroup_by()\ndf.groupby()\n\n\nsummarise\nsummarise()\ndf.agg()\n\n\nmake new variable\nmutate()\ndf.assign()\n\n\njoin dfs\ninner_join()\ndf.merge()\n\n\nsort df\narrange()\ndf.sort_values()\n\n\nrename columns\nrename()\ndf.rename()\n\n\n\n\n\n\n\n\nLast tip: AI is your friend. If you’re stuck, put your pandas code in chatgpt or GitHub Copilot and ask it to re-write code as a pipe. Seems to work pretty well."
+  },
+  {
+    "objectID": "posts/piping/index.html#not-so-secret-bonus-siuba",
+    "href": "posts/piping/index.html#not-so-secret-bonus-siuba",
+    "title": "piping in python",
+    "section": "Not so secret bonus: siuba",
+    "text": "Not so secret bonus: siuba\nThere is also the beautiful siuba package. If you come from R, this might be the way to go. But even if not, it’s still less verbose than pandas. Last time I tried it, the package didn’t quite have everything I needed but I think it grew a lot since then. Here is the same pipeline, but with siuba:\n\nfrom siuba import _, mutate, filter, select, group_by, summarize\n\n(iris\n  &gt;&gt; mutate(sepal_ratio = _.sepal_width / _.sepal_length)\n  &gt;&gt; filter(_.sepal_ratio &gt; 0.5)\n  &gt;&gt; select(_.species, _.sepal_ratio)\n  &gt;&gt; group_by(_.species)\n  &gt;&gt; summarize(mean_sepal_ratio = _.sepal_ratio.mean())\n  )"
+  },
+  {
+    "objectID": "posts/info/index.html",
+    "href": "posts/info/index.html",
+    "title": "hidden info",
+    "section": "",
+    "text": "“If I am what I have and if what I have is lost, then who am I?”\n- Erich Fromm\nThe future of knowledge is at a crossroads. Before long, most text and code will be written by or with AI models. What was once explicit human reasoning will become information hidden in neural network weights, undecipherable changes in evergrowing matrices. Model outputs will soon become inputs, and the trajectory of knowledge becomes unclear once we outsourced thinking to the machine.\nFor people who code, Stackoverflow is the place where problems are discussed and solutions are found. The community makes sure that precise questions are asked and that answers are ranked, corrected and accepted. More than merely providing solutions, the platform makes the human reasoning process explicit and open. Stackoverflow documents how we, as humans, think about code. But this could soon be over.\nWhy would anyone go through the effort of constructing a minimal reproducible example, formulating a precise question and waiting for hours or days to get an answer, if ChatGPT gives a decent answer straight away and hassle-free? To get some insights into this, I had a look at the number of questions with a Python tag on Stackoverflow over time. While Python questions were increasing :for years, there is a clear drop since ChatGPT was released.\nThe decline isn’t super strong yet, but we can see where this is going. Stackoverflow, an open catalogue of human reasoning, will be replaced by private human-to-AI interactions. Human-readable information becomes hidden in neural network weights. Knowledge-generation is outsourced into AI systems with billions of parameters.\nCode, arguably, is easy to validate. At least we roughly know when it does what we want. This is different in science, where the reasoning process itself is key to the validity of the results. Soon, AI reasoning will permeate the very foundation of science. AI’s are going to plan experiments, collect and analyse data, draw conclusions and write papers. Much of the human input to new knowledge will be evaluating AI outputs rather than reasoning ourselves.\nWhether AI will outperform human reasoning or be subtly wrong more often than humans, we can’t let the reasoning underpinning science be hidden in AI models. To keep the upper hand, we need to transition to a true open source science, where the community has the opportunity to collectively understand and verify scientific progress. The current peer review system, possibly a failed experiment anyway, won’t be able to keep up with a flood of AI-generated papers. Rather than receiving a scientific stamp-of-approval after being reviewed by only two or three peers, scientific papers should be continously open to scrutiny and improvement by the community. For inspiration, we could have a look at Stackoverflow."
+  },
+  {
+    "objectID": "posts/info/index.html#x-graph",
+    "href": "posts/info/index.html#x-graph",
+    "title": "hidden info",
+    "section": ":x graph",
+    "text": ":x graph\nNote: the peak in the graph marks the beginning of the COVID-19 lockdown, where people suddenly had more time to code and ask questions. However, the increase in interest declined relatively quickly. The drop following the peak is therefore unusual and can’t really be compared to the drop at the end."
   },
   {
     "objectID": "posts/map/index.html",
@@ -77,486 +245,17 @@
     "text": "Where to go from here\n\nJenny Bryan’s purrr tutorials\nHadley Wickham’s “The joy of functional programming”\nR4DS chapter on iterations"
   },
   {
-    "objectID": "posts/theme/index.html",
-    "href": "posts/theme/index.html",
-    "title": "gg themes",
+    "objectID": "posts/dacc-bio/index.html",
+    "href": "posts/dacc-bio/index.html",
+    "title": "d/acc bio",
     "section": "",
-    "text": "ggplot2 has become one of the most powerful and flexible visualisation tools, with a large community and lots of people working on new extensions every day. A large number of ways to represent data makes it possible to create nearly anything in ggplot2, from great data journalism to beautiful infographics and generative art. No post-processing required anymore.\nThe general look of a ggplot is controlled by a theme. Anyone using ggplot knows that the default grey theme is usually not what you want to show the world. Modifying themes is very flexible, but a little bit complicated. Even after using it for years, I have to google some things every single time. Creating your own theme is a way to give your plots a consistent and personal design, and will save you a lot of time and many lines of code.\n\nThe default ggplot\nLet’s use the data from gapminder to see how a default plot looks like. We first load a few packages and do some data pre-processing.\n\nlibrary(ggplot2)\nlibrary(gapminder)\nlibrary(dplyr)\nlibrary(wesanderson)\nlibrary(systemfonts)\n# a bit of data processing\ndat &lt;- gapminder %&gt;% \n        group_by(year, continent) %&gt;% \n        summarise(`Life Expectancy` = mean(lifeExp),\n                  Population = sum(as.numeric(pop)), \n                  .groups = 'drop') %&gt;% \n        rename(Year = year, Continent = continent)\n\nHere is a default theme_grey() scatterplot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n      geom_point()\n\n\n\n\n\n\n\n\nThere are a few things I change all the time:\n\nThe background, which I prefer simple plain, or only with x and y axis lines.\nGrid lines: I usually keep only major grid lines (as they are connected to values) or remove them entirely.\nThe spacing between axis, axis-labels and axis-titles.\nThe font.\nFor themes with axis lines, like theme_classic, the line thickness.\n\n\n\nMaking your own theme\nMaking a new theme is quite simple. We (1) create a function which starts with a standard theme, such as theme_minimal and (2) add all the theme aspects which we prefer for our plots. Finally (3), we add some arguments to make changing things easy which we need often, such as axis and grid lines and the text size. Below is the theme I am using, but of course you can change every other theme aspect too (see theme documentation). I’m often using the ‘Avenir Next’ font, which might not be installed on your system. Using ‘sans’ should always work.\n\ntheme_simple &lt;- function(axis_lines = TRUE, \n                         grid_lines = FALSE,     \n                         text_size = 12,       \n                         line_width = 0.2,\n                         # replace with 'sans' if not working\n                         base_family= 'Avenir Next'){ \n        \n    # start with theme_minimal because it is really simple.\n    th &lt;- ggplot2::theme_minimal(base_family = base_family, \n                               base_size = text_size)\n         \n    # remove the grid lines \n    th &lt;- th + theme(panel.grid=element_blank())\n    \n    # if we want axis lines\n    if (axis_lines) {\n      # We add axis lines and give them our preferred thickness\n        th &lt;- th + \n            theme(axis.line = element_line(linewidth = line_width),\n                  axis.ticks = element_line(linewidth = line_width))\n    } \n    # do we want grid lines?\n    if (grid_lines) {\n        th &lt;- th + \n            theme(panel.grid.major = element_line(linewidth = line_width))\n    }\n    \n    # more space for axis text/title and plot title \n    th &lt;- th + theme(\n              axis.text.x=element_text(margin=margin(t=5)),\n              axis.text.y=element_text(margin=margin(r=5)),\n              axis.title.x=element_text(margin=margin(t=10)),\n              axis.title.y=element_text(margin=margin(r=10)),\n              plot.title=element_text(margin=margin(b=10)))\n    \n    return (th)\n}\n\n\n\nAdding theme_simple to the plot.\nNow, we can add theme_simple() to the plot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n    geom_point() +\n    scale_color_manual(values = wes_palette(\"Darjeeling2\")) + \n    theme_simple()\n\n\n\n\n\n\n\n\nSmall tweaks can sometimes make a big aesthetic difference. ggplot comes with a few themes, like theme_classic(), which are sort of close to what I like my plots to be, but are just not quite there. If you feel the same, it’s time to make your own theme.\nLastly, you can put the code for your theme into an R script and save it, for example as theme_simple.R. The next time you make plots, just source the script to load the theme_simple() function. To use it as the default theme, we can use theme_set like so:\n\nsource(\"theme_simple.R\") \n# set theme_simple as default theme\nggplot2::theme_set(theme_simple()) \n\nThat’s it!\nIf you are plotting in base R, you might say: You need a full blog post just to explain how to make ggplot look like base R with a different font! And I can only say: touché, my friend.\n\n\nAppendix: Installing fonts\nFonts can really make a big difference in the visual design of plots. A lot of freely available fonts are on https://fonts.google.com/. On Mac, I just download them, double click and they are installed. Then, we have to make them available in R. The systemfonts package magically finds all installed fonts from different directories.\n\n# install.packages(\"systemfonts\")\nlibrary(systemfonts)\n# which fonts are installed?\n# print only top 5\nsystem_fonts()[1:5, ]\n\n#&gt; # A tibble: 5 × 9\n#&gt;   path                    index name  family style weight width italic monospace\n#&gt;   &lt;chr&gt;                   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;ord&gt;  &lt;ord&gt; &lt;lgl&gt;  &lt;lgl&gt;    \n#&gt; 1 /System/Library/Assets…     0 Balo… Baloo… Regu… normal norm… FALSE  FALSE    \n#&gt; 2 /System/Library/Assets…     8 Nira… Niram… Light light  norm… FALSE  FALSE    \n#&gt; 3 /System/Library/Assets…     0 Shob… Shobh… Regu… normal norm… FALSE  FALSE    \n#&gt; 4 /System/Library/Fonts/…     1 Telu… Telug… Bold  bold   norm… FALSE  FALSE    \n#&gt; 5 /Users/msto/Library/Fo…     0 JetB… JetBr… Semi… semib… norm… FALSE  TRUE\n\n\nOther options to import fonts are extrafont and showtext.\n\n\npdf-ing\nSometimes, especially for science publications, plots need to be saved as pdfs. With non-standard fonts, this can be problematic, because they have to be embedded, but a little tweak to ggsave() can help here.\n\nggsave(\"plot.pdf\", device = cairo_pdf)"
+    "text": "Biological laboratories are less safe than one might think. Looking at known incidents between 2000 and 2021 roughly every couple of weeks a lab worker accidentally gets infected, and roughly once a year, a pathogen escapes the lab. These are only reported accidents, likely to be an underestimate.\nSome of them are hard to believe. The only human infectious disease that we ever managed to eradicate is smallpox, caused by the variola virus. Since its eradication in 1980, there should just be two high-security stashes of it worldwide, one in the US and one in Russia. Yet, a third stash was discovered in 2014, in a six decade old cardboard box in an unsecured storage room on the NIH campus. Just a year later, the Pentagon accidentally sent live Anthrax samples to various places, including South Korea.\nAnd the list goes on. Brucella leaked from a biopharma plant in Lanzhou, infecting 10k people. The 1977 Russian flu pandemic had signs of a lab leak; the underlying H1N1 flu strain resembled a virus circulating 30 years earlier.\nBiosecurity is simply not that easy, humans make mistakes and accidents happen. But accidents are only part of the risk.\nBioweapons have a long history. From catapulting plague-infected bodies to blankets infected with smallpox, humans have found many ways to weaponise biological agents. Several countries had biological weapons programs, and some are suspected to still run them. Yet, the Biological Weapons Convention, an international treaty with the mission to effectively ban the development of bioweapons, runs with a handful of employees on roughly the budget of an average McDonald’s.\nThen there’s bioterrorism. In 1984, the Rajneeshee sect contaminated salads in restaurants in Oregon with Salmonella, poisening 750 people. Aum Shinrikyo, a Japanese doomsday cult, tried and failed to develop bioweapons but managed to carry out a chemical weapons attack on the Tokyo subway in 1995, killing and injuring many. In 2001, a US scientist sent anthrax letters to various senators and journals, resulting in several casualties and injuries.\nIn the near future, it will become increasingly possible for terrorists to design much more dangerous bio-agents.\nFirst, biotech is becoming increasingly cheap and available. Sequencing a human genome cost 100 million dollars in 2001, now it’s a few hundred. We can order synthesised DNA and get it shipped to us in a week. While most companies do screen orders for potentially dangerous sequences, around 20% don’t. Soon, it might even be possible to just synthesise DNA at home on a small benchtop device. With the right DNA, a real virus can be created using reverse genetics. While this is not that easy, future AI models will be increasingly capable assistants for biotech work, allowing less and less knowledgable actors to create pathogens in the lab.\nSo, the stakes are high. But don’t despair. In the spirit of d/acc, in the next few posts I’ll have a look at biosecurity technologies that will help safeguard humanity against ever more likely biological threats. d/acc is the idea that we should differentially focus on developing defensive, democratic and decentralised technologies. Think early-detection systems and open source vaccines instead of gain-of-function research. Let’s have a look what is out there."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "posts",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\n\n\n\n\n2025-07-25\n\n\nengineered-DNA forensics\n\n\n\n\n2025-06-25\n\n\nfree science\n\n\n\n\n2025-04-19\n\n\nd/acc bio\n\n\n\n\n2023-04-05\n\n\nhidden info\n\n\n\n\n2023-02-11\n\n\npiping python\n\n\n\n\n2022-11-10\n\n\ngg themes\n\n\n\n\n2022-01-09\n\n\nmap()-magic\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/piping/index.html",
-    "href": "posts/piping/index.html",
-    "title": "piping in python",
-    "section": "",
-    "text": "Data wrangling in Python seems clunky. Yet, it doesn’t have to be. Here is how to pipe in Python."
-  },
-  {
-    "objectID": "posts/piping/index.html#the-problem",
-    "href": "posts/piping/index.html#the-problem",
-    "title": "piping in python",
-    "section": "The problem",
-    "text": "The problem\nIn R, we process data beautifully with dplyr and %&gt;%:\n\nsuppressMessages(library(dplyr))\niris %&gt;%\n  mutate(sepal_ratio = Sepal.Width / Sepal.Length) %&gt;%\n  filter(sepal_ratio &gt; 0.5) %&gt;%\n  select(Species, sepal_ratio) %&gt;%\n  group_by(Species) %&gt;%\n  summarise(mean_sepal_ratio = mean(sepal_ratio))\n\nIn Python’s pandas, most data wrangling code looks much less great, often like this:\n\nimport pandas as pd\nurl = \"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv\"\niris = pd.read_csv(url)\n\niris[\"sepal_ratio\"] = iris[\"sepal_width\"] / iris[\"sepal_length\"]\niris = iris[iris[\"sepal_ratio\"] &gt; 0.5]    #filter\niris = iris[[\"species\", \"sepal_ratio\"]]   #select\niris = iris.groupby(\"species\")            #group by\niris = iris.agg({\"sepal_ratio\": \"mean\"})  #summarise\n\nThis is hard to read because there’s lots of repitition."
-  },
-  {
-    "objectID": "posts/piping/index.html#a-new-hope",
-    "href": "posts/piping/index.html#a-new-hope",
-    "title": "piping in python",
-    "section": "A new hope",
-    "text": "A new hope\nBut don’t despair! We can pipe in Python, too. Here is how:\n\niris = pd.read_csv(url)\n\n(iris\n  .assign(sepal_ratio = lambda x: x.sepal_width / x.sepal_length)\n  .query(\"sepal_ratio &gt; 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n            sepal_ratio\nspecies                \nsetosa         0.684248\nversicolor     0.530953\nvirginica      0.526112\n\n\nFor now, there are only two main principles to remember:\n\nUse . instead of %&gt;% to pipe. Put . at the beginning of the line.\nUse () around the whole expression. Python will complain otherwise.\n\nThere is a pipeable method for most tasks. Sometimes, though, there isn’t, but you can still make it work.\n\nUse lambda to define a function on the fly (like in .assign() above).\nUse .pipe(), which takes a function as an argument and allows you to pipe it.\n\nHere is an example of .pipe():\n\ndef sepal_ratio(df):\n  return df.assign(sepal_ratio = df.sepal_width / df.sepal_length)\n\n(iris\n  .pipe(sepal_ratio)\n  .query(\"sepal_ratio &gt; 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n            sepal_ratio\nspecies                \nsetosa         0.684248\nversicolor     0.530953\nvirginica      0.526112\n\n\nThat’s it! Some people don’t like piping because, they say, it’s harder to debug. I like to simply comment out lines, allowing you to run it line by line, which makes it actually very easy to debug. A pipe is also easy to read as it’s basically like a recipe. Start with a dataframe and change stuff step by step.\nHere’s a quick summary over the most common data wrangling tasks and their pipeable methods and functions in dplyr and pandas:\n\n\n\ntask\ndplyr\npandas\n\n\n\n\nfilter rows\nfilter()\ndf.query()\n\n\npick columns\nselect()\ndf.loc[]\n\n\ngroup by\ngroup_by()\ndf.groupby()\n\n\nsummarise\nsummarise()\ndf.agg()\n\n\nmake new variable\nmutate()\ndf.assign()\n\n\njoin dfs\ninner_join()\ndf.merge()\n\n\nsort df\narrange()\ndf.sort_values()\n\n\nrename columns\nrename()\ndf.rename()\n\n\n\n\n\n\n\n\nLast tip: AI is your friend. If you’re stuck, put your pandas code in chatgpt or GitHub Copilot and ask it to re-write code as a pipe. Seems to work pretty well."
-  },
-  {
-    "objectID": "posts/piping/index.html#not-so-secret-bonus-siuba",
-    "href": "posts/piping/index.html#not-so-secret-bonus-siuba",
-    "title": "piping in python",
-    "section": "Not so secret bonus: siuba",
-    "text": "Not so secret bonus: siuba\nThere is also the beautiful siuba package. If you come from R, this might be the way to go. But even if not, it’s still less verbose than pandas. Last time I tried it, the package didn’t quite have everything I needed but I think it grew a lot since then. Here is the same pipeline, but with siuba:\n\nfrom siuba import _, mutate, filter, select, group_by, summarize\n\n(iris\n  &gt;&gt; mutate(sepal_ratio = _.sepal_width / _.sepal_length)\n  &gt;&gt; filter(_.sepal_ratio &gt; 0.5)\n  &gt;&gt; select(_.species, _.sepal_ratio)\n  &gt;&gt; group_by(_.species)\n  &gt;&gt; summarize(mean_sepal_ratio = _.sepal_ratio.mean())\n  )"
-  },
-  {
-    "objectID": "posts/info/index.html",
-    "href": "posts/info/index.html",
-    "title": "hidden info",
-    "section": "",
-    "text": "“If I am what I have and if what I have is lost, then who am I?”\n- Erich Fromm\nThe future of knowledge is at a crossroads. Before long, most text and code will be written by or with AI models. What was once explicit human reasoning will become information hidden in neural network weights, undecipherable changes in evergrowing matrices. Model outputs will soon become inputs, and the trajectory of knowledge becomes unclear once we outsourced thinking to the machine.\nFor people who code, Stackoverflow is the place where problems are discussed and solutions are found. The community makes sure that precise questions are asked and that answers are ranked, corrected and accepted. More than merely providing solutions, the platform makes the human reasoning process explicit and open. Stackoverflow documents how we, as humans, think about code. But this could soon be over.\nWhy would anyone go through the effort of constructing a minimal reproducible example, formulating a precise question and waiting for hours or days to get an answer, if ChatGPT gives a decent answer straight away and hassle-free? To get some insights into this, I had a look at the number of questions with a Python tag on Stackoverflow over time. While Python questions were increasing :for years, there is a clear drop since ChatGPT was released.\nThe decline isn’t super strong yet, but we can see where this is going. Stackoverflow, an open catalogue of human reasoning, will be replaced by private human-to-AI interactions. Human-readable information becomes hidden in neural network weights. Knowledge-generation is outsourced into AI systems with billions of parameters.\nCode, arguably, is easy to validate. At least we roughly know when it does what we want. This is different in science, where the reasoning process itself is key to the validity of the results. Soon, AI reasoning will permeate the very foundation of science. AI’s are going to plan experiments, collect and analyse data, draw conclusions and write papers. Much of the human input to new knowledge will be evaluating AI outputs rather than reasoning ourselves.\nWhether AI will outperform human reasoning or be subtly wrong more often than humans, we can’t let the reasoning underpinning science be hidden in AI models. To keep the upper hand, we need to transition to a true open source science, where the community has the opportunity to collectively understand and verify scientific progress. The current peer review system, possibly a failed experiment anyway, won’t be able to keep up with a flood of AI-generated papers. Rather than receiving a scientific stamp-of-approval after being reviewed by only two or three peers, scientific papers should be continously open to scrutiny and improvement by the community. For inspiration, we could have a look at Stackoverflow."
-  },
-  {
-    "objectID": "posts/info/index.html#x-graph",
-    "href": "posts/info/index.html#x-graph",
-    "title": "hidden info",
-    "section": ":x graph",
-    "text": ":x graph\nNote: the peak in the graph marks the beginning of the COVID-19 lockdown, where people suddenly had more time to code and ask questions. However, the increase in interest declined relatively quickly. The drop following the peak is therefore unusual and can’t really be compared to the drop at the end."
-  },
-  {
-    "objectID": "posts/info/stackoverflow.html",
-    "href": "posts/info/stackoverflow.html",
-    "title": "Are Python questions on stackoverflow dropping since ChatGPT?",
-    "section": "",
-    "text": "This notebook\n* fetches the number of stackoverflow questions per month with the Python tag from stackoverflow using their API\n* plots them\n\nimport requests\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom matplotlib.dates import date2num\nfrom plotnine import *\nfrom datetime import datetime, timedelta\n\n\n# Set the API URL for fetching data\nbase_url = \"https://api.stackexchange.com/2.3/questions\"\n\n# Set the parameters\nparams = {\n    \"site\": \"stackoverflow\",\n    \"tagged\": \"python\",\n    \"pagesize\": 1,\n    \"fromdate\": None,\n    \"todate\": None,\n    \"filter\": \"total\",\n}\n\n\n# Get stackoverflow data for the last 96 months\ncurrent_date = datetime.now()\nend_date = current_date.replace(day=1) - timedelta(days=1)\nstart_date = end_date - timedelta(days=96*30)  \n\nmonths = pd.date_range(start=start_date, end=end_date + pd.Timedelta(days=1), freq='MS')\ndata = []\n\n# Fetch the data from the API\nfor i in range(len(months) - 1):\n    params[\"fromdate\"] = int(months[i].timestamp())\n    params[\"todate\"] = int(months[i+1].timestamp())\n    \n    response = requests.get(base_url, params=params)\n    total_questions = response.json()[\"total\"]\n    \n    data.append({\"month\": months[i].strftime(\"%Y-%m\"), \"questions\": total_questions})\n    \ndf = pd.DataFrame(data)\n\nnov_2022_data = df[df[\"month\"] == \"2022-11\"].iloc[0]\nsns.set(style=\"white\")\nplt.rcParams[\"font.family\"] = \"sans-serif\"\nfig, ax = plt.subplots(figsize=(7, 3.5))\nsns.lineplot(\n    x=\"month\", y=\"questions\", data=df, ax=ax, linewidth=2, color=\"#1f77b4\"\n)\nsns.scatterplot(\n    x=\"month\", y=\"questions\", data=df, ax=ax, color=\"#1f77b4\", s=20\n)\nax.axvline(x=nov_2022_data[\"month\"], ymin=0, ymax=1, linestyle=\"--\", color=\"grey\")\nax.annotate(\n    \"ChatGPT\\nrelease\",\n    xy=(nov_2022_data[\"month\"], nov_2022_data[\"questions\"] + 1000),\n    xytext=(5, 30),\n    textcoords=\"offset points\",\n    arrowprops=dict(arrowstyle=\"-&gt;\", color=\"#3B4252\"),\n    color=\"#3B4252\",\n)\n\nnum_labels = 5\nstep = len(df[\"month\"]) // (num_labels - 1)\nxticks = sorted(\n    list(set(df[\"month\"][::step].tolist() + [nov_2022_data[\"month\"]]))[:-1]\n)\nax.set_xticks(xticks)\nplt.xticks(rotation=60, fontsize=12)\nax.set_ylim(5000, 30000)\nax.set_yticks(range(10000, 31000, 10000))\nplt.yticks(fontsize=12)\nax.set_xlabel(\"Month\", fontsize=14, fontweight=\"bold\", labelpad=15)\nax.set_ylabel(\n    \"# of questions with python tag\", fontsize=14, fontweight=\"bold\", labelpad=15\n)\nax.tick_params(axis=\"both\", colors=\"grey\")\nfor spine in [\"bottom\", \"left\"]:\n    ax.spines[spine].set_color(\"grey\")\nax.grid(False)\nsns.despine()\nplt.show()\n\n\n\n\n\n\nThe number of python questions on Stackoverflow. Data: Stackoverflow API.\n\n\n\n\n\n\n#df.to_csv(\"stackoverflow_python_questions.csv\", index=False)"
-  },
-  {
-    "objectID": "posts/sci-mcp/index.html",
-    "href": "posts/sci-mcp/index.html",
-    "title": "free science",
-    "section": "",
-    "text": "At first, AIs were created to understand the world. Now, a world is created that AIs can understand better.\nThe Model Context Protocol (MCP) defines a standardised interface between things and AI. Until MCP, AIs like ChatGPT or Claude had to figure out themselves where to look for data, how to use an application, or how to navigate a website. This is often goes wrong, because there is so much variation.\nNow, if you’d like an AI to easily access your (app, system, data), you can create an MCP server. An MCP consists of a few fundamental building blocks like tools, resources and prompts for whethever task it is you’d like AIs to do. Eventually, if everything from browsers to online shopping to booking flights has MCP server, AIs will be able to easily do all these things for us, because they know how to use them.\nWouldn’t it be cool if science had MCPs? Say, each paper has its own MCP server that cleanly exposes all important parts, such as methods, conclusions, code and data, independent of the layout of the journal or the structure of the code or data repo? Each paper-MCP would also be registered, so that AIs can just search for it, like in a search engine. Let’s call this protocol the Science Model Context Protocol (SMCP).\nHere’s a list of things that a high-bandwidth, high-accuracy AI-science interface through SMCPs would enable:\n\nautomated synthesis: AI agents could reliably synthesise knowledge through systematic-reviews and meta-analyses, effectively enabling anyone to summarise state of the art knowledge on any question. This could dramatically accelerate science and improve/save many lives.\ndecentralised knowledge: tacit knowledge and skills are highly centralised within few institutions. I was a Postdoc at the University of Edinburgh, which is a hub for stats and genetics, making it much easier to produce high quality publications even as a fresh PhD student. What if everyone, no matter their University, could have easy access to the models, code, and rational behind them? This is what SCMPs will do.\nde-duplicating efforts: Too much time is spent replicating code for data-processing and analyses. Through an SCMP, AI can recreate them and adapt them to different use cases, freeing up time and capacity for researchers to explore new things.\nlive science + digital twins: most research is a one-off. Get the data, run the experiment, analyse, publish. However, what if more data comes along? Especially in the context of a research synthesis? SCMPs will facilitate continuous analyses, added more data and updating the results over time. I imagine that many important papers will have live “digital twins” which incorporate and publish continuous updates.\nstreamlined evaluation: AI agents can review bugs in code, flaws in statistical modelling and experimental design. Humans can think evaluate the bigger picture and conclusions. This wouldn’t just save time, but upskill humans and AIs in the process.\n\nLet’s be clear though, there are risks too:\n\nstreamlining science information for AIs speeds up the trajectory of agentic self-improvement in frontier-models. Are we ready for this?\nit also makes it easier for bad actors to access knowledge via AI, e.g. biotech, weapons\n\nWhenever we decentralise information, it comes with benefits and risks. In the age of AI, the trajectory is less clear than ever. Should we free science?"
-  },
-  {
-    "objectID": "posts/sci-mcp/index.html#how-to-do-it.",
-    "href": "posts/sci-mcp/index.html#how-to-do-it.",
-    "title": "free science",
-    "section": "How to do it.",
-    "text": "How to do it."
-  },
-  {
-    "objectID": "posts/sci-mcp/index.html#how-to-do-it",
-    "href": "posts/sci-mcp/index.html#how-to-do-it",
-    "title": "free science",
-    "section": "How to do it",
-    "text": "How to do it"
-  },
-  {
-    "objectID": "posts/smcp/index.html",
-    "href": "posts/smcp/index.html",
-    "title": "free science",
-    "section": "",
-    "text": "At first, AIs were created to understand the world. Now, a world is created that AIs can understand better.\nThe Model Context Protocol (MCP) defines a standardised interface between things and AI. Until MCP, LLMs like ChatGPT or Claude had to figure out where to look for data, how to use an application, or how to navigate a website. This often goes wrong, because apps are all different, and data is often not accessible.\nNow, if you’d like an AI to easily access your (app, system, data), you can create an MCP server. An MCP consists of a few fundamental building blocks like tools, resources and prompts for whethever task it is you’d like AIs to do. These building blocks are attached to your app and provide exactly the information that an AI needs to use it. Eventually, if everything from browsers to online shopping to booking flights has MCP servers, AIs will be able to easily do all these things for us, because they’ll know how to use them.\nWouldn’t it be cool if science had MCPs? Say, each paper has its own MCP server that cleanly exposes all important parts, such as methods, conclusions, code and data, independent of the layout of the journal or the structure of the code or data repo? Each paper-MCP would also be registered somewhere, so that AIs can just search for it. Let’s call this protocol the Science Model Context Protocol (SMCP).\nHere’s a list of things that a high-bandwidth, high-accuracy AI-science interface through SMCPs would enable:\n\nautomated synthesis: AI agents could reliably synthesise knowledge through systematic-reviews and meta-analyses, effectively enabling anyone to summarise state of the art knowledge on any question. This could dramatically accelerate science and improve/save many lives.\ndecentralised knowledge: tacit knowledge and skills are highly centralised within few institutions. I was a Postdoc at the University of Edinburgh, which is a hub for stats and genetics, making it much easier to produce high quality publications even as a fresh PhD student. What if everyone, no matter their University, could have easy access to the models, code, and rational behind them? This is what SCMPs will do.\nde-duplicating efforts: Too much time is spent replicating code for data-processing and analyses. Through an SCMP, AI can recreate them and adapt them to different use cases, freeing up time and capacity for researchers to explore new things.\nlive science + digital twins: most research is a one-off. Get the data, run the experiment, analyse, publish. However, what if more data comes along? Especially in the context of a research synthesis? SCMPs will facilitate continuous analyses, added more data and updating the results over time. I imagine that many important papers will have live “digital twins” which incorporate and publish continuous updates.\nstreamlined evaluation: AI agents can review bugs in code, flaws in statistical modelling and experimental design. Humans can think evaluate the bigger picture and conclusions. This wouldn’t just save time, but upskill humans and AIs in the process.\n\nLet’s be clear though, there are risks too:\n\nstreamlining scientific information for AIs will speed up AGI timelines. Are we ready for this?\nit also makes it easier for bad actors to access knowledge via AI, e.g. biotech, weapons\n\nWhenever we decentralise information, it comes with benefits and risks. In the age of AI, the trajectory is less clear than ever. Should we free science?"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Martin Stoffel",
-    "section": "",
-    "text": "mstoffel@posteo.de · GitHub · Google Scholar · LinkedIn\nAI engineer-researcher working in-between tech, bio, and society. Open-source software with 2,000+ citations; 24 publications (incl. Nature Communications, PNAS) with code pipelines; 8 yrs leading research & data-science teams."
-  },
-  {
-    "objectID": "cv.html#martin-stoffel",
-    "href": "cv.html#martin-stoffel",
-    "title": "Martin Stoffel",
-    "section": "",
-    "text": "mstoffel@posteo.de\nAI engineer-researcher working in-between tech, bio, and society. Open-source software with 2,000+ citations; 24 publications (incl. Nature Communications, PNAS) with code pipelines; 8 yrs leading research & data-science teams."
-  },
-  {
-    "objectID": "cv.html#experience",
-    "href": "cv.html#experience",
-    "title": "Martin Stoffel",
-    "section": "Experience",
-    "text": "Experience\n\nIndependent Researcher / AI Engineer\nSince Mar 2025\nResearching technical biosecurity solutions and safety of biological foundation models. Building AI agents (AWS/SQL/Python/FastAPI + Claude) for a German SME.\n\n\nResearch Data Scientist / Software Engineer\nThe Alan Turing Institute, Jan 2023 - Feb 2025\nCreated AutoEmulate, a machine learning pipeline to emulate physics simulations and cut runtime and compute by orders of magnitude; grew team 1→10 in a year; mentored PhD students; presented at AI UK; selected as part of Turing’s 2025 strategic roadmap.\nOther projects: built DL models to detect artisanal rare-earth mines in Myanmar for Global Witness; co-created a citizen science platform; and worked on a digital twin for an underground farm.\n\n\nFellow | AI alignment\nPIBBSS, June - September 2022\nExplored AI alignment and parallels to cultural & biological evolution.\n\n\nConsultant | Data Science\nPlusVital & University College Dublin, Jun – Oct 2021\nDelivered in under 5 months a genome-wide study of 6,000+ Thoroughbred horses; evidence for industry-wide inbreeding harms in health/performance — work published in Proceedings of the Royal Society and now protected by patent.\n\n\nResearch Fellow | Evolutionary Genomics\nUniversity of Edinburgh, Apr 2019 - Jan 2023\nLed research projects in Genomics, Ecology and Evolution; produced six peer-reviewed papers (incl. Nature Communications and PNAS with &gt;250 citations), and released open-source code pipelines on GitHub.\n\n\nPhD | Molecular Ecology\nBielefeld University & Liverpool John Moores University, Jan 2015 - Dec 2018\nJoint PhD in high-throughput genomics, biostatistics and software engineering; published eight papers (&gt; 2,500 citations); led a 10-country collaboration to study overhunting in global pinniped populations and built three open-source software packages; won the University’s best thesis award in Biology (summa cum laude)."
-  },
-  {
-    "objectID": "cv.html#open-source-software",
-    "href": "cv.html#open-source-software",
-    "title": "Martin Stoffel",
-    "section": "{{< fa code >}} Open Source Software",
-    "text": "{{&lt; fa code &gt;}} Open Source Software\n\n\nAutoEmulate\nPhysics ML • Machine learning pipeline to emulate physics simulations\n\n\nrptR & partR2\nStatistics • Repeatability estimation and variance decomposition tools\n\n\ninbreedR & GCalignR\nBioinformatics • Genomic analysis and alignment tools\n\n\nImpact: 150k+ downloads; 2,000+ citations across five libraries"
-  },
-  {
-    "objectID": "cv.html#education-skills",
-    "href": "cv.html#education-skills",
-    "title": "Martin Stoffel",
-    "section": "{{< fa graduation-cap >}} Education & Skills",
-    "text": "{{&lt; fa graduation-cap &gt;}} Education & Skills\n\n\nEducation\n\nMSc From Neural Mechanisms to Evolution, University of Bielefeld\nBSc Psychology\n\n\n\nTechnical Skills\n\nLanguages: Python, R, Bash\nML/AI: PyTorch, scikit-learn, Bayesian modelling\nDevOps: Git, Docker, AWS, Azure, CI/CD, HPC\nDomain: Bioinformatics, Visualisation, AI agents"
-  },
-  {
-    "objectID": "cv.html#grants-funding",
-    "href": "cv.html#grants-funding",
-    "title": "Martin Stoffel",
-    "section": "{{< fa trophy >}} Grants & Funding",
-    "text": "{{&lt; fa trophy &gt;}} Grants & Funding\n\n\nOpen Philanthropy - $40k Career Development Grant (AI safety / biosecurity)\nPIBBSS - $10k AI Alignment Fellowship\nGerman Research Foundation - €69k Fellowship (Evolutionary Genomics)\nLiverpool John Moores University - €60k PhD Scholarship (Molecular Ecology)"
-  },
-  {
-    "objectID": "cv.html#selected-publications",
-    "href": "cv.html#selected-publications",
-    "title": "Martin Stoffel",
-    "section": "{{< fa book >}} Selected Publications",
-    "text": "{{&lt; fa book &gt;}} Selected Publications\n24 papers including Nature Communications, PNAS, Nature Ecology & Evolution; 12 as lead author with &gt;3,000 citations. View all on Google Scholar →\n\n\nStoffel, Li, et al. (2024). AutoEmulate: A Python package for semi-automated emulation. Journal of Open Source Software\nStoffel, Johnston, et al. (2021). Genetic architecture and lifetime dynamics of inbreeding depression in a wild mammal. Nature Communications\nStoffel, Nakagawa, et al. (2017). rptR: Repeatability estimation and variance decomposition by generalized linear mixed-effects models. Methods in Ecology and Evolution"
-  },
-  {
-    "objectID": "cv.html#software",
-    "href": "cv.html#software",
-    "title": "Martin Stoffel",
-    "section": "Software",
-    "text": "Software\nDeveloped five open-source libraries with 150k+ downloads and 2,000+ citations:\n\nAutoEmulate – Machine learning pipeline for physics simulations\nrptR & partR2 – Statistical tools for repeatability and variance decomposition\ninbreedR & GCalignR – Bioinformatics analysis tools"
-  },
-  {
-    "objectID": "cv.html#skills",
-    "href": "cv.html#skills",
-    "title": "Martin Stoffel",
-    "section": "Skills",
-    "text": "Skills\nLanguages: Python, R, Bash · ML: PyTorch, scikit-learn, Bayesian modelling · DevOps: Git, Docker, AWS, Azure, CI/CD, HPC · Other: Bioinformatics, Visualisation, AI agents"
-  },
-  {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "Martin Stoffel",
-    "section": "Education",
-    "text": "Education\nMSc From Neural Mechanisms to Evolution, University of Bielefeld\nBSc Psychology"
-  },
-  {
-    "objectID": "cv.html#grants",
-    "href": "cv.html#grants",
-    "title": "Martin Stoffel",
-    "section": "Grants",
-    "text": "Grants\n\nOpen Philanthropy - $40k Career Development Grant (AI safety / biosecurity)\nPIBBSS AI Alignment Fellowship - $10k\nGerman Research Foundation Fellowship - €69k (Evolutionary Genomics)\nLJMU PhD Scholarship - €60k (Molecular Ecology)"
-  },
-  {
-    "objectID": "cv.html#publications",
-    "href": "cv.html#publications",
-    "title": "Martin Stoffel",
-    "section": "Publications",
-    "text": "Publications\n24 papers including Nature Communications, PNAS, Nature Ecology & Evolution; 12 as lead author with &gt;3,000 citations. Full list →\nStoffel, Li, et al. (2024). AutoEmulate: A Python package for semi-automated emulation. Journal of Open Source Software\nStoffel, Johnston, et al. (2021). Genetic architecture and lifetime dynamics of inbreeding depression in a wild mammal. Nature Communications\nStoffel, Nakagawa, et al. (2017). rptR: Repeatability estimation and variance decomposition by generalized linear mixed-effects models. Methods in Ecology and Evolution"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "projects",
-    "section": "",
-    "text": "AutoEmulate: Speeding up physics simulations using machine learning.\nJOSS (2025) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nrptR: Intra-class coefficients for hierarchical models.\nMethods in Ecology and Evolution (2017) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\npartR2: R2 for individual fixed effects in hierarchical models.\nPeerJ (2021) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\ninbreedR: Identity disequlibria and more.\nMethods in Ecology and Evolution (2016) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nGCalignR: Aligning gas chromatography samples.\nPlos One (2018) | Code\n:🥥"
-  },
-  {
-    "objectID": "projects.html#x-el",
-    "href": "projects.html#x-el",
-    "title": "projects",
-    "section": ":x el",
-    "text": ":x el\nWe scanned the genomes of thousands of wild Soay sheep for embryonic lethal mutations. These mutations prevent an individual from being born, should it be unlucky enough to receive the same genetic variant from both mum and dad. We found a few and wondered how they are maintained in the population. We show that despite their negative effects, these mutations can persist when genetically linked to beneficial variants.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
-  },
-  {
-    "objectID": "projects.html#quantitative-and-evolutionary-genetics",
-    "href": "projects.html#quantitative-and-evolutionary-genetics",
-    "title": "Research Portfolio",
-    "section": "🧬 Quantitative and Evolutionary Genetics",
-    "text": "🧬 Quantitative and Evolutionary Genetics\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics\nbioRxiv (2022) • Code • :In a nutshell\nScanning thousands of sheep genomes for embryonic lethal mutations\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger\nEvolution Letters (2021) • Code • :In a nutshell\nWhy long runs of homozygosity carry higher mutation load\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild\nNature Communications (2021) • Code • :In a nutshell • :doubts\nHow inbreeding affects survival in wild populations"
-  },
-  {
-    "objectID": "projects.html#molecular-ecology",
-    "href": "projects.html#molecular-ecology",
-    "title": "Research Portfolio",
-    "section": "🦭 Molecular Ecology",
-    "text": "🦭 Molecular Ecology\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals\nMolecular Ecology (2020) • Code • :In a nutshell • :doubts\nHow gut microbes predict sex differences in elephant seals\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction\nNature Communications (2018) • Code • :In a nutshell • :doubts\nHow industrial hunting nearly wiped out seals and sea lions\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals\nPNAS (2015) • Code • Press • :In a nutshell • :doubts\nHow seals use scent to navigate their social world"
-  },
-  {
-    "objectID": "projects.html#conservation-genetics",
-    "href": "projects.html#conservation-genetics",
-    "title": "Research Portfolio",
-    "section": "🦌 Conservation Genetics",
-    "text": "🦌 Conservation Genetics\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx\nPNAS (2023) • :In a nutshell\nBringing back the scimitar-horned oryx from extinction"
-  },
-  {
-    "objectID": "projects.html#behavioral-ecology",
-    "href": "projects.html#behavioral-ecology",
-    "title": "Research Portfolio",
-    "section": "🐦 Behavioral Ecology",
-    "text": "🐦 Behavioral Ecology\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny\nPNAS (2017) • Code in Supplementary Material • :In a nutshell\nHow skewed survival creates unusual mating systems"
-  },
-  {
-    "objectID": "projects.html#research-consulting",
-    "href": "projects.html#research-consulting",
-    "title": "Research Portfolio",
-    "section": "🐎 Research Consulting",
-    "text": "🐎 Research Consulting\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses\nProceedings of the Royal Society B (2022) • :In a nutshell\nHow inbreeding affects racing performance"
-  },
-  {
-    "objectID": "projects.html#in-depth-explanations",
-    "href": "projects.html#in-depth-explanations",
-    "title": "Research Portfolio",
-    "section": "🔬 In-Depth Explanations",
-    "text": "🔬 In-Depth Explanations\nClick the links above to dive deeper into each study"
-  },
-  {
-    "objectID": "projects.html#x-roh",
-    "href": "projects.html#x-roh",
-    "title": "projects",
-    "section": ":x roh",
-    "text": ":x roh\nRuns of homozygosity (ROH) are long stretches of homozygous genotypes, and turn out to be a weirdly insightful feature of the genome. The longer an ROH is, the fewer generations in the past is it’s common ancestor haplotype. We show using simulation and empirical genome data that such long ROH have a higher density of deleterious mutations, as natural selection had less time to select against them, compared to short ROH. This has been hypothesised before, but never been shown using real fitness data.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
-  },
-  {
-    "objectID": "projects.html#x-id",
-    "href": "projects.html#x-id",
-    "title": "projects",
-    "section": ":x id",
-    "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of bronze-age sheep, we show that the effects of even slight inbreeding on survival are severe. We uncover some of the underlying genetic mechanisms using a novel type of genome-wide association study to estimate the effects of deleterious mutations across the genome. This is possibly the most extensive study of its kind, outside of humans.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
-  },
-  {
-    "objectID": "projects.html#x-id_doubts",
-    "href": "projects.html#x-id_doubts",
-    "title": "",
-    "section": ":x id_doubts",
-    "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are usually rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
-  },
-  {
-    "objectID": "projects.html#x-nes",
-    "href": "projects.html#x-nes",
-    "title": "projects",
-    "section": ":x nes",
-    "text": ":x nes\n:Northern elephant seals have the second-largest sexual size dimorphism of any mammal (right after their Southern sister-species). Adult males can be 3-5 times as heavy as females. Why is that? Sexual selection has favored larger males because they are able to defend large harems of females on the beach against competitors.\nIn young elephant seals (pups) you can’t really spot a difference between males and females yet. However, when measuring their gut microbiome, sampled with a very long cotton swab, we find very strong sex-differences from early on. This opens the possibility for microbes to provide an adaptation to these two very different life-history strategies of female and male elephant seals.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
-  },
-  {
-    "objectID": "projects.html#x-nes_doubts",
-    "href": "projects.html#x-nes_doubts",
-    "title": "",
-    "section": ":x nes_doubts",
-    "text": ":x nes_doubts\nOne of the most important aspects of this study is that we ruled out that sex-differences in the gut microbiome are simply to due differences in diet, as all pups only ever fed on their mother’s milk and were fasting at the time of sampling. Therefore, it’s likely that male and female pups have a different gut microbiome due to intrinsic causes (genetics, physiology). However, this doesn’t mean that these differences are also adaptive and functional for things like development or the immune system."
-  },
-  {
-    "objectID": "projects.html#x-bot",
-    "href": "projects.html#x-bot",
-    "title": "projects",
-    "section": ":x bot",
-    "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
-  },
-  {
-    "objectID": "projects.html#x-bot_doubts",
-    "href": "projects.html#x-bot_doubts",
-    "title": "",
-    "section": ":x bot_doubts",
-    "text": ":x bot_doubts\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better."
-  },
-  {
-    "objectID": "projects.html#x-plov",
-    "href": "projects.html#x-plov",
-    "title": "projects",
-    "section": ":x plov",
-    "text": ":x plov\nAround 60% of adult snowy plovers are male, leading to a mating system where females are polygynous, because they can chose. My friend Luke led this project, where we wanted to know where this sex bias comes from. Turns out, at birth its 50/50, and most of the sex-bias in adults starts in juveniles, where males have lower survival rates than females. We argue that two-sex population models (as used in our study) are underused but essential to understand population dynamics and light on the remaining mysteries around sexual selection.\nAuthors | Luke J Eberhart-Phillips, Clemens Küpper, Tom EX Miller, Medardo Cruz-López, Kathryn H Maher, Natalie Dos Remedios, Martin A Stoffel, Joseph I Hoffman, Oliver Krüger, Tamás Székely"
-  },
-  {
-    "objectID": "projects.html#x-chem",
-    "href": "projects.html#x-chem",
-    "title": "projects",
-    "section": ":x chem",
-    "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
-  },
-  {
-    "objectID": "projects.html#x-chem_doubts",
-    "href": "projects.html#x-chem_doubts",
-    "title": "",
-    "section": ":x chem_doubts",
-    "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesising these chemical signals and doing behavioural experiments. However, we know at least that sea lions can recognise their pups by scent alone."
-  },
-  {
-    "objectID": "projects.html#x-horse",
-    "href": "projects.html#x-horse",
-    "title": "projects",
-    "section": ":x horse",
-    "text": ":x horse\nWe show that genomic inbreeding reduces the changes of a Thoroughbred horse ever making it to the racecourse, and pinpoint a genomic region where homozygosity has a particularly large effect, independent of genome-wide inbreeding. Results were a paper, the full reproducible analysis and a patent for the method.\nAuthors | Emmeline W Hill, Martin A Stoffel, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton"
-  },
-  {
-    "objectID": "projects.html#x-oryx",
-    "href": "projects.html#x-oryx",
-    "title": "projects",
-    "section": ":x oryx",
-    "text": ":x oryx\nto do\nAuthors | sEmily Humble, Martin A. Stoffel, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden"
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "",
-    "section": "",
-    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
-  },
-  {
-    "objectID": "research.html#empricial-research",
-    "href": "research.html#empricial-research",
-    "title": "",
-    "section": "",
-    "text": "Selected papers with simplified titles. Full publication list here.\n\n\n\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nbioRxiv (2022) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:In a nutshell, :doubts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImpacts of inbreeding on racing in Thoroughbred horses.\nProceedings of the Royal Society B (2022)\n:In a nutshell"
-  },
-  {
-    "objectID": "research.html#x-el",
-    "href": "research.html#x-el",
-    "title": "",
-    "section": ":x el",
-    "text": ":x el\nWe scanned the genomes of thousands of Soay sheep for embryonic lethal mutations. These mutations prevent an individual from being born, should it be unlucky enough to receive the same genetic variant from both mum and dad. We found a few semi-lethal mutations in the population, and show that these are under selection. We show that despite their negative effects, these mutations can be maintained when they are genetically linked to beneficial genetic variants.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
-  },
-  {
-    "objectID": "research.html#x-roh",
-    "href": "research.html#x-roh",
-    "title": "",
-    "section": ":x roh",
-    "text": ":x roh\nThe fundamental question in this study was: Is the density of deleterious mutations in the genome higher in long runs of homozygosity (ROH)? If an individual inherits an ROH, this basically means that they inherited two copies the very same stretch of DNA (or haplotype) from both mum and dad. The longer such an ROH is, the fewer generations in thee past is it’s most recent common ancestor haplotype. Therefore, natural selection had less time to remove potential deleterious mutations from this stretch of DNA.\nOur simulations and empirical data for thousands of wild Soay sheep showed exactly this. Long ROH have a higher density of deleterious mutations, their frequencies are lower, and the harmful effect of each single mutation is on average higher than those of mutations in short ROH.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
-  },
-  {
-    "objectID": "research.html#x-id",
-    "href": "research.html#x-id",
-    "title": "",
-    "section": ":x id",
-    "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of bronze-age sheep, we show that the effects of inbreeding on survival are severe and uncover some of the underlying genetic mechanisms.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
-  },
-  {
-    "objectID": "research.html#x-id_doubts",
-    "href": "research.html#x-id_doubts",
-    "title": "",
-    "section": ":x id_doubts",
-    "text": ":x id_doubts\nThe genetics of inbreeding depression is hard to study. Highly deleterious alleles are usually rare, making it statistically hard to pin them down. Moreover, the history of a population will have a large impact on the distribution of deleterious mutations. I’m currently uncertain about how many pieces of the puzzle we missed and how generalisable the patterns are."
-  },
-  {
-    "objectID": "research.html#x-nes",
-    "href": "research.html#x-nes",
-    "title": "",
-    "section": ":x nes",
-    "text": ":x nes\n:Northern elephant seals have the second-largest sexual size dimorphism of any mammal (right after their Southern sister-species). Adult males can be 3-5 times as heavy as females. Why is that? Sexual selection has favored larger males because they are able to defend large harems of females on the beach against competitors.\nIn young elephant seals (pups) you can’t really spot a difference between males and females yet. However, when measuring their microbiome (the collection of bacteria in their guts) sampled with a very long cotton swab, we find very strong sex-differences from early on. This opens the possibility for microbes to provide an adaptation to these two very different life-histories of female and male elephant seals.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
-  },
-  {
-    "objectID": "research.html#x-nes_doubts",
-    "href": "research.html#x-nes_doubts",
-    "title": "",
-    "section": ":x nes_doubts",
-    "text": ":x nes_doubts\nOne of the most important aspects of this study is that we ruled out that sex-differences in the gut microbiome are simply to due differences in diet, as all pups only ever fed on their mother’s milk and were fasting at the time of sampling. Therefore, it’s likely that male and female pups have a different gut microbiome due to intrinsic causes (genetics, physiology). However, this doesn’t mean that these differences are also adaptive and functional for things like development or the immune system."
-  },
-  {
-    "objectID": "research.html#x-bot",
-    "href": "research.html#x-bot",
-    "title": "",
-    "section": ":x bot",
-    "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
-  },
-  {
-    "objectID": "research.html#x-bot_doubts",
-    "href": "research.html#x-bot_doubts",
-    "title": "",
-    "section": ":x bot_doubts",
-    "text": ":x bot_doubts\nTo reconstruct the population histories of each species, we used Approximate Bayesian Computation (ABC). The idea is simple: Simulate genetic data under a variety of population histories and use ABC to figure out what fits best to the empirical genetic data. However, the best model does not have to be good. Alternative, untested population histories could have explained the patterns equally well or better."
-  },
-  {
-    "objectID": "research.html#x-plov",
-    "href": "research.html#x-plov",
-    "title": "",
-    "section": ":x plov",
-    "text": ":x plov\nAround 60% of adult snowy plovers are males, which led to a mating system where females are polygynous (they get to have more than one partner per season). My buddy Luke led this project, where we wanted to know where this sex biases comes from! Born 50/50, most of the sex biases we see in adults actually originates in juveniles, where males have lower survival rates than males. We therefore argue that two-sex population models (as used in our study) are essential to understand population dynamics and can help to shed light on some of the remaining mysteries around sexual selection.\nAuthors | Luke J Eberhart-Phillips, Clemens Küpper, Tom EX Miller, Medardo Cruz-López, Kathryn H Maher, Natalie Dos Remedios, Martin A Stoffel, Joseph I Hoffman, Oliver Krüger, Tamás Székely"
-  },
-  {
-    "objectID": "research.html#x-chem",
-    "href": "research.html#x-chem",
-    "title": "",
-    "section": ":x chem",
-    "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
-  },
-  {
-    "objectID": "research.html#x-chem_doubts",
-    "href": "research.html#x-chem_doubts",
-    "title": "",
-    "section": ":x chem_doubts",
-    "text": ":x chem_doubts\nSkin chemicals co-vary with relatedness, genetic make-up and colony membership. This doesn’t mean these ‘signals’ are recognised by individuals nor that they impact behaviour. Testing this specifically seems difficult in a wild population and requires syntesising these chemical signals and doing behavioural experiments. However, we know at least that sea lions can recognise their pups by scent alone."
-  },
-  {
-    "objectID": "research.html#x-horse",
-    "href": "research.html#x-horse",
-    "title": "",
-    "section": ":x horse",
-    "text": ":x horse\nWe show that genomic inbreeding reduces the changes of a Thoroughbred horse ever making it to the racecourse, and pinpoint a genomic region where homozygosity has a particularly large effect, independent of genome-wide inbreeding.\nAuthors | Emmeline W Hill, Martin A Stoffel, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton\nPic by DALL-E."
-  },
-  {
-    "objectID": "research.html#x-oryx",
-    "href": "research.html#x-oryx",
-    "title": "",
-    "section": ":x oryx",
-    "text": ":x oryx\nto do\nAuthors | sEmily Humble, Martin A. Stoffel, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden"
-  },
-  {
-    "objectID": "projects.html#research",
-    "href": "projects.html#research",
-    "title": "projects",
-    "section": "Research",
-    "text": "Research\nselected, full list here.\n\nQuantitative and evolutionary genetics\n\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nEvol letters (2024) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:🥥\n\n\n\n\n\nMolecular ecology\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:🥥\n\n\n\n\n\nConservation genetics\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :🥥\n\n\n\n\n\nBehavioural ecology\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:🥥\n\n\n\n\n\nResearch consulting\n\n\n\n\n\n\n\n\n\nImpacts of systemic inbreeding in Thoroughbred racehorses.\nProceedings of the Royal Society B (2022)\n:🥥"
-  },
-  {
-    "objectID": "projects.html#software",
-    "href": "projects.html#software",
-    "title": "projects",
-    "section": "",
-    "text": "AutoEmulate: Speeding up physics simulations using machine learning.\nJOSS (2025) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nrptR: Intra-class coefficients for hierarchical models.\nMethods in Ecology and Evolution (2017) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\npartR2: R2 for individual fixed effects in hierarchical models.\nPeerJ (2021) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\ninbreedR: Identity disequlibria and more.\nMethods in Ecology and Evolution (2016) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nGCalignR: Aligning gas chromatography samples.\nPlos One (2018) | Code\n:🥥"
-  },
-  {
-    "objectID": "projects.html#x-ae",
-    "href": "projects.html#x-ae",
-    "title": "projects",
-    "section": ":x ae",
-    "text": ":x ae\nSimulations of complex systems are slow. To speed them up for research and application, we have to emulate them, often using machine learning. This is difficult though. AutoEmulate’s goal is to provide a low-code platform to do all this automatically. I’ve created the package and was lead developer during my time at the Turing Institute. On the left is the old hex logo."
-  },
-  {
-    "objectID": "projects.html#x-rp",
-    "href": "projects.html#x-rp",
-    "title": "projects",
-    "section": ":x rp",
-    "text": ":x rp\nrptR calculates intra-class coefficients (also called repeatabilities, hence the name) based on generalised linear mixed models. It does just that, but pretty well, and has somehow become a standard in various fields. Hence the 191x field-citation ratio."
-  },
-  {
-    "objectID": "projects.html#x-p2",
-    "href": "projects.html#x-p2",
-    "title": "projects",
-    "section": ":x p2",
-    "text": ":x p2\npartR2 uses a few tricks to calculate the explained variance per fixed effect in GLMMs. There’s not much else doing this properly, so it has become quite popular. But take care: it’s key to think what exactly it is that you want to know, especally for more complicated models involving interactions etc."
-  },
-  {
-    "objectID": "projects.html#side",
-    "href": "projects.html#side",
-    "title": ":x in",
-    "section": "Side",
-    "text": "Side\n\n\n\n\n\n\n\n\n\nDeep learning to detect artisinal mining in Myanmar\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nMinimal transformer trained on all Sherlock Holmes stories"
-  },
-  {
-    "objectID": "projects.html#side-projects",
-    "href": "projects.html#side-projects",
-    "title": "projects",
-    "section": "Side projects",
-    "text": "Side projects\n\n\n\n\n\n\n\n\n\nDetecting artisanal mines in Myanmar from satellites\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Minimal transformer\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Neural Vocoder"
-  },
-  {
-    "objectID": "projects.html#deep-learning-side-projects",
-    "href": "projects.html#deep-learning-side-projects",
-    "title": ":x in",
-    "section": "Deep learning side projects",
-    "text": "Deep learning side projects\n\n\n\n\n\n\n\n\n\nDetecting artisanal mines in Myanmar from satellites\n:In a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Minimal transformer\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Neural Vocoder"
-  },
-  {
-    "objectID": "posts/gea/index.html",
-    "href": "posts/gea/index.html",
-    "title": "engineered-DNA forensics",
-    "section": "",
-    "text": "New synthetic bio-agents are created in labs around the world. Often enough, something goes wrong and a virus escapes the lab. More worringly, bad actors could misuse biotech to create vastly more dangerous weapons than ever before. Unlike with non-biological things, its difficult to figure out who developed a bio-agent in the first place.\nLuckily, there’s a new field for this: Genetic engineering attribution (GEA). It’s the idea that engineered bio-agents can be traced back to their designer through signatures in their DNA. Every lab uses their own designs and tools to create synthetic organisms, the combination if which can cause a unique pattern in the organisms DNA.\nGEA as a defensive technology would allow to quickly inform a response to outbreaks, identify the responsible researcher/lab/country-of-origin and deter bad actors. But how far are we?\n\nThe beginnings: Nielsen & Voigt, 2018\nThe early days of GEA using machine learning. Suprisingly timely, given COVID-19.\nThey used (engineered) Plasmid sequences from Addgene, where each entry has it’s lab as meta-data. After cleaning, they worked with 36,764 plasmid sequences from 827 labs. Then, they simply one-hot encoded each nucleotide matrix (sequence length was sequence+reverse complement) into a simple CNN to predict which of the labs the sequence came from.\n\n\n\n\n\n\nflowchart LR\n    A[\"DNA Sequence&lt;br/&gt;A T G C&lt;br/&gt;1 0 0 0&lt;br/&gt;0 1 0 0&lt;br/&gt;0 0 1 0&lt;br/&gt;0 0 0 1&lt;br/&gt;...&lt;br/&gt;16,048 × 4\"] --&gt; B[\"Conv&lt;br/&gt;+&lt;br/&gt;MaxPool\"] --&gt; C[\"Fully&lt;br/&gt;Connected\"] --&gt; D[\"827 labs&lt;br/&gt;Softmax\"]\n    \n    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px\n    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px\n    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px\n    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px\n\n\n\n\nFigure 1: Nielsen & Voigt CNN Architecture for Lab-of-Origin Prediction\n\n\n\n\n\nThe CNN predicted the correct lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10. Then, they compared it to BLAST.\n\n\n\n\n\n\nflowchart TD\n    A[bio-agent] --&gt; B(natural)\n    A            --&gt; C(engineered)\n    C            --&gt; D(general info)\n    C            --&gt; E(intelligence)\n    C            --&gt; F(GEA)\n    F            --&gt; G(country-of-origin)\n    F            --&gt; H(lab-of-origin)    \n\n\n\n\nFigure 2: bio-forensics\n\n\n\n\n\nTherefore, we should take the possibility seriously that biotech will be misused and push safeguarding technologies in the spirit of d/acc to prevent that.\nOne early-stage technology is genetic engineering attribution (GEA). It’s the idea that we can identify the designer of an engineered virus or bacterium by its DNA sequence.\nHow’s that possible? Like everything humans do, genetic engineering leaves a unique footprint in DNA, the combination of all the unique choices the lab made about design and tools. There’s a myriad ways on how to do genetic engineering, and therefore everyone leaves their\nattribution security benefits: * inform response (motives? capabilities?) * identify responsible parties for penalty * succesful attribution can deter other actors\ninfo for attribution: * non-technical: location, epidemiological features (middle of conlict? labs nearby? accidental vs purposeful) * intelligence: whistleblowers, interc. comms, surveillance * technical forensics: properties of the agent\nengineered vs natural * IARPA FELIX program\nsecurity potential of GEA * avoiding mistaken attribution is key * deterrence\nlimits: * attribution techniques don’t detect whether the agent was engineered in the first place (it follows engineering detection) * risk of false positives * releases of “non-engineered agents” wouldn’t be captured * designer might not be mis-user * some actors want to claim that it was them! * data is from genetic engineers operating “in the clear” * sophisticated actors might obfuscate or misdirect attribution, e.g. use the methodological signature of another actor * but these attempts will leave their own signatures\ngenetic engineering attribution, also:\n* lab-of-origin prediction * engineered-DNA forensics * biosec sequence attribution"
+    "text": "Date\n\n\nTitle\n\n\n\n\n\n\n2025-06-25\n\n\nfree science\n\n\n\n\n2025-04-19\n\n\nd/acc bio\n\n\n\n\n2023-04-05\n\n\nhidden info\n\n\n\n\n2023-02-11\n\n\npiping python\n\n\n\n\n2022-11-10\n\n\ngg themes\n\n\n\n\n2022-01-09\n\n\nmap()-magic\n\n\n\n\n\nNo matching items"
   }
 ]
