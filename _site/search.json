@@ -257,5 +257,33 @@
     "title": "posts",
     "section": "",
     "text": "Date\n\n\nTitle\n\n\n\n\n\n\n2025-06-25\n\n\nfree science\n\n\n\n\n2025-04-19\n\n\nd/acc bio\n\n\n\n\n2023-04-05\n\n\nhidden info\n\n\n\n\n2023-02-11\n\n\npiping python\n\n\n\n\n2022-11-10\n\n\ngg themes\n\n\n\n\n2022-01-09\n\n\nmap()-magic\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/gea/index.html",
+    "href": "posts/gea/index.html",
+    "title": "engineered-DNA forensics",
+    "section": "",
+    "text": "Engineered bio-agents are created in labs around the world. Often enough, something goes wrong and a virus escapes the lab. More worringly, bad actors could misuse new biotech and AI to create vastly more dangerous weapons than ever before. Whether a bio-agent is released accidentally or intentionally, it’s difficult to figure out who developed it in the first place.\nLuckily, there’s some progress in tackling the problem of Genetic engineering attribution (GEA). The idea behind GEA is that engineered organism can be traced back to their designers through signatures in their DNA. There’s many degrees of freedom in bio-engineering, and the combination of design, style and tools used can create a unique DNA pattern in the synthetic organism leading straight to its lab-of-origin.\nGEA is a key defensive technology. Once mature, it will allow to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It’s something we should invest in.\nWhile the field itself arguably started with the microbial forensics investigations of Amerithrax, GEA back then was manual and specific. In the machine learning era, we’re able to develop general tools that work for a wide range of threats, trained on available data. But how far are we?"
+  },
+  {
+    "objectID": "posts/gea/index.html#x-plasmid",
+    "href": "posts/gea/index.html#x-plasmid",
+    "title": "engineered-DNA forensics",
+    "section": ":x plasmid",
+    "text": ":x plasmid\nPlasmids are small, circular pieces of DNA that float around outside the actual genome. They are a good vector to transport genes into the cell, are relatively easy to work with and self-replicating. That’s why they are often used for genetic engineering."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-bpe",
+    "href": "posts/gea/index.html#x-bpe",
+    "title": "engineered-DNA forensics",
+    "section": ":x bpe",
+    "text": ":x bpe\nByte-pair encoding (BPE) is a tokenization method that breaks down DNA sequences into meaningful subunits rather than individual nucleotides. Instead of treating each A, T, G, C separately, BPE identifies frequently occurring pairs and merges them into single tokens, creating a more efficient representation. They also allow inputs to be of different lenghts, which is very useful for DNA sequences."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-lstm",
+    "href": "posts/gea/index.html#x-lstm",
+    "title": "engineered-DNA forensics",
+    "section": ":x lstm",
+    "text": ":x lstm\nLong Short-Term Memory (LSTM) is a type of neural network designed to remember information over long sequences. Unlike regular neural networks that forget previous inputs, LSTMs have special “gates” that control what information to keep, forget, or output. They also take input of different lengths, which is great for DNA sequences."
   }
 ]

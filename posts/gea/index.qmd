@@ -6,20 +6,24 @@ date: "2025-07-25"
 categories: [biosecurity]
 title-block-banner: false
 draft: true
+filters:
+    - nutshell
 ---
 
 
-New synthetic bio-agents are created in labs around the world. Often enough, something goes wrong and a virus escapes the lab. More worringly, bad actors could misuse biotech to create vastly more dangerous weapons than ever before. Unlike with non-biological things, its difficult to figure out **who** developed a bio-agent in the first place.
+Engineered bio-agents are created in labs around the world. Often enough, something goes wrong and a virus escapes the lab. More worringly, bad actors could misuse new biotech and AI to create vastly more dangerous weapons than ever before. Whether a bio-agent is released accidentally or intentionally, it's difficult to figure out **who** developed it in the first place.
 
-Luckily, there's a new field for this: **Genetic engineering attribution (GEA)**. It's the idea that *engineered* bio-agents can be traced back to their designer through signatures in their DNA. Every lab uses their own designs and tools to create synthetic organisms, the combination if which can cause a unique pattern in the organisms DNA. 
+Luckily, there's some progress in tackling the problem of **Genetic engineering attribution (GEA)**. The idea behind GEA is that *engineered* organism can be traced back to their designers through signatures in their DNA. There's many degrees of freedom in bio-engineering, and the combination of design, style and tools used can create a unique DNA pattern in the synthetic organism leading straight to its lab-of-origin.
 
-GEA as a defensive technology would allow to quickly inform a response to outbreaks, identify the responsible researcher/lab/country-of-origin and deter bad actors. But how far are we?
+GEA is a key defensive technology. Once mature, it will allow to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It's something we should invest in. 
 
-### The beginnings: Nielsen & Voigt, 2018
+While the field itself arguably started with the microbial forensics investigations of [Amerithrax](https://www.tandfonline.com/doi/full/10.1080/00396331003612521), GEA back then was manual and specific. In the machine learning era, we're able to develop general tools that work for a wide range of threats, trained on available data. But how far are we?
 
-The early days of GEA using machine learning. Suprisingly timely, given COVID-19. 
+### 2018: raw nucleotides + CNN
 
-They used (engineered) Plasmid sequences from [Addgene](https://www.addgene.org/), where each entry has it's lab as meta-data. After cleaning, they worked with 36,764 plasmid sequences from 827 labs. Then, they simply one-hot encoded each nucleotide matrix (sequence length was sequence+reverse complement) into a simple CNN to predict which of the labs the sequence came from. 
+[Nielsen & Voigt, 2018](https://www.nature.com/articles/s41467-018-05378-z) is first study using machine learning for GEA. They used (engineered) [:Plasmid](#x-plasmid) sequences from [Addgene](https://www.addgene.org/), an open source database, where each engineered sequence is linked to the lab that designed it.
+
+Their data contained 36,764 plasmid sequences from 827 labs. To make the sequences available to model, they simply one hot encoded each nucleotide, resulting in a 16,048 x 4 matrix of for each sequence. Then, they trained a simple CNN to predict which of the labs the sequence came from. 
 
 ```{mermaid}
 %%| label: fig-cnn
@@ -34,21 +38,69 @@ flowchart LR
     style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px
 ```
 
-The CNN predicted the correct lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10. 
-Then, they compared it to BLAST.
+The CNN correctly predicted the lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10 predictions. The results aren't what you'd need in practice, but they made a point: There actually *is* a unique lab-of-origin signature in these sequences, and its possible to model them.
+
+### 2020: base-pair encoding + LSTM
+
+[Alley et al, 2020](https://www.nature.com/articles/s41467-020-19612-0) are next in line. They also used Plasmid data from Addgene. After preprocessing, they had a dataset of over 80,000 sequences from over 1,300 labs, substantially larger than Nielsen & Voigt two years before. 
+
+Instead of directly training a model on nucleotides, they used [:byte-pair encoding (BPE)](#x-bpe) to identify reccuring patterns in the DNA, called motifs. These motifs mapped to codons, regulatory and conserved regions. Each motif then became a token that is fed to the model. 
+
+In addition to DNA, they also trained their model based on six phenotypes such as growth temperature and antibiotic resistance. In a real world scenario, this means that we would have to sequence the sample and run lab tests to get these phenotypes.
+
+To learn the lab-of-origin from sequences and phenotypes, they used an [:LSTM](#x-lstm) in a two step process, where they first trained on sequences only, and then added phenotypes and trained a bit further. This is because they found that this training strategy prevented the model to get stuck in a local minimum caused by the phenotype data.
 
 ```{mermaid}
-%%| label: fig-mermaid
-%%| fig-cap: bio-forensics
+%%| label: fig-lstm
+%%| fig-cap: Alley et al. deteRNNt architecture for Lab-of-Origin Prediction
 
-flowchart TD
-    A[bio-agent] --> B(natural)
-    A            --> C(engineered)
-    C            --> D(general info)
-    C            --> E(intelligence)
-    C            --> F(GEA)
-    F            --> G(country-of-origin)
-    F            --> H(lab-of-origin)    
+flowchart LR
+    A["DNA Sequence<br/>ATGCGTAA...<br/>↓<br/>BPE Motifs"] --> B["LSTM"] --> C["Metadata<br/>+<br/>Concat"] --> D["1314 labs<br/>Softmax"]
+    
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px
+    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px
+```
+
+The sequence+phenotype LSTM predicted the correct lab-of-origin 70% of the time, with a 84% top-10 accuracy. This is better than before, but it's unclear to which degree this is due to LSTM vs. CNN, BPE vs nucleotide encoding, more sequence data or the addition of meta-data to the training.
+
+The authors also show that the model is well-calibrated (when it says X% confidence that the plasmid belongs to a lab it shouild be correct X% of the time), and they use a simpler random forest model to predict nation-of-origin with 88% top-3 accuracy compared to 47% for guessing the most abundant nations (some are much more abundant so much more likely to be the nation-of-origin!).
+
+### 2022: pangenome + alignment (no deep learning!)
+
+Do we actually need deep learning at all? [Wang et al., 2022](https://www.nature.com/articles/s41467-021-21180-w) don't think so. They developed PlasmidHawk, which uses a much simpler approach based on a [:pangenome](#x-pan), sequence alignment and fragment counting, this is how it works:
+
+1. create a pangenome from ALL plasmid sequences 
+2. align each plasmid sequence back to the pangenome to annote it with lab-information for each fragment 
+3. align unknown plasmid sequence to pangenome 
+4. count number of aligned fragments for each lab 
+5. calculate a lab score (this says: the fewer labs share a fragment, the more indicative it is for a given lab)
+
+```{mermaid}
+%%| label: fig-plasmidHawk
+%%| fig-cap: Wang et al. PlasmidHawk Pipeline for Lab-of-Origin Prediction
+
+flowchart LR
+    subgraph S1 ["Step 1: Setup"]
+        E["Addgene<br/>Repository"] --> F["Build<br/>Pan-genome"] --> G["Annotate with<br/>Lab Origins"]
+    end
+    
+    subgraph S2 ["Step 2: Prediction"]
+        A["Unknown<br/>Plasmid"] --> B["Align to<br/>Pan-genome"] --> C["Count Aligned<br/>Fragments"] --> D["Lab with Most<br/>Fragments"]
+    end
+    
+    G -.-> B
+    
+    style S1 fill:none,stroke:none
+    style S2 fill:none,stroke:none
+    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px
+    style F fill:#fff9c4,stroke:#f9a825,stroke-width:3px
+    style G fill:#fff9c4,stroke:#f9a825,stroke-width:3px
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px
+    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px
 ```
 
 
@@ -93,3 +145,20 @@ genetic engineering attribution, also:
 * lab-of-origin prediction
 * engineered-DNA forensics
 * biosec sequence attribution
+
+
+## :x plasmid
+
+Plasmids are small, circular pieces of DNA that float around outside the actual genome. They are a good vector to transport genes into the cell, are relatively easy to work with and self-replicating. That's why they are often used for genetic engineering. 
+
+## :x bpe
+
+Byte-pair encoding (BPE) is a tokenization method that breaks down DNA sequences into meaningful subunits rather than individual nucleotides. Instead of treating each A, T, G, C separately, BPE identifies frequently occurring pairs and merges them into single tokens, creating a more efficient representation. They also allow inputs to be of different lenghts, which is very useful for DNA sequences.
+
+## :x lstm
+
+Long Short-Term Memory (LSTM) is a type of neural network designed to remember information over long sequences. Unlike regular neural networks that forget previous inputs, LSTMs have special "gates" that control what information to keep, forget, or output. They also take input of different lengths, which is great for DNA sequences.
+
+## :x pan
+
+Traditionally, genomics has worked with a single reference genome against which samples are aligned. This approach loses variation - if a sample has genetic features that can't be aligned to the reference, they're discarded. A pangenome captures all genetic variation across multiple samples in a single data structure, often represented as a graph rather than a linear sequence.
