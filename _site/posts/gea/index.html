@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-07-25">
-<meta name="description" content="how to make genetic engineering attribution work?">
+<meta name="description" content="where we are and how to move forward">
 
 <title>engineered-DNA forensics</title>
 <style>
@@ -143,7 +143,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    how to make genetic engineering attribution work?
+    where we are and how to move forward
   </div>
 </div>
 
@@ -166,14 +166,15 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 </header>
 
 
-<p>Engineered bio-agents are created in labs around the world. Often enough, something goes wrong and a virus escapes the lab. More worringly, bad actors could misuse new biotech and AI to create vastly more dangerous weapons than ever before. Whether a bio-agent is released accidentally or intentionally, it’s difficult to figure out <strong>who</strong> developed it in the first place.</p>
-<p>Luckily, there’s some progress in tackling the problem of <strong>Genetic engineering attribution (GEA)</strong>. The idea behind GEA is that <em>engineered</em> organism can be traced back to their designers through signatures in their DNA. There’s many degrees of freedom in bio-engineering, and the combination of design, style and tools used can create a unique DNA pattern in the synthetic organism leading straight to its lab-of-origin.</p>
-<p>GEA is a key defensive technology. Once mature, it will allow to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It’s something we should invest in.</p>
-<p>While the field itself arguably started with the microbial forensics investigations of <a href="https://www.tandfonline.com/doi/full/10.1080/00396331003612521">Amerithrax</a>, GEA back then was manual and specific. In the machine learning era, we’re able to develop general tools that work for a wide range of threats, trained on available data. But how far are we?</p>
+<p>Engineered organisms (&gt;bio-agents) are created in labs around the world. Lab-leaks are relatively common even in <a href="#x-bsl4">:BSL-4</a> labs. Bad actors, including nation states and terror groups have always had a large <a href="../../posts/dacc-bio/index.html">interest in bioweapons</a>. However, once a bio-agent is out in the wild, it’s really difficult to figure out <em>who</em> developed it in the first place.</p>
+<p>The problem is called <strong>genetic engineering attribution (GEA)</strong>. The challenge of GEA is tracing back <em>engineered</em> organisms to their designers through signatures in their DNA.</p>
+<p>But why could that work? There’s many degrees of freedom in genetic engineering, and the combination of design, style and tools used creates a unique DNA pattern in the synthetic organism, sometimes leading straight to its lab-of-origin.</p>
+<p>GEA is a key defensive technology. Once mature, it will allow us to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It’s something we should invest in.</p>
+<p>While the field itself arguably started with the microbial forensics investigations of <a href="https://www.tandfonline.com/doi/full/10.1080/00396331003612521">Amerithrax</a>, GEA back then was manual, specific and slow. In the machine learning era, we’re able to develop general tools that work for a wide range of bio-agents and labs. But how far are we?</p>
 <section id="raw-nucleotides-cnn" class="level3">
 <h3 class="anchored" data-anchor-id="raw-nucleotides-cnn">2018: raw nucleotides + CNN</h3>
-<p><a href="https://www.nature.com/articles/s41467-018-05378-z">Nielsen &amp; Voigt, 2018</a> is first study using machine learning for GEA. They used (engineered) <a href="#x-plasmid">:Plasmid</a> sequences from <a href="https://www.addgene.org/">Addgene</a>, an open source database, where each engineered sequence is linked to the lab that designed it.</p>
-<p>Their data contained 36,764 plasmid sequences from 827 labs. To make the sequences available to model, they simply one hot encoded each nucleotide, resulting in a 16,048 x 4 matrix of for each sequence. Then, they trained a simple CNN to predict which of the labs the sequence came from.</p>
+<p><a href="https://www.nature.com/articles/s41467-018-05378-z">Nielsen &amp; Voigt, 2018</a> is the first study using machine learning for GEA. They used engineered <a href="#x-plasmid">:Plasmid</a> sequences from <a href="https://www.addgene.org/">Addgene</a>, an open source database. It’s one of the few databases where each engineered sequence is linked to the lab that designed it.</p>
+<p>Their data contained 36,764 plasmid sequences from 827 labs. To make the sequences available to model, they simply <a href="#x-one-hot">:one-hot encoded</a> each nucleotide, resulting in a 16,048 x 4 matrix of for each plasmid sequence. Then, they trained a simple CNN to predict which of the labs the sequence came from.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-cnn" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -197,14 +198,14 @@ Figure&nbsp;1: Nielsen &amp; Voigt CNN Architecture for Lab-of-Origin Prediction
 </div>
 </div>
 </div>
-<p>The CNN correctly predicted the lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10 predictions. The results aren’t what you’d need in practice, but they made a point: There actually <em>is</em> a unique lab-of-origin signature in these sequences, and its possible to model them.</p>
+<p>The CNN correctly predicted the lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10 predictions. This isn’t quite good enough to apply to a real case, but they made a point: There actually <em>is</em> a unique lab-of-origin signature in these sequences. ML-GEA is up to a promising start.</p>
 </section>
 <section id="base-pair-encoding-lstm" class="level3">
 <h3 class="anchored" data-anchor-id="base-pair-encoding-lstm">2020: base-pair encoding + LSTM</h3>
-<p><a href="https://www.nature.com/articles/s41467-020-19612-0">Alley et al, 2020</a> are next in line. They also used Plasmid data from Addgene. After preprocessing, they had a dataset of over 80,000 sequences from over 1,300 labs, substantially larger than Nielsen &amp; Voigt two years before.</p>
+<p><a href="https://www.nature.com/articles/s41467-020-19612-0">Alley et al, 2020</a> are next in line. They also used plasmid data from Addgene. After preprocessing, they had a dataset of over 80,000 sequences from over 1,300 labs, substantially larger than Nielsen &amp; Voigt two years before.</p>
 <p>Instead of directly training a model on nucleotides, they used <a href="#x-bpe">:byte-pair encoding (BPE)</a> to identify reccuring patterns in the DNA, called motifs. These motifs mapped to codons, regulatory and conserved regions. Each motif then became a token that is fed to the model.</p>
 <p>In addition to DNA, they also trained their model based on six phenotypes such as growth temperature and antibiotic resistance. In a real world scenario, this means that we would have to sequence the sample and run lab tests to get these phenotypes.</p>
-<p>To learn the lab-of-origin from sequences and phenotypes, they used an <a href="#x-lstm">:LSTM</a> in a two step process, where they first trained on sequences only, and then added phenotypes and trained a bit further. This is because they found that this training strategy prevented the model to get stuck in a local minimum caused by the phenotype data.</p>
+<p>To predict the lab-of-origin from sequences and phenotypes, they used an <a href="#x-lstm">:LSTM</a> trained in a two step process. First, they trained on sequences only, and then added phenotypes and finetuned the model. This training strategy prevented the model to get stuck in a local minimum caused by the phenotype data early in training.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-lstm" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -228,12 +229,25 @@ Figure&nbsp;2: Alley et al.&nbsp;deteRNNt architecture for Lab-of-Origin Predict
 </div>
 </div>
 </div>
-<p>The sequence+phenotype LSTM predicted the correct lab-of-origin 70% of the time, with a 84% top-10 accuracy. This is better than before, but it’s unclear to which degree this is due to LSTM vs.&nbsp;CNN, BPE vs nucleotide encoding, more sequence data or the addition of meta-data to the training.</p>
-<p>The authors also show that the model is well-calibrated (when it says X% confidence that the plasmid belongs to a lab it shouild be correct X% of the time), and they use a simpler random forest model to predict nation-of-origin with 88% top-3 accuracy compared to 47% for guessing the most abundant nations (some are much more abundant so much more likely to be the nation-of-origin!).</p>
+<p>The sequence+phenotype LSTM predicted the correct lab-of-origin 70% of the time, with a 84% top-10 accuracy. This is better than before, but it’s unclear whether the performance increase comes from LSTM vs.&nbsp;CNN, BPE vs raw nucleotide encoding, more sequence data or the addition of meta-data to the training.</p>
+<p>The authors also show that the model is well <a href="#x-calibration">:calibrated</a> and that a simpler random forest model can predict the nation-of-origin with 88% top-3 accuracy compared to 47% for simply guessing the most abundant nations in the database.</p>
 </section>
 <section id="pangenome-alignment-no-deep-learning" class="level3">
 <h3 class="anchored" data-anchor-id="pangenome-alignment-no-deep-learning">2022: pangenome + alignment (no deep learning!)</h3>
-<p>Do we actually need deep learning at all? <a href="https://www.nature.com/articles/s41467-021-21180-w">Wang et al., 2022</a> don’t think so. They developed PlasmidHawk, which uses a much simpler approach based on sequence alignment and fragment counting:</p>
+<p>Do we actually need deep learning at all? <a href="https://www.nature.com/articles/s41467-021-21180-w">Wang et al., 2022</a> don’t think so. They developed PlasmidHawk, which uses a much simpler approach based on a <a href="#x-pan">:pangenome</a>, sequence alignment and fragment counting. This is how it works:</p>
+<p><em>Setup</em></p>
+<ol type="1">
+<li>create a pangenome from ALL plasmid sequences<br>
+</li>
+<li>align each plasmid sequence back to the pangenome to annote <em>each fragment or sub-sequence</em> with lab-of-origin information. These are not unique, some fragments will be annotated with multiple labs.</li>
+</ol>
+<p><em>Prediction</em></p>
+<ol start="3" type="1">
+<li>take a new plasmid sequence and align to the pangenome<br>
+</li>
+<li>count how often each lab occurs among the aligned fragments. This is a raw score already. One of the labs will occur most often, making it a good candidate for the lab-of-origin.</li>
+<li>but they calculate a lab score - a more elegant, <em>weighted</em> version of the raw count. The idea is: the fewer labs share a fragment, the more indicative it is for labs that that have it.</li>
+</ol>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-plasmidHawk" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -241,25 +255,32 @@ Figure&nbsp;2: Alley et al.&nbsp;deteRNNt architecture for Lab-of-Origin Predict
 <div aria-describedby="fig-plasmidHawk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-plasmidHawk">flowchart LR
-    subgraph S1 ["Step 1: Setup"]
-        E["Addgene&lt;br/&gt;Repository"] --&gt; F["Build&lt;br/&gt;Pan-genome"] --&gt; G["Annotate with&lt;br/&gt;Lab Origins"]
+    subgraph S1 ["Setup Phase"]
+        E["Addgene&lt;br/&gt;Repository"] 
+        F["Build&lt;br/&gt;Pan-genome"] 
+        G["Annotate&lt;br/&gt;Lab Origins"]
+        E --&gt; F --&gt; G
     end
     
-    subgraph S2 ["Step 2: Prediction"]
-        A["Unknown&lt;br/&gt;Plasmid"] --&gt; B["Align to&lt;br/&gt;Pan-genome"] --&gt; C["Count Aligned&lt;br/&gt;Fragments"] --&gt; D["Lab with Most&lt;br/&gt;Fragments"]
+    subgraph S2 ["Prediction Phase"]
+        A["Unknown&lt;br/&gt;Plasmid"] 
+        B["Align to&lt;br/&gt;Pan-genome"] 
+        C["Count&lt;br/&gt;Fragments"] 
+        D["Predict&lt;br/&gt;Lab Origin"]
+        A --&gt; B --&gt; C --&gt; D
     end
     
     G -.-&gt; B
     
     style S1 fill:none,stroke:none
     style S2 fill:none,stroke:none
-    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px
-    style F fill:#fff9c4,stroke:#f9a825,stroke-width:3px
-    style G fill:#fff9c4,stroke:#f9a825,stroke-width:3px
-    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
-    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px
-    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px
-    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px
+    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:4px,color:#000
+    style F fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:#000
+    style G fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:#000
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:4px,color:#000
+    style B fill:#fff3e0,stroke:#f57c00,stroke-width:4px,color:#000
+    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:4px,color:#000
+    style D fill:#fce4ec,stroke:#c2185b,stroke-width:4px,color:#000
 </pre>
 </div>
 </div>
@@ -270,33 +291,26 @@ Figure&nbsp;3: Wang et al.&nbsp;PlasmidHawk Pipeline for Lab-of-Origin Predictio
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-mermaid" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-mermaid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-mermaid">flowchart TD
-    A[bio-agent] --&gt; B(natural)
-    A            --&gt; C(engineered)
-    C            --&gt; D(general info)
-    C            --&gt; E(intelligence)
-    C            --&gt; F(GEA)
-    F            --&gt; G(country-of-origin)
-    F            --&gt; H(lab-of-origin)    
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mermaid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: bio-forensics
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>Therefore, we should take the possibility seriously that biotech will be misused and push safeguarding technologies in the spirit of <a href="../dacc-bio/"><strong>d/acc</strong></a> to prevent that.</p>
-<p>One early-stage technology is <strong>genetic engineering attribution (GEA)</strong>. It’s the idea that we can identify the designer of an engineered virus or bacterium by its DNA sequence.</p>
-<p>How’s that possible? Like everything humans do, genetic engineering leaves a unique footprint in DNA, the combination of all the unique choices the lab made about design and tools. There’s a myriad ways on how to do genetic engineering, and therefore everyone leaves their</p>
+<p>Their method, called PlasmidHawk, had a 76% accuracy for lab-of-origin prediction and a 85% top-10 accuracy, which is better than the two neural network models before. They say it’s more efficient than deep learning too, as updating the pangenome with new plasmids is quick compared to re-training a neural network, but the data isn’t that big and DL hardware/software is becoming very efficient, so I believe this isn’t a substantial point anymore.</p>
+<p>A big advantage of this approach is interpretability. For each novel sequence, the method directly surfaces the association between fragment and lab-of-origin after aligning it to the pangenome. This leaves a few more degrees of freedom though: The size of fragments has to be chosen manually, and so does the similarity threshold for alignment. The method also doesn’t allow to incorporate additional meta-data like the LSTM approach above, which will be crucial in real-word GEA.</p>
+</section>
+<section id="gea-competition" class="level3">
+<h3 class="anchored" data-anchor-id="gea-competition">2022: GEA competition</h3>
+<p>The first <a href="https://www.nature.com/articles/s41467-022-35032-8">GEA competition</a> had 1,200 competitors to create the best GEA model. They worked with the Alley at al data: 81,833 plasmid sequences, 1314 labs-of-origin to predict. There are many more labs in the Addgene database, but all labs with fewer than ten plasmids were pooled into an “Unknown Engineered” category.</p>
+<p>The top-teams’ models vastly outperformed previous models, with a top-1 accuracy of 82% and a top-10 accuracy of 95%.</p>
+<p>They were also much better at <em>negative</em> attribution - the ability to <em>exclude</em> potential designers. This is measured by ab X99 score. X99 is the minimum positive integer N, so that the top-N accuracy is at least 99%. For example, X99 would be 279 if the lab-of-origin would be among the top 279 predicted candidates 99% of the time. In Nilsen &amp; Voigt 2018, the X99 was 898, the winning model in the competition had a score of 299.</p>
+<p>So what were the modeling strategies of the winners? Mostly <a href="#x-ensemble">:ensembles</a> containing CNNs, though the details (pre-processing etc) varied substantially.</p>
+<p><em>Problems</em></p>
+<p><a href="https://www.nature.com/articles/s41467-022-35032-8">Crook et al 2022</a> describe some of the issues they observed in the competition models:</p>
+<ul>
+<li>low <a href="#x-calibration">:calibration</a> scores, except for the winning model</li>
+<li>problematic large composite “Unknown Engineered” class, in which all labs with fewer than 10 sequences (~2000 labs) are pooled. The top-10 accuracy for the Unknown Engineered class was consistently very high, inflating the overall prediction, thought the problem didn’t seem to be very big for the best models.</li>
+</ul>
+<p><em>deeper dive</em></p>
+<p><a href="https://www.nature.com/articles/s43588-022-00234-z">Soares et al</a> published their solution, which was one of the winners.</p>
+</section>
+<section id="thoughts" class="level1">
+<h1>thoughts</h1>
 <p>attribution security benefits: * inform response (motives? capabilities?) * identify responsible parties for penalty * succesful attribution can deter other actors</p>
 <p>info for attribution: * non-technical: location, epidemiological features (middle of conlict? labs nearby? accidental vs purposeful) * intelligence: whistleblowers, interc. comms, surveillance * technical forensics: properties of the agent</p>
 <p>engineered vs natural * IARPA FELIX program</p>
@@ -304,7 +318,6 @@ Figure&nbsp;4: bio-forensics
 <p>limits: * attribution techniques don’t detect whether the agent was engineered in the first place (it follows engineering detection) * risk of false positives * releases of “non-engineered agents” wouldn’t be captured * designer might not be mis-user * some actors want to claim that it was them! * data is from genetic engineers operating “in the clear” * sophisticated actors might obfuscate or misdirect attribution, e.g.&nbsp;use the methodological signature of another actor * but these attempts will leave their own signatures</p>
 <p>genetic engineering attribution, also:<br>
 * lab-of-origin prediction * engineered-DNA forensics * biosec sequence attribution</p>
-</section>
 <section id="x-plasmid" class="level2">
 <h2 class="anchored" data-anchor-id="x-plasmid">:x plasmid</h2>
 <p>Plasmids are small, circular pieces of DNA that float around outside the actual genome. They are a good vector to transport genes into the cell, are relatively easy to work with and self-replicating. That’s why they are often used for genetic engineering.</p>
@@ -316,8 +329,29 @@ Figure&nbsp;4: bio-forensics
 <section id="x-lstm" class="level2">
 <h2 class="anchored" data-anchor-id="x-lstm">:x lstm</h2>
 <p>Long Short-Term Memory (LSTM) is a type of neural network designed to remember information over long sequences. Unlike regular neural networks that forget previous inputs, LSTMs have special “gates” that control what information to keep, forget, or output. They also take input of different lengths, which is great for DNA sequences.</p>
+</section>
+<section id="x-pan" class="level2">
+<h2 class="anchored" data-anchor-id="x-pan">:x pan</h2>
+<p>Traditionally, genomics has worked with a single reference genome against which samples are aligned. This approach loses variation - if a sample has genetic features that can’t be aligned to the reference, they’re discarded. A pangenome captures all genetic variation across multiple samples in a single data structure, often represented as a graph rather than a linear sequence.</p>
+</section>
+<section id="x-ensemble" class="level2">
+<h2 class="anchored" data-anchor-id="x-ensemble">:x ensemble</h2>
+<p>Ensemble methods do as they sound: They combine the predictions of multiple different models, often leading to more accurate and reliable results.</p>
+</section>
+<section id="x-calibration" class="level2">
+<h2 class="anchored" data-anchor-id="x-calibration">:x calibration</h2>
+<p>Calibration is about aligning <em>stated</em> probabilities with empirical <em>frequencies</em>. DL models are often overconfident. When a model is well-calibrated it should do the following: if it predicts something with a 70% probability, the thing should happen 70% of the time. If someone tells me there’s a 30% rain probability in Edinburgh today, they I expect that there’s rain in 3 out of 10 times they tell me that.</p>
+</section>
+<section id="x-one-hot" class="level2">
+<h2 class="anchored" data-anchor-id="x-one-hot">:x one-hot</h2>
+<p>One-hot encoding transforms categorical variables into binary vectors where only one element is “hot” (1) and all others are “cold” (0). For DNA nucleotides: A → [1,0,0,0], T → [0,1,0,0], G → [0,0,1,0], C → [0,0,0,1]. This allows machine learning algorithms to process the data.</p>
+</section>
+<section id="x-bsl4" class="level2">
+<h2 class="anchored" data-anchor-id="x-bsl4">:x bsl4</h2>
+<p>BSL-4 labs have the strictest biosafety precautions, as they deal with agents that are aerosol-transmitted and/or highly dangerous and for which there is often no treatment or vaccine.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

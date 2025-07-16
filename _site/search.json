@@ -263,7 +263,7 @@
     "href": "posts/gea/index.html",
     "title": "engineered-DNA forensics",
     "section": "",
-    "text": "Engineered bio-agents are created in labs around the world. Often enough, something goes wrong and a virus escapes the lab. More worringly, bad actors could misuse new biotech and AI to create vastly more dangerous weapons than ever before. Whether a bio-agent is released accidentally or intentionally, it’s difficult to figure out who developed it in the first place.\nLuckily, there’s some progress in tackling the problem of Genetic engineering attribution (GEA). The idea behind GEA is that engineered organism can be traced back to their designers through signatures in their DNA. There’s many degrees of freedom in bio-engineering, and the combination of design, style and tools used can create a unique DNA pattern in the synthetic organism leading straight to its lab-of-origin.\nGEA is a key defensive technology. Once mature, it will allow to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It’s something we should invest in.\nWhile the field itself arguably started with the microbial forensics investigations of Amerithrax, GEA back then was manual and specific. In the machine learning era, we’re able to develop general tools that work for a wide range of threats, trained on available data. But how far are we?"
+    "text": "Engineered organisms (&gt;bio-agents) are created in labs around the world. Lab-leaks are relatively common even in :BSL-4 labs. Bad actors, including nation states and terror groups have always had a large interest in bioweapons. However, once a bio-agent is out in the wild, it’s really difficult to figure out who developed it in the first place.\nThe problem is called genetic engineering attribution (GEA). The challenge of GEA is tracing back engineered organisms to their designers through signatures in their DNA.\nBut why could that work? There’s many degrees of freedom in genetic engineering, and the combination of design, style and tools used creates a unique DNA pattern in the synthetic organism, sometimes leading straight to its lab-of-origin.\nGEA is a key defensive technology. Once mature, it will allow us to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It’s something we should invest in.\nWhile the field itself arguably started with the microbial forensics investigations of Amerithrax, GEA back then was manual, specific and slow. In the machine learning era, we’re able to develop general tools that work for a wide range of bio-agents and labs. But how far are we?"
   },
   {
     "objectID": "posts/gea/index.html#x-plasmid",
@@ -285,5 +285,40 @@
     "title": "engineered-DNA forensics",
     "section": ":x lstm",
     "text": ":x lstm\nLong Short-Term Memory (LSTM) is a type of neural network designed to remember information over long sequences. Unlike regular neural networks that forget previous inputs, LSTMs have special “gates” that control what information to keep, forget, or output. They also take input of different lengths, which is great for DNA sequences."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-pan",
+    "href": "posts/gea/index.html#x-pan",
+    "title": "engineered-DNA forensics",
+    "section": ":x pan",
+    "text": ":x pan\nTraditionally, genomics has worked with a single reference genome against which samples are aligned. This approach loses variation - if a sample has genetic features that can’t be aligned to the reference, they’re discarded. A pangenome captures all genetic variation across multiple samples in a single data structure, often represented as a graph rather than a linear sequence."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-ensemble",
+    "href": "posts/gea/index.html#x-ensemble",
+    "title": "engineered-DNA forensics",
+    "section": ":x ensemble",
+    "text": ":x ensemble\nEnsemble methods do as they sound: They combine the predictions of multiple different models, often leading to more accurate and reliable results."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-calibration",
+    "href": "posts/gea/index.html#x-calibration",
+    "title": "engineered-DNA forensics",
+    "section": ":x calibration",
+    "text": ":x calibration\nCalibration is about aligning stated probabilities with empirical frequencies. DL models are often overconfident. When a model is well-calibrated it should do the following: if it predicts something with a 70% probability, the thing should happen 70% of the time. If someone tells me there’s a 30% rain probability in Edinburgh today, they I expect that there’s rain in 3 out of 10 times they tell me that."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-one-hot",
+    "href": "posts/gea/index.html#x-one-hot",
+    "title": "engineered-DNA forensics",
+    "section": ":x one-hot",
+    "text": ":x one-hot\nOne-hot encoding transforms categorical variables into binary vectors where only one element is “hot” (1) and all others are “cold” (0). For DNA nucleotides: A → [1,0,0,0], T → [0,1,0,0], G → [0,0,1,0], C → [0,0,0,1]. This allows machine learning algorithms to process the data."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-bsl4",
+    "href": "posts/gea/index.html#x-bsl4",
+    "title": "engineered-DNA forensics",
+    "section": ":x bsl4",
+    "text": ":x bsl4\nBSL-4 labs have the strictest biosafety precautions, as they deal with agents that are aerosol-transmitted and/or highly dangerous and for which there is often no treatment or vaccine."
   }
 ]
