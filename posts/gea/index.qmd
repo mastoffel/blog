@@ -169,7 +169,7 @@ This is largely a pragmatic choice. Addgene contains lots of curated sequences w
 | Nielsen & Voigt (2018) | CNN | Addgene plasmids | 36,764 | 827 | 48% | 70% | First ML approach to GEA |
 | Alley et al (2020) | LSTM | Addgene plasmids + metadata | 81,833 | 1,314 | 70% | 84% | BPE encoding, phenotype data |
 | Wang et al (2022) | Pangenome alignment | Addgene plasmids | 38,682 (full-length) | 896 | 76% | 85% | Non-ML approach, interpretable |
-| Competition Winners (2022) | CNN ensembles | Addgene plasmids + metadata | 81,833 | 1,314 | 82% | 95% | Ensemble methods, k-mers, BLAST-PCA features |
+| Competition Winner (2022) | CNN ensembles | Addgene plasmids + metadata | 81,833 | 1,314 | 82% | 95% | Ensemble methods, k-mers, BLAST-PCA features |
 | Soares et al (2022) | CNN + Triplet Network | Addgene plasmids + metadata| 81,833 | 1,314 | 76% | 90% | Circular shift augmentation, embedding space |
 
 The research so far also shows that small tweaks like BPE, or circular shift augmentation can still make a large difference. It seems likely that there's a lot of low-hanging fruit here.
