@@ -2,7 +2,7 @@
 title: "engineered-DNA forensics"
 description: "where we are and how to move forward"
 # author: "Martin Stoffel"
-date: "2025-07-25"
+date: "2025-07-17"
 categories: [biosecurity]
 title-block-banner: false
 draft: false
