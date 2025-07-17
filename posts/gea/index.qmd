@@ -11,13 +11,13 @@ filters:
 ---
 
 
-Engineered organisms (>bio-agents) are created in labs around the world. Lab-leaks are relatively common even in [:BSL-4](#x-bsl4) labs. Bad actors, including nation states and terror groups have always had a large [interest in bioweapons](../dacc-bio/index.qmd). However, once a bio-agent is out in the wild, it's really difficult to figure out *who* developed it in the first place.
+Engineered organisms (>bio-agents) are created in labs around the world. Lab-leaks are [relatively common](https://www.sciencedirect.com/science/article/pii/S2666524723003191?utm_source=chatgpt.com), even out of [:BSL-4](#x-bsl4) labs. Bad actors, including nation states and terror groups have always had a large [interest in bioweapons](../dacc-bio/index.qmd). However, once a bio-agent is out in the wild, it's really difficult to figure out *who* developed it in the first place.
 
-The problem is called **genetic engineering attribution (GEA)**. The challenge of GEA is tracing back *engineered* organisms to their designers through signatures in their DNA. 
+The problem is called **genetic engineering attribution (GEA)**. The challenge of GEA is tracing back engineered organisms to their designers through signatures in their DNA. 
 
-But why could that work? There's many degrees of freedom in genetic engineering, and the combination of design, style and tools used creates a unique DNA pattern in the synthetic organism, sometimes leading straight to its lab-of-origin.
+But why could that work? There's many degrees of freedom in genetic engineering, and the combination of design, style and tools used creates a unique DNA pattern in the synthetic organism, reflecting its lab-of-origin.
 
-GEA is a key defensive technology. Once mature, it will allow us to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It's something we should invest in. 
+Once mature, GEA will allow us to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It's something we should invest in. 
 
 While the field itself arguably started with the microbial forensics investigations of [Amerithrax](https://www.tandfonline.com/doi/full/10.1080/00396331003612521), GEA back then was manual, specific and slow. In the machine learning era, we're able to develop general tools that work for a wide range of bio-agents and labs. But how far are we?
 
@@ -40,13 +40,13 @@ flowchart LR
     style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px
 ```
 
-The CNN correctly predicted the lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10 predictions. This isn't quite good enough to apply to a real case, but they made a point: There actually *is* a unique lab-of-origin signature in these sequences. ML-GEA is up to a promising start.
+The CNN correctly predicted the lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10 predictions. This isn't quite good enough to apply to a real-world case, but they made a point: There actually *is* a unique lab-of-origin signature in these sequences. ML-GEA is up to a promising start.
 
 ### 2020: base-pair encoding + LSTM
 
 [Alley et al, 2020](https://www.nature.com/articles/s41467-020-19612-0) are next in line. They also used plasmid data from Addgene. After preprocessing, they had a dataset of over 80,000 sequences from over 1,300 labs, substantially larger than Nielsen & Voigt two years before. 
 
-Instead of directly training a model on nucleotides, they used [:byte-pair encoding (BPE)](#x-bpe) to identify reccuring patterns in the DNA, called motifs. These motifs mapped to codons, regulatory and conserved regions. Each motif then became a token that is fed to the model. 
+Instead of directly training a model on nucleotides, they used [:byte-pair encoding (BPE)](#x-bpe) to identify recurring patterns in the DNA, called motifs. These motifs mapped to codons, regulatory and conserved regions. Each motif then became a token that is fed to the model. 
 
 In addition to DNA, they also trained their model based on six phenotypes such as growth temperature and antibiotic resistance. In a real world scenario, this means that we would have to sequence the sample and run lab tests to get these phenotypes.
 
@@ -108,13 +108,13 @@ flowchart LR
     
     style S1 fill:none,stroke:none
     style S2 fill:none,stroke:none
-    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:4px,color:#000
-    style F fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:#000
-    style G fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:#000
-    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:4px,color:#000
-    style B fill:#fff3e0,stroke:#f57c00,stroke-width:4px,color:#000
-    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:4px,color:#000
-    style D fill:#fce4ec,stroke:#c2185b,stroke-width:4px,color:#000
+    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:4px,color:
+    style F fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:
+    style G fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:4px,color:
+    style B fill:#fff3e0,stroke:#f57c00,stroke-width:4px,color:
+    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:4px,color:
+    style D fill:#fce4ec,stroke:#c2185b,stroke-width:4px,color:
 ```
 
 Their method, called PlasmidHawk, had a 76% accuracy for lab-of-origin prediction and a 85% top-10 accuracy, which is better than the two neural network models before. They say it's more efficient than deep learning too, as updating the pangenome with new plasmids is quick compared to re-training a neural network, but the data isn't that big and DL hardware/software is becoming very efficient, so I believe this isn't a substantial point anymore.
@@ -123,7 +123,7 @@ A big advantage of this approach is interpretability. For each novel sequence, t
 
 ### 2022: GEA competition
 
-The first [GEA competition](https://www.nature.com/articles/s41467-022-35032-8) had 1,200 competitors to create the best GEA model. They worked with the Alley at al data: 81,833 plasmid sequences, 1314 labs-of-origin to predict. There are many more labs in the Addgene database, but all labs with fewer than ten plasmids were pooled into an "Unknown Engineered" category.
+The first [GEA competition](https://www.nature.com/articles/s41467-022-35032-8) had 1,200 competitors. They worked with the Alley at al data: 81,833 plasmid sequences + meta-data and 1314 labs-of-origin to predict. There are many more labs in the Addgene database, but all labs with fewer than ten plasmids were pooled into an "Unknown Engineered" category.
 
 The top-teams' models vastly outperformed previous models, with a top-1 accuracy of 82% and a top-10 accuracy of 95%. 
 
@@ -138,60 +138,56 @@ So what were the modeling strategies of the winners? Mostly [:ensembles](#x-ense
 * low [:calibration](#x-calibration) scores, except for the winning model
 * problematic large composite "Unknown Engineered" class, in which all labs with fewer than 10 sequences (~2000 labs) are pooled. The top-10 accuracy for the Unknown Engineered class was consistently very high, inflating the overall prediction, thought the problem didn't seem to be very big for the best models.
 
-*deeper dive*
+*Deeper dive into a top solution*
 
 [Soares et al](https://www.nature.com/articles/s43588-022-00234-z) published their solution, which was one of the winners. Their model had a 90% top-10 accuracy.
 
-* circular shift augmentation > reverse-complement augmentation
-* BPE
-* interpretation via metric learning training for CNNs -> teaches the model to extract embeddings from DNA sequencing while learning embeddings of known labs.
-* one-shot learning: predict labs with only one training instance
-* identiy important tokens in the sequence
-* extract design signatures with integrated gradients
-* phenotype: antibiotic resistance, copy number, growth temperature, growth strain, selectable markers and in which species
-* metric learning: triplet networks
+Their initial model was a CNN with two tweaks. First, they also used [:BPE](#x-bpe). Second, they used circular shift augmentation. The key insight here is that plasmid DNA is circular, it doesn't have a start or an end. The sequence `ATGCACTAG` shifted by 3 is `CACTAGATG`. To reflect this, they randomly shift sequences during training, which helps the model to learn local motifs and relative nucleotide arrangements rather than absolute positions, and increases the training set. This model was already better than all pre-competition models, with a 76% top-1 and 89% top-10 accuracy.
 
+But the interesting bit is their second model. Here, the base-model is the same CNN as before, but instead of a final softmax layer that directly predicts the lab, they used a **triplet network**. 
 
+The idea of a triplet network is this: for each training example, we create a triplet consisting of a plasmid sequence (the anchor), its true lab-of-origin (the positive) and a different lab (the negative). The CNN processes the sequence and the labs into 200-D learnable [:embedding](#x-embed) vectors.
 
+During training, the model learns to poisition the anchor embedding vector closer to the positive lab embedding than to the negative one, using a triplet loss function. Instead of predicting lab-classes, they create embedding vectors. These can then be used to still predict classes, simply by measuring the distance of a sequence embedding to the nearest labs. The closest lab embedding is the top-1 candidate.
 
+Now, while the model was only ever so slightly better than the simpler CNN, it comes with other advantages:
 
+* interpretability: We can visualise the embeddings easily
+* few-shot learning: Even with a single sequence from a new model we can ask which lab embeddings are closest
+* dimensional > categorical: instead of assigning a single class, we get distances in space, which can tell a more nuanced story
 
+## summary - where are we
 
+GEA is in its infancy. Every single study so far has built models to predict the lab-of-origin from plasmid sequences in the Addgene database. 
 
-# thoughts
+This is largely a pragmatic choice. Addgene contains lots of curated sequences with associated meta-data and lab-of-origin. Studies so far have shown that GEA is *possible*, and that models can predict the lab-of-origin with accuracies of ~70-80%, decent negative attribution and good calibration. 
 
-attribution security benefits:
-* inform response (motives? capabilities?)
-* identify responsible parties for penalty
-* succesful attribution can deter other actors
+But most models probably won't be useful in the case of a real outbreak, because:
 
-info for attribution:
-* non-technical: location, epidemiological features (middle of conlict? labs nearby? accidental vs purposeful)
-* intelligence: whistleblowers, interc. comms, surveillance
-* technical forensics: properties of the agent
+**Many bio-agents won't have a plasmid**
 
-engineered vs natural
-* IARPA FELIX program
+A bio-agent might not have a plasmid at all. Most viruses don't have plasmids and even engineered bacteria may not have an engineered plasmid if the engineered trait has been chromosomally integrated.
 
-security potential of GEA
-* avoiding mistaken attribution is key
-* deterrence
+**Models are less likely to predict bad actors**
 
-limits:
-* attribution techniques don't detect whether the agent was engineered in the first place (it follows engineering detection)
-* risk of false positives
-* releases of "non-engineered agents" wouldn't be captured
-* designer might not be mis-user
-* some actors want to claim that it was them!
-* data is from genetic engineers operating "in the clear" 
-* sophisticated actors might obfuscate or misdirect attribution,
-e.g. use the methodological signature of another actor
-    * but these attempts will leave their own signatures
+Terror organisations won't deposit sequences in Addgene, and neither will the labs they are associated with. Models so far are therefore best at predicting trustworthy labs that care about transparency and data sharing. This is still useful for tracing accidental outbreaks though.
 
-genetic engineering attribution, also:  
-* lab-of-origin prediction
-* engineered-DNA forensics
-* biosec sequence attribution
+**Open-source might be a problem**
+
+All models so far are trained on open-source data, allowing bad actors to create plasmid sequences mimicking other labs. This will leave it's own traces, but is worth thinking about. AI-designers could help to further cover tracks, though other AIs could be trained to spot this. 
+
+## how to move forward
+
+Let's think through a step-by-step approach to make GEA a mature field.
+
+1. **data**: We want GEA to handle *any* sequence, from whole-genomes to viruses, from plasmids to [:synthetic assemblies](#x-synth). Therefore, we need to create comprehensive databases linking these to lab-of-origin and meta-data.
+
+2. **models**: Most models so far are highly specific in their hyperparameter optimisation, data-preprocessing and ensembling. To handle any sequence, we need highly flexible models that are trained across the biosec-relevant part of the tree-of-life and can handle any sequence length. Sequence foundation models in the style of [evo2](https://arcinstitute.org/tools/evo) might be able to do this. 
+
+3. **integration into a wider framework**. Technical GEA is only part of the solution. We'll also have non-technical information (location, epidemiological features etc.) of outbreaks as well as intelligence (whistleblowers, surveillance). We need to integrate them into a coherent framework.
+
+4. **genetic attribution security**. Once GEA is mature enough, there will be new problems, such as AI-assisted evasion of lab-of-origin detection. At this point we'll need defensive systems that are robust to obfuscation and stay on top in a new adversarial arms race between GEA tools and evasion techniques. 
+
 
 
 ## :x plasmid
@@ -221,3 +217,13 @@ One-hot encoding transforms categorical variables into binary vectors where only
 
 ## :x bsl4
 BSL-4 labs have the strictest biosafety precautions, as they deal with agents that are aerosol-transmitted and/or highly dangerous and for which there is often no treatment or vaccine.
+
+## :x synth
+A fully synthetic DNA molecule, often created from smaller components.
+
+## :x-embed
+Any object - a word, DNA sequence, image, or even a lab - can be translated into a vector, i.e. an array of numbers. This is called and **embedding**. The dimensionality (100, 200, 1024) is usually chosen manually. 
+
+The idea is that these embedding vectors are trained so that similar objects are close together in embedding space, and dissimilar ones are farther apart. After training, the positions of these vectors encode rich, abstract properties of the original objects.
+
+For example, in LLMs, the embedding of "King" - "Man" + "Women" ends up close to "Queen" - because the model has learned how sex and royalty are structured in language. In GEA, plasmid embeddings from the same lab will end up close together in embedding space, as they all share similar design signatures.

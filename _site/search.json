@@ -266,6 +266,20 @@
     "text": "Engineered organisms (&gt;bio-agents) are created in labs around the world. Lab-leaks are relatively common even in :BSL-4 labs. Bad actors, including nation states and terror groups have always had a large interest in bioweapons. However, once a bio-agent is out in the wild, it’s really difficult to figure out who developed it in the first place.\nThe problem is called genetic engineering attribution (GEA). The challenge of GEA is tracing back engineered organisms to their designers through signatures in their DNA.\nBut why could that work? There’s many degrees of freedom in genetic engineering, and the combination of design, style and tools used creates a unique DNA pattern in the synthetic organism, sometimes leading straight to its lab-of-origin.\nGEA is a key defensive technology. Once mature, it will allow us to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It’s something we should invest in.\nWhile the field itself arguably started with the microbial forensics investigations of Amerithrax, GEA back then was manual, specific and slow. In the machine learning era, we’re able to develop general tools that work for a wide range of bio-agents and labs. But how far are we?"
   },
   {
+    "objectID": "posts/gea/index.html#summary---where-are-we",
+    "href": "posts/gea/index.html#summary---where-are-we",
+    "title": "engineered-DNA forensics",
+    "section": "summary - where are we",
+    "text": "summary - where are we\nGEA is in its infancy. Every single study so far has built models to predict the lab-of-origin from plasmid sequences in the Addgene database.\nThis is largely a pragmatic choice. Addgene contains lots of curated sequences with associated meta-data and lab-of-origin. Studies so far have shown that GEA is possible, and that models can predict the lab-of-origin with accuracies of ~70-80%, decent negative attribution and good calibration.\nBut most models probably won’t be useful in the case of a real outbreak, because:\nMany bio-agents won’t have a plasmid\nA bio-agent might not have a plasmid at all. Most viruses don’t have plasmids and even engineered bacteria may not have an engineered plasmid if the engineered trait has been chromosomally integrated.\nModels are less likely to predict bad actors\nTerror organisations won’t deposit sequences in Addgene, and neither will the labs they are associated with. Models so far are therefore best at predicting trustworthy labs that care about transparency and data sharing. This is still useful for tracing accidental outbreaks though.\nOpen-source might be a problem\nAll models so far are trained on open-source data, allowing bad actors to create plasmid sequences mimicking other labs. This will leave it’s own traces, but is worth thinking about. AI-designers could help to further cover tracks, though other AIs could be trained to spot this."
+  },
+  {
+    "objectID": "posts/gea/index.html#how-to-move-forward",
+    "href": "posts/gea/index.html#how-to-move-forward",
+    "title": "engineered-DNA forensics",
+    "section": "how to move forward",
+    "text": "how to move forward\nLet’s think through a step-by-step approach to make GEA a mature field.\n\ndata: We want GEA to handle any sequence, from whole-genomes to viruses, from plasmids to :synthetic assemblies. Therefore, we need to create comprehensive databases linking these to lab-of-origin and meta-data.\nmodels: Most models so far are highly specific in their hyperparameter optimisation, data-preprocessing and ensembling. To handle any sequence, we need highly flexible models that are trained across the biosec-relevant part of the tree-of-life and can handle any sequence length. Sequence foundation models in the style of evo2 might be able to do this.\nintegration into a wider framework. Technical GEA is only part of the solution. We’ll also have non-technical information (location, epidemiological features etc.) of outbreaks as well as intelligence (whistleblowers, surveillance). We need to integrate them into a coherent framework.\ngenetic attribution security. Once GEA is mature enough, there will be new problems, such as AI-assisted evasion of lab-of-origin detection. At this point we’ll need defensive systems that are robust to obfuscation and stay on top in a new adversarial arms race between GEA tools and evasion techniques."
+  },
+  {
     "objectID": "posts/gea/index.html#x-plasmid",
     "href": "posts/gea/index.html#x-plasmid",
     "title": "engineered-DNA forensics",
@@ -320,5 +334,19 @@
     "title": "engineered-DNA forensics",
     "section": ":x bsl4",
     "text": ":x bsl4\nBSL-4 labs have the strictest biosafety precautions, as they deal with agents that are aerosol-transmitted and/or highly dangerous and for which there is often no treatment or vaccine."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-synth",
+    "href": "posts/gea/index.html#x-synth",
+    "title": "engineered-DNA forensics",
+    "section": ":x synth",
+    "text": ":x synth\nA fully synthetic DNA molecule, often created from smaller components."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-embed",
+    "href": "posts/gea/index.html#x-embed",
+    "title": "engineered-DNA forensics",
+    "section": ":x-embed",
+    "text": ":x-embed\nAny object - a word, DNA sequence, image, or even a lab - can be translated into a vector, i.e. an array of numbers. This is called and embedding. The dimensionality (100, 200, 1024) is usually chosen manually.\nThe idea is that these embedding vectors are trained so that similar objects are close together in embedding space, and dissimilar ones are farther apart. After training, the positions of these vectors encode rich, abstract properties of the original objects.\nFor example, in LLMs, the embedding of “King” - “Man” + “Women” ends up close to “Queen” - because the model has learned how sex and royalty are structured in language. In GEA, plasmid embeddings from the same lab will end up close together in embedding space, as they all share similar design signatures."
   }
 ]
