@@ -84,7 +84,6 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-<meta name="quarto:status" content="draft">
 
 
 </head>
@@ -92,7 +91,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -166,15 +165,15 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 </header>
 
 
-<p>Engineered organisms (&gt;bio-agents) are created in labs around the world. Lab-leaks are <a href="https://www.sciencedirect.com/science/article/pii/S2666524723003191?utm_source=chatgpt.com">relatively common</a>, even out of <a href="#x-bsl4">:BSL-4</a> labs. Bad actors, including nation states and terror groups have always had a large <a href="../../posts/dacc-bio/index.html">interest in bioweapons</a>. However, once a bio-agent is out in the wild, it’s really difficult to figure out <em>who</em> developed it in the first place.</p>
+<p>Engineered organisms (bio-agents) are created in labs around the world. Lab-leaks are <a href="https://www.sciencedirect.com/science/article/pii/S2666524723003191?utm_source=chatgpt.com">relatively common</a>, even out of <a href="#x-bsl4">:BSL-4</a> labs. Bad actors, including nation states and terror groups have always had a large <a href="../../posts/dacc-bio/index.html">interest in bioweapons</a>. However, once a bio-agent is out in the wild, it’s really difficult to figure out <em>who</em> developed it in the first place.</p>
 <p>The problem is called <strong>genetic engineering attribution (GEA)</strong>. The challenge of GEA is tracing back engineered organisms to their designers through signatures in their DNA.</p>
-<p>But why could that work? There’s many degrees of freedom in genetic engineering, and the combination of design, style and tools used creates a unique DNA pattern in the synthetic organism, reflecting its lab-of-origin.</p>
+<p>But why could that work? There are many degrees of freedom in genetic engineering, and the combination of design, style and tools used creates a unique DNA pattern in the synthetic organism, reflecting its lab-of-origin.</p>
 <p>Once mature, GEA will allow us to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It’s something we should invest in.</p>
 <p>While the field itself arguably started with the microbial forensics investigations of <a href="https://www.tandfonline.com/doi/full/10.1080/00396331003612521">Amerithrax</a>, GEA back then was manual, specific and slow. In the machine learning era, we’re able to develop general tools that work for a wide range of bio-agents and labs. But how far are we?</p>
 <section id="raw-nucleotides-cnn" class="level2">
 <h2 class="anchored" data-anchor-id="raw-nucleotides-cnn">2018: raw nucleotides + CNN</h2>
 <p><a href="https://www.nature.com/articles/s41467-018-05378-z">Nielsen &amp; Voigt, 2018</a> is the first study using machine learning for GEA. They used engineered <a href="#x-plasmid">:Plasmid</a> sequences from <a href="https://www.addgene.org/">Addgene</a>, an open source database. It’s one of the few databases where each engineered sequence is linked to the lab that designed it.</p>
-<p>Their data contained 36,764 plasmid sequences from 827 labs. To make the sequences available to model, they simply <a href="#x-one-hot">:one-hot encoded</a> each nucleotide, resulting in a 16,048 x 4 matrix of for each plasmid sequence. Then, they trained a simple CNN to predict which of the labs the sequence came from.</p>
+<p>Their data contained 36,764 plasmid sequences from 827 labs. To make the sequences available to model, they simply <a href="#x-one-hot">:one-hot encoded</a> each nucleotide, resulting in a 16,048 x 4 matrix for each plasmid sequence. Then, they trained a simple CNN to predict which of the labs the sequence came from.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-cnn" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -205,7 +204,7 @@ Figure&nbsp;1: Nielsen &amp; Voigt CNN Architecture for Lab-of-Origin Prediction
 <p><a href="https://www.nature.com/articles/s41467-020-19612-0">Alley et al, 2020</a> are next in line. They also used plasmid data from Addgene. After preprocessing, they had a dataset of 81833 sequences from 1,314 labs, substantially larger than Nielsen &amp; Voigt two years before.</p>
 <p>Instead of directly training a model on nucleotides, they used <a href="#x-bpe">:byte-pair encoding (BPE)</a> to identify recurring patterns in the DNA, called motifs. These motifs mapped to codons, regulatory and conserved regions. Each motif then became a token that is fed to the model.</p>
 <p>In addition to DNA, they also trained their model based on six phenotypes such as growth temperature and antibiotic resistance. In a real world scenario, this means that we would have to sequence the sample and run lab tests to get these phenotypes.</p>
-<p>To predict the lab-of-origin from sequences and phenotypes, they used an <a href="#x-lstm">:LSTM</a> trained in a two step process. First, they trained on sequences only, and then added phenotypes and finetuned the model. This training strategy prevented the model to get stuck in a local minimum caused by the phenotype data early in training.</p>
+<p>To predict the lab-of-origin from sequences and phenotypes, they used an <a href="#x-lstm">:LSTM</a> trained in a two step process. First, they trained on sequences only, and then added phenotypes and finetuned the model. This training strategy prevented the model from getting stuck in a local minimum caused by the phenotype data early in training.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-lstm" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -244,7 +243,7 @@ Figure&nbsp;2: Alley et al.&nbsp;deteRNNt architecture for Lab-of-Origin Predict
 <ol start="3" type="1">
 <li>Take a new plasmid sequence and align to the pangenome</li>
 <li>Count how often each lab occurs among the aligned fragments. This is a raw score already. One of the labs will occur most often, making it a good candidate for the lab-of-origin.</li>
-<li>But they calculate a lab score - a more elegant, <em>weighted</em> version of the raw count. The idea is: the fewer labs share a fragment, the more indicative it is for labs that that have it.</li>
+<li>But they calculate a lab score - a more elegant, <em>weighted</em> version of the raw count. The idea is: the fewer labs share a fragment, the more indicative it is for labs that have it.</li>
 </ol>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -290,26 +289,26 @@ Figure&nbsp;3: Wang et al.&nbsp;PlasmidHawk Pipeline for Lab-of-Origin Predictio
 </div>
 </div>
 <p>Their method, called PlasmidHawk, had a 76% accuracy for lab-of-origin prediction and a 85% top-10 accuracy, which is better than the two neural network models before. They say it’s more efficient than deep learning too, as updating the pangenome with new plasmids is quick compared to re-training a neural network, but the data isn’t that big and DL hardware/software is becoming very efficient, so I believe this isn’t a substantial point anymore.</p>
-<p>A big advantage of this approach is interpretability. For each novel sequence, the method directly surfaces the association between fragment and lab-of-origin after aligning it to the pangenome. This leaves a few more degrees of freedom though: The size of fragments has to be chosen manually, and so does the similarity threshold for alignment. The method also doesn’t allow to incorporate additional meta-data like the LSTM approach above, which will be crucial in real-word GEA.</p>
+<p>A big advantage of this approach is interpretability. For each novel sequence, the method directly surfaces the association between fragment and lab-of-origin after aligning it to the pangenome. This leaves a few more degrees of freedom though: The size of fragments has to be chosen manually, and so does the similarity threshold for alignment. The method also doesn’t allow to incorporate additional meta-data like the LSTM approach above, which will be crucial in real-world GEA.</p>
 </section>
 <section id="gea-competition" class="level2">
 <h2 class="anchored" data-anchor-id="gea-competition">2022: GEA competition</h2>
 <p>The first <a href="https://www.nature.com/articles/s41467-022-35032-8">GEA competition</a> had 1,200 competitors. They worked with the Alley at al data: 81,833 plasmid sequences + meta-data and 1314 labs-of-origin to predict. There are many more labs in the Addgene database, but all labs with fewer than ten plasmids were pooled into an “Unknown Engineered” category.</p>
 <p>The top-teams’ models vastly outperformed previous models, with a top-1 accuracy of 82% and a top-10 accuracy of 95%.</p>
-<p>They were also much better at <em>negative</em> attribution - the ability to <em>exclude</em> potential designers. This is measured by ab X99 score. X99 is the minimum positive integer N, so that the top-N accuracy is at least 99%. For example, X99 would be 279 if the lab-of-origin would be among the top 279 predicted candidates 99% of the time. In Nilsen &amp; Voigt 2018, the X99 was 898, the winning model in the competition had a score of 299.</p>
+<p>They were also much better at <em>negative</em> attribution - the ability to <em>exclude</em> potential designers. This is measured by an X99 score. X99 is the minimum positive integer N so that the top-N accuracy is at least 99%. For example, X99 would be 279 if the lab-of-origin would be among the top 279 predicted candidates 99% of the time. In Nilsen &amp; Voigt 2018, the X99 was 898, the winning model in the competition had a score of 299.</p>
 <p>So what were the modeling strategies of the winners? Mostly <a href="#x-ensemble">:ensembles</a> containing CNNs, though the details (pre-processing etc) varied substantially.</p>
 <p><strong>Problems</strong></p>
 <p><a href="https://www.nature.com/articles/s41467-022-35032-8">Crook et al 2022</a> describe some of the issues they observed in the competition models:</p>
 <ul>
 <li>Low <a href="#x-calibration">:calibration</a> scores, except for the winning model</li>
-<li>Problematic large composite “Unknown Engineered” class, in which all labs with fewer than 10 sequences (~2000 labs) are pooled. The top-10 accuracy for the Unknown Engineered class was consistently very high, inflating the overall prediction, though the problem didn’t seem to be very big for the best models.</li>
+<li>Problematic large composite “Unknown Engineered” class, in which all labs with fewer than 10 sequences (~2000 labs) are pooled. The top-10 accuracy for the Unknown Engineered class was consistently very high, inflating the overall performance, though the problem didn’t seem to be very big for the best models.</li>
 </ul>
 <p><strong>Deeper dive into a top solution</strong></p>
 <p><a href="https://www.nature.com/articles/s43588-022-00234-z">Soares et al</a> published their solution, which was one of the winners. Their model had a 90% top-10 accuracy.</p>
 <p>Their initial model was a CNN with two tweaks. First, they also used <a href="#x-bpe">:BPE</a>. Second, they used circular shift augmentation. The key insight here is that plasmid DNA is circular, it doesn’t have a start or an end. The sequence <code>ATGCACTAG</code> shifted by 3 is <code>CACTAGATG</code>. To reflect this, they randomly shift sequences during training, which helps the model to learn local motifs and relative nucleotide arrangements rather than absolute positions, and increases the training set. This model was already better than all pre-competition models, with a 76% top-1 and 89% top-10 accuracy.</p>
 <p>But the interesting bit is their second model. Here, the base-model is the same CNN as before, but instead of a final softmax layer that directly predicts the lab, they used a <strong>triplet network</strong>.</p>
 <p>The idea of a triplet network is this: for each training example, we create a triplet consisting of a plasmid sequence (the anchor), its true lab-of-origin (the positive) and a different lab (the negative). The CNN processes the sequence and the labs into 200-D learnable <a href="#x-embed">:embedding</a> vectors.</p>
-<p>During training, the model learns to poisition the anchor embedding vector closer to the positive lab embedding than to the negative one, using a triplet loss function. Instead of predicting lab-classes, they create embedding vectors. These can then be used to still predict classes, simply by measuring the distance of a sequence embedding to the nearest labs. The closest lab embedding is the top-1 candidate.</p>
+<p>During training, the model learns to position the anchor embedding vector closer to the positive lab embedding than to the negative one, using a triplet loss function. Instead of predicting lab-classes, they create embedding vectors. These can then be used to still predict classes, simply by measuring the distance of a sequence embedding to the nearest labs. The closest lab embedding is the top-1 candidate.</p>
 <p>Now, while the model was only ever so slightly better than the simpler CNN, it comes with other advantages:</p>
 <ul>
 <li><strong>Interpretability</strong>: We can visualise the embeddings easily</li>
@@ -411,7 +410,7 @@ Table&nbsp;1: Overview of genetic engineering attribution studies.
 <ul>
 <li><p><strong>Many bio-agents won’t have a plasmid</strong> - A bio-agent might not have a plasmid at all. Most viruses don’t have plasmids and even engineered bacteria may not have an engineered plasmid if the engineered trait has been chromosomally integrated.</p></li>
 <li><p><strong>Models are less likely to predict bad actors</strong> - Terror organisations won’t deposit sequences in Addgene, and neither will the labs they are associated with. Models so far are therefore best at predicting trustworthy labs that care about transparency and data sharing. This is still useful for tracing accidental outbreaks though.</p></li>
-<li><p><strong>Open-source might be a problem</strong> - All models so far are trained on open-source data, allowing bad actors to create plasmid sequences mimicking other labs. This will leave it’s own traces, but is worth thinking about. AI-designers could help to further cover tracks, though other AIs could be trained to spot this.</p></li>
+<li><p><strong>Open-source might be a problem</strong> - All models so far are trained on open-source data, allowing bad actors to create plasmid sequences mimicking other labs. This will leave its own traces, but is worth thinking about. AI-designers could help to further cover tracks, though other AIs could be trained to spot this.</p></li>
 </ul>
 </section>
 <section id="how-to-move-forward" class="level2">
@@ -431,7 +430,7 @@ Table&nbsp;1: Overview of genetic engineering attribution studies.
 </section>
 <section id="x-bpe" class="level2">
 <h2 class="anchored" data-anchor-id="x-bpe">:x bpe</h2>
-<p>Byte-pair encoding (BPE) is a tokenization method that breaks down DNA sequences into meaningful subunits rather than individual nucleotides. Instead of treating each A, T, G, C separately, BPE identifies frequently occurring pairs and merges them into single tokens, creating a more efficient representation. They also allow inputs to be of different lenghts, which is very useful for DNA sequences.</p>
+<p>Byte-pair encoding (BPE) is a tokenization method that breaks down DNA sequences into meaningful subunits rather than individual nucleotides. Instead of treating each A, T, G, C separately, BPE identifies frequently occurring pairs and merges them into single tokens, creating a more efficient representation. They also allow inputs to be of different lengths, which is very useful for DNA sequences.</p>
 </section>
 <section id="x-lstm" class="level2">
 <h2 class="anchored" data-anchor-id="x-lstm">:x lstm</h2>
@@ -447,7 +446,7 @@ Table&nbsp;1: Overview of genetic engineering attribution studies.
 </section>
 <section id="x-calibration" class="level2">
 <h2 class="anchored" data-anchor-id="x-calibration">:x calibration</h2>
-<p>Calibration is about aligning <em>stated</em> probabilities with empirical <em>frequencies</em>. DL models are often overconfident. When a model is well-calibrated it should do the following: if it predicts something with a 70% probability, the thing should happen 70% of the time. If someone tells me there’s a 30% rain probability in Edinburgh today, they I expect that there’s rain in 3 out of 10 times they tell me that.</p>
+<p>Calibration is about aligning <em>stated</em> probabilities with empirical <em>frequencies</em>. DL models are often overconfident. When a model is well-calibrated it should do the following: if it predicts something with a 70% probability, the thing should happen 70% of the time. If someone tells me there’s a 30% rain probability in Edinburgh today, I expect that it rains 3 out of 10 times they give me that prediction.</p>
 </section>
 <section id="x-one-hot" class="level2">
 <h2 class="anchored" data-anchor-id="x-one-hot">:x one-hot</h2>
@@ -462,8 +461,8 @@ Table&nbsp;1: Overview of genetic engineering attribution studies.
 <p>A fully synthetic DNA molecule, often created from smaller components.</p>
 </section>
 <section id="x-embed" class="level2">
-<h2 class="anchored" data-anchor-id="x-embed">:x-embed</h2>
-<p>Any object - a word, DNA sequence, image, or even a lab - can be translated into a vector, i.e.&nbsp;an array of numbers. This is called and <strong>embedding</strong>. The dimensionality (100, 200, 1024) is usually chosen manually.</p>
+<h2 class="anchored" data-anchor-id="x-embed">:x embed</h2>
+<p>Any object - a word, DNA sequence, image, or even a lab - can be translated into a vector, i.e.&nbsp;an array of numbers. This is called an <strong>embedding</strong>. The dimensionality (100, 200, 1024) is usually chosen manually.</p>
 <p>The idea is that these embedding vectors are trained so that similar objects are close together in embedding space, and dissimilar ones are farther apart. After training, the positions of these vectors encode rich, abstract properties of the original objects.</p>
 <p>For example, in LLMs, the embedding of “King” - “Man” + “Women” ends up close to “Queen” - because the model has learned how sex and royalty are structured in language. In GEA, plasmid embeddings from the same lab will end up close together in embedding space, as they all share similar design signatures.</p>
 
