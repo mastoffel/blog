@@ -1,0 +1,14 @@
+---
+title: "metagenomic surveillance"
+description: "bottlenecks"
+# author: "Martin Stoffel"
+date: "2025-07-22"
+categories: [biosecurity]
+title-block-banner: false
+draft: true
+filters:
+    - nutshell
+---
+
+Within a decade, tens of thousands of biotech-savy individuals could single-handidly cause a [new pandemic](https://www.gcsp.ch/sites/default/files/2024-12/gcsp-geneva-paper-29-22.pdf), due to massive drops in the cost of DNA sequencing and synthesis, hardware, and unprecedented access to knowledge through AI.
+
