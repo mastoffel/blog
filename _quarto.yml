@@ -21,7 +21,7 @@ website:
 format:
   html:
     theme: brae.scss
-    highlight-style: atom-one
+    highlight-style: kate
     html-math-method: plain
     minimal: false
 

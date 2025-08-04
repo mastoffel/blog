@@ -85,9 +85,55 @@ for pk, col in pkm.copy().items():
 copys can be **shallow** or **deep**, the difference only matters for compound objects. A shallow copy creates a new compound object, and then inserts *references* to the objects found in the original. A deep copy creates a new compound object, and then recursively insert copies of the objects found in the original. The latter is best done using `deepcopy()`.
 :::
 
-::: {.callout-note}
-There are five callouts: `note`, `warning`, `important`, `tip`, `caution`
-:::
+### range
 
 ```{python}
+print(range(42))
+sum(range(17))
+```
+
+- `range()` creates an *iterable*, something to loop over. It's like a lazy list. 
+
+### for-else
+
+```{python}
+for i in range(16, 32):
+    for x in range(3, i):
+        if i % x == 0:
+            print(i, x, i%x)
+            break
+    else:
+        print('naaa')
+```
+
+### `match`
+-> TODO: come back to this.
+
+Only the first pattern that matches gets executed!
+
+```{python}
+def clothes(weather):
+    match weather:
+        case "rain":
+            return "hardshell"
+        case "sun":
+            return "shorts"
+        case "hail":
+            return "woolhat"
+        case "cloudy" | "foggy" | "humid":
+            return "merino baselayer"
+        case _: # wildcard
+            return "Adidas Spezial"
+```    
+
+
+### functions
+
+```{python}
+def fib(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end =' ')
+        a, b = b, a+b
+fib(2000)
 ```

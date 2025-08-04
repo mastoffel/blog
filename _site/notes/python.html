@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e8fb9d25728d58bfeac61b497e4a6629.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a0b8f7824cab871fe7735f1fe8ba4cd9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-55a5241d4fbd08b1b19b2c60d0ad10c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-776afe9c53aec80eac26d0356b5fdbd4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -181,7 +181,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <p>A run through the <a href="https://docs.python.org/3/tutorial/index.html#tutorial-index">Python Tutorial</a>, focusing on things less familiar.</p>
 <section id="calculating" class="level3">
 <h3 class="anchored" data-anchor-id="calculating">calculating</h3>
-<div id="13eee14f" class="cell" data-execution_count="1">
+<div id="3477d6d8" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># floor division</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">15</span> <span class="op">//</span> <span class="dv">6</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># modulo</span></span>
@@ -198,7 +198,7 @@ gtag('config', 'G-FYLF41PFGT', { 'anonymize_ip': true});
 <li>escaping: <code>'doesn\'t'</code></li>
 <li><code>print()</code> interpretes special characters, e.g.&nbsp;<code>\n</code></li>
 </ul>
-<div id="7cc9784d" class="cell" data-execution_count="2">
+<div id="049a5195" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># auto concat</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Gen'</span> <span class="st">'etics'</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> (<span class="st">'Gen'</span></span>
@@ -218,10 +218,10 @@ Genetics</code></pre>
  +---+---+---+---+---+---+
  0   1   2   3   4   5   6
 -6  -5  -4  -3  -2  -1</code></pre>
-<div id="c673391f" class="cell" data-execution_count="3">
+<div id="9cf0240f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># out of range slicing is handled</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>word <span class="op">=</span> <span class="st">"tree"</span><span class="op">;</span> word[<span class="dv">1</span>:<span class="dv">1123234</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>'ree'</code></pre>
 </div>
 </div>
@@ -232,12 +232,12 @@ Genetics</code></pre>
 <li>lists, like strings are <a href="https://docs.python.org/3/glossary.html#term-sequence">sequence</a> types - they can do slicing, len etc.</li>
 <li>unlike strings, they are mutable</li>
 </ul>
-<div id="3b6adc29" class="cell" data-execution_count="4">
+<div id="e21d6669" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ltrs <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>, <span class="st">'e'</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># remove elements </span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ltrs[<span class="dv">1</span>:<span class="dv">3</span>] <span class="op">=</span> []</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>ltrs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>['a', 'd', 'e']</code></pre>
 </div>
 </div>
@@ -254,7 +254,7 @@ Genetics</code></pre>
 <ul>
 <li>pointing to the same list</li>
 </ul>
-<div id="e48d5649" class="cell" data-execution_count="5">
+<div id="a2bf5d34" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>l1 <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>l2 <span class="op">=</span> l1</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>l2[<span class="dv">1</span>] <span class="op">=</span> <span class="st">'z'</span></span>
@@ -266,7 +266,7 @@ Genetics</code></pre>
 <ul>
 <li>when modifiying a colleciton, it’s good to use a <em>copy</em> or create a <em>new</em> collection</li>
 </ul>
-<div id="0fdf3429" class="cell" data-execution_count="6">
+<div id="c7a028f5" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pkm <span class="op">=</span> {<span class="st">'pikachu'</span>: <span class="st">'yellow'</span>, <span class="st">'snorlax'</span>: <span class="st">'grey-blue'</span>, <span class="st">'scyther'</span>: <span class="st">'green'</span>}</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># copy</span></span>
@@ -290,17 +290,83 @@ copys
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</section>
+<section id="range" class="level3">
+<h3 class="anchored" data-anchor-id="range">range</h3>
+<div id="e3448f23" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">range</span>(<span class="dv">42</span>))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(<span class="bu">range</span>(<span class="dv">17</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>range(0, 42)</code></pre>
 </div>
-<div class="callout-title-container flex-fill">
-Note
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>136</code></pre>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>There are five callouts: <code>note</code>, <code>warning</code>, <code>important</code>, <code>tip</code>, <code>caution</code></p>
+<ul>
+<li><code>range()</code> creates an <em>iterable</em>, something to loop over. It’s like a lazy list.</li>
+</ul>
+</section>
+<section id="for-else" class="level3">
+<h3 class="anchored" data-anchor-id="for-else">for-else</h3>
+<div id="631a0877" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">16</span>, <span class="dv">32</span>):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>, i):</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">%</span> x <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(i, x, i<span class="op">%</span>x)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'naaa'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>16 4 0
+naaa
+18 3 0
+naaa
+20 4 0
+21 3 0
+22 11 0
+naaa
+24 3 0
+25 5 0
+26 13 0
+27 3 0
+28 4 0
+naaa
+30 3 0
+naaa</code></pre>
+</div>
+</div>
+</section>
+<section id="match" class="level3">
+<h3 class="anchored" data-anchor-id="match"><code>match</code></h3>
+<p>-&gt; TODO: come back to this.</p>
+<p>Only the first pattern that matches gets executed!</p>
+<div id="8631a66c" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clothes(weather):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">match</span> weather:</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">"rain"</span>:</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"hardshell"</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">"sun"</span>:</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"shorts"</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">"hail"</span>:</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"woolhat"</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">"cloudy"</span> <span class="op">|</span> <span class="st">"foggy"</span> <span class="op">|</span> <span class="st">"humid"</span>:</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"merino baselayer"</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> _: <span class="co"># wildcard</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"Adidas Spezial"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="functions" class="level3">
+<h3 class="anchored" data-anchor-id="functions">functions</h3>
+<div id="2e3c9602" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib(n):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> a <span class="op">&lt;</span> n:</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a, end <span class="op">=</span><span class="st">' '</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        a, b <span class="op">=</span> b, a<span class="op">+</span>b</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>fib(<span class="dv">2000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 </code></pre>
 </div>
 </div>
 
