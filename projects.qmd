@@ -139,25 +139,30 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 ## Side projects 
 
-::: {layout="[10,85]"}
+::: {layout="[20,85]"}
 ![](pics/mining.png)
 
 [Detecting artisanal mines in Myanmar from satellites](https://www.turing.ac.uk/news/publications/data-study-group-final-report-global-witness-identifying-unregulated-mining-sites)\
 [:🥥](#x-mi)
 :::
 
-::: {layout="[10,85]"}
+::: {layout="[20,85]"}
 ![](pics/holmes.png)
 
 [Code: Minimal transformer](https://github.com/mastoffel/DeepDeductions)\
 :::
 
-::: {layout="[10,85]"}
+::: {layout="[20,85]"}
 ![](pics/cat.png)
 
 [Code: Neural Vocoder](https://github.com/mastoffel/neural_vocoder)\
 :::
 
+::: {layout="[20, 85]"}
+![](pics/gea.jpg)
+
+[Code: Deep learning for genetic engineering attribution](https://github.com/mastoffel/gea)
+:::
 
 ## :x el{#x-el}
 We scanned the genomes of thousands of wild Soay sheep for embryonic lethal mutations. These mutations prevent an individual from being born, should it be unlucky enough to receive the same genetic variant from both mum and dad. We found a few and wondered how they are maintained in the population. We show that despite their negative effects, these mutations can persist when genetically linked to beneficial variants.
