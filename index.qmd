@@ -20,7 +20,7 @@ title-block-banner: false
 # posts
 
 ::: {.hero-right}
-![](pics/snowy.jpg){.hero-image}
+![](pics/snowy.webp){.hero-image}
 :::
 
 :::

@@ -9,7 +9,7 @@ filters:
 ## Software
 
 ::: {layout="[20,85]"}
-![](pics/AE_logo_final.png)
+![](pics/thumbs/AE_logo_final.webp)
 
 [`AutoEmulate`: Speeding up physics simulations using machine learning.](https://joss.theoj.org/papers/10.21105/joss.07626)\
 *JOSS* (2025) \| [Code](https://github.com/alan-turing-institute/autoemulate)\
@@ -17,7 +17,7 @@ filters:
 :::
 
 ::: {layout="[20,85]"}
-![](pics/rptr2.png)
+![](pics/thumbs/rptr2.webp)
 
 [`rptR`: Intra-class coefficients for hierarchical models.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12797)\
 *Methods in Ecology and Evolution* (2017) \| [Code](https://github.com/mastoffel/rptR)\
@@ -25,7 +25,7 @@ filters:
 :::
 
 ::: {layout="[20,85]"}
-![](pics/venn.png)
+![](pics/thumbs/venn.webp)
 
 [`partR2`: $R^2$ for individual fixed effects in hierarchical models.](https://peerj.com/articles/11414/)\
 *PeerJ* (2021) \| [Code](https://github.com/mastoffel/partR2)\
@@ -33,7 +33,7 @@ filters:
 :::
 
 ::: {layout="[20,85]"}
-![](pics/inbreedr3.png)
+![](pics/thumbs/inbreedr3.webp)
 
 [`inbreedR`: Identity disequlibria and more.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588)\
 *Methods in Ecology and Evolution* (2016) \| [Code](https://github.com/mastoffel/inbreedR)\
@@ -41,7 +41,7 @@ filters:
 :::
 
 ::: {layout="[20,85]"}
-![](pics/gcalignr.png)
+![](pics/thumbs/gcalignr.webp)
 
 [`GCalignR`: Aligning gas chromatography samples.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12588)\
 *Plos One (2018)* \| [Code](https://github.com/mottensmann/GCalignR/graphs/contributors)\
@@ -57,7 +57,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 ### Quantitative and evolutionary genetics
 
 ::: {layout="[20,85]"}
-![](pics/kilda.jpg)
+![](pics/thumbs/kilda.webp)
 
 [Exploring lethal mutations and their evolutionary dynamics.](https://academic.oup.com/evlett/article/8/2/222/7327097)\
 *Evol letters* (2024) \| [Code](https://github.com/mastoffel/haplotype_homozygosity)\
@@ -65,7 +65,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 :::
 
 ::: {layout="[20,85]"}
-![](pics/roh2.jpeg)
+![](pics/thumbs/roh2.webp)
 
 [Long runs of homozygosity have a higher mutation load because their haplotypes are younger](https://onlinelibrary.wiley.com/doi/full/10.1002/evl3.229).\
 *Evol Letters* (2021) \| [Code](https://github.com/mastoffel/sheep_roh)\
@@ -73,7 +73,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 :::
 
 ::: {layout="[20,85]"}
-![](pics/ID.jpeg)
+![](pics/thumbs/ID.webp)
 
 [Effect size and genetic basis of inbreeding depression in the wild](https://www.nature.com/articles/s41467-021-23222-9).\
 *Nature Comms* (2021) \| [Code](https://github.com/mastoffel/sheep_ID)\
@@ -83,7 +83,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 ### Molecular ecology
 
 ::: {layout="[20,85]"}
-![](pics/nes_young.jpeg)
+![](pics/thumbs/nes_young.webp)
 
 [Early life gut microbiota predict extreme sex differences in Elephant Seals.](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.15385)\
 *Mol Ecol* (2020) \| [Code](https://github.com/mastoffel/nes_microbiome)\
@@ -91,7 +91,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 :::
 
 ::: {layout="[20,85]"}
-![](pics/pinnipeds_figure.jpeg)
+![](pics/thumbs/pinnipeds_figure.webp)
 
 [Industrial exploitation brought one-third of pinniped species to the edge of extinction](https://www.nature.com/articles/s41467-018-06695-z).\
 *Nature Comms* (2018) \| [Code](https://github.com/mastoffel/pinniped_bottlenecks)\
@@ -99,7 +99,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 :::
 
 ::: {layout="[20,85]"}
-![](pics/afs2.jpeg)
+![](pics/thumbs/afs2.webp)
 
 [Skin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.](https://www.pnas.org/doi/abs/10.1073/pnas.1506076112)\
 *PNAS* (2015) \| [Code](https://github.com/mastoffel/seal_chemical_fingerprints/blob/master/analysis_markdown.pdf) \| Article in the [Sueddeutsche Zeitung](https://www.sueddeutsche.de/wissen/biologie-wie-robben-einander-finden-1.2604289).\
@@ -108,7 +108,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 
 ### Conservation genetics
 ::: {layout="[20,85]"}
-![](pics/oryx.png)
+![](pics/thumbs/oryx.webp)
 
 [Conservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.](https://www.pnas.org/doi/10.1073/pnas.2210756120)\
 *PNAS* (2023) \| 
@@ -118,7 +118,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 ### Behavioural ecology
 
 ::: {layout="[20,85]"}
-![](pics/snowy.jpeg)
+![](pics/thumbs/snowy.webp)
 
 [Biased sex ratios and the impact of early survival on female polygyny](https://www.pnas.org/doi/abs/10.1073/pnas.1620043114).\
 *PNAS* (2017) \| Code in Supplementary Material\
@@ -129,7 +129,7 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 ### Research consulting
 
 ::: {layout="[20,85]"}
-![](pics/racehorse.jpeg)
+![](pics/thumbs/racehorse.webp)
 
 [Impacts of systemic inbreeding in Thoroughbred racehorses.](https://royalsocietypublishing.org/doi/full/10.1098/rspb.2022.0487)  
 *Proceedings of the Royal Society B* (2022)  
@@ -140,26 +140,26 @@ selected, full list [here](https://scholar.google.de/citations?user=58uLFHoAAAAJ
 ## Side projects 
 
 ::: {layout="[20,85]"}
-![](pics/mining.png)
+![](pics/thumbs/mining.webp)
 
 [Detecting artisanal mines in Myanmar from satellites](https://www.turing.ac.uk/news/publications/data-study-group-final-report-global-witness-identifying-unregulated-mining-sites)\
 [:🥥](#x-mi)
 :::
 
 ::: {layout="[20,85]"}
-![](pics/holmes.png)
+![](pics/thumbs/holmes.webp)
 
 [Code: Minimal transformer](https://github.com/mastoffel/DeepDeductions)\
 :::
 
 ::: {layout="[20,85]"}
-![](pics/cat.png)
+![](pics/thumbs/cat.webp)
 
 [Code: Neural Vocoder](https://github.com/mastoffel/neural_vocoder)\
 :::
 
 ::: {layout="[20, 85]"}
-![](pics/gea.jpg)
+![](pics/thumbs/gea.webp)
 
 [Code: Deep learning for genetic engineering attribution](https://github.com/mastoffel/gea)
 :::

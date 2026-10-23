@@ -24,4 +24,5 @@ format:
     highlight-style: kate
     html-math-method: plain
     minimal: false
+    include-in-header: fonts.html
 

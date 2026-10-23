@@ -9,7 +9,6 @@
 
 # Quarto specific files
 /.quarto/
-/_freeze/
 /.ipynb_checkpoints/
 
 # System files

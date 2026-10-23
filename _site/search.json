@@ -12,5 +12,376 @@
     "title": "posts",
     "section": "",
     "text": "Date\n\n\nTitle\n\n\n\n\n\n\n2025-07-17\n\n\nengineered-DNA forensics\n\n\n\n\n2025-06-25\n\n\nfree science\n\n\n\n\n2025-04-19\n\n\nd/acc bio\n\n\n\n\n2023-04-05\n\n\nhidden info\n\n\n\n\n2023-02-11\n\n\npiping python\n\n\n\n\n2022-11-10\n\n\ngg themes\n\n\n\n\n2022-01-09\n\n\nmap()-magic\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/dacc-bio/index.html",
+    "href": "posts/dacc-bio/index.html",
+    "title": "d/acc bio",
+    "section": "",
+    "text": "Biological laboratories are less safe than one might think. Looking at known incidents between 2000 and 2021 roughly every couple of weeks a lab worker accidentally gets infected, and roughly once a year, a pathogen escapes the lab. These are only reported accidents, likely to be an underestimate.\nSome of them are hard to believe. The only human infectious disease that we ever managed to eradicate is smallpox, caused by the variola virus. Since its eradication in 1980, there should just be two high-security stashes of it worldwide, one in the US and one in Russia. Yet, a third stash was discovered in 2014, in a six decade old cardboard box in an unsecured storage room on the NIH campus. Just a year later, the Pentagon accidentally sent live Anthrax samples to various places, including South Korea.\nAnd the list goes on. Brucella leaked from a biopharma plant in Lanzhou, infecting 10k people. The 1977 Russian flu pandemic had signs of a lab leak; the underlying H1N1 flu strain resembled a virus circulating 30 years earlier.\nBiosecurity is simply not that easy, humans make mistakes and accidents happen. But accidents are only part of the risk.\nBioweapons have a long history. From catapulting plague-infected bodies to blankets infected with smallpox, humans have found many ways to weaponise biological agents. Several countries had biological weapons programs, and some are suspected to still run them. Yet, the Biological Weapons Convention, an international treaty with the mission to effectively ban the development of bioweapons, runs with a handful of employees on roughly the budget of an average McDonald’s.\nThen there’s bioterrorism. In 1984, the Rajneeshee sect contaminated salads in restaurants in Oregon with Salmonella, poisening 750 people. Aum Shinrikyo, a Japanese doomsday cult, tried and failed to develop bioweapons but managed to carry out a chemical weapons attack on the Tokyo subway in 1995, killing and injuring many. In 2001, a US scientist sent anthrax letters to various senators and journals, resulting in several casualties and injuries.\nIn the near future, it will become increasingly possible for terrorists to design much more dangerous bio-agents.\nFirst, biotech is becoming increasingly cheap and available. Sequencing a human genome cost 100 million dollars in 2001, now it’s a few hundred. We can order synthesised DNA and get it shipped to us in a week. While most companies do screen orders for potentially dangerous sequences, around 20% don’t. Soon, it might even be possible to just synthesise DNA at home on a small benchtop device. With the right DNA, a real virus can be created using reverse genetics. While this is not that easy, future AI models will be increasingly capable assistants for biotech work, allowing less and less knowledgable actors to create pathogens in the lab.\nSo, the stakes are high. But don’t despair. In the spirit of d/acc, some of the next posts will focus on biosecurity technologies that can help safeguard humanity against ever more likely biological threats. d/acc is the idea that we should differentially focus on developing defensive, democratic and decentralised technologies. Think early-detection systems and open source vaccines instead of gain-of-function research. Let’s have a look what is out there."
+  },
+  {
+    "objectID": "posts/map/index.html",
+    "href": "posts/map/index.html",
+    "title": "map()-magic",
+    "section": "",
+    "text": "“Form follows function” - Louis Sullivan\nOne of the major steps in becoming a more effective R programmer for me was to really adopt functional programming. It made my code more readable, less error-prone, faster, and also simply for fun to write.\nFunctional programming is simply about writing code with functions. Instead of repeating the same line of code over and over or using double-nested for loops, we can abstract the essence of what we are doing into functions.\nA function can then be elegantly applied to many inputs. Here, we will do this with purrr::map(), which I’m using day in and day out and which is a great starting point to dive into the world of functional programming.\nLet’s go through some of the map()-magic with a minimal workflow to produce clean, robust and fast code. We will do a small :genome-wide association study, an analysis looking at the association between genes and a trait by fitting a model over and over again for every :SNP in the genome.\nHere are some my favorite packages.\nlibrary(purrr) # provides the key function here: map\nlibrary(furrr) # does map in parallel\nlibrary(dplyr) # does all sorts of magic\nlibrary(glue)  # concatenates strings beautifully\nlibrary(broom) # takes a model and returns a tidy data.frame\nLet’s see whether drinking coffee has a genetic basis. We make up a trait (coffees per day) and 100 SNPs for 100 individuals."
+  },
+  {
+    "objectID": "posts/map/index.html#simulate-data",
+    "href": "posts/map/index.html#simulate-data",
+    "title": "map()-magic",
+    "section": "Simulate data",
+    "text": "Simulate data\n\ncoffees   &lt;- sample(1:6, 100, TRUE)\nsnps      &lt;- replicate(100, sample(c(0,1,2), 100, TRUE))\nsnp_names &lt;- paste0(\"snp\", 1:100)\n\ndat &lt;- data.frame(cbind(coffees, snps)) %&gt;% \n            setNames(c(\"coffees\", snp_names))\n            \nhead(dat[1:5, 1:7])\n\n#&gt;   coffees snp1 snp2 snp3 snp4 snp5 snp6\n#&gt; 1       5    1    2    1    0    1    2\n#&gt; 2       1    1    2    2    2    2    1\n#&gt; 3       5    0    0    2    2    1    0\n#&gt; 4       1    1    0    2    0    1    2\n#&gt; 5       1    1    0    1    1    1    0"
+  },
+  {
+    "objectID": "posts/map/index.html#write-a-function",
+    "href": "posts/map/index.html#write-a-function",
+    "title": "map()-magic",
+    "section": "1) Write a function",
+    "text": "1) Write a function\nWe could now do 100 linear models manually by writing 100 lines of code, or we could do a for loop.\nInstead, let’s write a function to fit one model, and then apply this function to each SNP. We generally want the thing that changes (i.e. snp_name) to be the first argument. The function below fits a linear model of coffee consumption with a snp as predictor, and extracts the model estimate and p-value for the SNP. It returns a one-row data.frame. I generally like my functions to return data.frames, because that makes it easy to put together many function outputs into a big data.frame at the end.\n\nfit_model &lt;- function(snp_name, dat) {\n      # write formula using SNP name\n      model_formula &lt;- glue(\"coffees ~ {snp_name}\")\n      # fit linear model\n      fit &lt;- lm(model_formula, data = dat) %&gt;% \n                  broom::tidy() %&gt;%        # tidy results\n                  filter(term == snp_name) # extract snp\n      return(fit)\n      \n}"
+  },
+  {
+    "objectID": "posts/map/index.html#use-map-to-apply-function-to-every-snp",
+    "href": "posts/map/index.html#use-map-to-apply-function-to-every-snp",
+    "title": "map()-magic",
+    "section": "2) Use map() to apply function to every SNP",
+    "text": "2) Use map() to apply function to every SNP\nUsing a vector with snp_names, we can apply the function to every SNP. The structure of map() is always the same: map(list/vector, function, additional_arguments). map() always returns a list. We can convert the list to a data.frame with dplyr::bind_rows().\n\n# run gwas\ngwas &lt;- map(snp_names, fit_model, dat) %&gt;% \n              bind_rows()\n# print first three SNPs\ngwas[1:3, ]\n\n#&gt; # A tibble: 3 × 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1   -0.240      0.215    -1.12    0.267\n#&gt; 2 snp2   -0.169      0.217    -0.781   0.437\n#&gt; 3 snp3    0.0571     0.213     0.269   0.789"
+  },
+  {
+    "objectID": "posts/map/index.html#what-if-something-goes-wrong---map-safely",
+    "href": "posts/map/index.html#what-if-something-goes-wrong---map-safely",
+    "title": "map()-magic",
+    "section": "3) What if something goes wrong? - map() safely",
+    "text": "3) What if something goes wrong? - map() safely\nLoops often fail becomes something goes wrong in one or a few iterations.Let’s introduce a non-existing SNP and try again to see how it fails\n\nsnp_names2 &lt;- c(\"not_a_snp\", snp_names)\n\ngwas &lt;- map(snp_names2, fit_model, dat) %&gt;% \n      bind_rows()\n\n#&gt; Error in `map()`:\n#&gt; ℹ In index: 1.\n#&gt; Caused by error:\n#&gt; ! object 'not_a_snp' not found\n\n\nWe can make our gwas error-safe using purrr::safely(). This does some magic under the hood which isn’t so important now. For every iteration, it will return a list with two elements, one for the result and one for the error (equals NULL if there is no error). This way, we always get the results or errors of all our iterations back.\n\nfit_model_safely &lt;- purrr::safely(fit_model)\n\ngwas &lt;- map(snp_names2, fit_model_safely, dat)\ngwas[1:2]\n\n#&gt; [[1]]\n#&gt; [[1]]$result\n#&gt; NULL\n#&gt; \n#&gt; [[1]]$error\n#&gt; &lt;simpleError in eval(predvars, data, env): object 'not_a_snp' not found&gt;\n#&gt; \n#&gt; \n#&gt; [[2]]\n#&gt; [[2]]$result\n#&gt; # A tibble: 1 × 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1    -0.240     0.215     -1.12   0.267\n#&gt; \n#&gt; [[2]]$error\n#&gt; NULL\n\n\nmap() lets you extract a list element simply by its name. Here, we iterate over the list of results and extract all SNPs that worked.\n\ngwas &lt;- map(gwas, \"result\") %&gt;% \n            bind_rows()\ngwas[1:3, ]\n\n#&gt; # A tibble: 3 × 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1   -0.240      0.215    -1.12    0.267\n#&gt; 2 snp2   -0.169      0.217    -0.781   0.437\n#&gt; 3 snp3    0.0571     0.213     0.269   0.789"
+  },
+  {
+    "objectID": "posts/map/index.html#what-if-it-takes-too-long---map-in-parallel",
+    "href": "posts/map/index.html#what-if-it-takes-too-long---map-in-parallel",
+    "title": "map()-magic",
+    "section": "4) What if it takes too long? - map() in parallel",
+    "text": "4) What if it takes too long? - map() in parallel\nOnce the idea of map() is clear, we can easily parallelise it to run on multiple cores. There is some overhead in collecting computations from several cores so this doesn’t make much sense when the running time is short. But for longer computations, using 4 cores instead of 1 should make it nearly 4 times as fast.\nWe can use the furrr package here, which mimics purrr functions but can run in parallel. It is based on future, which is why all functions start with future_, for example future_map(). Unlike other ways of parallelising, this approach works on Windows, Mac and Linux. All we have to do now is to first set up a plan() …\n\n# check available cores\navailableCores()\n# parallelises across 4 cores\nplan(multisession, workers = 4)\n\n… and then replace map() with future_map().\n\ngwas &lt;- future_map(snp_names, fit_model, dat) %&gt;% \n            bind_rows()\ngwas[1:3, ]\n\n#&gt; # A tibble: 3 × 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1   -0.240      0.215    -1.12    0.267\n#&gt; 2 snp2   -0.169      0.217    -0.781   0.437\n#&gt; 3 snp3    0.0571     0.213     0.269   0.789"
+  },
+  {
+    "objectID": "posts/map/index.html#the-full-minimal-workflow-for-a-robust-parallel-gwas",
+    "href": "posts/map/index.html#the-full-minimal-workflow-for-a-robust-parallel-gwas",
+    "title": "map()-magic",
+    "section": "The full, minimal workflow for a robust, parallel gwas",
+    "text": "The full, minimal workflow for a robust, parallel gwas\n\nplan(multisession, workers = 4)\n\nfit_model &lt;- function(snp_name, dat) {\n      model_formula &lt;- glue(\"coffees ~ {snp_name}\")\n      fit &lt;- lm(model_formula, data = dat) %&gt;% \n                  broom::tidy() %&gt;% \n                  filter(term == snp_name)\n      return(fit)\n}\n\nfit_model_safely &lt;- purrr::safely(fit_model)\ngwas &lt;- future_map(snp_names, fit_model_safely, dat) %&gt;% \n                  map(\"result\") %&gt;% \n                  bind_rows()\n\ngwas[1:3, ]\n\n#&gt; # A tibble: 3 × 5\n#&gt;   term  estimate std.error statistic p.value\n#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 snp1   -0.240      0.215    -1.12    0.267\n#&gt; 2 snp2   -0.169      0.217    -0.781   0.437\n#&gt; 3 snp3    0.0571     0.213     0.269   0.789"
+  },
+  {
+    "objectID": "posts/map/index.html#general-thoughts-about-map",
+    "href": "posts/map/index.html#general-thoughts-about-map",
+    "title": "map()-magic",
+    "section": "General thoughts about map",
+    "text": "General thoughts about map\nWhen to use map?\n\nWhenever more than two lines of code look similar, whenever a for loop needs two cups of coffee to be understood, map will be on your side\n\nCan every for-loop be replaced by a function and map?\n\nI think yes, but it becomes less practical when an iteration depends on the previous iteration, though I rarely encounter that problem\n\nWhat about the base R functions apply, sapply, lapply?\n\nlapply is very similar to map, though it lacks some very nice features which can be discovered over time. The other apply-functions can give surprising results, except for vapply, which is concise but slightly more complicated.\n\nWhat about map_df, map_lgl, map_dbl and all the other maps?\n\nAll these functions differ in what their output is. However, the list resulting from simple map() can easily be transformed into any of these. After getting to grips with map, all the other maps fall into place.\n\nWhat if I have more than one vector or list as input?\n\nmap2() takes two vectors as input and pmap() takes any number of vectors as input. I’m using pmap() to iterate over rows in a data.frame, but this is stuff for another blogpost I think."
+  },
+  {
+    "objectID": "posts/map/index.html#where-to-go-from-here",
+    "href": "posts/map/index.html#where-to-go-from-here",
+    "title": "map()-magic",
+    "section": "Where to go from here",
+    "text": "Where to go from here\n\nJenny Bryan’s purrr tutorials\nHadley Wickham’s “The joy of functional programming”\nR4DS chapter on iterations"
+  },
+  {
+    "objectID": "posts/info/index.html",
+    "href": "posts/info/index.html",
+    "title": "hidden info",
+    "section": "",
+    "text": "“If I am what I have and if what I have is lost, then who am I?”\n- Erich Fromm\nThe future of knowledge is at a crossroads. Before long, most text and code will be written by or with AI models. What was once explicit human reasoning will become information hidden in neural network weights, undecipherable changes in evergrowing matrices. Model outputs will soon become inputs, and the trajectory of knowledge becomes unclear once we outsourced thinking to the machine.\nFor people who code, Stackoverflow is the place where problems are discussed and solutions are found. The community makes sure that precise questions are asked and that answers are ranked, corrected and accepted. More than merely providing solutions, the platform makes the human reasoning process explicit and open. Stackoverflow documents how we, as humans, think about code. But this could soon be over.\nWhy would anyone go through the effort of constructing a minimal reproducible example, formulating a precise question and waiting for hours or days to get an answer, if ChatGPT gives a decent answer straight away and hassle-free? To get some insights into this, I had a look at the number of questions with a Python tag on Stackoverflow over time. While Python questions were increasing :for years, there is a clear drop since ChatGPT was released.\nThe decline isn’t super strong yet, but we can see where this is going. Stackoverflow, an open catalogue of human reasoning, will be replaced by private human-to-AI interactions. Human-readable information becomes hidden in neural network weights. Knowledge-generation is outsourced into AI systems with billions of parameters.\nCode, arguably, is easy to validate. At least we roughly know when it does what we want. This is different in science, where the reasoning process itself is key to the validity of the results. Soon, AI reasoning will permeate the very foundation of science. AI’s are going to plan experiments, collect and analyse data, draw conclusions and write papers. Much of the human input to new knowledge will be evaluating AI outputs rather than reasoning ourselves.\nWhether AI will outperform human reasoning or be subtly wrong more often than humans, we can’t let the reasoning underpinning science be hidden in AI models. To keep the upper hand, we need to transition to a true open source science, where the community has the opportunity to collectively understand and verify scientific progress. The current peer review system, possibly a failed experiment anyway, won’t be able to keep up with a flood of AI-generated papers. Rather than receiving a scientific stamp-of-approval after being reviewed by only two or three peers, scientific papers should be continously open to scrutiny and improvement by the community. For inspiration, we could have a look at Stackoverflow."
+  },
+  {
+    "objectID": "posts/info/index.html#x-graph",
+    "href": "posts/info/index.html#x-graph",
+    "title": "hidden info",
+    "section": ":x graph",
+    "text": ":x graph\nNote: the peak in the graph marks the beginning of the COVID-19 lockdown, where people suddenly had more time to code and ask questions. However, the increase in interest declined relatively quickly. The drop following the peak is therefore unusual and can’t really be compared to the drop at the end."
+  },
+  {
+    "objectID": "posts/piping/index.html",
+    "href": "posts/piping/index.html",
+    "title": "piping python",
+    "section": "",
+    "text": "Data wrangling in Python seems clunky. Yet, it doesn’t have to be. Here is how to pipe in Python."
+  },
+  {
+    "objectID": "posts/piping/index.html#the-problem",
+    "href": "posts/piping/index.html#the-problem",
+    "title": "piping python",
+    "section": "The problem",
+    "text": "The problem\nIn R, we process data beautifully with dplyr and %&gt;%:\n\nsuppressMessages(library(dplyr))\niris %&gt;%\n  mutate(sepal_ratio = Sepal.Width / Sepal.Length) %&gt;%\n  filter(sepal_ratio &gt; 0.5) %&gt;%\n  select(Species, sepal_ratio) %&gt;%\n  group_by(Species) %&gt;%\n  summarise(mean_sepal_ratio = mean(sepal_ratio))\n\nIn Python’s pandas, most data wrangling code looks much less great, often like this:\n\nimport pandas as pd\nurl = \"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv\"\niris = pd.read_csv(url)\n\niris[\"sepal_ratio\"] = iris[\"sepal_width\"] / iris[\"sepal_length\"]\niris = iris[iris[\"sepal_ratio\"] &gt; 0.5]    #filter\niris = iris[[\"species\", \"sepal_ratio\"]]   #select\niris = iris.groupby(\"species\")            #group by\niris = iris.agg({\"sepal_ratio\": \"mean\"})  #summarise\n\nThis is hard to read because there’s lots of repitition."
+  },
+  {
+    "objectID": "posts/piping/index.html#a-new-hope",
+    "href": "posts/piping/index.html#a-new-hope",
+    "title": "piping python",
+    "section": "A new hope",
+    "text": "A new hope\nBut don’t despair! We can pipe in Python, too. Here is how:\n\niris = pd.read_csv(url)\n\n(iris\n  .assign(sepal_ratio = lambda x: x.sepal_width / x.sepal_length)\n  .query(\"sepal_ratio &gt; 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n\n\n\n\n\n\n\nsepal_ratio\n\n\nspecies\n\n\n\n\n\nsetosa\n0.684248\n\n\nversicolor\n0.530953\n\n\nvirginica\n0.526112\n\n\n\n\n\n\n\nFor now, there are only two main principles to remember:\n\nUse . instead of %&gt;% to pipe. Put . at the beginning of the line.\nUse () around the whole expression. Python will complain otherwise.\n\nThere is a pipeable method for most tasks. Sometimes, though, there isn’t, but you can still make it work.\n\nUse lambda to define a function on the fly (like in .assign() above).\nUse .pipe(), which takes a function as an argument and allows you to pipe it.\n\nHere is an example of .pipe():\n\ndef sepal_ratio(df):\n  return df.assign(sepal_ratio = df.sepal_width / df.sepal_length)\n\n(iris\n  .pipe(sepal_ratio)\n  .query(\"sepal_ratio &gt; 0.5\")\n  .loc[:, [\"species\", \"sepal_ratio\"]]\n  .groupby(\"species\")\n  .agg({\"sepal_ratio\": \"mean\"})\n  )\n\n\n\n\n\n\n\n\nsepal_ratio\n\n\nspecies\n\n\n\n\n\nsetosa\n0.684248\n\n\nversicolor\n0.530953\n\n\nvirginica\n0.526112\n\n\n\n\n\n\n\nThat’s it! Some people don’t like piping because, they say, it’s harder to debug. I like to simply comment out lines, allowing you to run it line by line, which makes it actually very easy to debug. A pipe is also easy to read as it’s basically like a recipe. Start with a dataframe and change stuff step by step.\nHere’s a quick summary over the most common data wrangling tasks and their pipeable methods and functions in dplyr and pandas:\n\n\n\ntask\ndplyr\npandas\n\n\n\n\nfilter rows\nfilter()\ndf.query()\n\n\npick columns\nselect()\ndf.loc[]\n\n\ngroup by\ngroup_by()\ndf.groupby()\n\n\nsummarise\nsummarise()\ndf.agg()\n\n\nmake new variable\nmutate()\ndf.assign()\n\n\njoin dfs\ninner_join()\ndf.merge()\n\n\nsort df\narrange()\ndf.sort_values()\n\n\nrename columns\nrename()\ndf.rename()\n\n\n\n\n\n\n\n\nLast tip: AI is your friend. If you’re stuck, put your pandas code in chatgpt or GitHub Copilot and ask it to re-write code as a pipe. Seems to work pretty well."
+  },
+  {
+    "objectID": "posts/piping/index.html#not-so-secret-bonus-siuba",
+    "href": "posts/piping/index.html#not-so-secret-bonus-siuba",
+    "title": "piping python",
+    "section": "Not so secret bonus: siuba",
+    "text": "Not so secret bonus: siuba\nThere is also the beautiful siuba package. If you come from R, this might be the way to go. But even if not, it’s still less verbose than pandas. Last time I tried it, the package didn’t quite have everything I needed but I think it grew a lot since then. Here is the same pipeline, but with siuba:\n\nfrom siuba import _, mutate, filter, select, group_by, summarize\n\n(iris\n  &gt;&gt; mutate(sepal_ratio = _.sepal_width / _.sepal_length)\n  &gt;&gt; filter(_.sepal_ratio &gt; 0.5)\n  &gt;&gt; select(_.species, _.sepal_ratio)\n  &gt;&gt; group_by(_.species)\n  &gt;&gt; summarize(mean_sepal_ratio = _.sepal_ratio.mean())\n  )"
+  },
+  {
+    "objectID": "posts/smcp/index.html",
+    "href": "posts/smcp/index.html",
+    "title": "free science",
+    "section": "",
+    "text": "At first, AIs were created to understand the world. Now, a world is created that AIs can understand better.\nThe Model Context Protocol (MCP) defines a standardised interface between things and AI. Until MCP, LLMs like ChatGPT or Claude had to figure out where to look for data, how to use an application, or how to navigate a website. This often goes wrong, because apps are all different, and data is often not accessible.\nNow, if you’d like an AI to easily access your (app, system, data), you can create an MCP server. An MCP consists of a few fundamental building blocks like tools, resources and prompts for whethever task it is you’d like AIs to do. These building blocks are attached to your app and provide exactly the information that an AI needs to use it. Eventually, if everything from browsers to online shopping to booking flights has MCP servers, AIs will be able to easily do all these things for us, because they’ll know how to use them.\nWouldn’t it be cool if science had MCPs? Say, each paper has its own MCP server that cleanly exposes all important parts, such as methods, conclusions, code and data, independent of the layout of the journal or the structure of the code or data repo? Each paper-MCP would also be registered somewhere, so that AIs can just search for it. Let’s call this protocol the Science Model Context Protocol (SMCP).\nHere’s a list of things that a high-bandwidth, high-accuracy AI-science interface through SMCPs would enable:\n\nautomated synthesis: AI agents could reliably synthesise knowledge through systematic-reviews and meta-analyses, effectively enabling anyone to summarise state of the art knowledge on any question. This could dramatically accelerate science and improve/save many lives.\ndecentralised knowledge: tacit knowledge and skills are highly centralised within few institutions. I was a Postdoc at the University of Edinburgh, which is a hub for stats and genetics, making it much easier to produce high quality publications even as a fresh PhD student. What if everyone, no matter their University, could have easy access to the models, code, and rational behind them? This is what SCMPs will do.\nde-duplicating efforts: Too much time is spent replicating code for data-processing and analyses. Through an SCMP, AI can recreate them and adapt them to different use cases, freeing up time and capacity for researchers to explore new things.\nlive science + digital twins: most research is a one-off. Get the data, run the experiment, analyse, publish. However, what if more data comes along? Especially in the context of a research synthesis? SCMPs will facilitate continuous analyses, added more data and updating the results over time. I imagine that many important papers will have live “digital twins” which incorporate and publish continuous updates.\nstreamlined evaluation: AI agents can review bugs in code, flaws in statistical modelling and experimental design. Humans can think evaluate the bigger picture and conclusions. This wouldn’t just save time, but upskill humans and AIs in the process.\n\nLet’s be clear though, there are risks too:\n\nstreamlining scientific information for AIs will speed up AGI timelines. Are we ready for this?\nit also makes it easier for bad actors to access knowledge via AI, e.g. biotech, weapons\n\nWhenever we decentralise information, it comes with benefits and risks. In the age of AI, the trajectory is less clear than ever. Should we free science?"
+  },
+  {
+    "objectID": "posts/gea/index.html",
+    "href": "posts/gea/index.html",
+    "title": "engineered-DNA forensics",
+    "section": "",
+    "text": "Engineered organisms (bio-agents) are created in labs around the world. Lab-leaks are relatively common, even out of :BSL-4 labs. Bad actors, including nation states and terror groups have always had a large interest in bioweapons. However, once a bio-agent is out in the wild, it’s really difficult to figure out who developed it in the first place.\nThe problem is called genetic engineering attribution (GEA). The challenge of GEA is tracing back engineered organisms to their designers through signatures in their DNA.\nBut why could that work? There are many degrees of freedom in genetic engineering, and the combination of design, style and tools used creates a unique DNA pattern in the synthetic organism, reflecting its lab-of-origin.\nOnce mature, GEA will allow us to quickly respond to outbreaks, identify responsible labs to fill safety gaps and, importantly, deter bad actors. It’s something we should invest in.\nWhile the field itself arguably started with the microbial forensics investigations of Amerithrax, GEA back then was manual, specific and slow. In the machine learning era, we’re able to develop general tools that work for a wide range of bio-agents and labs. But how far are we?"
+  },
+  {
+    "objectID": "posts/gea/index.html#raw-nucleotides-cnn",
+    "href": "posts/gea/index.html#raw-nucleotides-cnn",
+    "title": "engineered-DNA forensics",
+    "section": "2018: raw nucleotides + CNN",
+    "text": "2018: raw nucleotides + CNN\nNielsen & Voigt, 2018 is the first study using machine learning for GEA. They used engineered :Plasmid sequences from Addgene, an open source database. It’s one of the few databases where each engineered sequence is linked to the lab that designed it.\nTheir data contained 36,764 plasmid sequences from 827 labs. To make the sequences available to model, they simply :one-hot encoded each nucleotide, resulting in a 16,048 x 4 matrix for each plasmid sequence. Then, they trained a simple CNN to predict which of the labs the sequence came from.\n\n\n\n\n\n\nflowchart LR\n    A[\"DNA Sequence&lt;br/&gt;A T G C&lt;br/&gt;1 0 0 0&lt;br/&gt;0 1 0 0&lt;br/&gt;0 0 1 0&lt;br/&gt;0 0 0 1&lt;br/&gt;...&lt;br/&gt;16,048 × 4\"] --&gt; B[\"Conv&lt;br/&gt;+&lt;br/&gt;MaxPool\"] --&gt; C[\"Fully&lt;br/&gt;Connected\"] --&gt; D[\"827 labs&lt;br/&gt;Softmax\"]\n    \n    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px\n    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px\n    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px\n    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px\n\n\n\n\nFigure 1: Nielsen & Voigt CNN Architecture for Lab-of-Origin Prediction\n\n\n\n\n\nThe CNN correctly predicted the lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10 predictions. This isn’t quite good enough to apply to a real-world case, but they made a point: There actually is a unique lab-of-origin signature in these sequences. ML-GEA is up to a promising start."
+  },
+  {
+    "objectID": "posts/gea/index.html#base-pair-encoding-lstm",
+    "href": "posts/gea/index.html#base-pair-encoding-lstm",
+    "title": "engineered-DNA forensics",
+    "section": "2020: base-pair encoding + LSTM",
+    "text": "2020: base-pair encoding + LSTM\nAlley et al, 2020 are next in line. They also used plasmid data from Addgene. After preprocessing, they had a dataset of 81833 sequences from 1,314 labs, substantially larger than Nielsen & Voigt two years before.\nInstead of directly training a model on nucleotides, they used :byte-pair encoding (BPE) to identify recurring patterns in the DNA, called motifs. These motifs mapped to codons, regulatory and conserved regions. Each motif then became a token that is fed to the model.\nIn addition to DNA, they also trained their model based on six phenotypes such as growth temperature and antibiotic resistance. In a real world scenario, this means that we would have to sequence the sample and run lab tests to get these phenotypes.\nTo predict the lab-of-origin from sequences and phenotypes, they used an :LSTM trained in a two step process. First, they trained on sequences only, and then added phenotypes and finetuned the model. This training strategy prevented the model from getting stuck in a local minimum caused by the phenotype data early in training.\n\n\n\n\n\n\nflowchart LR\n    A[\"DNA Sequence&lt;br/&gt;ATGCGTAA...&lt;br/&gt;↓&lt;br/&gt;BPE Motifs\"] --&gt; B[\"LSTM\"] --&gt; C[\"Metadata&lt;br/&gt;+&lt;br/&gt;Concat\"] --&gt; D[\"1314 labs&lt;br/&gt;Softmax\"]\n    \n    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px\n    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px\n    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px\n    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px\n\n\n\n\nFigure 2: Alley et al. deteRNNt architecture for Lab-of-Origin Prediction\n\n\n\n\n\nThe sequence+phenotype LSTM predicted the correct lab-of-origin 70% of the time, with a 84% top-10 accuracy. This is better than before, but it’s unclear whether the performance increase comes from LSTM vs. CNN, BPE vs raw nucleotide encoding, more sequence data or the addition of meta-data to the training.\nThe authors also show that the model is well :calibrated and that a simpler random forest model can predict the nation-of-origin with 88% top-3 accuracy compared to 47% for simply guessing the most abundant nations in the database."
+  },
+  {
+    "objectID": "posts/gea/index.html#pangenome-alignment-no-deep-learning",
+    "href": "posts/gea/index.html#pangenome-alignment-no-deep-learning",
+    "title": "engineered-DNA forensics",
+    "section": "2022: pangenome + alignment (no deep learning!)",
+    "text": "2022: pangenome + alignment (no deep learning!)\nDo we actually need deep learning at all? Wang et al., 2022 don’t think so. They developed PlasmidHawk, which uses a much simpler approach based on a :pangenome, sequence alignment and fragment counting. They needed full-length plasmid DNA, resulting in a dataset of 38,682 plasmids from 896 labs. This is how the method works:\nSetup\n\nCreate a pangenome from ALL plasmid sequences\nAlign each plasmid sequence back to the pangenome to annotate each fragment or sub-sequence with lab-of-origin information. These are not unique, some fragments will be annotated with multiple labs.\n\nPrediction\n\nTake a new plasmid sequence and align to the pangenome\nCount how often each lab occurs among the aligned fragments. This is a raw score already. One of the labs will occur most often, making it a good candidate for the lab-of-origin.\nBut they calculate a lab score - a more elegant, weighted version of the raw count. The idea is: the fewer labs share a fragment, the more indicative it is for labs that have it.\n\n\n\n\n\n\n\nflowchart LR\n    subgraph S1 [\"Setup Phase\"]\n        E[\"Addgene&lt;br/&gt;Repository\"] \n        F[\"Build&lt;br/&gt;Pan-genome\"] \n        G[\"Annotate&lt;br/&gt;Lab Origins\"]\n        E --&gt; F --&gt; G\n    end\n    \n    subgraph S2 [\"Prediction Phase\"]\n        A[\"Unknown&lt;br/&gt;Plasmid\"] \n        B[\"Align to&lt;br/&gt;Pan-genome\"] \n        C[\"Count&lt;br/&gt;Fragments\"] \n        D[\"Predict&lt;br/&gt;Lab Origin\"]\n        A --&gt; B --&gt; C --&gt; D\n    end\n    \n    G -.-&gt; B\n    \n    style S1 fill:none,stroke:none\n    style S2 fill:none,stroke:none\n    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:4px,color:\n    style F fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:\n    style G fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:\n    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:4px,color:\n    style B fill:#fff3e0,stroke:#f57c00,stroke-width:4px,color:\n    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:4px,color:\n    style D fill:#fce4ec,stroke:#c2185b,stroke-width:4px,color:\n\n\n\n\nFigure 3: Wang et al. PlasmidHawk Pipeline for Lab-of-Origin Prediction\n\n\n\n\n\nTheir method, called PlasmidHawk, had a 76% accuracy for lab-of-origin prediction and a 85% top-10 accuracy, which is better than the two neural network models before. They say it’s more efficient than deep learning too, as updating the pangenome with new plasmids is quick compared to re-training a neural network, but the data isn’t that big and DL hardware/software is becoming very efficient, so I believe this isn’t a substantial point anymore.\nA big advantage of this approach is interpretability. For each novel sequence, the method directly surfaces the association between fragment and lab-of-origin after aligning it to the pangenome. This leaves a few more degrees of freedom though: The size of fragments has to be chosen manually, and so does the similarity threshold for alignment. The method also doesn’t allow to incorporate additional meta-data like the LSTM approach above, which will be crucial in real-world GEA."
+  },
+  {
+    "objectID": "posts/gea/index.html#gea-competition",
+    "href": "posts/gea/index.html#gea-competition",
+    "title": "engineered-DNA forensics",
+    "section": "2022: GEA competition",
+    "text": "2022: GEA competition\nThe first GEA competition had 1,200 competitors. They worked with the Alley at al data: 81,833 plasmid sequences + meta-data and 1314 labs-of-origin to predict. There are many more labs in the Addgene database, but all labs with fewer than ten plasmids were pooled into an “Unknown Engineered” category.\nThe top-teams’ models vastly outperformed previous models, with a top-1 accuracy of 82% and a top-10 accuracy of 95%.\nThey were also much better at negative attribution - the ability to exclude potential designers. This is measured by an X99 score. X99 is the minimum positive integer N so that the top-N accuracy is at least 99%. For example, X99 would be 279 if the lab-of-origin would be among the top 279 predicted candidates 99% of the time. In Nilsen & Voigt 2018, the X99 was 898, the winning model in the competition had a score of 299.\nSo what were the modeling strategies of the winners? Mostly :ensembles containing CNNs, though the details (pre-processing etc) varied substantially.\nProblems\nCrook et al 2022 describe some of the issues they observed in the competition models:\n\nLow :calibration scores, except for the winning model\nProblematic large composite “Unknown Engineered” class, in which all labs with fewer than 10 sequences (~2000 labs) are pooled. The top-10 accuracy for the Unknown Engineered class was consistently very high, inflating the overall performance, though the problem didn’t seem to be very big for the best models.\n\nDeeper dive into a top solution\nSoares et al published their solution, which was one of the winners. Their model had a 90% top-10 accuracy.\nTheir initial model was a CNN with two tweaks. First, they also used :BPE. Second, they used circular shift augmentation. The key insight here is that plasmid DNA is circular, it doesn’t have a start or an end. The sequence ATGCACTAG shifted by 3 is CACTAGATG. To reflect this, they randomly shift sequences during training, which helps the model to learn local motifs and relative nucleotide arrangements rather than absolute positions, and increases the training set. This model was already better than all pre-competition models, with a 76% top-1 and 89% top-10 accuracy.\nBut the interesting bit is their second model. Here, the base-model is the same CNN as before, but instead of a final softmax layer that directly predicts the lab, they used a triplet network.\nThe idea of a triplet network is this: for each training example, we create a triplet consisting of a plasmid sequence (the anchor), its true lab-of-origin (the positive) and a different lab (the negative). The CNN processes the sequence and the labs into 200-D learnable :embedding vectors.\nDuring training, the model learns to position the anchor embedding vector closer to the positive lab embedding than to the negative one, using a triplet loss function. Instead of predicting lab-classes, they create embedding vectors. These can then be used to still predict classes, simply by measuring the distance of a sequence embedding to the nearest labs. The closest lab embedding is the top-1 candidate.\nNow, while the model was only ever so slightly better than the simpler CNN, it comes with other advantages:\n\nInterpretability: We can visualise the embeddings easily\nFew-shot learning: Even with a single sequence from a new model we can ask which lab embeddings are closest\nDimensional &gt; categorical: Instead of assigning a single class, we get distances in space, which can tell a more nuanced story"
+  },
+  {
+    "objectID": "posts/gea/index.html#summary---where-are-we",
+    "href": "posts/gea/index.html#summary---where-are-we",
+    "title": "engineered-DNA forensics",
+    "section": "Summary - where are we",
+    "text": "Summary - where are we\nGEA is in its infancy. Every single study so far has built models to predict the lab-of-origin from plasmid sequences in the Addgene database.\nThis is largely a pragmatic choice. Addgene contains lots of curated sequences with associated meta-data and lab-of-origin. Studies so far have shown that GEA is possible, and that models can predict the lab-of-origin with accuracies of ~70-80%, decent negative attribution and good calibration.\n\n\n\nTable 1: Overview of genetic engineering attribution studies.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudy (Year)\nModel\nData\nSequences\nLabs\nTop-1 Accuracy\nTop-10 Accuracy\nKey Innovation\n\n\n\n\nNielsen & Voigt (2018)\nCNN\nAddgene plasmids\n36,764\n827\n48%\n70%\nFirst ML approach to GEA\n\n\nAlley et al (2020)\nLSTM\nAddgene plasmids + metadata\n81,833\n1,314\n70%\n84%\nBPE encoding, phenotype data\n\n\nWang et al (2022)\nPangenome alignment\nAddgene plasmids\n38,682 (full-length)\n896\n76%\n85%\nNon-ML approach, interpretable\n\n\nCompetition Winner (2022)\nCNN ensembles\nAddgene plasmids + metadata\n81,833\n1,314\n82%\n95%\nEnsemble methods, k-mers, BLAST-PCA features\n\n\nSoares et al (2022)\nCNN + Triplet Network\nAddgene plasmids + metadata\n81,833\n1,314\n76%\n90%\nCircular shift augmentation, embedding space\n\n\n\n\n\n\nThe research so far also shows that small tweaks like BPE, or circular shift augmentation can still make a large difference. It seems likely that there’s a lot of low-hanging fruit here.\nBut most models probably won’t be useful in the case of a real outbreak yet, because:\n\nMany bio-agents won’t have a plasmid - A bio-agent might not have a plasmid at all. Most viruses don’t have plasmids and even engineered bacteria may not have an engineered plasmid if the engineered trait has been chromosomally integrated.\nModels are less likely to predict bad actors - Terror organisations won’t deposit sequences in Addgene, and neither will the labs they are associated with. Models so far are therefore best at predicting trustworthy labs that care about transparency and data sharing. This is still useful for tracing accidental outbreaks though.\nOpen-source might be a problem - All models so far are trained on open-source data, allowing bad actors to create plasmid sequences mimicking other labs. This will leave its own traces, but is worth thinking about. AI-designers could help to further cover tracks, though other AIs could be trained to spot this."
+  },
+  {
+    "objectID": "posts/gea/index.html#how-to-move-forward",
+    "href": "posts/gea/index.html#how-to-move-forward",
+    "title": "engineered-DNA forensics",
+    "section": "How to move forward",
+    "text": "How to move forward\nSo how do we make GEA practical for real-world outbreaks?\n\nData - We want GEA to handle any sequence, from whole bacterial and viral genomes and plasmids to :synthetic assemblies. Therefore, we need to create comprehensive databases linking these to lab-of-origin and meta-data.\nModels - Most models so far are highly specific in their hyperparameter optimisation, data-preprocessing and ensembling. To handle a wide range of sequences, we need flexible models that are trained across the biosec-relevant part of the tree-of-life and can handle any sequence length. Sequence foundation models in the style of evo2 might be able to do this.\nIntegration into a wider framework - Technical GEA is only part of the solution. We’ll also have non-technical information (location, epidemiological features etc.) of outbreaks as well as intelligence (whistleblowers, surveillance). We need to integrate them into a coherent framework.\nGenetic attribution security - Once GEA is mature enough, there will be new problems, such as AI-assisted evasion of lab-of-origin detection. At this point we’ll need defensive systems that are robust to obfuscation and stay on top in a new adversarial arms race between GEA tools and evasion techniques.\n\nThe game is afoot."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-plasmid",
+    "href": "posts/gea/index.html#x-plasmid",
+    "title": "engineered-DNA forensics",
+    "section": ":x plasmid",
+    "text": ":x plasmid\nPlasmids are small, circular pieces of DNA that float around outside the actual genome. They are a good vector to transport genes into the cell, are relatively easy to work with and self-replicating. That’s why they are often used for genetic engineering."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-bpe",
+    "href": "posts/gea/index.html#x-bpe",
+    "title": "engineered-DNA forensics",
+    "section": ":x bpe",
+    "text": ":x bpe\nByte-pair encoding (BPE) is a tokenization method that breaks down DNA sequences into meaningful subunits rather than individual nucleotides. Instead of treating each A, T, G, C separately, BPE identifies frequently occurring pairs and merges them into single tokens, creating a more efficient representation. They also allow inputs to be of different lengths, which is very useful for DNA sequences."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-lstm",
+    "href": "posts/gea/index.html#x-lstm",
+    "title": "engineered-DNA forensics",
+    "section": ":x lstm",
+    "text": ":x lstm\nLong Short-Term Memory (LSTM) is a type of neural network designed to remember information over long sequences. Unlike regular neural networks that forget previous inputs, LSTMs have special “gates” that control what information to keep, forget, or output. They also take input of different lengths, which is great for DNA sequences."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-pan",
+    "href": "posts/gea/index.html#x-pan",
+    "title": "engineered-DNA forensics",
+    "section": ":x pan",
+    "text": ":x pan\nTraditionally, genomics has worked with a single reference genome against which samples are aligned. This approach loses variation - if a sample has genetic features that can’t be aligned to the reference, they’re discarded. A pangenome captures all genetic variation across multiple samples in a single data structure, often represented as a graph rather than a linear sequence."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-ensemble",
+    "href": "posts/gea/index.html#x-ensemble",
+    "title": "engineered-DNA forensics",
+    "section": ":x ensemble",
+    "text": ":x ensemble\nEnsemble methods do as they sound: They combine the predictions of multiple different models, often leading to more accurate and reliable results."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-calibration",
+    "href": "posts/gea/index.html#x-calibration",
+    "title": "engineered-DNA forensics",
+    "section": ":x calibration",
+    "text": ":x calibration\nCalibration is about aligning stated probabilities with empirical frequencies. DL models are often overconfident. When a model is well-calibrated it should do the following: if it predicts something with a 70% probability, the thing should happen 70% of the time. If someone tells me there’s a 30% rain probability in Edinburgh today, I expect that it rains 3 out of 10 times they give me that prediction."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-one-hot",
+    "href": "posts/gea/index.html#x-one-hot",
+    "title": "engineered-DNA forensics",
+    "section": ":x one-hot",
+    "text": ":x one-hot\nOne-hot encoding transforms categorical variables into binary vectors where only one element is “hot” (1) and all others are “cold” (0). For DNA nucleotides: A → [1,0,0,0], T → [0,1,0,0], G → [0,0,1,0], C → [0,0,0,1]. This allows machine learning algorithms to process the data."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-bsl4",
+    "href": "posts/gea/index.html#x-bsl4",
+    "title": "engineered-DNA forensics",
+    "section": ":x bsl4",
+    "text": ":x bsl4\nBSL-4 labs have the strictest biosafety precautions, as they deal with agents that are aerosol-transmitted and/or highly dangerous and for which there is often no treatment or vaccine."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-synth",
+    "href": "posts/gea/index.html#x-synth",
+    "title": "engineered-DNA forensics",
+    "section": ":x synth",
+    "text": ":x synth\nA fully synthetic DNA molecule, often created from smaller components."
+  },
+  {
+    "objectID": "posts/gea/index.html#x-embed",
+    "href": "posts/gea/index.html#x-embed",
+    "title": "engineered-DNA forensics",
+    "section": ":x embed",
+    "text": ":x embed\nAny object - a word, DNA sequence, image, or even a lab - can be translated into a vector, i.e. an array of numbers. This is called an embedding. The dimensionality (100, 200, 1024) is usually chosen manually.\nThe idea is that these embedding vectors are trained so that similar objects are close together in embedding space, and dissimilar ones are farther apart. After training, the positions of these vectors encode rich, abstract properties of the original objects.\nFor example, in LLMs, the embedding of “King” - “Man” + “Women” ends up close to “Queen” - because the model has learned how sex and royalty are structured in language. In GEA, plasmid embeddings from the same lab will end up close together in embedding space, as they all share similar design signatures."
+  },
+  {
+    "objectID": "posts/info/stackoverflow.html",
+    "href": "posts/info/stackoverflow.html",
+    "title": "Are Python questions on stackoverflow dropping since ChatGPT?",
+    "section": "",
+    "text": "This notebook\n* fetches the number of stackoverflow questions per month with the Python tag from stackoverflow using their API\n* plots them\n\nimport requests\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom matplotlib.dates import date2num\nfrom plotnine import *\nfrom datetime import datetime, timedelta\n\n\n# Set the API URL for fetching data\nbase_url = \"https://api.stackexchange.com/2.3/questions\"\n\n# Set the parameters\nparams = {\n    \"site\": \"stackoverflow\",\n    \"tagged\": \"python\",\n    \"pagesize\": 1,\n    \"fromdate\": None,\n    \"todate\": None,\n    \"filter\": \"total\",\n}\n\n\n# Get stackoverflow data for the last 96 months\ncurrent_date = datetime.now()\nend_date = current_date.replace(day=1) - timedelta(days=1)\nstart_date = end_date - timedelta(days=96*30)  \n\nmonths = pd.date_range(start=start_date, end=end_date + pd.Timedelta(days=1), freq='MS')\ndata = []\n\n# Fetch the data from the API\nfor i in range(len(months) - 1):\n    params[\"fromdate\"] = int(months[i].timestamp())\n    params[\"todate\"] = int(months[i+1].timestamp())\n    \n    response = requests.get(base_url, params=params)\n    total_questions = response.json()[\"total\"]\n    \n    data.append({\"month\": months[i].strftime(\"%Y-%m\"), \"questions\": total_questions})\n    \ndf = pd.DataFrame(data)\n\nnov_2022_data = df[df[\"month\"] == \"2022-11\"].iloc[0]\nsns.set(style=\"white\")\nplt.rcParams[\"font.family\"] = \"sans-serif\"\nfig, ax = plt.subplots(figsize=(7, 3.5))\nsns.lineplot(\n    x=\"month\", y=\"questions\", data=df, ax=ax, linewidth=2, color=\"#1f77b4\"\n)\nsns.scatterplot(\n    x=\"month\", y=\"questions\", data=df, ax=ax, color=\"#1f77b4\", s=20\n)\nax.axvline(x=nov_2022_data[\"month\"], ymin=0, ymax=1, linestyle=\"--\", color=\"grey\")\nax.annotate(\n    \"ChatGPT\\nrelease\",\n    xy=(nov_2022_data[\"month\"], nov_2022_data[\"questions\"] + 1000),\n    xytext=(5, 30),\n    textcoords=\"offset points\",\n    arrowprops=dict(arrowstyle=\"-&gt;\", color=\"#3B4252\"),\n    color=\"#3B4252\",\n)\n\nnum_labels = 5\nstep = len(df[\"month\"]) // (num_labels - 1)\nxticks = sorted(\n    list(set(df[\"month\"][::step].tolist() + [nov_2022_data[\"month\"]]))[:-1]\n)\nax.set_xticks(xticks)\nplt.xticks(rotation=60, fontsize=12)\nax.set_ylim(5000, 30000)\nax.set_yticks(range(10000, 31000, 10000))\nplt.yticks(fontsize=12)\nax.set_xlabel(\"Month\", fontsize=14, fontweight=\"bold\", labelpad=15)\nax.set_ylabel(\n    \"# of questions with python tag\", fontsize=14, fontweight=\"bold\", labelpad=15\n)\nax.tick_params(axis=\"both\", colors=\"grey\")\nfor spine in [\"bottom\", \"left\"]:\n    ax.spines[spine].set_color(\"grey\")\nax.grid(False)\nsns.despine()\nplt.show()\n\n\n\n\n\n\nThe number of python questions on Stackoverflow. Data: Stackoverflow API.\n\n\n\n\n\n\n#df.to_csv(\"stackoverflow_python_questions.csv\", index=False)"
+  },
+  {
+    "objectID": "posts/theme/index.html",
+    "href": "posts/theme/index.html",
+    "title": "gg themes",
+    "section": "",
+    "text": "ggplot2 has become one of the most powerful and flexible visualisation tools, with a large community and lots of people working on new extensions every day. A large number of ways to represent data makes it possible to create nearly anything in ggplot2, from great data journalism to beautiful infographics and generative art. No post-processing required anymore.\nThe general look of a ggplot is controlled by a theme. Anyone using ggplot knows that the default grey theme is usually not what you want to show the world. Modifying themes is very flexible, but a little bit complicated. Even after using it for years, I have to google some things every single time. Creating your own theme is a way to give your plots a consistent and personal design, and will save you a lot of time and many lines of code.\n\nThe default ggplot\nLet’s use the data from gapminder to see how a default plot looks like. We first load a few packages and do some data pre-processing.\n\nlibrary(ggplot2)\nlibrary(gapminder)\nlibrary(dplyr)\nlibrary(wesanderson)\nlibrary(systemfonts)\n# a bit of data processing\ndat &lt;- gapminder %&gt;% \n        group_by(year, continent) %&gt;% \n        summarise(`Life Expectancy` = mean(lifeExp),\n                  Population = sum(as.numeric(pop)), \n                  .groups = 'drop') %&gt;% \n        rename(Year = year, Continent = continent)\n\nHere is a default theme_grey() scatterplot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n      geom_point()\n\n\n\n\n\n\n\n\nThere are a few things I change all the time:\n\nThe background, which I prefer simple plain, or only with x and y axis lines.\nGrid lines: I usually keep only major grid lines (as they are connected to values) or remove them entirely.\nThe spacing between axis, axis-labels and axis-titles.\nThe font.\nFor themes with axis lines, like theme_classic, the line thickness.\n\n\n\nMaking your own theme\nMaking a new theme is quite simple. We (1) create a function which starts with a standard theme, such as theme_minimal and (2) add all the theme aspects which we prefer for our plots. Finally (3), we add some arguments to make changing things easy which we need often, such as axis and grid lines and the text size. Below is the theme I am using, but of course you can change every other theme aspect too (see theme documentation). I’m often using the ‘Avenir Next’ font, which might not be installed on your system. Using ‘sans’ should always work.\n\ntheme_simple &lt;- function(axis_lines = TRUE, \n                         grid_lines = FALSE,     \n                         text_size = 12,       \n                         line_width = 0.2,\n                         # replace with 'sans' if not working\n                         base_family= 'Avenir Next'){ \n        \n    # start with theme_minimal because it is really simple.\n    th &lt;- ggplot2::theme_minimal(base_family = base_family, \n                               base_size = text_size)\n         \n    # remove the grid lines \n    th &lt;- th + theme(panel.grid=element_blank())\n    \n    # if we want axis lines\n    if (axis_lines) {\n      # We add axis lines and give them our preferred thickness\n        th &lt;- th + \n            theme(axis.line = element_line(linewidth = line_width),\n                  axis.ticks = element_line(linewidth = line_width))\n    } \n    # do we want grid lines?\n    if (grid_lines) {\n        th &lt;- th + \n            theme(panel.grid.major = element_line(linewidth = line_width))\n    }\n    \n    # more space for axis text/title and plot title \n    th &lt;- th + theme(\n              axis.text.x=element_text(margin=margin(t=5)),\n              axis.text.y=element_text(margin=margin(r=5)),\n              axis.title.x=element_text(margin=margin(t=10)),\n              axis.title.y=element_text(margin=margin(r=10)),\n              plot.title=element_text(margin=margin(b=10)))\n    \n    return (th)\n}\n\n\n\nAdding theme_simple to the plot.\nNow, we can add theme_simple() to the plot.\n\nggplot(dat, aes(Year, `Life Expectancy`, color = Continent)) +\n    geom_point() +\n    scale_color_manual(values = wes_palette(\"Darjeeling2\")) + \n    theme_simple()\n\n\n\n\n\n\n\n\nSmall tweaks can sometimes make a big aesthetic difference. ggplot comes with a few themes, like theme_classic(), which are sort of close to what I like my plots to be, but are just not quite there. If you feel the same, it’s time to make your own theme.\nLastly, you can put the code for your theme into an R script and save it, for example as theme_simple.R. The next time you make plots, just source the script to load the theme_simple() function. To use it as the default theme, we can use theme_set like so:\n\nsource(\"theme_simple.R\") \n# set theme_simple as default theme\nggplot2::theme_set(theme_simple()) \n\nThat’s it!\nIf you are plotting in base R, you might say: You need a full blog post just to explain how to make ggplot look like base R with a different font! And I can only say: touché, my friend.\n\n\nAppendix: Installing fonts\nFonts can really make a big difference in the visual design of plots. A lot of freely available fonts are on https://fonts.google.com/. On Mac, I just download them, double click and they are installed. Then, we have to make them available in R. The systemfonts package magically finds all installed fonts from different directories.\n\n# install.packages(\"systemfonts\")\nlibrary(systemfonts)\n# which fonts are installed?\n# print only top 5\nsystem_fonts()[1:5, ]\n\n#&gt; # A tibble: 5 × 9\n#&gt;   path                    index name  family style weight width italic monospace\n#&gt;   &lt;chr&gt;                   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;ord&gt;  &lt;ord&gt; &lt;lgl&gt;  &lt;lgl&gt;    \n#&gt; 1 /System/Library/Fonts/…     1 Shre… Shree… Bold  bold   norm… FALSE  FALSE    \n#&gt; 2 /System/Library/Fonts/…     0 Acad… Acade… Plain normal norm… FALSE  FALSE    \n#&gt; 3 /System/Library/Fonts/…     0 Impa… Impact Regu… heavy  semi… FALSE  FALSE    \n#&gt; 4 /Users/msto/Library/Fo…     0 Lato… Lato   Heav… ultra… norm… TRUE   FALSE    \n#&gt; 5 /Users/msto/Library/Fo…     0 Fira… FiraC… Semi… semib… norm… FALSE  FALSE\n\n\nOther options to import fonts are extrafont and showtext.\n\n\npdf-ing\nSometimes, especially for science publications, plots need to be saved as pdfs. With non-standard fonts, this can be problematic, because they have to be embedded, but a little tweak to ggsave() can help here.\n\nggsave(\"plot.pdf\", device = cairo_pdf)"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "projects",
+    "section": "",
+    "text": "AutoEmulate: Speeding up physics simulations using machine learning.\nJOSS (2025) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nrptR: Intra-class coefficients for hierarchical models.\nMethods in Ecology and Evolution (2017) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\npartR2: R2 for individual fixed effects in hierarchical models.\nPeerJ (2021) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\ninbreedR: Identity disequlibria and more.\nMethods in Ecology and Evolution (2016) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nGCalignR: Aligning gas chromatography samples.\nPlos One (2018) | Code\n:🥥"
+  },
+  {
+    "objectID": "projects.html#software",
+    "href": "projects.html#software",
+    "title": "projects",
+    "section": "",
+    "text": "AutoEmulate: Speeding up physics simulations using machine learning.\nJOSS (2025) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nrptR: Intra-class coefficients for hierarchical models.\nMethods in Ecology and Evolution (2017) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\npartR2: R2 for individual fixed effects in hierarchical models.\nPeerJ (2021) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\ninbreedR: Identity disequlibria and more.\nMethods in Ecology and Evolution (2016) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nGCalignR: Aligning gas chromatography samples.\nPlos One (2018) | Code\n:🥥"
+  },
+  {
+    "objectID": "projects.html#research",
+    "href": "projects.html#research",
+    "title": "projects",
+    "section": "Research",
+    "text": "Research\nselected, full list here.\n\nQuantitative and evolutionary genetics\n\n\n\n\n\n\n\n\n\nExploring lethal mutations and their evolutionary dynamics.\nEvol letters (2024) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nLong runs of homozygosity have a higher mutation load because their haplotypes are younger.\nEvol Letters (2021) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nEffect size and genetic basis of inbreeding depression in the wild.\nNature Comms (2021) | Code\n:🥥\n\n\n\n\n\nMolecular ecology\n\n\n\n\n\n\n\n\n\nEarly life gut microbiota predict extreme sex differences in Elephant Seals.\nMol Ecol (2020) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nIndustrial exploitation brought one-third of pinniped species to the edge of extinction.\nNature Comms (2018) | Code\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nSkin chemicals encode clues to identify offspring, home colony and potential mates in fur seals.\nPNAS (2015) | Code | Article in the Sueddeutsche Zeitung.\n:🥥\n\n\n\n\n\nConservation genetics\n\n\n\n\n\n\n\n\n\nConservation management strategy impacts inbreeding and mutation load in scimitar-horned oryx.\nPNAS (2023) | :🥥\n\n\n\n\n\nBehavioural ecology\n\n\n\n\n\n\n\n\n\nBiased sex ratios and the impact of early survival on female polygyny.\nPNAS (2017) | Code in Supplementary Material\n:🥥\n\n\n\n\n\nResearch consulting\n\n\n\n\n\n\n\n\n\nImpacts of systemic inbreeding in Thoroughbred racehorses.\nProceedings of the Royal Society B (2022)\n:🥥"
+  },
+  {
+    "objectID": "projects.html#side-projects",
+    "href": "projects.html#side-projects",
+    "title": "projects",
+    "section": "Side projects",
+    "text": "Side projects\n\n\n\n\n\n\n\n\n\nDetecting artisanal mines in Myanmar from satellites\n:🥥\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Minimal transformer\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Neural Vocoder\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode: Deep learning for genetic engineering attribution"
+  },
+  {
+    "objectID": "projects.html#x-el",
+    "href": "projects.html#x-el",
+    "title": "projects",
+    "section": ":x el",
+    "text": ":x el\nWe scanned the genomes of thousands of wild Soay sheep for embryonic lethal mutations. These mutations prevent an individual from being born, should it be unlucky enough to receive the same genetic variant from both mum and dad. We found a few and wondered how they are maintained in the population. We show that despite their negative effects, these mutations can persist when genetically linked to beneficial variants.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-roh",
+    "href": "projects.html#x-roh",
+    "title": "projects",
+    "section": ":x roh",
+    "text": ":x roh\nRuns of homozygosity (ROH) are long stretches of homozygous genotypes, and turn out to be a weirdly insightful feature of the genome. The longer an ROH is, the fewer generations in the past is it’s common ancestor haplotype. We show using simulation and empirical genome data that such long ROH have a higher density of deleterious mutations, as natural selection had less time to select against them, compared to short ROH. This has been hypothesised before, but never been shown using real fitness data.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-id",
+    "href": "projects.html#x-id",
+    "title": "projects",
+    "section": ":x id",
+    "text": ":x id\nWe know that inbreeding is bad for offspring fitness since Darwin or maybe even since biblical times. The phenomenon is called inbreeding depression and is relevant not just for animals but also for humans. Studying a densely pheno- and genotyped wild population of bronze-age sheep, we show that the effects of even slight inbreeding on survival are severe. We uncover some of the underlying genetic mechanisms using a novel type of genome-wide association study to estimate the effects of deleterious mutations across the genome. This is possibly the most extensive study of its kind, outside of humans.\nAuthors | MA Stoffel, SE Johnston, JG Pilkington, JM Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-nes",
+    "href": "projects.html#x-nes",
+    "title": "projects",
+    "section": ":x nes",
+    "text": ":x nes\n:Northern elephant seals have the second-largest sexual size dimorphism of any mammal (right after their Southern sister-species). Adult males can be 3-5 times as heavy as females. Why is that? Sexual selection has favored larger males because they are able to defend large harems of females on the beach against competitors.\nIn young elephant seals (pups) you can’t really spot a difference between males and females yet. However, when measuring their gut microbiome, sampled with a very long cotton swab, we find very strong sex-differences from early on. This opens the possibility for microbes to provide an adaptation to these two very different life-history strategies of female and male elephant seals.\nAuthors | Martin A Stoffel, Karina Acevedo‐Whitehouse, Nami Morales‐Durán, Stefanie Grosser, Nayden Chakarov, Oliver Krüger, Hazel J Nichols, Fernando R Elorriaga‐Verplancken, Joseph I Hoffman"
+  },
+  {
+    "objectID": "projects.html#x-bot",
+    "href": "projects.html#x-bot",
+    "title": "projects",
+    "section": ":x bot",
+    "text": ":x bot\nThe scale of industrial seal hunting in the 18th-20th century was large, yet somehow overshadowed by the even larger whaling industry. Using genetics and a dataset of more than 11,000 seals, we estimate that many populations were on the edge of extinction. While only two species went extinct so far (the Carribean monk seal and the Japanese sea lion), others have lost most of their diversity.\nAuthors | MA Stoffel, Emily Humble, AJ Paijmans, Karina Acevedo-Whitehouse, Barbara Louise Chilvers, B Dickerson, F Galimberti, Neil J Gemmell, SD Goldsworthy, HJ Nichols, Oliver Krüger, S Negro, A Osborne, T Pastor, Bruce Cameron Robertson, S Sanvito, JK Schultz, ABA Shafer, Jochen BW Wolf, Joseph I Hoffman"
+  },
+  {
+    "objectID": "projects.html#x-plov",
+    "href": "projects.html#x-plov",
+    "title": "projects",
+    "section": ":x plov",
+    "text": ":x plov\nAround 60% of adult snowy plovers are male, leading to a mating system where females are polygynous, because they can chose. My friend Luke led this project, where we wanted to know where this sex bias comes from. Turns out, at birth its 50/50, and most of the sex-bias in adults starts in juveniles, where males have lower survival rates than females. We argue that two-sex population models (as used in our study) are underused but essential to understand population dynamics and light on the remaining mysteries around sexual selection.\nAuthors | Luke J Eberhart-Phillips, Clemens Küpper, Tom EX Miller, Medardo Cruz-López, Kathryn H Maher, Natalie Dos Remedios, Martin A Stoffel, Joseph I Hoffman, Oliver Krüger, Tamás Székely"
+  },
+  {
+    "objectID": "projects.html#x-chem",
+    "href": "projects.html#x-chem",
+    "title": "projects",
+    "section": ":x chem",
+    "text": ":x chem\nFur seal mothers have to find their own offspring in dense colonies among thousands of others when they return from their foraging trips at sea. Over distance, calls seem important but at close range sniffing is common. We showed that seal scent glands contain a mix of chemicals, which might be partially determined by genes and which make it possible to identify related individuals. To do this, we developed a new algorithm to work with gas-chromatography data from wild animals (GCalignR, see below) and borrowed analytical methods from psychology.\nAuthors | Martin A Stoffel, Barbara A Caspers, Jaume Forcada, Athina Giannakara, Markus Baier, Luke Eberhart-Phillips, Caroline Müller, Joseph I Hoffman"
+  },
+  {
+    "objectID": "projects.html#x-horse",
+    "href": "projects.html#x-horse",
+    "title": "projects",
+    "section": ":x horse",
+    "text": ":x horse\nWe show that genomic inbreeding reduces the changes of a Thoroughbred horse ever making it to the racecourse, and pinpoint a genomic region where homozygosity has a particularly large effect, independent of genome-wide inbreeding. Results were a paper, the full reproducible analysis and a patent for the method.\nAuthors | Emmeline W Hill, Martin A Stoffel, Beatrice A McGivney, David E MacHugh, Josephine M Pemberton"
+  },
+  {
+    "objectID": "projects.html#x-oryx",
+    "href": "projects.html#x-oryx",
+    "title": "projects",
+    "section": ":x oryx",
+    "text": ":x oryx\nto do\nAuthors | sEmily Humble, Martin A. Stoffel, Kara Dicks, Alex D. Ball, Rebecca M. Gooley, Justin Chuven, Ricardo Pusey, Mohammed Al Remeithi, Klaus-Peter Koepfli, Budhan Pukazhenthi, Helen Senn, Rob Ogden"
+  },
+  {
+    "objectID": "projects.html#x-ae",
+    "href": "projects.html#x-ae",
+    "title": "projects",
+    "section": ":x ae",
+    "text": ":x ae\nSimulations of complex systems are slow. To speed them up for research and application, we have to emulate them, often using machine learning. This is difficult though. AutoEmulate’s goal is to provide a low-code platform to do all this automatically. I’ve created the package and was lead developer during my time at the Turing Institute. On the left is the old hex logo."
+  },
+  {
+    "objectID": "projects.html#x-rp",
+    "href": "projects.html#x-rp",
+    "title": "projects",
+    "section": ":x rp",
+    "text": ":x rp\nrptR calculates intra-class coefficients (also called repeatabilities, hence the name) based on generalised linear mixed models. It does just that, but pretty well, and has somehow become a standard in various fields. Hence the 191x field-citation ratio."
+  },
+  {
+    "objectID": "projects.html#x-p2",
+    "href": "projects.html#x-p2",
+    "title": "projects",
+    "section": ":x p2",
+    "text": ":x p2\npartR2 uses a few tricks to calculate the explained variance per fixed effect in GLMMs. There’s not much else doing this properly, so it has become quite popular. But take care: it’s key to think what exactly it is that you want to know, especally for more complicated models involving interactions etc."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "about",
+    "section": "",
+    "text": "I’m Martin, an independent researcher. At the moment I’m thinking about the intersection of AI safety and biology funded by an Open Philantropy grant, while building AI agents for a small company on the side. Previously, I led the development of AutoEmulate, an open-source package to emulate physics simulations using machine learning at the Turing Institute; explored parallels between cultural evolution and AI progress as a PIBBSS fellow; studied deleterious mutations in a bronze-age island sheep population; discovered genetic traces of the 19th century overhunting in pinniped populations around the world, consulted on whether racehorse breeding actually works, and built scientific open source software.\nThings I like: trying to write a blog, Pokemon Red, Steel Maces, Open Water Swimming, The Tao of Pooh, cycling against the wind on Snaefellsnes, playing Ukulele with my 1 year old, saying serious things in spontaneous conversations.\nPlease get in touch if you’d like to chat!"
   }
 ]

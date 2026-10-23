@@ -43,7 +43,7 @@ $dark:          $gray-900 !default;
 $min-contrast-ratio:   1.28 !default;
 
 // web font
-$web-font-path: "https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Fira+Code:wght@400;500&display=swap" !default;
+$web-font-path: false !default; // loaded via fonts.html (avoids a CSS @import chain)
 // Fonts
 
 $font-family-sans-serif: 'Work Sans', -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif !default;
