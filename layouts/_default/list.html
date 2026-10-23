@@ -1,0 +1,12 @@
+{{ define "main" }}
+<p class="lede">{{ .Content | plainify | htmlUnescape }}</p>
+<ol class="ledger">
+  {{ range (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+  <li>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span class="desc">{{ .Description }}</span>
+  </li>
+  {{ end }}
+</ol>
+{{ end }}

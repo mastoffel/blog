@@ -1,0 +1,22 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ range hugo.Data.projects.sections }}
+<section class="projects">
+  <h2>{{ .title }}</h2>
+  {{ with .intro }}<p class="byline">{{ . | markdownify }}</p>{{ end }}
+  {{ range .groups }}
+    {{ with .title }}<h3>{{ . }}</h3>{{ end }}
+    {{ range .items }}
+    <div class="project">
+      <img src="/pics/{{ .image }}" alt="" loading="lazy">
+      <div>
+        <p class="ptitle">{{ .title | markdownify }}</p>
+        {{ with .meta }}<p class="pmeta">{{ . | markdownify }}</p>{{ end }}
+        {{ with .note }}<details><summary>more</summary>{{ . | $.Page.RenderString (dict "display" "block") }}</details>{{ end }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+</section>
+{{ end }}
+{{ end }}

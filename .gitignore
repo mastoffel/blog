@@ -30,3 +30,7 @@ renv/python/
 *.log
 *.tmp
 *~
+# Hugo
+/public/
+/resources/
+.hugo_build.lock

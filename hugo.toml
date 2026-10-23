@@ -1,0 +1,12 @@
+baseURL = "https://www.mstoffel.xyz/"
+locale = "en"
+title = "Martin Stoffel"
+disableKinds = ["taxonomy", "term"]
+
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+codeFences = false
+
+[params]
+description = "Martin Stoffel — biology, AI and code."

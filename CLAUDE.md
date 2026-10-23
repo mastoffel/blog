@@ -1,0 +1,3 @@
+- Hugo site (no theme). `hugo server` to preview; Netlify builds via `netlify.toml`. Old Quarto version lives on `main`.
+- Code posts are pre-rendered markdown (from `quarto render x.qmd --to hugo-md`); nothing executes at build.
+- Inline expandable notes: `[:term](#x-name)` + a `## :x name` section at the end of the post (`static/nutshell.js`). Projects page is `data/projects.yaml`.
