@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <link rel="icon" href="/favicon.png">
 {{ with resources.Get "css/main.css" | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
@@ -12,10 +12,10 @@
 </head>
 <body>
 <header class="masthead">
-  <a class="name" href="/">Martin Stoffel</a>
+  <a class="name" href="/"><img src="/favicon.png" alt="Martin Stoffel"></a>
   <nav>
     {{ $here := .RelPermalink }}
-    {{ range slice (slice "writing" "/") (slice "projects" "/projects/") (slice "about" "/about/") }}
+    {{ range slice (slice "blog" "/") (slice "about" "/about/") (slice "projects" "/projects/") }}
     <a href="{{ index . 1 }}"{{ if eq $here (index . 1) }} aria-current="page"{{ end }}>{{ index . 0 }}</a>
     {{ end }}
   </nav>

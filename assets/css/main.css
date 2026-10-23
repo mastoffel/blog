@@ -8,18 +8,8 @@
   --measure: 36rem;
   --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  color-scheme: light dark;
+  color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #1b1814;
-    --ink: #e9e3d6;
-    --faint: rgb(233 227 214 / 0.55);
-    --rule: rgb(233 227 214 / 0.2);
-    --wash: rgb(233 227 214 / 0.06);
-  }
-}
-
 * { box-sizing: border-box; }
 html {
   background: var(--paper);
@@ -36,16 +26,17 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--rul
 a:hover { text-decoration-color: currentColor; }
 
 /* masthead */
-.masthead { display: flex; justify-content: space-between; align-items: baseline;
+.masthead { display: flex; justify-content: space-between; align-items: center;
   flex-wrap: wrap; gap: 0.25rem 1rem; padding: 2.5rem 0 0.6rem;
   border-bottom: 1px solid var(--ink); margin-bottom: 3rem; }
 .masthead a { text-decoration: none; }
-.masthead .name { font-weight: 700; }
+.masthead .name img { width: 2rem; height: 2rem; margin: 0; }
 .masthead nav { display: flex; gap: 1.1rem; font-style: italic; }
 .masthead nav a[aria-current] { text-decoration: underline; text-decoration-color: currentColor; }
 
 /* home */
-.lede { font-size: 1.3rem; line-height: 1.45; margin: 0 0 3rem; }
+.home h1 { margin-bottom: 1.5rem; }
+.home .hero { width: 100%; border-radius: 0.6rem; margin: 0 0 2.5rem; }
 .ledger { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
 .ledger li { display: grid; grid-template-columns: 6.5rem 1fr; column-gap: 1rem;
   padding: 0.7rem 0; border-bottom: 1px solid var(--rule); }
@@ -96,9 +87,8 @@ a.nut.open::after { content: "−"; }
 .ptitle a:hover { text-decoration: underline; }
 .pmeta { color: var(--faint); font-size: 0.9rem; }
 details { font-size: 0.92rem; margin-top: 0.3rem; }
-summary { cursor: pointer; color: var(--faint); font-style: italic; list-style: none; }
+summary { cursor: pointer; list-style: none; width: max-content; }
 summary::-webkit-details-marker { display: none; }
-summary::before { content: "+ "; }
-details[open] summary::before { content: "− "; }
+details[open] summary { opacity: 0.5; }
 details > :not(summary) { margin-top: 0.5rem; }
 details p { margin-bottom: 0.6rem !important; }

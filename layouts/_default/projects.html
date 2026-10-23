@@ -12,7 +12,7 @@
       <div>
         <p class="ptitle">{{ .title | markdownify }}</p>
         {{ with .meta }}<p class="pmeta">{{ . | markdownify }}</p>{{ end }}
-        {{ with .note }}<details><summary>more</summary>{{ . | $.Page.RenderString (dict "display" "block") }}</details>{{ end }}
+        {{ with .note }}<details><summary>🥥</summary>{{ . | $.Page.RenderString (dict "display" "block") }}</details>{{ end }}
       </div>
     </div>
     {{ end }}
