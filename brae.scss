@@ -450,3 +450,7 @@ div.quarto-post .metadata {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
 }
+// Mermaid diagrams pre-rendered as SVG (mermaid-format: svg): match the old JS look
+svg.flowchart .nodeLabel { color: $blue !important; }
+svg.flowchart .flowchart-link { stroke: #adb5bd !important; }
+svg.flowchart .marker { fill: #adb5bd !important; stroke: #adb5bd !important; }

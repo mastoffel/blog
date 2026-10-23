@@ -8,6 +8,9 @@ title-block-banner: false
 draft: false
 filters:
     - nutshell
+format:
+  html:
+    mermaid-format: svg
 ---
 
 
@@ -29,6 +32,7 @@ Their data contained 36,764 plasmid sequences from 827 labs. To make the sequenc
 
 ```{mermaid}
 %%| label: fig-cnn
+%%| fig-height: 2.38
 %%| fig-cap: Nielsen & Voigt CNN Architecture for Lab-of-Origin Prediction
 
 flowchart LR
@@ -54,6 +58,7 @@ To predict the lab-of-origin from sequences and phenotypes, they used an [:LSTM]
 
 ```{mermaid}
 %%| label: fig-lstm
+%%| fig-height: 1.47
 %%| fig-cap: Alley et al. deteRNNt architecture for Lab-of-Origin Prediction
 
 flowchart LR
@@ -86,6 +91,7 @@ Do we actually need deep learning at all? [Wang et al., 2022](https://www.nature
 
 ```{mermaid}
 %%| label: fig-plasmidHawk
+%%| fig-height: 1.99
 %%| fig-cap: Wang et al. PlasmidHawk Pipeline for Lab-of-Origin Prediction
 
 flowchart LR
