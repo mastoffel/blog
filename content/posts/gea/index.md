@@ -11,7 +11,7 @@ filters:
 ---
 
 
-Engineered organisms (bio-agents) are created in labs around the world. Lab-leaks are [relatively common](https://www.sciencedirect.com/science/article/pii/S2666524723003191?utm_source=chatgpt.com), even out of [:BSL-4](#x-bsl4) labs. Bad actors, including nation states and terror groups have always had a large [interest in bioweapons](../dacc-bio/index.qmd). However, once a bio-agent is out in the wild, it's really difficult to figure out *who* developed it in the first place.
+Engineered organisms (bio-agents) are created in labs around the world. Lab-leaks are [relatively common](https://www.sciencedirect.com/science/article/pii/S2666524723003191?utm_source=chatgpt.com), even out of [:BSL-4](#x-bsl4) labs. Bad actors, including nation states and terror groups have always had a large [interest in bioweapons](/posts/dacc-bio/). However, once a bio-agent is out in the wild, it's really difficult to figure out *who* developed it in the first place.
 
 The problem is called **genetic engineering attribution (GEA)**. The challenge of GEA is tracing back engineered organisms to their designers through signatures in their DNA. 
 
