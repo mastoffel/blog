@@ -1,0 +1,8 @@
+# Static assets: browsers reuse them for a day, then refresh in the background.
+# HTML keeps Netlify's default (always revalidated), so new posts show up immediately.
+/site_libs/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/pics/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=604800
+/favicon.png
+  Cache-Control: public, max-age=604800, stale-while-revalidate=604800
