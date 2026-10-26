@@ -23,3 +23,13 @@ Cache-Control = "public, max-age=604800, stale-while-revalidate=604800"
 for = "/*.js"
 [headers.values]
 Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+# Old Quarto addresses
+[[redirects]]
+from = "/about.html"
+to = "/about/"
+status = 301
+[[redirects]]
+from = "/projects.html"
+to = "/projects/"
+status = 301
