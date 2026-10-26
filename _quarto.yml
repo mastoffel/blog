@@ -4,7 +4,6 @@ project:
 website:
   title: ""
   favicon: "favicon.png"
-  google-analytics: "G-FYLF41PFGT"
   navbar:
     logo: "favicon.png"
     right:
@@ -24,5 +23,5 @@ format:
     highlight-style: kate
     html-math-method: plain
     minimal: false
-    include-in-header: fonts.html
+    include-in-header: head.html
 
