@@ -1,12 +1,13 @@
 baseURL = "https://www.mstoffel.xyz/"
 locale = "en"
 title = "Martin Stoffel"
-disableKinds = ["taxonomy", "term"]
+disableKinds = ["taxonomy", "term", "section"]
 
 [markup.goldmark.renderer]
 unsafe = true
 [markup.highlight]
-codeFences = false
+style = "github"
+noClasses = true
 
 [params]
-description = "Martin Stoffel — biology, AI and code."
+description = "Martin Stoffel's blog"

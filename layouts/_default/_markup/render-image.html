@@ -1,0 +1,10 @@
+{{- $res := .Page.Resources.Get .Destination -}}
+{{- $img := "" -}}
+{{- if and $res (eq $res.MediaType.SubType "svg") -}}
+  {{- $img = $res.Content | safeHTML -}}
+{{- else -}}
+  {{- $img = printf `<img src="%s" alt="%s" loading="lazy">` .Destination .PlainText | safeHTML -}}
+{{- end -}}
+{{- if .PlainText -}}
+<figure>{{ $img }}<figcaption>{{ .Text | safeHTML }}</figcaption></figure>
+{{- else -}}{{ $img }}{{- end -}}

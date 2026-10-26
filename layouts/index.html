@@ -1,15 +1,12 @@
 {{ define "main" }}
-<div class="home">
-    <h1>posts</h1>
-    <img class="hero" src="/pics/snowy.jpg" alt="Snowy plover">
-    <ol class="ledger">
-      {{ range (where site.RegularPages "Section" "posts").ByDate.Reverse }}
-      <li>
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <span class="desc">{{ .Description }}</span>
-      </li>
-      {{ end }}
-    </ol>
-</div>
+<h1 class="title">posts</h1>
+<img class="hero" src="/pics/snowy.webp" alt="Snowy plover between stone walls" width="1200" height="265">
+<table class="listing">
+  {{ range (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+  <tr>
+    <td class="date">{{ .Date.Format "2006-01-02" }}</td>
+    <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+  </tr>
+  {{ end }}
+</table>
 {{ end }}

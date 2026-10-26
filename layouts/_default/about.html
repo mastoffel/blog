@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="about">
+  <h1 class="title">{{ .Title }}</h1>
+  {{ .Content }}
+  <hr>
+  <div class="about-links">
+    {{ range .Params.links }}<a class="about-link" href="{{ .url }}" aria-label="{{ .label }}">{{ partial (printf "icons/%s.svg" .icon) . }}</a>{{ end }}
+  </div>
+</div>
+{{ end }}

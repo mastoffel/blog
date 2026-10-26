@@ -1,4 +1,4 @@
-{{- $text := .Text -}}
-{{- if hasPrefix .PlainText ":" -}}{{- $text = strings.TrimPrefix ":" .Text -}}{{- end -}}
-<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if hasPrefix .Destination "#x-" }} class="nut"{{ end }}>{{ $text | safeHTML }}</a>
-{{- /* trim */ -}}
+{{- $nut := hasPrefix .Destination "#x-" -}}
+{{- if $nut }}{{ .Page.Store.Set "nutshell" true }}{{ end -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $nut }} class="nut"{{ end }}>{{ strings.TrimPrefix ":" .Text | safeHTML }}</a>
+{{- /* chomp trailing newline */ -}}

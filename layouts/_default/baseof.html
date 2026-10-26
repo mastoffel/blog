@@ -6,22 +6,25 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <link rel="icon" href="/favicon.png">
+<link rel="preload" href="/fonts/WorkSans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Fraunces-700.woff2" as="font" type="font/woff2" crossorigin>
 {{ with resources.Get "css/main.css" | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FYLF41PFGT"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FYLF41PFGT');</script>
+<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="/index.xml">
+<script type="speculationrules">{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<script data-goatcounter="https://mstoffel.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
-<header class="masthead">
-  <a class="name" href="/"><img src="/favicon.png" alt="Martin Stoffel"></a>
+<header class="navbar">
+  <a class="logo" href="/"><img src="/favicon.png" alt="Home" width="28" height="28"></a>
   <nav>
     {{ $here := .RelPermalink }}
     {{ range slice (slice "blog" "/") (slice "about" "/about/") (slice "projects" "/projects/") }}
-    <a href="{{ index . 1 }}"{{ if eq $here (index . 1) }} aria-current="page"{{ end }}>{{ index . 0 }}</a>
+    <a href="{{ index . 1 }}"{{ if eq $here (index . 1) }} class="active" aria-current="page"{{ end }}>{{ index . 0 }}</a>
     {{ end }}
   </nav>
 </header>
 <main>{{ block "main" . }}{{ end }}</main>
-<script src="/nutshell.js" defer></script>
+{{ if .Store.Get "nutshell" }}<script src="/nutshell.js" defer></script>{{ end }}
 <script src="/phylo-trail.js" defer></script>
 </body>
 </html>

@@ -27,18 +27,7 @@ While the field itself arguably started with the microbial forensics investigati
 
 Their data contained 36,764 plasmid sequences from 827 labs. To make the sequences available to model, they simply [:one-hot encoded](#x-one-hot) each nucleotide, resulting in a 16,048 x 4 matrix for each plasmid sequence. Then, they trained a simple CNN to predict which of the labs the sequence came from. 
 
-```{mermaid}
-%%| label: fig-cnn
-%%| fig-cap: Nielsen & Voigt CNN Architecture for Lab-of-Origin Prediction
-
-flowchart LR
-    A["DNA Sequence<br/>A T G C<br/>1 0 0 0<br/>0 1 0 0<br/>0 0 1 0<br/>0 0 0 1<br/>...<br/>16,048 × 4"] --> B["Conv<br/>+<br/>MaxPool"] --> C["Fully<br/>Connected"] --> D["827 labs<br/>Softmax"]
-    
-    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
-    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px
-    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px
-    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px
-```
+![Figure 1: Nielsen & Voigt CNN Architecture for Lab-of-Origin Prediction](fig-cnn.svg)
 
 The CNN correctly predicted the lab-of-origin in 48% of held-out sequences, and 70% of the time the correct lab was in the top 10 predictions. This isn't quite good enough to apply to a real-world case, but they made a point: There actually *is* a unique lab-of-origin signature in these sequences. ML-GEA is up to a promising start.
 
@@ -52,18 +41,7 @@ In addition to DNA, they also trained their model based on six phenotypes such a
 
 To predict the lab-of-origin from sequences and phenotypes, they used an [:LSTM](#x-lstm) trained in a two step process. First, they trained on sequences only, and then added phenotypes and finetuned the model. This training strategy prevented the model from getting stuck in a local minimum caused by the phenotype data early in training.
 
-```{mermaid}
-%%| label: fig-lstm
-%%| fig-cap: Alley et al. deteRNNt architecture for Lab-of-Origin Prediction
-
-flowchart LR
-    A["DNA Sequence<br/>ATGCGTAA...<br/>↓<br/>BPE Motifs"] --> B["LSTM"] --> C["Metadata<br/>+<br/>Concat"] --> D["1314 labs<br/>Softmax"]
-    
-    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
-    style B fill:#fff3e0,stroke:#f57c00,stroke-width:3px
-    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:3px
-    style D fill:#fce4ec,stroke:#c2185b,stroke-width:3px
-```
+![Figure 2: Alley et al. deteRNNt architecture for Lab-of-Origin Prediction](fig-lstm.svg)
 
 The sequence+phenotype LSTM predicted the correct lab-of-origin 70% of the time, with a 84% top-10 accuracy. This is better than before, but it's unclear whether the performance increase comes from LSTM vs. CNN, BPE vs raw nucleotide encoding, more sequence data or the addition of meta-data to the training.
 
@@ -84,38 +62,7 @@ Do we actually need deep learning at all? [Wang et al., 2022](https://www.nature
 4. Count how often each lab occurs among the aligned fragments. This is a raw score already. One of the labs will occur most often, making it a good candidate for the lab-of-origin.
 5. But they calculate a lab score - a more elegant, *weighted* version of the raw count. The idea is: the fewer labs share a fragment, the more indicative it is for labs that have it. 
 
-```{mermaid}
-%%| label: fig-plasmidHawk
-%%| fig-cap: Wang et al. PlasmidHawk Pipeline for Lab-of-Origin Prediction
-
-flowchart LR
-    subgraph S1 ["Setup Phase"]
-        E["Addgene<br/>Repository"] 
-        F["Build<br/>Pan-genome"] 
-        G["Annotate<br/>Lab Origins"]
-        E --> F --> G
-    end
-    
-    subgraph S2 ["Prediction Phase"]
-        A["Unknown<br/>Plasmid"] 
-        B["Align to<br/>Pan-genome"] 
-        C["Count<br/>Fragments"] 
-        D["Predict<br/>Lab Origin"]
-        A --> B --> C --> D
-    end
-    
-    G -.-> B
-    
-    style S1 fill:none,stroke:none
-    style S2 fill:none,stroke:none
-    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:4px,color:
-    style F fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:
-    style G fill:#fff9c4,stroke:#f9a825,stroke-width:4px,color:
-    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:4px,color:
-    style B fill:#fff3e0,stroke:#f57c00,stroke-width:4px,color:
-    style C fill:#e8f5e8,stroke:#388e3c,stroke-width:4px,color:
-    style D fill:#fce4ec,stroke:#c2185b,stroke-width:4px,color:
-```
+![Figure 3: Wang et al. PlasmidHawk Pipeline for Lab-of-Origin Prediction](fig-plasmidHawk.svg)
 
 Their method, called PlasmidHawk, had a 76% accuracy for lab-of-origin prediction and a 85% top-10 accuracy, which is better than the two neural network models before. They say it's more efficient than deep learning too, as updating the pangenome with new plasmids is quick compared to re-training a neural network, but the data isn't that big and DL hardware/software is becoming very efficient, so I believe this isn't a substantial point anymore.
 

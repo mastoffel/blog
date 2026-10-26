@@ -1,0 +1,5 @@
+{{- if .Type -}}
+{{ transform.Highlight .Inner .Type }}
+{{- else -}}
+<pre class="output"><code>{{ .Inner }}</code></pre>
+{{- end -}}

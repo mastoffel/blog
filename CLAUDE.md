@@ -1,3 +1,6 @@
-- Hugo site (no theme). `hugo server` to preview; Netlify builds via `netlify.toml`. Old Quarto version lives on `main`.
-- Code posts are pre-rendered markdown (from `quarto render x.qmd --to hugo-md`); nothing executes at build.
-- Inline expandable notes: `[:term](#x-name)` + a `## :x name` section at the end of the post (`static/nutshell.js`). Projects page is `data/projects.yaml`.
+- Hugo site, no theme: `hugo server` to preview. Netlify builds it (`netlify.toml`); nothing built is committed.
+- Design lives in `assets/css/main.css` + `layouts/`; it mirrors the old Quarto look (still on `main` until merged).
+- Code posts are pre-rendered markdown; nothing executes at build. Unlabelled code fences render as output blocks.
+- Expandable notes: `[:term](#x-name)` + a `## :x name` section at the end of the post (`static/nutshell.js`). Projects page is `data/projects.yaml`.
+- Mermaid diagrams are pre-rendered SVGs next to the post; `![caption](x.svg)` inlines them (render-image hook).
+- `pics-originals/` holds full-size images and is not published; only `static/` is.

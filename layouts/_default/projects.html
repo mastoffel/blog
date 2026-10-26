@@ -1,22 +1,20 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ range hugo.Data.projects.sections }}
-<section class="projects">
-  <h2>{{ .title }}</h2>
-  {{ with .intro }}<p class="byline">{{ . | markdownify }}</p>{{ end }}
-  {{ range .groups }}
-    {{ with .title }}<h3>{{ . }}</h3>{{ end }}
-    {{ range .items }}
-    <div class="project">
-      <img src="/pics/{{ .image }}" alt="" loading="lazy">
-      <div>
-        <p class="ptitle">{{ .title | markdownify }}</p>
-        {{ with .meta }}<p class="pmeta">{{ . | markdownify }}</p>{{ end }}
-        {{ with .note }}<details><summary>🥥</summary>{{ . | $.Page.RenderString (dict "display" "block") }}</details>{{ end }}
-      </div>
+{{ .Store.Set "nutshell" true }}
+<header class="title-block"><h1 class="title">{{ .Title }}</h1></header>
+{{ range $s := hugo.Data.projects.sections }}
+<h2>{{ .title }}</h2>
+{{ with .intro }}<p>{{ . | markdownify }}</p>{{ end }}
+{{ range .groups }}
+  {{ with .title }}<h3>{{ . }}</h3>{{ end }}
+  {{ range .items }}
+  <div class="project">
+    <img src="/pics/{{ .image }}" alt="" loading="lazy">
+    <div>
+      <p>{{ .title | markdownify }}{{ with .meta }}<br>{{ . | markdownify }}{{ end }}{{ with .note }}<br><a class="nut" href="#x-{{ anchorize $.Title }}-{{ md5 . | truncate 8 "" }}">🥥</a>{{ end }}</p>
+      {{ with .note }}<template data-nut="{{ anchorize $.Title }}-{{ md5 . | truncate 8 "" }}">{{ . | $.RenderString (dict "display" "block") }}</template>{{ end }}
     </div>
-    {{ end }}
+  </div>
   {{ end }}
-</section>
+{{ end }}
 {{ end }}
 {{ end }}
